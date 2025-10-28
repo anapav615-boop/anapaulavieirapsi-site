@@ -1,0 +1,7 @@
+# Corrige páginas antigas
+/terapia-online.html   /atendimento-online   301
+/obrigado.html         /                     301
+
+# Ignora arquivos técnicos inexistentes
+/security.txt          /                     404
+/humans.txt            /                     404
