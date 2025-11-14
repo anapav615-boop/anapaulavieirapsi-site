@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Perguntas Frequentes (FAQ) | Ana Paula Ap. Vieira Psicóloga Clínica</title>
+
+  <!-- DESCRIÇÃO SEO -->
+  <meta name="description" content="Perguntas frequentes sobre psicoterapia, sessões online, funcionamento do atendimento, sigilo e processo terapêutico com a psicóloga Ana Paula Ap. Vieira (CRP 06/217114).">
+
+  <!-- FAVICON E CSS ORIGINAL -->
+  <link rel="icon" href="imagens/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Preload da imagem principal (sua foto) -->
+<link rel="preload" as="image" href="imagens/sua-foto.jpg">
+
+<!-- Preload da fonte Poppins -->
+<link rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      as="style">
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/faq.html" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica">
+  <meta property="og:title" content="Perguntas Frequentes sobre Psicoterapia">
+  <meta property="og:description" content="Tire suas dúvidas sobre psicoterapia, sessões online, sigilo e agendamento.">
+  <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/faq.html">
+  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/logo-simbolo.png">
+  <meta property="og:image:alt" content="FAQ Psicóloga Ana Paula Ap. Vieira">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Perguntas Frequentes sobre Psicoterapia">
+  <meta name="twitter:description" content="Entenda como funciona o atendimento, sigilo e os processos da psicoterapia.">
+  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/logo-simbolo.png">
+
+  <!-- JSON-LD (SEO AVANÇADO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como funciona o processo de psicoterapia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O processo terapêutico acontece em encontros semanais, de 50 minutos, com foco em acolhimento, compreensão das emoções e desenvolvimento de estratégias para lidar com desafios."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "As sessões são sigilosas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. Todo o conteúdo das sessões é confidencial, conforme o Código de Ética Profissional do Psicólogo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso fazer terapia online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. A terapia online é autorizada pelo CFP e segue os mesmos princípios éticos e sigilo do atendimento presencial."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quantas sessões são necessárias?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cada pessoa tem um ritmo. A quantidade de sessões varia conforme a demanda emocional e necessidade de cada paciente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como agendar uma sessão?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O agendamento pode ser feito pelo WhatsApp, e-mail ou pelo formulário de contato do site."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- CSS ESPECÍFICO QUE JÁ ESTAVA NO ARQUIVO -->
+  <style>
+    /* ================================
+       SEÇÃO FAQ (perguntas frequentes)
+    ================================ */
+    .hero-faq {
+      background-color: #f4effa;
+      text-align: center;
+      padding: 80px 10% 60px;
+    }
+
+    .hero-faq h2 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      color: #7a56b2;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-faq p {
+      color: #4a3d52;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .faq-container {
+      max-width: 850px;
+      margin: 60px auto 40px;
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 25px 25px 10px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e1d9f3;
+      padding: 15px 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      color: #7a56b2;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .faq-question:hover {
+      color: #5d4191;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      color: #4a3d52;
+      font-size: 1rem;
+      line-height: 1.7;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq-item.ativo .faq-answer {
+      max-height: 200px;
+      padding-top: 10px;
+    }
+
+    .faq-icon {
+      font-size: 1.3rem;
+      color: #7a56b2;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.ativo .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 768px) {
+      .hero-faq h2 {
+        font-size: 1.6rem;
+      }
+
+      .faq-question {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ================== CABEÇALHO ================== -->
+  <header class="cabecalho">
+    <div class="logo-area" style="display:flex; align-items:center; gap:18px; padding:14px 18px;">
+      <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" class="logo" style="width:56px; height:56px;">
+      <h1 style="margin:0; color:#6b48a8; font-size:1.25rem;">Ana Paula Ap. Vieira | Psicóloga Clínica</h1>
+    </div>
+    <nav class="menu-nav" style="padding:6px 18px;">
+      <ul style="list-style:none; display:flex; gap:18px; margin:0; padding:0; justify-content:flex-end;">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="quem-sou.html">Quem Sou</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="preco.html">Preços</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="depoimentos.html">Depoimentos</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ================== HERO FAQ ================== -->
+  <section class="hero-faq fade-section visivel">
+    <h2>Perguntas Frequentes</h2>
+    <p>Reuni aqui algumas das dúvidas mais comuns sobre o processo terapêutico, atendimento psicológico e funcionamento das sessões. Clique nas perguntas para visualizar as respostas.</p>
+  </section>
+
+  <!-- ================== CONTEÚDO FAQ ================== -->
+  <section class="faq-container animar visivel">
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Como funciona o processo de psicoterapia?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>O processo terapêutico acontece em encontros semanais, com duração média de 50 minutos. É um espaço de escuta, acolhimento e autoconhecimento, onde o paciente pode compreender emoções, comportamentos e desenvolver novas formas de lidar com desafios.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>As sessões são sigilosas?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Sim. Todo o conteúdo das sessões é confidencial, de acordo com o Código de Ética Profissional do Psicólogo. A privacidade e o respeito são princípios fundamentais no atendimento.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Posso fazer terapia online?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Sim, a terapia online é autorizada pelo Conselho Federal de Psicologia e segue os mesmos princípios e sigilo do atendimento presencial. É uma ótima opção para quem busca praticidade e conforto.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Quantas sessões são necessárias?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>O número de sessões varia conforme a necessidade e o ritmo de cada pessoa. O importante é respeitar o processo e manter uma frequência para que o trabalho psicológico seja efetivo.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Como agendar uma sessão?</span>
+        <span class="faq-icon">▼</span>
+      </div>
+      <div class="faq-answer">
+        <p>Você pode entrar em contato pelo WhatsApp, e-mail ou através do formulário disponível na seção de contato do site. Juntas encontraremos o melhor horário para você.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== VOLTAR PARA O INÍCIO ================== -->
+  <div style="text-align:center; margin-bottom:80px;">
+    <a href="index.html" class="btn-recursos">Voltar para o Início</a>
+  </div>
+
+   <!-- ================== RODAPÉ PADRONIZADO (links sublinhados) ================== -->
+  <footer class="rodape" style="background:#f4effa;padding:26px 18px;text-align:center;margin-top:18px;">
+    <div style="max-width:1000px;margin:0 auto;">
+      <p style="margin:6px 0;">
+        <strong>Endereço:</strong>
+        <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP"
+           target="_blank"
+           style="text-decoration:underline;">
+          R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP
+        </a>
+      </p>
+
+      <p style="margin:6px 0;">
+        <strong>Telefone:</strong>
+        <a href="https://wa.me/5515996760791"
+           target="_blank"
+           style="text-decoration:underline;">
+          (15) 99676-0791
+        </a>
+      </p>
+
+      <p style="margin:6px 0%;">
+        <strong>E-mail:</strong>
+        <a href="mailto:contato@anapaulaapvieirapsi.com.br"
+           style="text-decoration:underline;">
+          contato@anapaulaapvieirapsi.com.br
+        </a>
+      </p>
+
+      <p style="margin:6px 0;">© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
+
+      <div style="margin-top:8px;">
+        <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
+        <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" style="text-decoration:underline;">Facebook</a> |
+        <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185" target="_blank" style="text-decoration:underline;">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÕES UTÉIS -->
+  <button id="btn-topo" class="btn-topo" title="Voltar ao início">↑</button>
+  <a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
+    <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
+  </a>
+
+  <!-- ================== SCRIPT FAQ ================== -->
+  <script>
+    const perguntas = document.querySelectorAll('.faq-question');
+    perguntas.forEach(pergunta => {
+      pergunta.addEventListener('click', () => {
+        const item = pergunta.parentElement;
+        item.classList.toggle('ativo');
+      });
+    });
+
+    // Mostrar botão "voltar ao topo"
+    const btnTopo = document.getElementById('btn-topo');
+    window.addEventListener('scroll', () => {
+      btnTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    btnTopo.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
