@@ -1,3 +1,39 @@
+# ---------------------------------------------
+# ROBOTS.TXT AVANÇADO PARA SEO PROFISSIONAL
+# anapaulaapvieirapsi.com.br
+# ---------------------------------------------
+
 User-agent: *
+# Permite rastrear todas as páginas HTML
+Allow: /*.html$
 Allow: /
-Sitemap: https://www.anapaulaapvieirapsi.com.br/sitemap.xml
+
+# Evita indexação de arquivos não necessários
+Disallow: /css/
+Disallow: /js/
+Disallow: /imagens/
+Disallow: /fonts/
+Disallow: /assets/
+Disallow: /*?*    # impede URLs com parâmetros (evita páginas duplicadas)
+
+# ---------------------------------------------
+# GOOGLEBOT — permissões e prioridades
+# ---------------------------------------------
+User-agent: Googlebot
+Allow: / 
+Allow: /*.html$
+Disallow: /*?*
+
+# ---------------------------------------------
+# OTIMIZAÇÃO PARA BING/YANDEX (crawl-delay)
+# ---------------------------------------------
+User-agent: Bingbot
+Crawl-delay: 2
+
+User-agent: Yandex
+Crawl-delay: 2
+
+# ---------------------------------------------
+# SITEMAP — para que o Google leia tudo corretamente
+# ---------------------------------------------
+Sitemap: https://anapaulaapvieirapsi.com.br/sitemap.xml
