@@ -320,25 +320,9 @@
     <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
   </a>
 
-  <!-- ================== SCRIPT FAQ ================== -->
-  <script>
-    const perguntas = document.querySelectorAll('.faq-question');
-    perguntas.forEach(pergunta => {
-      pergunta.addEventListener('click', () => {
-        const item = pergunta.parentElement;
-        item.classList.toggle('ativo');
-      });
-    });
-
-    // Mostrar botão "voltar ao topo"
-    const btnTopo = document.getElementById('btn-topo');
-    window.addEventListener('scroll', () => {
-      btnTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
-    });
-    btnTopo.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+  <!-- ================== SCRIPTS ================== -->
   <script src="app.js"></script>
 </body>
 </html>
+
 
