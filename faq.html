@@ -16,14 +16,14 @@
   <link rel="manifest" href="manifest.json">
 
   <!-- Preload da imagem principal (sua foto) -->
-<link rel="preload" as="image" href="imagens/sua-foto.jpg">
+  <link rel="preload" as="image" href="imagens/sua-foto.jpg">
 
-<!-- Preload da fonte Poppins -->
-<link rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      as="style">
-<link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+  <!-- Preload da fonte Poppins -->
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        as="style">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
 
   <!-- CANONICAL -->
   <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/faq.html" />
@@ -94,11 +94,8 @@
   }
   </script>
 
-  <!-- CSS ESPECÍFICO QUE JÁ ESTAVA NO ARQUIVO -->
+  <!-- CSS ESPECÍFICO DA PÁGINA FAQ -->
   <style>
-    /* ================================
-       SEÇÃO FAQ (perguntas frequentes)
-    ================================ */
     .hero-faq {
       background-color: #f4effa;
       text-align: center;
@@ -210,7 +207,6 @@
     </nav>
   </header>
 
-
   <!-- ================== HERO FAQ ================== -->
   <section class="hero-faq fade-section visivel">
     <h2>Perguntas Frequentes</h2>
@@ -275,7 +271,7 @@
     <a href="index.html" class="btn-recursos">Voltar para o Início</a>
   </div>
 
-   <!-- ================== RODAPÉ PADRONIZADO (links sublinhados) ================== -->
+  <!-- ================== RODAPÉ PADRONIZADO ================== -->
   <footer class="rodape" style="background:#f4effa;padding:26px 18px;text-align:center;margin-top:18px;">
     <div style="max-width:1000px;margin:0 auto;">
       <p style="margin:6px 0;">
@@ -314,15 +310,45 @@
     </div>
   </footer>
 
-  <!-- BOTÕES UTÉIS -->
+  <!-- BOTÕES ÚTEIS -->
   <button id="btn-topo" class="btn-topo" title="Voltar ao início">↑</button>
   <a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
     <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
   </a>
 
   <!-- ================== SCRIPTS ================== -->
+  <script>
+    // FAQ: abrir/fechar respostas
+    document.addEventListener('DOMContentLoaded', function () {
+      const itens = document.querySelectorAll('.faq-item');
+
+      itens.forEach((item) => {
+        const pergunta = item.querySelector('.faq-question');
+        if (!pergunta) return;
+
+        pergunta.addEventListener('click', () => {
+          item.classList.toggle('ativo');
+        });
+      });
+
+      // Botão voltar ao topo
+      const btnTopo = document.getElementById('btn-topo');
+      if (btnTopo) {
+        window.addEventListener('scroll', () => {
+          btnTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+
+        btnTopo.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+
   <script src="app.js"></script>
 </body>
 </html>
+
+
 
 
