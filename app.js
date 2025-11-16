@@ -136,3 +136,25 @@ document.addEventListener("DOMContentLoaded", () => {
     <a href="recursos.html" class="btn-voltar-artigos">← Voltar aos recursos</a>
   `;
 })();
+// FAQ: abrir/fechar respostas
+document.addEventListener('DOMContentLoaded', function () {
+  const perguntas = document.querySelectorAll('.faq-pergunta');
+
+  perguntas.forEach((pergunta) => {
+    pergunta.addEventListener('click', () => {
+      const item = pergunta.closest('.faq-item');
+      if (!item) return;
+
+      // fecha outros (se quiser só um aberto por vez)
+      document.querySelectorAll('.faq-item').forEach((outro) => {
+        if (outro !== item) {
+          outro.classList.remove('ativo');
+        }
+      });
+
+      // abre/fecha o clicado
+      item.classList.toggle('ativo');
+    });
+  });
+});
+
