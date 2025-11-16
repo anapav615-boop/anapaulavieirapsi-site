@@ -537,43 +537,41 @@
         Se você deseja agendar uma sessão ou tirar dúvidas, preencha o formulário abaixo com seus dados e uma breve descrição do motivo do contato. Se preferir, envie mensagem pelo WhatsApp.
       </p>
 
-      <form name="contato"
-            method="POST"
-            action="obrigado.html"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            class="form-contato"
-            style="max-width:640px; margin:0 auto;">
+     <form class="form-contato"
+      action="https://formsubmit.co/contato@anapaulaapvieirapsi.com.br"
+      method="POST"
+      style="max-width:640px; margin:0 auto;">
 
-        <input type="hidden" name="form-name" value="contato">
-        <input type="hidden" name="bot-field">
+  <!-- Configurações do FormSubmit -->
+  <input type="hidden" name="_next" value="https://anapaulaapvieirapsi.com.br/obrigado.html">
+  <input type="hidden" name="_subject" value="Novo contato pelo site — Ana Paula Ap. Vieira">
+  <input type="hidden" name="_captcha" value="false">
 
-        <div class="form-row">
-          <label for="nome">Nome</label>
-          <input id="nome" name="nome" type="text" required placeholder="Seu nome completo">
-        </div>
+  <div class="form-row">
+    <label for="nome">Nome</label>
+    <input id="nome" name="nome" type="text" required placeholder="Seu nome completo">
+  </div>
 
-        <div class="form-row">
-          <label for="email">E-mail</label>
-          <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
-        </div>
+  <div class="form-row">
+    <label for="email">E-mail</label>
+    <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
+  </div>
 
-        <div class="form-row">
-          <label for="telefone">Telefone (WhatsApp)</label>
-          <input id="telefone" name="telefone" type="tel" placeholder="(15) 9xxxx-xxxx">
-        </div>
+  <div class="form-row">
+    <label for="telefone">Telefone (WhatsApp)</label>
+    <input id="telefone" name="telefone" type="tel" placeholder="(15) 9xxxx-xxxx">
+  </div>
 
-        <div class="form-row">
-          <label for="mensagem">Mensagem (breve descrição do motivo do contato)</label>
-          <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem..."></textarea>
-        </div>
+  <div class="form-row">
+    <label for="mensagem">Mensagem (breve descrição do motivo do contato)</label>
+    <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem..."></textarea>
+  </div>
 
-        <input type="hidden" name="assunto" value="Contato via site — Agendamento">
+  <div class="form-row form-actions" style="text-align:left;">
+    <button type="submit" class="btn-enviar">Enviar</button>
+  </div>
+</form>
 
-        <div class="form-row form-actions" style="text-align:left;">
-          <button type="submit" class="btn-enviar">Enviar</button>
-        </div>
-      </form>
     </section>
 
   </main>
@@ -632,4 +630,5 @@
   <script src="app.js"></script>
 </body>
 </html>
+
 
