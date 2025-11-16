@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "Compreendendo a Ansiedade",
+    "descricao": "A ansiedade é uma resposta natural do corpo, mas quando constante pode afetar o bem-estar emocional. Conheça formas de reconhecê-la e lidar com ela.",
+    "imagem": "imagens/ansiedade.jpg",
+    "link": "ansiedade.html"
+  },
+  {
+    "titulo": "Cuidando da Depressão",
+    "descricao": "A depressão exige acolhimento e tratamento. Veja como a terapia pode ajudar na reconstrução da esperança e da autoconfiança.",
+    "imagem": "imagens/depressao.jpg",
+    "link": "depressao.html"
+  },
+  {
+    "titulo": "Autoestima e Autoconhecimento",
+    "descricao": "Fortalecer a autoestima é um processo que envolve autoconhecimento e aceitação. Descubra como a psicoterapia pode auxiliar.",
+    "imagem": "imagens/autoestima.jpg",
+    "link": "autoestima.html"
+  },
+  {
+    "titulo": "Como a Terapia Pode Ajudar no Processo de Autoconhecimento",
+    "descricao": "Descubra como o processo terapêutico auxilia no autoconhecimento, na autoestima e no crescimento pessoal, especialmente para quem busca equilíbrio em Itapetininga.",
+    "imagem": "imagens/autoconhecimento.jpg",
+    "link": "autoconhecimento.html"
+  },
+  {
+    "titulo": "Relações Saudáveis e Vínculos Emocionais",
+    "descricao": "Entenda como vínculos emocionais saudáveis fortalecem a autoestima e ajudam a construir relações mais conscientes.",
+    "imagem": "imagens/relacoes-saudaveis-card.jpg",
+    "link": "artigo-relacoes-saudaveis-vinculos-emocionais.html"
+  }
+]
