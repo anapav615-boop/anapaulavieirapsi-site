@@ -81,7 +81,7 @@
     <priority>0.75</priority>
   </url>
 
-  <!-- Artigo anterior -->
+  <!-- Artigo base -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/artigo-relacoes-saudaveis-vinculos-emocionais.html</loc>
     <lastmod>2025-11-14</lastmod>
@@ -89,7 +89,7 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- Novos artigos de hoje -->
+  <!-- Novos artigos -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/orientacao-parental.html</loc>
     <lastmod>2025-11-19</lastmod>
@@ -97,6 +97,7 @@
     <priority>0.80</priority>
   </url>
 
+  <!-- Infantil -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/psicoterapia-infantil.html</loc>
     <lastmod>2025-11-19</lastmod>
@@ -111,6 +112,15 @@
     <priority>0.80</priority>
   </url>
 
+  <!-- O que faltava -->
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/artigo-psicoterapia-infantil.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Adultos -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/psicoterapia-adultos.html</loc>
     <lastmod>2025-11-19</lastmod>
@@ -118,6 +128,7 @@
     <priority>0.80</priority>
   </url>
 
+  <!-- Adolescentes -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/psicoterapia-adolescentes.html</loc>
     <lastmod>2025-11-19</lastmod>
