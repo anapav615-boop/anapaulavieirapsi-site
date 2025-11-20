@@ -60,11 +60,10 @@
 </head>
 
 <body>
-
-  <!-- CABEÇALHO -->
+  <!-- CABEÇALHO PADRONIZADO -->
   <header class="cabecalho">
     <div class="logo-area" style="display:flex;align-items:center;gap:18px;padding:14px 18px;">
-      <img src="imagens/logo-simbolo.png" class="logo" style="width:56px;height:56px;">
+      <img src="imagens/logo-simbolo.png" class="logo" style="width:56px;height:56px;" alt="Símbolo Psicologia">
       <h1 style="margin:0;color:#6b48a8;font-size:1.25rem;">Ana Paula Ap. Vieira | Psicóloga Clínica</h1>
     </div>
 
@@ -81,14 +80,13 @@
     </nav>
   </header>
 
-
   <!-- CONTEÚDO -->
   <main>
     <section class="conteudo-artigo" style="max-width:920px;margin:28px auto;padding:0 18px;">
 
       <img src="imagens/psicoterapia-infantil-como-ajuda.jpg"
            alt="Psicoterapia infantil – apoio emocional para crianças"
-           style="width:100%;border-radius:12px;object-fit:cover;">
+           style="width:100%;height:auto;border-radius:12px;object-fit:cover;">
 
       <p class="legenda" style="margin-top:8px;color:#6c5a6f;">
         A psicoterapia infantil oferece um espaço seguro para expressão e desenvolvimento emocional.
@@ -132,53 +130,62 @@
       </ul>
 
       <p style="margin-top:20px;color:#5b4a66;">
-        — Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)  
+        — Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)<br>
         Psicoterapia infantil presencial em Itapetininga – SP e online para todo o Brasil.
       </p>
 
       <a href="recursos.html"
-         style="display:inline-block;margin-top:24px;padding:10px 26px;border-radius:30px;background:#7a56b2;color:#fff;text-decoration:none;">
+         style="display:inline-block;margin-top:24px;padding:10px 26px;border-radius:30px;background:#7a56b2;color:#fff;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.12);">
         ← Voltar aos recursos
       </a>
 
     </section>
   </main>
 
-
-  <!-- RODAPÉ -->
+  <!-- RODAPÉ PADRONIZADO -->
   <footer class="rodape" style="background:#f4effa;padding:26px 18px;text-align:center;margin-top:18px;">
-    <div style="max-width:1000px;margin:auto;">
+    <div style="max-width:1000px;margin:0 auto;">
 
-      <p><strong>Endereço:</strong>
+      <p style="margin:6px 0;">
+        <strong>Endereço:</strong>
         <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP"
-           target="_blank">R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP</a>
+           target="_blank"
+           style="text-decoration:underline;">
+          R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP
+        </a>
       </p>
 
-      <p><strong>Telefone:</strong>
-        <a href="https://wa.me/5515996760791" target="_blank">(15) 99676-0791</a>
+      <p style="margin:6px 0;">
+        <strong>Telefone:</strong>
+        <a href="https://wa.me/5515996760791" target="_blank" style="text-decoration:underline;">
+          (15) 99676-0791
+        </a>
       </p>
 
-      <p><strong>E-mail:</strong>
-        <a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a>
+      <p style="margin:6px 0;">
+        <strong>E-mail:</strong>
+        <a href="mailto:contato@anapaulaapvieirapsi.com.br" style="text-decoration:underline;">
+          contato@anapaulaapvieirapsi.com.br
+        </a>
       </p>
 
-      <p>© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
+      <p style="margin:6px 0;">© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
 
-      <div>
-        <a href="https://www.instagram.com/anapaulapsico/" target="_blank">Instagram</a> |
-        <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank">Facebook</a> |
-        <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185" target="_blank">LinkedIn</a>
+      <div style="margin-top:8px;">
+        <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
+        <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" style="text-decoration:underline;">Facebook</a> |
+        <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185" target="_blank" style="text-decoration:underline;">LinkedIn</a>
       </div>
     </div>
   </footer>
 
-
+  <!-- BOTÃO TOPO + WHATSAPP -->
+  <button id="btn-topo" class="btn-topo" title="Voltar ao início">↑</button>
   <a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank"
      style="position:fixed;right:18px;bottom:18px;z-index:999;">
-    <img src="imagens/whatsapp-icon.png" style="width:72px;height:72px;border-radius:50%;">
+    <img src="imagens/whatsapp-icon.png" alt="WhatsApp"
+         style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
   </a>
-
-  <button id="btn-topo" class="btn-topo">↑</button>
 
   <script src="app.js"></script>
 </body>
