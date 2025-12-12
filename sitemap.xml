@@ -143,4 +143,30 @@
     <priority>0.80</priority>
   </url>
 
+    <!-- Recurso: Fé e Psicologia -->
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/fe-e-psicologia.html</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Recurso: Força interior -->
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/forca-interior.html</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Recurso: Autocuidado emocional -->
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/autocuidado-emocional.html</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+
 </urlset>
+
