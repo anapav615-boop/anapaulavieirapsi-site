@@ -4,7 +4,7 @@
   <!-- HOME -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/</loc>
-    <lastmod>2025-11-19</lastmod>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,28 +12,35 @@
   <!-- Páginas principais -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/quem-sou.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/servicos.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/sobre-o-atendimento.html</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/preco.html</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/recursos.html</loc>
-    <lastmod>2025-11-19</lastmod>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -52,7 +59,7 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- Artigos principais -->
+  <!-- Conteúdos terapêuticos -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/ansiedade.html</loc>
     <lastmod>2025-11-14</lastmod>
@@ -61,8 +68,36 @@
   </url>
 
   <url>
+    <loc>https://anapaulaapvieirapsi.com.br/ansiedade-2.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
     <loc>https://anapaulaapvieirapsi.com.br/depressao.html</loc>
     <lastmod>2025-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/depressao-2.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/exaustao-emocional.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/esgotamento-trabalho.html</loc>
+    <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -81,7 +116,21 @@
     <priority>0.75</priority>
   </url>
 
-  <!-- Artigo base -->
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/autocuidado-emocional.html</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/autocuidado-emocional-2.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Artigos -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/artigo-relacoes-saudaveis-vinculos-emocionais.html</loc>
     <lastmod>2025-11-14</lastmod>
@@ -89,7 +138,6 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- Novos artigos -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/orientacao-parental.html</loc>
     <lastmod>2025-11-19</lastmod>
@@ -112,7 +160,6 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- O que faltava -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/artigo-psicoterapia-infantil.html</loc>
     <lastmod>2025-11-19</lastmod>
@@ -143,7 +190,7 @@
     <priority>0.80</priority>
   </url>
 
-    <!-- Recurso: Fé e Psicologia -->
+  <!-- Recursos -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/fe-e-psicologia.html</loc>
     <lastmod>2025-12-12</lastmod>
@@ -151,7 +198,6 @@
     <priority>0.70</priority>
   </url>
 
-  <!-- Recurso: Força interior -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/forca-interior.html</loc>
     <lastmod>2025-12-12</lastmod>
@@ -159,14 +205,4 @@
     <priority>0.70</priority>
   </url>
 
-  <!-- Recurso: Autocuidado emocional -->
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/autocuidado-emocional.html</loc>
-    <lastmod>2025-12-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-
 </urlset>
-
