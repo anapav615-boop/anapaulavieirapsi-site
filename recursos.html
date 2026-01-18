@@ -1,537 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Recursos — Ana Paula Ap. Vieira | Psicóloga Clínica</title>
+  <title>Recursos | Ana Paula Ap. Vieira – Psicóloga Clínica</title>
 
-  <meta name="description" content="Recursos e conteúdos psicoeducativos sobre psicoterapia infantil, adolescentes, adultos, orientação parental, ansiedade, depressão, autoestima, autoconhecimento e relações saudáveis. Textos e orientações para apoiar o bem-estar emocional.">
+  <meta name="description" content="Conteúdos sobre saúde emocional: ansiedade, depressão, exaustão emocional, autocuidado e orientação psicológica com Ana Paula Ap. Vieira." />
 
-  <link rel="icon" href="imagens/favicon.png">
+  <link rel="icon" type="image/png" href="imagens/favicon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
 
-  <!-- Preload da imagem principal da página Recursos -->
-  <link rel="preload" as="image" href="imagens/capa-recursos.jpg">
-
-  <!-- Preload da fonte Poppins -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
-
   <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/recursos.html">
-  <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica">
-  <meta property="og:title" content="Recursos — Ana Paula Ap. Vieira">
-  <meta property="og:description" content="Textos e materiais psicoeducativos sobre psicoterapia infantil, adolescentes, adultos, família, saúde mental e autoconhecimento.">
-  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/capa-recursos.jpg">
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Recursos — Ana Paula Ap. Vieira",
-    "description":"Recursos e conteúdos psicoeducativos sobre psicoterapia infantil, adolescentes, adultos, orientação parental, ansiedade, depressão, autoestima, autoconhecimento e relações saudáveis."
-  }
-  </script>
-
-  <!-- Estilos específicos da página -->
-  <style>
-    body.page-recursos {
-      background-color: #fefbf9;
-      margin:0;
-      font-family:"Poppins",sans-serif;
-    }
-
-    .capa-recursos {
-      text-align: center;
-      margin: 22px 0 10px;
-    }
-
-    .capa-recursos img {
-      width: 100%;
-      max-width: 780px;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    }
-
-    .content-wrap {
-      max-width: 1200px;
-      margin: 0 auto 40px;
-      padding: 0 18px;
-    }
-
-    .hero-recursos {
-      text-align: center;
-      padding: 32px 0 10px;
-    }
-
-    .hero-recursos h1 {
-      margin: 0 0 10px;
-      color: #6b48a8;
-      font-size: 2rem;
-    }
-
-    .hero-recursos p {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .bloco-recursos {
-      margin-top: 32px;
-    }
-
-    .bloco-recursos h2 {
-      font-size: 1.4rem;
-      color: #6b48a8;
-      margin: 0 0 8px;
-      text-align: left;
-    }
-
-    .bloco-recursos p.bloco-subtitulo {
-      margin: 0 0 14px;
-      font-size: 0.96rem;
-      color: #6c5a7a;
-    }
-
-    .cards-recursos {
-      max-width: 1200px;
-      margin: 18px auto 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      justify-content: center;
-      align-items: stretch;
-    }
-
-    .cards-recursos .card {
-      width: 260px;
-      background: #ffffff;
-      border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .cards-recursos .tema-thumb {
-      width: 100%;
-      height: 170px;
-      overflow: hidden;
-    }
-
-    .cards-recursos .tema-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .cards-recursos .card h3 {
-      color: #6b48a8;
-      padding: 16px 18px 0;
-      margin: 0;
-      font-size: 1.05rem;
-    }
-
-    .cards-recursos .card p {
-      padding: 10px 18px 14px;
-      margin: 0;
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.6;
-      flex: 1;
-    }
-
-    .cards-recursos .btn-leia {
-      margin: 0 18px 18px;
-      display: inline-block;
-      padding: 8px 18px;
-      background: #7a56b2;
-      border-radius: 20px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.92rem;
-      text-align: center;
-    }
-
-    .cards-recursos .btn-leia:hover {
-      background: #5e3f8f;
-    }
-
-    .animar {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .animar.visivel {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .btn-recursos {
-      background:#7a56b2;
-      color:#fff;
-      padding:10px 22px;
-      border-radius:24px;
-      text-decoration:none;
-      font-size:0.95rem;
-    }
-  </style>
 </head>
 
-<body class="page-recursos">
-  <!-- CABEÇALHO IGUAL AO SERVIÇOS -->
-  <header class="cabecalho">
-    <div class="logo-area" style="display:flex; align-items:center; gap:18px; padding:14px 18px;">
-      <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" style="width:56px; height:56px;">
-      <h1 style="margin:0; color:#6b48a8; font-size:1.25rem;">Ana Paula Ap. Vieira | Psicóloga Clínica</h1>
-    </div>
-    <nav class="menu-nav" style="padding:6px 18px;">
-      <ul style="list-style:none; display:flex; gap:18px; margin:0; padding:0; justify-content:flex-end;">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="quem-sou.html">Quem Sou</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="preco.html">Preços</a></li>
-        <li><a href="recursos.html">Recursos</a></li>
-        <li><a href="depoimentos.html">Depoimentos</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
-  </header>
+<body>
+
+<!-- ================== CABEÇALHO ================== -->
+<header class="cabecalho">
+  <div class="logo-area">
+    <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" class="logo">
+    <h1>Ana Paula Ap. Vieira | Psicóloga Clínica</h1>
+  </div>
+
+  <nav class="menu-nav">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="quem-sou.html">Quem Sou</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="preco.html">Preços</a></li>
+      <li><a href="recursos.html" class="ativo">Recursos</a></li>
+      <li><a href="depoimentos.html">Depoimentos</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================== CONTEÚDO ================== -->
+<main>
 
   <!-- CAPA -->
   <section class="capa-recursos">
-    <img src="imagens/capa-recursos.jpg" alt="Consultório Psicologia Ana Paula" />
+    <img src="imagens/capa-recursos.jpg" alt="Recursos em saúde emocional">
+    <h2>Recursos em Saúde Emocional</h2>
+    <p>Textos para acolher, orientar e ajudar você a compreender seus sentimentos.</p>
   </section>
 
-  <main>
-    <div class="content-wrap">
-      <section class="hero-recursos">
-        <h1>Recursos e Conteúdos Psicológicos</h1>
-        <p>
-          Espaço dedicado a reflexões, orientações e materiais psicoeducativos sobre autoconhecimento,
-          saúde mental, infância, adolescência, vida adulta e família. Cada texto é elaborado com carinho para inspirar
-          sua jornada de bem-estar emocional.
-        </p>
-      </section>
+  <!-- ================== BLOCO 1 ================== -->
+  <section class="secao-recursos">
+    <h3>Saúde Emocional</h3>
 
-      <!-- BLOCO 1 -->
-      <section class="bloco-recursos">
-        <h2>Atendimento psicológico: crianças, adolescentes, adultos e família</h2>
-        <p class="bloco-subtitulo">
-          Conteúdos sobre psicoterapia infantil, terapia para adolescentes, psicoterapia para adultos e orientação parental,
-          voltados para quem busca entender melhor as necessidades emocionais dos filhos, da família e de si mesmo(a).
-        </p>
+    <div class="cards-recursos">
 
-        <div class="cards-recursos">
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/sala-terapia-infantil-itapetininga.jpg" alt="Psicoterapia infantil em Itapetininga">
-            </div>
-            <h3>Psicoterapia Infantil</h3>
-            <p>
-              Entenda como a psicoterapia infantil oferece um espaço seguro para que crianças expressem emoções,
-              elaborem vivências e se desenvolvam com apoio e acolhimento.
-            </p>
-            <a href="psicoterapia-infantil.html" class="btn-leia">Saiba mais</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/psicoterapia-adolescentes.jpg" alt="Psicoterapia para adolescentes em Itapetininga">
-            </div>
-            <h3>Psicoterapia para Adolescentes</h3>
-            <p>
-              Um espaço de escuta e reflexão na transição para a vida adulta, acolhendo dúvidas, conflitos,
-              ansiedade, relações e escolhas de vida dos adolescentes.
-            </p>
-            <a href="psicoterapia-adolescentes.html" class="btn-leia">Saiba mais</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/psicoterapia-adultos-itapetininga.jpg" alt="Psicoterapia para adultos em Itapetininga">
-            </div>
-            <h3>Psicoterapia para Adultos</h3>
-            <p>
-              Um espaço de escuta, autoconhecimento e cuidado emocional para lidar com ansiedade, exaustão, autoestima,
-              relações e momentos de transição ao longo da vida adulta.
-            </p>
-            <a href="psicoterapia-adultos.html" class="btn-leia">Saiba mais</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/orientacao-parental-itapetininga.jpg" alt="Orientação parental em Itapetininga">
-            </div>
-            <h3>Orientação Parental</h3>
-            <p>
-              Apoio para pais e responsáveis que desejam compreender melhor os filhos, fortalecer o vínculo e
-              lidar com desafios do dia a dia com mais acolhimento e segurança.
-            </p>
-            <a href="orientacao-parental.html" class="btn-leia">Saiba mais</a>
-          </article>
+      <!-- Ansiedade -->
+      <article class="card animar">
+        <div class="tema-thumb">
+          <img src="imagens/ansiedade.jpg" alt="Ansiedade">
         </div>
-      </section>
+        <h3>Ansiedade</h3>
+        <p>Entenda os sinais da ansiedade e como a psicoterapia pode ajudar.</p>
+        <a href="ansiedade-2.html" class="btn-leia">Ler texto</a>
+      </article>
 
-      <!-- BLOCO 2 (ATUALIZADO) -->
-      <section class="bloco-recursos">
-        <h2>Psicoeducação em saúde mental</h2>
-        <p class="bloco-subtitulo">
-          Textos psicoeducativos sobre ansiedade, depressão, exaustão emocional, esgotamento no trabalho e autocuidado emocional,
-          para apoiar sua compreensão sobre saúde mental.
-        </p>
-
-        <div class="cards-recursos">
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/ansiedade-acolhimento.jpg" alt="Ansiedade e acolhimento emocional">
-            </div>
-            <h3>Ansiedade e acolhimento emocional</h3>
-            <p>
-              Entenda sinais emocionais e físicos da ansiedade e como a psicoterapia pode ajudar a construir mais segurança interna.
-            </p>
-            <a href="ansiedade-2.html" class="btn-leia">Ler texto</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/depressao-acolhimento.jpg" alt="Depressão e acolhimento emocional">
-            </div>
-            <h3>Depressão e acolhimento emocional</h3>
-            <p>
-              A depressão não é fraqueza. Veja sinais, impactos e caminhos de cuidado — com acolhimento e suporte psicológico.
-            </p>
-            <a href="depressao-2.html" class="btn-leia">Ler texto</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/exaustao-emocional-acolhimento.jpg" alt="Exaustão emocional e cansaço">
-            </div>
-            <h3>Exaustão emocional e cansaço</h3>
-            <p>
-              Quando o corpo continua, mas a mente já ultrapassou os limites: sinais, efeitos e como retomar o cuidado emocional.
-            </p>
-            <a href="exaustao-emocional.html" class="btn-leia">Ler texto</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/esgotamento-trabalho.jpg" alt="Esgotamento no trabalho e saúde emocional">
-            </div>
-            <h3>Esgotamento no trabalho</h3>
-            <p>
-              Sobrecarga, pressão constante e sensação de “não dar conta”: entenda o esgotamento no trabalho e caminhos de cuidado.
-            </p>
-            <a href="esgotamento-no-trabalho.html" class="btn-leia">Ler texto</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/autoestima.jpg" alt="Autoestima e Autoconhecimento">
-            </div>
-            <h3>Autoestima e Autoconhecimento</h3>
-            <p>
-              Fortalecer a autoestima é um processo que envolve autoconhecimento e aceitação.
-            </p>
-            <a href="autoestima.html" class="btn-leia">Saiba mais</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/autoconhecimento.jpg" alt="Processo de Autoconhecimento">
-            </div>
-            <h3>Processo de Autoconhecimento</h3>
-            <p>
-              O autoconhecimento é uma jornada que apoia mudanças internas e escolhas mais conscientes.
-            </p>
-            <a href="autoconhecimento.html" class="btn-leia">Saiba mais</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/relacoes-saudaveis-card.jpg" alt="Relações saudáveis e vínculos emocionais">
-            </div>
-            <h3>Relações Saudáveis e Vínculos Emocionais</h3>
-            <p>
-              Entenda como vínculos emocionais saudáveis fortalecem a autoestima e o equilíbrio emocional.
-            </p>
-            <a href="artigo-relacoes-saudaveis-vinculos-emocionais.html" class="btn-leia">Ler artigo</a>
-          </article>
-
-          <!-- NOVOS RECURSOS (já existiam) -->
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/fe-e-psicologia.jpg" alt="Fé e psicologia no cuidado emocional">
-            </div>
-            <h3>Fé e psicologia no cuidado emocional</h3>
-            <p>
-              A fé pode caminhar junto com a psicoterapia, oferecendo acolhimento, sentido e esperança.
-            </p>
-            <a href="fe-e-psicologia.html" class="btn-leia">Ler artigo</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/forca-interior.jpg" alt="Força interior em momentos difíceis">
-            </div>
-            <h3>Força interior em momentos difíceis</h3>
-            <p>
-              Superar momentos difíceis não é apagar a dor, mas aprender a caminhar com ela.
-            </p>
-            <a href="forca-interior.html" class="btn-leia">Ler artigo</a>
-          </article>
-
-          <!-- Autocuidado (atualizado para a versão 2) -->
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/autocuidado-emocional-natureza-2.jpg" alt="Autocuidado emocional em contato com a natureza">
-            </div>
-            <h3>Autocuidado emocional</h3>
-            <p>
-              Autocuidado emocional não é luxo: é necessidade. Veja práticas simples para se escutar e se respeitar.
-            </p>
-            <a href="autocuidado-emocional-2.html" class="btn-leia">Ler texto</a>
-          </article>
-
+      <!-- Depressão -->
+      <article class="card animar">
+        <div class="tema-thumb">
+          <img src="imagens/depressao.jpg" alt="Depressão">
         </div>
-      </section>
+        <h3>Depressão</h3>
+        <p>A depressão não é fraqueza. Conheça sinais e caminhos de cuidado.</p>
+        <a href="depressao-2.html" class="btn-leia">Ler texto</a>
+      </article>
 
-      <!-- BLOCO 3 – ARTIGOS: INFÂNCIA E ADOLESCÊNCIA -->
-      <section class="bloco-recursos">
-        <h2>Artigos psicoeducativos: infância e adolescência</h2>
-        <p class="bloco-subtitulo">
-          Textos voltados para compreender melhor as necessidades emocionais de crianças e adolescentes, o papel da psicoterapia
-          e como a família pode apoiar esse processo com acolhimento e escuta.
-        </p>
-
-        <div class="cards-recursos">
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/psicoterapia-infantil-como-ajuda.jpg" alt="Psicoterapia infantil – apoio emocional para crianças">
-            </div>
-            <h3>Psicoterapia Infantil — Como a Terapia Ajuda as Crianças</h3>
-            <p>
-              Entenda como a psicoterapia infantil ajuda crianças a desenvolverem habilidades emocionais, lidarem com medos,
-              frustrações e melhorarem a expressão dos sentimentos no dia a dia.
-            </p>
-            <a href="psicoterapia-infantil-como-ajuda.html" class="btn-leia">Ler artigo</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/psicoterapia-infantil-artigo1.jpg" alt="Psicoterapia infantil – quando procurar ajuda para a criança">
-            </div>
-            <h3>Psicoterapia Infantil – Quando procurar ajuda</h3>
-            <p>
-              Sinais de sofrimento emocional na infância, quando buscar psicoterapia infantil e
-              como a terapia pode ajudar a criança a expressar sentimentos e fortalecer vínculos com a família.
-            </p>
-            <a href="artigo-psicoterapia-infantil.html" class="btn-leia">Ler artigo</a>
-          </article>
-
-          <article class="card animar">
-            <div class="tema-thumb">
-              <img src="imagens/psicoterapia-adolescentes-ilustracao.png" alt="Psicoterapia para adolescentes – apoio emocional na adolescência">
-            </div>
-            <h3>Psicoterapia para Adolescentes – Como a Terapia Ajuda Jovens</h3>
-            <p>
-              A psicoterapia para adolescentes oferece um espaço seguro para falar sobre emoções intensas, conflitos, autoestima,
-              relações e desafios típicos dessa fase de transição.
-            </p>
-            <a href="psicoterapia-adolescentes-como-ajuda.html" class="btn-leia">Ler artigo</a>
-          </article>
+      <!-- Exaustão emocional -->
+      <article class="card animar">
+        <div class="tema-thumb">
+          <img src="imagens/exaustao-emocional-acolhimento.jpg" alt="Exaustão emocional">
         </div>
-      </section>
+        <h3>Exaustão emocional</h3>
+        <p>Quando o corpo segue, mas a mente já ultrapassou seus limites.</p>
+        <a href="exaustao-emocional.html" class="btn-leia">Ler texto</a>
+      </article>
 
-      <div style="text-align:center; margin:18px 0 40px;">
-        <a href="index.html" class="btn-recursos">
-          Voltar ao início
-        </a>
-      </div>
+      <!-- Esgotamento no trabalho (CORRIGIDO) -->
+      <article class="card animar">
+        <div class="tema-thumb">
+          <img src="imagens/esgotamento-trabalho.jpg" alt="Esgotamento no trabalho">
+        </div>
+        <h3>Esgotamento no trabalho</h3>
+        <p>Sobrecarga, pressão constante e sensação de não dar conta.</p>
+        <a href="esgotamento-trabalho.html" class="btn-leia">Ler texto</a>
+      </article>
+
+      <!-- Autocuidado emocional -->
+      <article class="card animar">
+        <div class="tema-thumb">
+          <img src="imagens/autocuidado-emocional-natureza-2.jpg" alt="Autocuidado emocional">
+        </div>
+        <h3>Autocuidado emocional</h3>
+        <p>Se cuidar não é luxo, é necessidade para quem carrega demais.</p>
+        <a href="autocuidado-emocional-2.html" class="btn-leia">Ler texto</a>
+      </article>
+
+      <!-- Sobre o Atendimento (NOVO CARD) -->
+      <article class="card animar">
+        <div class="tema-thumb">
+          <img src="imagens/sobre-o-atendimento-psicologico-acolhimento.jpg" alt="Sobre o atendimento psicológico">
+        </div>
+        <h3>Sobre o Atendimento</h3>
+        <p>Um espaço de acolhimento, escuta e cuidado para crianças, adolescentes e adultos.</p>
+        <a href="sobre-o-atendimento.html" class="btn-leia">Ler texto</a>
+      </article>
+
     </div>
-  </main>
+  </section>
 
-  <!-- RODAPÉ IGUAL AO SERVIÇOS -->
-  <footer class="rodape" style="background:#f4effa;padding:26px 18px;text-align:center;margin-top:18px;">
-    <div style="max-width:1000px;margin:0 auto;">
-      <p style="margin:6px 0;">
-        <strong>Endereço:</strong>
-        <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP"
-           target="_blank"
-           style="text-decoration:underline;">
-          R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP
-        </a>
-      </p>
+</main>
 
-      <p class="rodape-privacidade">
-        Este site utiliza práticas básicas de navegação. Saiba mais em nossa
-        <a href="privacidade.html">Política de Privacidade</a>.
-      </p>
+<!-- ================== RODAPÉ ================== -->
+<footer class="rodape">
+  <p>© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
+</footer>
 
-      <p style="margin:6px 0;">
-        <strong>Telefone:</strong>
-        <a href="https://wa.me/5515996760791"
-           target="_blank"
-           style="text-decoration:underline;">
-          (15) 99676-0791
-        </a>
-      </p>
+<!-- BOTÃO WHATSAPP -->
+<a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank">
+  <img src="imagens/whatsapp-icon.png" alt="WhatsApp">
+</a>
 
-      <p style="margin:6px 0;">
-        <strong>E-mail:</strong>
-        <a href="mailto:contato@anapaulaapvieirapsi.com.br"
-           style="text-decoration:underline;">
-          contato@anapaulaapvieirapsi.com.br
-        </a>
-      </p>
+<script src="app.js"></script>
 
-      <p style="margin:6px 0;">© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
-
-      <div style="margin-top:8px;">
-        <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
-        <a href="https://www.facebook.com" target="_blank" style="text-decoration:underline;">Facebook</a> |
-        <a href="https://www.linkedin.com" target="_blank" style="text-decoration:underline;">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- BOTÃO TOPO + WHATSAPP -->
-  <button id="btn-topo" class="btn-topo" title="Voltar ao início">↑</button>
-  <a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
-    <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
-  </a>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const items = document.querySelectorAll('.animar');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) e.target.classList.add('visivel');
-        });
-      }, { threshold: 0.12 });
-      items.forEach(i => observer.observe(i));
-
-      const btnTopo = document.getElementById('btn-topo');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) btnTopo.style.display = 'block';
-        else btnTopo.style.display = 'none';
-      });
-      btnTopo.addEventListener('click', () =>
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-      );
-    });
-  </script>
-
-  <script src="app.js"></script>
 </body>
 </html>
