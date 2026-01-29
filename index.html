@@ -552,16 +552,10 @@
         Se você deseja agendar uma sessão ou tirar dúvidas, preencha o formulário abaixo com seus dados e uma breve descrição do motivo do contato. Se preferir, envie mensagem pelo WhatsApp.
       </p>
 
-      <form name="contato"
-            method="POST"
-            action="obrigado.html"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            class="form-contato"
-            style="max-width:640px; margin:0 auto;">
+     <form id="form-contato"
+      class="form-contato"
+      style="max-width:640px; margin:0 auto;">
 
-        <input type="hidden" name="form-name" value="contato">
-        <input type="hidden" name="bot-field">
 
         <div class="form-row">
           <label for="nome">Nome</label>
@@ -583,9 +577,7 @@
           <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem..."></textarea>
         </div>
 
-        <input type="hidden" name="assunto" value="Contato via site — Agendamento">
-
-        <div class="form-row form-actions" style="text-align:left;">
+               <div class="form-row form-actions" style="text-align:left;">
           <button type="submit" class="btn-enviar">Enviar</button>
         </div>
       </form>
@@ -644,6 +636,40 @@
   </a>
 
   <script src="app.js"></script>
+
+<script>
+  (function () {
+    const form = document.getElementById("form-contato");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const telefone = document.getElementById("telefone").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
+
+      const numeroWhatsApp = "5515996760791"; // (15) 99676-0791
+
+      const texto =
+        `Olá, Ana Paula!%0A%0A` +
+        `Nome: ${encodeURIComponent(nome)}%0A` +
+        `E-mail: ${encodeURIComponent(email)}%0A` +
+        `Telefone: ${encodeURIComponent(telefone)}%0A%0A` +
+        `Mensagem: ${encodeURIComponent(mensagem)}%0A%0A` +
+        `Enviado pelo formulário do site.`;
+
+      const url = `https://wa.me/${numeroWhatsApp}?text=${texto}`;
+
+      window.open(url, "_blank", "noopener,noreferrer");
+
+      // Leva para a página de agradecimento (sem erro 405)
+      window.location.href = "obrigado.html";
+    });
+  })();
+</script>
+
 </body>
 </html>
 
