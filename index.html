@@ -104,6 +104,27 @@
       border-color: rgba(107,72,168,0.55);
       box-shadow: 0 0 0 4px rgba(107,72,168,0.10);
     }
+    .btn-mini{
+      display:inline-block;
+      margin-top:12px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .btn-mini.primary{
+      background: var(--roxo);
+      color:#fff;
+      box-shadow: 0 10px 22px rgba(107,72,168,0.14);
+    }
+    .btn-mini.secondary{
+      background: linear-gradient(180deg, #f4effa 0%, #f2fbf6 100%);
+      color: var(--roxo);
+      border: 1px solid rgba(127,191,154,0.55);
+      box-shadow:none;
+    }
+
     .btn-enviar{
       padding: 10px 18px;
       border-radius: 28px;
@@ -281,6 +302,9 @@
     
     /* ===== Recursos (imagens alinhadas e cards consistentes) ===== */
     .recurso-card{ display:flex; flex-direction:column; gap:10px; }
+    .recurso-card p{ margin:0; line-height:1.7; }
+    .recurso-card .recurso-actions{ margin-top:auto; }
+
     .recurso-img{
       width:100%;
       height: 170px;
@@ -569,42 +593,43 @@
         </article>
 
         <!-- Cards extras (sem depender de novas imagens no servidor) -->
+        
         <article class="mini-card recurso-card">
-          <div class="recurso-thumb" aria-hidden="true">🫶</div>
+          <img src="imagens/ansiedade.jpg" alt="Ansiedade" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Ansiedade</h3>
-          <p>
-            Entenda sinais comuns, gatilhos e caminhos de cuidado.
-            <a href="ansiedade.html" style="text-decoration:underline; color: var(--roxo); font-weight:600;">Ler conteúdo</a>
-          </p>
+          <p>Entenda sinais comuns, gatilhos e caminhos de cuidado.</p>
+          <div class="recurso-actions">
+            <a href="ansiedade.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
 
         <article class="mini-card recurso-card">
-          <div class="recurso-thumb" aria-hidden="true">🌿</div>
+          <img src="imagens/cansaco-emocional.jpg" alt="Cansaço emocional" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Cansaço emocional</h3>
-          <p>
-            Quando a mente não desliga e o corpo pede pausa.
-            <a href="exaustao-emocional.html" style="text-decoration:underline; color: var(--roxo); font-weight:600;">Ler conteúdo</a>
-          </p>
+          <p>Quando a mente não desliga e o corpo pede pausa.</p>
+          <div class="recurso-actions">
+            <a href="exaustao-emocional.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
 
         <article class="mini-card recurso-card">
-          <div class="recurso-thumb" aria-hidden="true">✨</div>
+          <img src="imagens/autoestima.jpg" alt="Autoestima" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Autoestima</h3>
-          <p>
-            Autocobrança, insegurança e valor pessoal: por onde começar.
-            <a href="autoestima.html" style="text-decoration:underline; color: var(--roxo); font-weight:600;">Ler conteúdo</a>
-          </p>
+          <p>Autocobrança, insegurança e valor pessoal: por onde começar.</p>
+          <div class="recurso-actions">
+            <a href="autoestima.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
 
         <article class="mini-card recurso-card">
-          <div class="recurso-thumb" aria-hidden="true">🤝</div>
+          <img src="imagens/relacoes-saudaveis-capa.jpg" alt="Relacionamentos" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Relacionamentos</h3>
-          <p>
-            Padrões, limites e comunicação: construindo vínculos mais saudáveis.
-            <a href="relacionamentos.html" style="text-decoration:underline; color: var(--roxo); font-weight:600;">Ler conteúdo</a>
-          </p>
+          <p>Padrões, limites e comunicação: construindo vínculos mais saudáveis.</p>
+          <div class="recurso-actions">
+            <a href="relacionamentos.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
-      </div>
+</div>
     </div>
   </section>
 <!-- CONTATO -->
