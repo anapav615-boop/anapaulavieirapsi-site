@@ -47,14 +47,13 @@
       padding: 18px;
       box-sizing: border-box;
     }
-    .card-section {
-      background: var(--card);
-      border: 1px solid var(--stroke);
-      border-left: 8px solid rgba(127,191,154,0.95);
-      border-radius: var(--radius);
-      padding: 26px 22px;
-      box-shadow: var(--shadow);
-      box-sizing: border-box;
+   .card-section {
+  background: rgba(255,255,255,0.94);
+  border: 2px solid #7fbf9a; /* verde contornando */
+  border-radius: 22px;
+  padding: 26px 22px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.06);
+}
     }
 
     .title {
@@ -379,16 +378,19 @@
         <article class="mini-card">
           <h3>Psicoterapia para Adolescentes</h3>
           <p>
-            Espaço seguro para adolescentes elaborarem emoções, conflitos e mudanças próprias dessa fase,
-            fortalecendo vínculos e autonomia.
+            Espaço seguro para adolescentes compreenderem emoções, 
+            conflitos internos e desafios relacionais, favorecendo
+            autonomia, identidade e desenvolvimento emocional saudável.
           </p>
-        </article>
 
         <article class="mini-card">
           <h3>Psicoterapia para Adultos</h3>
           <p>
-            Um espaço de escuta e elaboração emocional para lidar com ansiedade, cansaço emocional, autoestima
-            e desafios nos relacionamentos.
+            <p>
+            Um processo terapêutico para aprofundar o autoconhecimento,
+            elaborar experiências e construir novas formas de lidar com
+            ansiedade, cansaço emocional e padrões nos relacionamentos.
+           </p>
           </p>
         </article>
       </div>
@@ -450,17 +452,48 @@
   </section>
 
   <!-- RECURSOS -->
-  <section class="shell" aria-label="Recursos">
-    <div class="card-section">
-      <h2 class="title">Explore mais sobre o cuidado emocional</h2>
-      <div class="cards-recursos" aria-label="Recursos e artigos">
-        <!-- Mantive seus 8 cards exatamente como estavam -->
-        <article class="card animar">
-          <div class="tema-thumb">
-            <img src="imagens/sala-terapia-infantil-itapetininga.jpg" alt="Psicoterapia infantil em Itapetininga">
-          </div>
-    </div>
-  </section>
+  <div class="cards-recursos grid">
+
+  <article class="mini-card">
+    <img src="imagens/psicoterapia-infantil.jpg" alt="Psicoterapia infantil" style="width:100%;border-radius:12px;margin-bottom:10px;">
+    <h3>Psicoterapia Infantil</h3>
+    <p>
+      Espaço lúdico e acolhedor para que a criança possa expressar emoções,
+      elaborar vivências e desenvolver recursos emocionais com segurança.
+    </p>
+  </article>
+
+  <article class="mini-card">
+    <img src="imagens/psicoterapia-adolescentes.jpg" alt="Psicoterapia para adolescentes" style="width:100%;border-radius:12px;margin-bottom:10px;">
+    <h3>Psicoterapia para Adolescentes</h3>
+    <p>
+      Um espaço de escuta e construção emocional para adolescentes lidarem com
+      conflitos, identidade, ansiedade e mudanças dessa fase, fortalecendo
+      autonomia, vínculos e autoestima.
+    </p>
+  </article>
+
+  <article class="mini-card">
+    <img src="imagens/psicoterapia-adultos.jpg" alt="Psicoterapia para adultos" style="width:100%;border-radius:12px;margin-bottom:10px;">
+    <h3>Psicoterapia para Adultos</h3>
+    <p>
+      Acompanhamento terapêutico para compreender padrões emocionais,
+      elaborar experiências e desenvolver novas formas de lidar com ansiedade,
+      sobrecarga e desafios nos relacionamentos.
+    </p>
+  </article>
+
+  <article class="mini-card">
+    <img src="imagens/orientacao-parental.jpg" alt="Orientação parental" style="width:100%;border-radius:12px;margin-bottom:10px;">
+    <h3>Orientação Parental</h3>
+    <p>
+      Apoio a pais e responsáveis para fortalecer vínculos,
+      compreender comportamentos e construir estratégias educativas
+      com mais segurança emocional.
+    </p>
+  </article>
+
+</div>
 
   <!-- CONTATO -->
   <section class="shell" id="contato" aria-label="Contato">
