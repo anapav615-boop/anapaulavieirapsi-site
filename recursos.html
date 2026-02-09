@@ -7,94 +7,197 @@
   <title>Recursos — Ana Paula Ap. Vieira | Psicóloga Clínica</title>
 
   <meta name="description" content="Recursos e conteúdos psicoeducativos sobre psicoterapia infantil, adolescentes, adultos, orientação parental, ansiedade, depressão, autoestima, autoconhecimento e relações saudáveis. Textos e orientações para apoiar o bem-estar emocional.">
+  <meta name="robots" content="index, follow" />
 
   <link rel="icon" href="imagens/favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=6">
   <link rel="manifest" href="manifest.json">
 
   <link rel="preload" as="image" href="imagens/capa-recursos.jpg">
 
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/recursos.html">
 
+  <!-- Estilo local para padronizar com o INDEX (somente o necessário) -->
   <style>
-    body.page-recursos { background-color:#fefbf9; margin:0; font-family:"Poppins",sans-serif; }
-    .capa-recursos { text-align:center; margin:22px 0 10px; }
-    .capa-recursos img { width:100%; max-width:780px; height:auto; border-radius:12px; object-fit:cover; box-shadow:0 4px 16px rgba(0,0,0,0.08); }
-    .content-wrap { max-width:1200px; margin:0 auto 40px; padding:0 18px; }
-    .hero-recursos { text-align:center; padding:32px 0 10px; }
-    .hero-recursos h1 { margin:0 0 10px; color:#6b48a8; font-size:2rem; }
-    .hero-recursos p { max-width:800px; margin:0 auto; font-size:1rem; color:#555; line-height:1.6; }
-    .bloco-recursos { margin-top:32px; }
-    .bloco-recursos h2 { font-size:1.4rem; color:#6b48a8; margin:0 0 8px; }
-    .bloco-recursos p.bloco-subtitulo { margin:0 0 14px; font-size:0.96rem; color:#6c5a7a; }
-
-    .cards-recursos {
-      max-width:1200px;
-      margin:18px auto 10px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:24px;
-      justify-content:center;
-      align-items:stretch;
+    :root {
+      --roxo: #6b48a8;
+      --roxo-2: #7b55bd;
+      --verde: #7fbf9a;
+      --bg1: rgba(244,239,250,0.92);
+      --bg2: rgba(246,252,249,0.88);
+      --text: #403847;
+      --card: rgba(255,255,255,0.94);
+      --stroke: rgba(230,219,246,0.95);
+      --shadow: 0 14px 34px rgba(0,0,0,0.06);
+      --radius: 22px;
     }
 
-    .cards-recursos .card {
-      width:260px;
-      background:#ffffff;
-      border-radius:14px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.06);
-      overflow:hidden;
+    body{
+      font-family:"Poppins",sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 520px at 12% 0%, rgba(107,72,168,0.12) 0%, rgba(107,72,168,0.00) 62%),
+        radial-gradient(900px 520px at 88% 10%, rgba(127,191,154,0.18) 0%, rgba(127,191,154,0.00) 62%),
+        linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 55%, rgba(244,239,250,0.74) 100%);
+      margin:0;
+    }
+
+    .shell{
+      max-width:1200px;
+      margin:0 auto;
+      padding:18px;
+      box-sizing:border-box;
+    }
+
+    .card-section{
+      background: var(--card);
+      border: 3px solid rgba(127,191,154,0.95);
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+      position: relative;
+    }
+
+    .card-section::before{
+      content:"";
+      position:absolute;
+      inset: 10px;
+      border-radius: 16px;
+      border: 1px solid rgba(127,191,154,0.25);
+      pointer-events:none;
+    }
+
+    .title{
+      margin:0 0 12px;
+      text-align:center;
+      color: var(--roxo);
+      font-size: 1.55rem;
+      line-height: 1.25;
+    }
+
+    .lead{
+      text-align:center;
+      max-width: 920px;
+      margin:0 auto 12px;
+      line-height: 1.75;
+    }
+
+    /* GRID padrão (igual index) */
+    .grid{
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      justify-content:center;
+      align-items:stretch;
+      margin-top:14px;
+    }
+
+    /* Card padrão (igual index) */
+    .mini-card{
+      width:320px;
+      background:#fff;
+      border-radius:16px;
+      padding:18px 20px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.04);
+      box-sizing:border-box;
+      text-align:left;
       display:flex;
       flex-direction:column;
     }
 
-    .cards-recursos .tema-thumb { width:100%; height:170px; overflow:hidden; }
-    .cards-recursos .tema-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
-
-    /* Padronização de alturas internas */
-    .cards-recursos .card h3 {
-      color:#6b48a8;
-      padding:16px 18px 0;
-      margin:0;
-      font-size:1.05rem;
-      min-height:52px; /* mantém títulos com 1-2 linhas alinhados */
-      display:flex;
-      align-items:flex-start;
+    .mini-card h3{
+      margin:0 0 8px;
+      color: var(--roxo);
+      font-size: 1.05rem;
     }
 
-    .cards-recursos .card p {
-      padding:10px 18px 14px;
+    .mini-card p{
       margin:0;
-      font-size:0.95rem;
-      color:#555;
-      line-height:1.6;
-      flex:1;
-      min-height:92px; /* mantém os textos com altura semelhante */
+      line-height:1.7;
     }
 
-    .cards-recursos .btn-leia {
-      margin:0 18px 18px;
+    /* Recursos: imagem + botão alinhado */
+    .recurso-card{ display:flex; flex-direction:column; gap:10px; }
+    .recurso-card p{ margin:0; line-height:1.7; }
+    .recurso-card .recurso-actions{ margin-top:auto; }
+
+    .recurso-img{
+      width:100%;
+      height:170px;
+      object-fit:cover;
+      border-radius:12px;
+      display:block;
+      margin-bottom:2px;
+    }
+
+    .btn-mini{
       display:inline-block;
-      padding:8px 18px;
-      background:#7a56b2;
-      border-radius:20px;
-      color:#fff;
-      text-decoration:none;
-      font-size:0.92rem;
+      margin-top:12px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.95rem;
       text-align:center;
+      align-self:flex-start;
     }
-    .cards-recursos .btn-leia:hover { background:#5e3f8f; }
 
-    .animar { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
-    .animar.visivel { opacity:1; transform:translateY(0); }
-    .btn-recursos { background:#7a56b2; color:#fff; padding:10px 22px; border-radius:24px; text-decoration:none; font-size:0.95rem; }
+    .btn-mini.secondary{
+      background: linear-gradient(180deg, #f4effa 0%, #f2fbf6 100%);
+      color: var(--roxo);
+      border: 1px solid rgba(127,191,154,0.55);
+      box-shadow:none;
+    }
+
+    .btn-mini.secondary:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(107,72,168,0.10);
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width: 980px;
+      margin: 0 auto 6px;
+      line-height:1.75;
+      color: #6c5a7a;
+      font-size: 0.98rem;
+    }
+
+    .block-title{
+      text-align:center;
+      color: var(--roxo);
+      margin: 18px 0 8px;
+      font-size: 1.25rem;
+    }
+
+    /* Card de capa (imagem grande) */
+    .hero-media{
+      max-width: 980px;
+      margin: 0 auto 14px;
+      border-radius: 18px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+    .hero-media img{
+      width:100%;
+      height:auto;
+      display:block;
+      object-fit:cover;
+    }
+
+    @media (max-width:780px){
+      .mini-card{ width:100%; max-width:520px; }
+      .card-section{ padding: 22px 18px; }
+    }
   </style>
 </head>
 
-<body class="page-recursos">
+<body>
 <header class="cabecalho">
   <div class="logo-area" style="display:flex; align-items:center; gap:18px; padding:14px 18px;">
     <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" style="width:56px; height:56px;">
@@ -113,243 +216,295 @@
   </nav>
 </header>
 
-<section class="capa-recursos">
-  <img src="imagens/capa-recursos.jpg" alt="Consultório Psicologia Ana Paula" />
-</section>
-
 <main>
-  <div class="content-wrap">
-    <section class="hero-recursos">
-      <h1>Recursos e Conteúdos Psicológicos</h1>
-      <p>
-        Espaço dedicado a reflexões, orientações e materiais psicoeducativos sobre autoconhecimento,
-        saúde mental, infância, adolescência, vida adulta e família. Cada texto é elaborado com carinho para inspirar
-        sua jornada de bem-estar emocional.
-      </p>
-    </section>
 
-    <!-- BLOCO 1 -->
-    <section class="bloco-recursos">
-      <h2>Atendimento psicológico: crianças, adolescentes, adultos e família</h2>
-      <p class="bloco-subtitulo">
+  <!-- CABEÇALHO / INTRO -->
+  <section class="shell" aria-label="Recursos e conteúdos">
+    <div class="card-section">
+      <h2 class="title">Recursos e Conteúdos Psicológicos</h2>
+
+      <div class="hero-media">
+        <img src="imagens/capa-recursos.jpg" alt="Consultório Psicologia Ana Paula" onerror="this.onerror=null;this.style.display='none';">
+      </div>
+
+      <p class="lead">
+        Espaço dedicado a reflexões, orientações e materiais psicoeducativos sobre autoconhecimento,
+        saúde mental, infância, adolescência, vida adulta e família.
+        Cada texto é elaborado com carinho para apoiar sua jornada de bem-estar emocional.
+      </p>
+    </div>
+  </section>
+
+  <!-- BLOCO 1 -->
+  <section class="shell" aria-label="Atendimento psicológico">
+    <div class="card-section">
+      <h3 class="block-title">Atendimento psicológico: crianças, adolescentes, adultos e família</h3>
+      <p class="section-subtitle">
         Conteúdos sobre psicoterapia infantil, terapia para adolescentes, psicoterapia para adultos e orientação parental,
         voltados para quem busca entender melhor as necessidades emocionais dos filhos, da família e de si mesmo(a).
       </p>
 
-      <div class="cards-recursos">
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/sobre-o-atendimento-psicologico-acolhimento.jpg" alt="Sobre o atendimento psicológico"></div>
+      <div class="grid">
+        <article class="mini-card recurso-card">
+          <img src="imagens/sobre-o-atendimento-psicologico-acolhimento.jpg" alt="Sobre o atendimento psicológico" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Sobre o Atendimento</h3>
           <p>Um espaço de acolhimento, escuta e cuidado. Entenda como funciona a psicoterapia e como pode te ajudar.</p>
-          <a href="sobre-o-atendimento.html" class="btn-leia">Ler texto</a>
+          <div class="recurso-actions">
+            <a href="sobre-o-atendimento.html" class="btn-mini secondary">Ler texto</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/sala-terapia-infantil-itapetininga.jpg" alt="Psicoterapia infantil em Itapetininga"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/sala-terapia-infantil-itapetininga.jpg" alt="Psicoterapia infantil em Itapetininga" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Psicoterapia Infantil</h3>
           <p>Entenda como a psicoterapia infantil oferece um espaço seguro para expressão emocional.</p>
-          <a href="psicoterapia-infantil.html" class="btn-leia">Saiba mais</a>
+          <div class="recurso-actions">
+            <a href="psicoterapia-infantil.html" class="btn-mini secondary">Saiba mais</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/psicoterapia-adolescentes.jpg" alt="Psicoterapia para adolescentes"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/psicoterapia-adolescentes.jpg" alt="Psicoterapia para adolescentes" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Psicoterapia para Adolescentes</h3>
           <p>Um espaço de escuta e reflexão na transição para a vida adulta.</p>
-          <a href="psicoterapia-adolescentes.html" class="btn-leia">Saiba mais</a>
+          <div class="recurso-actions">
+            <a href="psicoterapia-adolescentes.html" class="btn-mini secondary">Saiba mais</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/psicoterapia-adultos-itapetininga.jpg" alt="Psicoterapia para adultos"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/psicoterapia-adultos-itapetininga.jpg" alt="Psicoterapia para adultos" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Psicoterapia para Adultos</h3>
           <p>Um espaço de escuta, autoconhecimento e cuidado emocional ao longo da vida adulta.</p>
-          <a href="psicoterapia-adultos.html" class="btn-leia">Saiba mais</a>
+          <div class="recurso-actions">
+            <a href="psicoterapia-adultos.html" class="btn-mini secondary">Saiba mais</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/orientacao-parental-itapetininga.jpg" alt="Orientação parental"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/orientacao-parental-itapetininga.jpg" alt="Orientação parental" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Orientação Parental</h3>
           <p>Apoio para pais e responsáveis que desejam fortalecer vínculos e lidar com desafios.</p>
-          <a href="orientacao-parental.html" class="btn-leia">Saiba mais</a>
+          <div class="recurso-actions">
+            <a href="orientacao-parental.html" class="btn-mini secondary">Saiba mais</a>
+          </div>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- BLOCO 2 – PSICOEDUCAÇÃO -->
-    <section class="bloco-recursos">
-      <h2>Psicoeducação em saúde mental</h2>
-      <p class="bloco-subtitulo">Textos psicoeducativos sobre ansiedade, depressão, autoestima, autoconhecimento e relações saudáveis.</p>
+  <!-- BLOCO 2 -->
+  <section class="shell" aria-label="Psicoeducação em saúde mental">
+    <div class="card-section">
+      <h3 class="block-title">Psicoeducação em saúde mental</h3>
+      <p class="section-subtitle">
+        Textos psicoeducativos sobre ansiedade, depressão, autoestima, autoconhecimento e relações saudáveis.
+      </p>
 
-      <div class="cards-recursos">
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/ansiedade-mulheres.jpg" alt="Ansiedade em mulheres"></div>
+      <div class="grid">
+        <article class="mini-card recurso-card">
+          <img src="imagens/ansiedade-mulheres.jpg" alt="Ansiedade em mulheres" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Ansiedade em mulheres</h3>
           <p>Quando o corpo fala o que a mente tenta silenciar. Sinais, causas e caminhos de cuidado emocional.</p>
-          <a href="ansiedade-em-mulheres.html" class="btn-leia">Ler artigo</a>
+          <div class="recurso-actions">
+            <a href="ansiedade-em-mulheres.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/ansiedade-acolhimento.jpg" alt="Ansiedade e acolhimento emocional"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/ansiedade-acolhimento.jpg" alt="Ansiedade e acolhimento emocional" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Ansiedade e acolhimento emocional</h3>
           <p>Entenda sinais, sintomas e como a psicoterapia pode ajudar.</p>
-          <a href="ansiedade-2.html" class="btn-leia">Ler texto</a>
+          <div class="recurso-actions">
+            <a href="ansiedade-2.html" class="btn-mini secondary">Ler texto</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/depressao-acolhimento.jpg" alt="Depressão e acolhimento emocional"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/depressao-acolhimento.jpg" alt="Depressão e acolhimento emocional" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Depressão e acolhimento emocional</h3>
           <p>Compreenda sinais e impactos da depressão e caminhos de cuidado.</p>
-          <a href="depressao-2.html" class="btn-leia">Ler texto</a>
+          <div class="recurso-actions">
+            <a href="depressao-2.html" class="btn-mini secondary">Ler texto</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/exaustao-emocional-acolhimento.jpg" alt="Exaustão emocional"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/exaustao-emocional-acolhimento.jpg" alt="Exaustão emocional" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Exaustão emocional e cansaço</h3>
           <p>Quando o corpo continua, mas a mente já ultrapassou os limites.</p>
-          <a href="exaustao-emocional.html" class="btn-leia">Ler texto</a>
+          <div class="recurso-actions">
+            <a href="exaustao-emocional.html" class="btn-mini secondary">Ler texto</a>
+          </div>
         </article>
 
-        <!-- NOVO CARD: CANSAÇO EMOCIONAL -->
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/cansaco-emocional.jpg" alt="Cansaço emocional"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/cansaco-emocional.jpg" alt="Cansaço emocional" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Cansaço emocional</h3>
           <p>Quando o descanso não dá conta, e as emoções pedem espaço para cuidado e reconstrução interna.</p>
-          <a href="cansaco-emocional.html" class="btn-leia">Ler texto</a>
+          <div class="recurso-actions">
+            <a href="cansaco-emocional.html" class="btn-mini secondary">Ler texto</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/esgotamento-trabalho.jpg" alt="Esgotamento no trabalho"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/esgotamento-trabalho.jpg" alt="Esgotamento no trabalho" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Esgotamento no trabalho</h3>
           <p>Sobrecarga e pressão constante no ambiente profissional.</p>
-          <a href="esgotamento-trabalho.html" class="btn-leia">Ler texto</a>
+          <div class="recurso-actions">
+            <a href="esgotamento-trabalho.html" class="btn-mini secondary">Ler texto</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/autocuidado-emocional-natureza-2.jpg" alt="Autocuidado emocional"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/autocuidado-emocional-natureza-2.jpg" alt="Autocuidado emocional" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Autocuidado emocional</h3>
           <p>Quando se cuidar deixa de ser luxo e vira necessidade.</p>
-          <a href="autocuidado-emocional-2.html" class="btn-leia">Ler texto</a>
+          <div class="recurso-actions">
+            <a href="autocuidado-emocional-2.html" class="btn-mini secondary">Ler texto</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/autoestima.jpg" alt="Autoestima"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/autoestima.jpg" alt="Autoestima" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Autoestima e Autoconhecimento</h3>
           <p>Fortalecer a autoestima envolve autoconhecimento e aceitação.</p>
-          <a href="autoestima.html" class="btn-leia">Saiba mais</a>
+          <div class="recurso-actions">
+            <a href="autoestima.html" class="btn-mini secondary">Saiba mais</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/autoconhecimento.jpg" alt="Autoconhecimento"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/autoconhecimento.jpg" alt="Autoconhecimento" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Processo de Autoconhecimento</h3>
           <p>Uma jornada que apoia escolhas mais conscientes.</p>
-          <a href="autoconhecimento.html" class="btn-leia">Saiba mais</a>
+          <div class="recurso-actions">
+            <a href="autoconhecimento.html" class="btn-mini secondary">Saiba mais</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/relacoes-saudaveis-card.jpg" alt="Relações saudáveis"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/relacoes-saudaveis-card.jpg" alt="Relações saudáveis" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Relações Saudáveis</h3>
           <p>Vínculos emocionais que fortalecem a autoestima.</p>
-          <a href="artigo-relacoes-saudaveis-vinculos-emocionais.html" class="btn-leia">Ler artigo</a>
+          <div class="recurso-actions">
+            <a href="artigo-relacoes-saudaveis-vinculos-emocionais.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/fe-e-psicologia.jpg" alt="Fé e psicologia"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/fe-e-psicologia.jpg" alt="Fé e psicologia" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Fé e psicologia</h3>
           <p>A fé como apoio no cuidado emocional.</p>
-          <a href="fe-e-psicologia.html" class="btn-leia">Ler artigo</a>
+          <div class="recurso-actions">
+            <a href="fe-e-psicologia.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/forca-interior.jpg" alt="Força interior"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/forca-interior.jpg" alt="Força interior" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Força interior</h3>
           <p>Aprender a caminhar com a dor.</p>
-          <a href="forca-interior.html" class="btn-leia">Ler artigo</a>
+          <div class="recurso-actions">
+            <a href="forca-interior.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- BLOCO 3 – INFÂNCIA E ADOLESCÊNCIA -->
-    <section class="bloco-recursos">
-      <h2>Artigos psicoeducativos: infância e adolescência</h2>
-      <p class="bloco-subtitulo">Textos voltados para crianças, adolescentes e famílias.</p>
+  <!-- BLOCO 3 -->
+  <section class="shell" aria-label="Infância e adolescência">
+    <div class="card-section">
+      <h3 class="block-title">Artigos psicoeducativos: infância e adolescência</h3>
+      <p class="section-subtitle">Textos voltados para crianças, adolescentes e famílias.</p>
 
-      <div class="cards-recursos">
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/psicoterapia-infantil-como-ajuda.jpg" alt="Psicoterapia infantil"></div>
+      <div class="grid">
+        <article class="mini-card recurso-card">
+          <img src="imagens/psicoterapia-infantil-como-ajuda.jpg" alt="Psicoterapia infantil" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Psicoterapia Infantil — Como a Terapia Ajuda</h3>
           <p>Como a psicoterapia infantil apoia o desenvolvimento emocional.</p>
-          <a href="psicoterapia-infantil-como-ajuda.html" class="btn-leia">Ler artigo</a>
+          <div class="recurso-actions">
+            <a href="psicoterapia-infantil-como-ajuda.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/psicoterapia-infantil-artigo1.jpg" alt="Quando procurar ajuda"></div>
-          <h3>Psicoterapia Infantil – Quando procurar ajuda</h3>
+        <article class="mini-card recurso-card">
+          <img src="imagens/psicoterapia-infantil-artigo1.jpg" alt="Quando procurar ajuda" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
+          <h3>Psicoterapia Infantil — Quando procurar ajuda</h3>
           <p>Quando buscar apoio psicológico para a criança.</p>
-          <a href="artigo-psicoterapia-infantil.html" class="btn-leia">Ler artigo</a>
+          <div class="recurso-actions">
+            <a href="artigo-psicoterapia-infantil.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
 
-        <article class="card animar">
-          <div class="tema-thumb"><img src="imagens/psicoterapia-adolescentes-ilustracao.png" alt="Psicoterapia adolescentes"></div>
+        <article class="mini-card recurso-card">
+          <img src="imagens/psicoterapia-adolescentes-ilustracao.png" alt="Psicoterapia adolescentes" class="recurso-img" onerror="this.onerror=null;this.src='imagens/consultorio.jpg';">
           <h3>Psicoterapia para Adolescentes</h3>
           <p>Apoio emocional na fase da adolescência.</p>
-          <a href="psicoterapia-adolescentes-como-ajuda.html" class="btn-leia">Ler artigo</a>
+          <div class="recurso-actions">
+            <a href="psicoterapia-adolescentes-como-ajuda.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
         </article>
       </div>
-    </section>
 
-    <div style="text-align:center; margin:18px 0 40px;">
-      <a href="index.html" class="btn-recursos">Voltar ao início</a>
+      <div style="text-align:center; margin-top:18px;">
+        <a href="index.html" class="btn-mini secondary" style="align-self:center;">Voltar ao início</a>
+      </div>
     </div>
-  </div>
+  </section>
+
 </main>
 
 <footer class="rodape" style="background:#f4effa;padding:26px 18px;text-align:center;margin-top:18px;">
-    <div style="max-width:1000px;margin:0 auto;">
-      <p style="margin:6px 0;">
-        <strong>Endereço:</strong>
-        <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP"
-           target="_blank"
-           style="text-decoration:underline;">
-          R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP
-        </a>
-      </p>
+  <div style="max-width:1000px;margin:0 auto;">
+    <p style="margin:6px 0;">
+      <strong>Endereço:</strong>
+      <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP"
+         target="_blank"
+         style="text-decoration:underline;">
+        R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP
+      </a>
+    </p>
 
-      <p class="rodape-privacidade">
-        Este site utiliza práticas básicas de navegação. Saiba mais em nossa
-        <a href="privacidade.html">Política de Privacidade</a>.
-      </p>
+    <p class="rodape-privacidade">
+      Este site utiliza práticas básicas de navegação. Saiba mais em nossa
+      <a href="privacidade.html">Política de Privacidade</a>.
+    </p>
 
-      <p style="margin:6px 0;">
-        <strong>Telefone:</strong>
-        <a href="https://wa.me/5515996760791"
-           target="_blank"
-           style="text-decoration:underline;">
-          (15) 99676-0791
-        </a>
-      </p>
+    <p style="margin:6px 0;">
+      <strong>Telefone:</strong>
+      <a href="https://wa.me/5515996760791"
+         target="_blank"
+         style="text-decoration:underline;">
+        (15) 99676-0791
+      </a>
+    </p>
 
-      <p style="margin:6px 0;">
-        <strong>E-mail:</strong>
-        <a href="mailto:contato@anapaulaapvieirapsi.com.br"
-           style="text-decoration:underline;">
-          contato@anapaulaapvieirapsi.com.br
-        </a>
-      </p>
+    <p style="margin:6px 0;">
+      <strong>E-mail:</strong>
+      <a href="mailto:contato@anapaulaapvieirapsi.com.br"
+         style="text-decoration:underline;">
+        contato@anapaulaapvieirapsi.com.br
+      </a>
+    </p>
 
-      <p style="margin:6px 0;">© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
+    <p style="margin:6px 0;">© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
 
-      <div style="margin-top:8px;">
-        <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
-        <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" style="text-decoration:underline;">Facebook</a> |
-        <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" style="text-decoration:underline;">LinkedIn</a>
-      </div>
+    <div style="margin-top:8px;">
+      <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
+      <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" style="text-decoration:underline;">Facebook</a> |
+      <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" style="text-decoration:underline;">LinkedIn</a>
     </div>
-  </footer>
+  </div>
+</footer>
 
-<button id='btn-topo' class='btn-topo' title='Voltar ao início'>↑</button>
+<button id="btn-topo" class="btn-topo" title="Voltar ao início">↑</button>
 
 <a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
   <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
 </a>
 
 <script src="app.js"></script>
-<script>
+</body>
+</html>
