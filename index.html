@@ -13,24 +13,23 @@
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
 
-  <!-- SEO: canonical -->
   <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ana Paula Ap. Vieira | Psicóloga Clínica" />
   <meta property="og:description" content="Psicoterapia presencial em Itapetininga (SP) e online para todo o Brasil. Um espaço seguro de escuta e acolhimento." />
   <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/" />
-  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/hero-acolhimento.jpg" />
+  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/consultorio.jpg" />
   <meta property="og:locale" content="pt_BR" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ana Paula Ap. Vieira | Psicóloga Clínica" />
   <meta name="twitter:description" content="Psicoterapia presencial em Itapetininga (SP) e online para todo o Brasil. Um espaço seguro de escuta e acolhimento." />
-  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/hero-acolhimento.jpg" />
+  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/consultorio.jpg" />
 
-  <!-- JSON-LD LocalBusiness + Person -->
+  <!-- JSON-LD LocalBusiness + Person (mantido) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,13 +59,7 @@
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
-            ],
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
             "opens": "08:00",
             "closes": "20:00"
           }
@@ -101,8 +94,8 @@
   }
   </script>
 
-  <!-- Preload da imagem principal -->
-  <link rel="preload" as="image" href="imagens/hero-acolhimento.jpg">
+  <!-- Preload (Caminho A) -->
+  <link rel="preload" as="image" href="imagens/consultorio.jpg">
 
   <!-- Fonte -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style">
@@ -122,33 +115,34 @@
     }
     main { flex:1; }
 
-    /* HERO novo */
-    .hero-home {
+    /* HERO (imagem + mensagem + CTA) */
+    .hero-home{
       max-width:1200px;
       margin:0 auto;
       padding:18px;
     }
-    .hero-wrap {
+    .hero-wrap{
       display:flex;
       gap:22px;
       align-items:stretch;
       flex-wrap:wrap;
     }
-    .hero-media {
+    .hero-media{
       flex:1.15;
       min-width:320px;
       border-radius:18px;
       overflow:hidden;
       box-shadow:0 12px 28px rgba(0,0,0,0.08);
+      background:#fff;
     }
-    .hero-media img {
+    .hero-media img{
       width:100%;
       height:100%;
       max-height:420px;
       object-fit:cover;
       display:block;
     }
-    .hero-box {
+    .hero-box{
       flex:1;
       min-width:300px;
       background:#fff;
@@ -160,24 +154,22 @@
       justify-content:center;
       gap:12px;
     }
-    .hero-box h1 {
+    .hero-box h2{
       margin:0;
       color:#6b48a8;
       font-size:1.55rem;
       line-height:1.25;
+      text-align:left;
     }
-    .hero-box p {
-      margin:0;
-      line-height:1.7;
-    }
-    .cta-row {
+    .hero-box p{ margin:0; line-height:1.7; }
+    .cta-row{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
       margin-top:6px;
       align-items:center;
     }
-    .btn-cta {
+    .btn-cta{
       display:inline-block;
       padding:10px 18px;
       border-radius:28px;
@@ -187,39 +179,37 @@
       color:#fff;
       box-shadow:0 10px 22px rgba(107,72,168,0.18);
     }
-    .btn-cta:hover { opacity:0.95; }
-    .btn-cta.sec {
+    .btn-cta:hover{ opacity:0.95; }
+    .btn-cta.sec{
       background:#f4effa;
       color:#6b48a8;
       box-shadow:none;
       border:1px solid #d9ccef;
     }
 
-    /* Seções (reaproveitando sua estética) */
-    .sec {
+    /* Seções */
+    .sec{
       max-width:1200px;
       margin:0 auto;
       padding:18px;
     }
-    .sec h2 {
+    .sec h2{
       text-align:center;
       margin:0 0 12px;
       color:#6b48a8;
       font-size:1.4rem;
     }
-    .sec p {
-      line-height:1.7;
-    }
+    .sec p{ line-height:1.7; }
 
-    /* Bloco “Quem sou” */
-    .intro-grid {
+    /* Apresentação */
+    .intro-grid{
       display:flex;
       gap:22px;
       flex-wrap:wrap;
       align-items:center;
       justify-content:center;
     }
-    .intro-card {
+    .intro-card{
       flex:1;
       min-width:300px;
       background:#fff;
@@ -227,75 +217,98 @@
       padding:20px 22px;
       box-shadow:0 10px 26px rgba(0,0,0,0.06);
     }
-    .intro-photo {
+    .intro-photo{
       width:260px;
       height:260px;
       border-radius:50%;
       object-fit:cover;
       box-shadow:0 6px 18px rgba(0,0,0,0.12);
     }
-    .intro-photo-wrap {
+    .intro-photo-wrap{
       flex:0.7;
       min-width:280px;
       display:flex;
       justify-content:center;
     }
 
-    /* “Talvez você esteja vivendo” */
-    .chips {
+    /* Chips - ANCORADO (não fica “solto”) */
+    .chips-box{
+      max-width:1050px;
+      margin:0 auto;
+      background:#fff;
+      border:1px solid #eadff8;
+      border-radius:18px;
+      padding:18px 16px;
+      box-shadow:0 10px 26px rgba(0,0,0,0.05);
+    }
+    .chips{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
       justify-content:center;
       margin-top:10px;
     }
-    .chip {
-      background:#fff;
+    .chip-link{
+      text-decoration:none;
+      color:inherit;
+      display:inline-flex;
+    }
+    .chip{
+      background:#fbf8ff;
       border:1px solid #e6dbf6;
       border-radius:999px;
-      padding:8px 12px;
-      box-shadow:0 6px 16px rgba(0,0,0,0.04);
+      padding:10px 14px;
       font-size:0.95rem;
+      transition:transform 0.08s ease, box-shadow 0.08s ease;
     }
-    .chip strong { color:#6b48a8; }
+    .chip strong{ color:#6b48a8; }
+    .chip:hover{
+      transform:translateY(-1px);
+      box-shadow:0 8px 18px rgba(0,0,0,0.06);
+    }
+    .chips-text{
+      text-align:center;
+      max-width:820px;
+      margin:12px auto 0;
+    }
 
-    /* Serviços e grids (mantendo padrão do seu index) */
-    .servicos-home {
+    /* Serviços (mantido do seu padrão) */
+    .servicos-home{
       max-width:1200px;
       margin:0 auto;
       padding:18px;
     }
-    .servicos-home h2 {
+    .servicos-home h2{
       text-align:center;
       margin-bottom:16px;
       color:#6b48a8;
     }
-    .servicos-grid {
+    .servicos-grid{
       display:flex;
       flex-wrap:wrap;
       gap:20px;
       justify-content:center;
     }
-    .servico-card {
+    .servico-card{
       background:#fff;
       border-radius:16px;
       padding:18px 20px;
       width:260px;
       box-shadow:0 10px 24px rgba(0,0,0,0.04);
     }
-    .servico-card h3 {
+    .servico-card h3{
       margin-top:0;
       color:#6b48a8;
       font-size:1.05rem;
     }
-    .servico-card p {
+    .servico-card p{
       margin-bottom:8px;
       line-height:1.6;
       font-size:0.96rem;
     }
 
-    /* Cards de recursos (iguais aos seus) */
-    .cards-recursos {
+    /* Cards recursos (igual ao seu) */
+    .cards-recursos{
       max-width:1200px;
       margin:0 auto;
       display:flex;
@@ -304,7 +317,7 @@
       justify-content:center;
       padding:12px 18px 32px;
     }
-    .cards-recursos .card {
+    .cards-recursos .card{
       width:260px;
       background:#fff;
       border-radius:16px;
@@ -313,36 +326,36 @@
       display:flex;
       flex-direction:column;
     }
-    .cards-recursos .tema-thumb {
+    .cards-recursos .tema-thumb{
       width:100%;
       height:160px;
       overflow:hidden;
     }
-    .cards-recursos .tema-thumb img {
+    .cards-recursos .tema-thumb img{
       width:100%;
       height:100%;
       object-fit:cover;
     }
-    .cards-recursos .card h3 {
+    .cards-recursos .card h3{
       margin:12px 18px 6px;
       color:#6b48a8;
       font-size:1.02rem;
     }
-    .cards-recursos .card p {
+    .cards-recursos .card p{
       margin:0 18px 14px;
       font-size:0.95rem;
       line-height:1.6;
     }
 
-    /* Formulário (igual ao seu) */
-    .form-contato label {
+    /* Form */
+    .form-contato label{
       display:block;
       font-weight:500;
       margin-bottom:4px;
       color:#5a4768;
     }
     .form-contato input,
-    .form-contato textarea {
+    .form-contato textarea{
       width:100%;
       padding:10px 12px;
       border-radius:10px;
@@ -352,24 +365,24 @@
       margin-bottom:12px;
       box-sizing:border-box;
     }
-    .form-contato textarea {
+    .form-contato textarea{
       resize:vertical;
       min-height:120px;
     }
-    .form-contato .btn-enviar {
+    .form-contato .btn-enviar{
       padding:10px 18px;
       border-radius:28px;
       border:0;
       cursor:pointer;
     }
 
-    @media (max-width: 780px) {
-      .hero-box h1 { font-size:1.35rem; }
-      .hero-media img { max-height:360px; }
+    @media (max-width: 780px){
+      .hero-box h2{ font-size:1.35rem; }
+      .hero-media img{ max-height:360px; }
     }
-    @media (max-width: 600px) {
-      .hero-home { padding:14px; }
-      .intro-photo { width:220px; height:220px; }
+    @media (max-width: 600px){
+      .intro-photo{ width:220px; height:220px; }
+      .hero-home{ padding:14px; }
     }
   </style>
 </head>
@@ -394,22 +407,21 @@
     </nav>
   </header>
 
-  <!-- ================== MAIN (NOVO) ================== -->
+  <!-- ================== MAIN ================== -->
   <main>
 
-    <!-- HERO novo (imagem + mensagem + CTA) -->
+    <!-- HERO -->
     <section class="hero-home" aria-label="Abertura">
       <div class="hero-wrap">
         <div class="hero-media">
           <picture>
-  <source srcset="imagens/consultorio-mobile.jpg" media="(max-width: 768px)">
-  <img src="imagens/consultorio.jpg" alt="Ambiente acolhedor para psicoterapia">
-</picture>
-
+            <source srcset="imagens/consultorio-mobile.jpg" media="(max-width: 768px)">
+            <img src="imagens/consultorio.jpg" alt="Ambiente acolhedor para psicoterapia">
+          </picture>
         </div>
 
         <div class="hero-box">
-          <h1>Quando o cansaço emocional pesa, você não precisa lidar com isso sozinha.</h1>
+          <h2>Quando o cansaço emocional pesa, você não precisa lidar com isso sozinha.</h2>
           <p>
             Ansiedade, exaustão, conflitos ou fases difíceis podem tornar o dia a dia pesado.
             A psicoterapia é um espaço seguro de escuta e acolhimento para compreender o que você sente
@@ -428,7 +440,7 @@
       </div>
     </section>
 
-    <!-- Quem sou + acolhimento -->
+    <!-- APRESENTAÇÃO -->
     <section class="sec" aria-label="Apresentação">
       <h2>Um espaço de escuta, cuidado e respeito pela sua história</h2>
 
@@ -459,26 +471,28 @@
       </div>
     </section>
 
-    <!-- Identificação emocional -->
+    <!-- IDENTIFICAÇÃO (CHIPS CLICÁVEIS) -->
     <section class="sec" aria-label="Identificação">
       <h2>Talvez você esteja vivendo…</h2>
 
-      <div class="chips">
-        <span class="chip"><strong>Ansiedade</strong> que não desacelera</span>
-        <span class="chip"><strong>Cansaço emocional</strong> constante</span>
-        <span class="chip">Sobrecarga mental</span>
-        <span class="chip">Dificuldades nos relacionamentos</span>
-        <span class="chip">Insegurança e autocobrança</span>
-        <span class="chip">Fases de transição e mudanças</span>
-      </div>
+      <div class="chips-box">
+        <div class="chips" aria-label="Temas de cuidado emocional">
+          <a class="chip-link" href="ansiedade.html" title="Ler sobre ansiedade"><span class="chip"><strong>Ansiedade</strong> que não desacelera</span></a>
+          <a class="chip-link" href="exaustao-emocional.html" title="Ler sobre exaustão emocional"><span class="chip"><strong>Cansaço emocional</strong> constante</span></a>
+          <a class="chip-link" href="autoconhecimento.html" title="Ler sobre autoconhecimento"><span class="chip">Sobrecarga mental</span></a>
+          <a class="chip-link" href="relacionamentos.html" title="Ler sobre relacionamentos"><span class="chip">Dificuldades nos relacionamentos</span></a>
+          <a class="chip-link" href="autoestima.html" title="Ler sobre autoestima"><span class="chip">Insegurança e autocobrança</span></a>
+          <a class="chip-link" href="autoconhecimento.html" title="Ler sobre autoconhecimento"><span class="chip">Fases de transição e mudanças</span></a>
+        </div>
 
-      <p style="text-align:center; max-width:900px; margin:14px auto 0;">
-        A terapia pode ser um suporte importante para compreender essas experiências,
-        fortalecer recursos internos e construir formas mais saudáveis de se relacionar consigo e com a vida.
-      </p>
+        <p class="chips-text">
+          A terapia pode ser um suporte importante para compreender essas experiências,
+          fortalecer recursos internos e construir formas mais saudáveis de se relacionar consigo e com a vida.
+        </p>
+      </div>
     </section>
 
-    <!-- Serviços (mantém estrutura, com texto de introdução melhor) -->
+    <!-- SERVIÇOS -->
     <section class="servicos-home" aria-label="Serviços">
       <h2>Como posso te ajudar</h2>
       <p style="text-align:center; max-width:880px; margin:0 auto 16px;">
@@ -494,7 +508,6 @@
             de novos modos de lidar com a própria história.
           </p>
           <p>Um espaço para falar de si, reconhecer limites, desejos e possibilidades.</p>
-          <p><a href="servicos.html" class="btn-leia">Ver serviços</a></p>
         </article>
 
         <article class="servico-card">
@@ -516,7 +529,7 @@
       </div>
     </section>
 
-    <!-- Como funciona -->
+    <!-- COMO FUNCIONA -->
     <section class="servicos-home" aria-label="Como funciona">
       <h2>Como funciona a terapia</h2>
 
@@ -530,26 +543,25 @@
         </article>
 
         <article class="servico-card">
-          <h3>Primeiro contato</h3>
+          <h3>Valores</h3>
           <p>
-            No primeiro contato, você pode tirar dúvidas sobre a forma de atendimento,
-            valores e horários disponíveis, sem compromisso.
+            Os valores das sessões são combinados diretamente com cada pessoa, considerando sua realidade e possibilidades.
+            Entre em contato para saber mais.
           </p>
-          <p><a href="#contato" class="btn-leia">Quero conversar</a></p>
         </article>
 
         <article class="servico-card">
-          <h3>Um cuidado ético</h3>
+          <h3>Primeiro contato</h3>
           <p>
-            Atendimento fundamentado na ética da psicologia, com sigilo,
-            respeito e compromisso com o seu bem-estar emocional.
+            No primeiro contato, você pode tirar dúvidas sobre a forma de atendimento, valores e horários disponíveis,
+            sem compromisso.
           </p>
-          <p><a href="faq.html" class="btn-leia">Dúvidas frequentes</a></p>
+          <p><a href="#contato" class="btn-leia">Quero conversar</a></p>
         </article>
       </div>
     </section>
 
-    <!-- Depoimentos (chamada mantida, com leve ajuste de texto) -->
+    <!-- DEPOIMENTOS -->
     <section class="servicos-home" aria-label="Depoimentos">
       <h2>O que as pessoas dizem sobre a experiência em terapia</h2>
       <p style="text-align:center; max-width:820px; margin:0 auto 10px;">
@@ -561,14 +573,14 @@
       </p>
     </section>
 
-    <!-- Recursos (mantido) -->
+    <!-- RECURSOS -->
     <section style="padding-top:8px;" aria-label="Recursos">
       <div class="recursos-titulo" style="text-align:center; font-size:1.4rem; color:#6b48a8; margin-bottom:10px;">
         Explore mais sobre o cuidado emocional
       </div>
 
       <div class="cards-recursos" aria-label="Recursos e artigos">
-
+        <!-- Mantive seus 8 cards exatamente como estavam -->
         <article class="card animar">
           <div class="tema-thumb">
             <img src="imagens/sala-terapia-infantil-itapetininga.jpg" alt="Psicoterapia infantil em Itapetininga">
@@ -640,11 +652,10 @@
           <p>O autoconhecimento é uma jornada contínua, que apoia a construção de novas formas de se relacionar consigo e com o mundo.</p>
           <a href="autoconhecimento.html" class="btn-leia">Saiba mais</a>
         </article>
-
       </div>
     </section>
 
-    <!-- CONTATO / FORMULÁRIO (mantido, com título mais acolhedor) -->
+    <!-- CONTATO -->
     <section class="servicos-home" id="contato" aria-label="Contato">
       <h2>Você não precisa enfrentar isso sozinha</h2>
       <p style="max-width:760px; margin:0 auto 16px; text-align:center;">
@@ -729,7 +740,7 @@
     </div>
   </footer>
 
-  <!-- BOTÕES ÚTEIS (mantido) -->
+  <!-- BOTÕES ÚTEIS -->
   <button id="btn-topo" class="btn-topo" title="Voltar ao início">↑</button>
   <a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
     <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
@@ -750,7 +761,7 @@
         const telefone = document.getElementById("telefone").value.trim();
         const mensagem = document.getElementById("mensagem").value.trim();
 
-        const numeroWhatsApp = "5515996760791"; // (15) 99676-0791
+        const numeroWhatsApp = "5515996760791";
 
         const texto =
           `Olá, Ana Paula!%0A%0A` +
@@ -763,12 +774,9 @@
         const url = `https://wa.me/${numeroWhatsApp}?text=${texto}`;
 
         window.open(url, "_blank", "noopener,noreferrer");
-
-        // Leva para a página de agradecimento (sem erro 405)
         window.location.href = "obrigado.html";
       });
     })();
   </script>
-
 </body>
 </html>
