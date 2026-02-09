@@ -10,7 +10,7 @@
   <meta name="robots" content="index, follow">
 
   <link rel="icon" type="image/png" href="imagens/favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
   <link rel="manifest" href="manifest.json">
 
   <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/">
@@ -114,6 +114,17 @@
       overflow: visible !important;
     }
     main { flex:1; }
+
+    :root{
+      --purple:#6b48a8;
+      --green:#3FAE8C;
+      --bg:#f7f3fb;
+      --card:#ffffff;
+      --border:rgba(107,72,168,0.16);
+      --border2:rgba(63,174,140,0.22);
+      --shadow:0 12px 30px rgba(0,0,0,0.06);
+    }
+
 
     /* HERO (imagem + mensagem + CTA) */
     .hero-home{
@@ -236,7 +247,7 @@
       max-width:1050px;
       margin:0 auto;
       background:#fff;
-      border:1px solid #eadff8;
+      border:1px solid rgba(63,174,140,0.20);
       border-radius:18px;
       padding:18px 16px;
       box-shadow:0 10px 26px rgba(0,0,0,0.05);
@@ -254,7 +265,7 @@
       display:inline-flex;
     }
     .chip{
-      background:#fbf8ff;
+      background:rgba(251,248,255,0.92);
       border:1px solid #e6dbf6;
       border-radius:999px;
       padding:10px 14px;
@@ -480,7 +491,7 @@
           <a class="chip-link" href="ansiedade.html" title="Ler sobre ansiedade"><span class="chip"><strong>Ansiedade</strong> que não desacelera</span></a>
           <a class="chip-link" href="exaustao-emocional.html" title="Ler sobre exaustão emocional"><span class="chip"><strong>Cansaço emocional</strong> constante</span></a>
           <a class="chip-link" href="autoconhecimento.html" title="Ler sobre autoconhecimento"><span class="chip">Sobrecarga mental</span></a>
-          <a class="chip-link" href="relacionamentos.html" title="Ler sobre relacionamentos"><span class="chip">Dificuldades nos relacionamentos</span></a>
+          <a class="chip-link" href="servicos.html" title="Ver serviços (relacionamentos)"><span class="chip">Dificuldades nos relacionamentos</span></a>
           <a class="chip-link" href="autoestima.html" title="Ler sobre autoestima"><span class="chip">Insegurança e autocobrança</span></a>
           <a class="chip-link" href="autoconhecimento.html" title="Ler sobre autoconhecimento"><span class="chip">Fases de transição e mudanças</span></a>
         </div>
@@ -495,38 +506,42 @@
     <!-- SERVIÇOS -->
     <section class="servicos-home" aria-label="Serviços">
       <h2>Como posso te ajudar</h2>
-      <p style="text-align:center; max-width:880px; margin:0 auto 16px;">
-        A psicoterapia é um processo de construção. Cada encontro é pensado para favorecer escuta,
-        elaboração emocional e autoconhecimento, com ética, sigilo e respeito.
+
+      <p class="sec-lead" style="text-align:center; max-width:920px; margin:0 auto 18px;">
+        A psicoterapia é um processo de cuidado e construção emocional. O atendimento é pensado para acolher diferentes fases da vida —
+        infância, adolescência e vida adulta — sempre com ética, escuta e respeito à singularidade de cada pessoa.
       </p>
 
       <div class="servicos-grid">
         <article class="servico-card">
-          <h3>Psicoterapia Individual</h3>
+          <h3>Psicoterapia para Adultos</h3>
           <p>
-            Atendimento psicológico individual com foco em acolhimento, elaboração emocional e construção
-            de novos modos de lidar com a própria história.
+            Um espaço de escuta e elaboração emocional para lidar com ansiedade, cansaço emocional, autoestima e desafios nos relacionamentos.
           </p>
-          <p>Um espaço para falar de si, reconhecer limites, desejos e possibilidades.</p>
         </article>
 
         <article class="servico-card">
-          <h3>Atendimento Presencial</h3>
+          <h3>Psicoterapia Infantil</h3>
           <p>
-            Consultório em Itapetininga-SP, em ambiente reservado, confortável e acolhedor,
-            pensado para que você possa se expressar com tranquilidade.
+            Acolhimento emocional para a criança, auxiliando na expressão de sentimentos e no desenvolvimento saudável em um espaço seguro.
           </p>
-          <p><strong>Endereço:</strong> R. Nazareth, 84 - Vila São Pedro.</p>
         </article>
 
         <article class="servico-card">
-          <h3>Atendimento Online</h3>
+          <h3>Psicoterapia para Adolescentes</h3>
           <p>
-            Psicoterapia online para quem busca acolhimento sem sair de casa, com segurança, ética e sigilo profissional.
+            Espaço seguro para adolescentes elaborarem emoções, conflitos e mudanças próprias dessa fase, fortalecendo vínculos e autonomia.
           </p>
-          <p>Ideal para rotinas flexíveis ou para quem não está em Itapetininga.</p>
         </article>
       </div>
+
+      <p style="text-align:center; margin-top:18px;">
+        <span class="micro-note">Atendimento presencial em Itapetininga-SP e online para todo o Brasil.</span>
+      </p>
+
+      <p style="text-align:center; margin-top:12px;">
+        <a href="servicos.html" class="btn-cta">Conhecer todos os serviços</a>
+      </p>
     </section>
 
     <!-- COMO FUNCIONA -->
@@ -559,18 +574,27 @@
           <p><a href="#contato" class="btn-leia">Quero conversar</a></p>
         </article>
       </div>
+      <p style="text-align:center; margin-top:20px; max-width:820px; margin-left:auto; margin-right:auto;">
+        Ficou com alguma dúvida sobre o funcionamento, valores ou como começar? Veja as respostas às perguntas mais comuns no FAQ.
+      </p>
+      <p style="text-align:center; margin-top:10px;">
+        <a href="faq.html" class="btn-cta sec">Ver perguntas frequentes</a>
+      </p>
+
     </section>
 
     <!-- DEPOIMENTOS -->
     <section class="servicos-home" aria-label="Depoimentos">
-      <h2>O que as pessoas dizem sobre a experiência em terapia</h2>
-      <p style="text-align:center; max-width:820px; margin:0 auto 10px;">
-        A experiência terapêutica é única para cada pessoa. Na página de depoimentos, você encontra relatos de forma respeitosa e
-        sigilosa, preservando a identidade de cada paciente.
-      </p>
-      <p style="text-align:center;">
-        <a href="depoimentos.html" class="btn-leia">Ver depoimentos</a>
-      </p>
+      <div class="section-card">
+        <h2>O que as pessoas dizem sobre a experiência em terapia</h2>
+        <p style="text-align:center; max-width:860px; margin:0 auto 14px;">
+          A experiência terapêutica é única para cada pessoa. Na página de depoimentos, você encontra relatos de forma respeitosa e sigilosa,
+          preservando a identidade de cada paciente.
+        </p>
+        <p style="text-align:center; margin:0;">
+          <a href="depoimentos.html" class="btn-cta">Ver depoimentos</a>
+        </p>
+      </div>
     </section>
 
     <!-- RECURSOS -->
