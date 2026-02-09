@@ -6,45 +6,20 @@
 
   <title>Perguntas Frequentes (FAQ) | Ana Paula Ap. Vieira Psicóloga Clínica</title>
 
-  <!-- DESCRIÇÃO SEO -->
-  <meta name="description" content="Perguntas frequentes sobre psicoterapia, sessões online, funcionamento do atendimento, sigilo e processo terapêutico com a psicóloga Ana Paula Ap. Vieira (CRP 06/217114).">
+  <meta name="description" content="Perguntas frequentes sobre psicoterapia, sessões online, funcionamento do atendimento, sigilo e processo terapêutico com a psicóloga Ana Paula Ap. Vieira (CRP 06/217114)." />
+  <meta name="robots" content="index, follow" />
 
-  <!-- FAVICON E CSS ORIGINAL -->
   <link rel="icon" href="imagens/favicon.png" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="manifest" href="manifest.json" />
 
-  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Preload da imagem principal (sua foto) -->
-  <link rel="preload" as="image" href="imagens/sua-foto.jpg">
-
-  <!-- Preload da fonte Poppins -->
-  <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-        as="style">
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
-
-  <!-- CANONICAL -->
   <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/faq.html" />
 
-  <!-- OPEN GRAPH -->
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica">
-  <meta property="og:title" content="Perguntas Frequentes sobre Psicoterapia">
-  <meta property="og:description" content="Tire suas dúvidas sobre psicoterapia, sessões online, sigilo e agendamento.">
-  <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/faq.html">
-  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/logo-simbolo.png">
-  <meta property="og:image:alt" content="FAQ Psicóloga Ana Paula Ap. Vieira">
-
-  <!-- TWITTER -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Perguntas Frequentes sobre Psicoterapia">
-  <meta name="twitter:description" content="Entenda como funciona o atendimento, sigilo e os processos da psicoterapia.">
-  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/logo-simbolo.png">
-
-  <!-- JSON-LD (SEO AVANÇADO) -->
+  <!-- JSON-LD (FAQPage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -94,101 +69,177 @@
   }
   </script>
 
-  <!-- CSS ESPECÍFICO DA PÁGINA FAQ -->
+  <!-- PADRÃO DO INDEX + FAQ (+ / -) -->
   <style>
-    .hero-faq {
-      background-color: #f4effa;
-      text-align: center;
-      padding: 80px 10% 60px;
+    :root{
+      --roxo:#6b48a8;
+      --verde:#7fbf9a;
+      --bg1: rgba(244,239,250,0.92);
+      --bg2: rgba(246,252,249,0.88);
+      --text:#403847;
+      --stroke: rgba(127,191,154,0.35);
+      --radius:22px;
     }
 
-    .hero-faq h2 {
-      font-family: "Poppins", sans-serif;
-      font-weight: 600;
-      color: #7a56b2;
-      font-size: 2rem;
-      margin-bottom: 15px;
+    body{
+      font-family:"Poppins",sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 520px at 12% 0%, rgba(107,72,168,0.12) 0%, rgba(107,72,168,0.00) 62%),
+        radial-gradient(900px 520px at 88% 10%, rgba(127,191,154,0.18) 0%, rgba(127,191,154,0.00) 62%),
+        linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 55%, rgba(244,239,250,0.74) 100%);
+      margin:0;
     }
 
-    .hero-faq p {
-      color: #4a3d52;
-      font-size: 1.1rem;
-      max-width: 700px;
+    .shell{
+      max-width:1200px;
+      margin:0 auto;
+      padding:18px;
+      box-sizing:border-box;
+    }
+
+    .card-section{
+      background: rgba(255,255,255,0.94);
+      border: 3px solid rgba(127,191,154,0.95);
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+      position: relative;
+    }
+
+    .card-section::before{
+      content:"";
+      position:absolute;
+      inset:10px;
+      border-radius:16px;
+      border:1px solid rgba(127,191,154,0.25);
+      pointer-events:none;
+    }
+
+    .title{
+      margin:0 0 10px;
+      text-align:center;
+      color: var(--roxo);
+      font-size:1.55rem;
+      line-height:1.25;
+    }
+
+    .lead{
+      text-align:center;
+      max-width:900px;
+      margin:0 auto 14px;
+      line-height:1.75;
+      color:#4a3d52;
+      font-size:1.02rem;
+    }
+
+    /* FAQ */
+    .faq-wrap{
+      max-width: 920px;
       margin: 0 auto;
-      line-height: 1.7;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      margin-top: 16px;
     }
 
-    .faq-container {
-      max-width: 850px;
-      margin: 60px auto 40px;
-      background-color: #fff;
-      border-radius: 15px;
-      padding: 25px 25px 10px;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    .faq-item{
+      background:#fff;
+      border-radius:16px;
+      padding:16px 18px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.04);
+      border:1px solid var(--stroke);
+      position:relative;
+      overflow:hidden;
     }
 
-    .faq-item {
-      border-bottom: 1px solid #e1d9f3;
-      padding: 15px 0;
+    .faq-item::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      width:9px;
+      background:linear-gradient(180deg, rgba(127,191,154,0.95) 0%, rgba(127,191,154,0.30) 100%);
     }
 
-    .faq-item:last-child {
-      border-bottom: none;
+    .faq-question{
+      font-weight:600;
+      color: var(--roxo);
+      font-size:1.06rem;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      user-select:none;
+      padding-left: 10px; /* compensar faixa verde */
     }
 
-    .faq-question {
-      font-weight: 600;
-      color: #7a56b2;
-      font-size: 1.1rem;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: color 0.3s ease;
+    .faq-question:hover{ color:#5d4191; }
+
+    /* ✅ Ícone + / - */
+    .faq-icon{
+      width:34px;
+      height:34px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(127,191,154,0.45);
+      background: linear-gradient(180deg, #f4effa 0%, #f2fbf6 100%);
+      color: var(--roxo);
+      font-weight:800;
+      flex:0 0 auto;
+      box-shadow:0 10px 24px rgba(0,0,0,0.03);
     }
 
-    .faq-question:hover {
-      color: #5d4191;
+    .faq-icon::before{ content:"+"; }
+    .faq-item.ativo .faq-icon::before{ content:"–"; } /* hífen longo */
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      color:#4a3d52;
+      font-size:1rem;
+      line-height:1.75;
+      transition: max-height 0.35s ease;
+      padding-left: 10px; /* compensar faixa verde */
     }
 
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      color: #4a3d52;
-      font-size: 1rem;
-      line-height: 1.7;
-      transition: max-height 0.4s ease, padding 0.4s ease;
+    .faq-answer p{ margin:10px 0 0; }
+
+    /* Botões */
+    .btn-mini{
+      display:inline-block;
+      margin-top:14px;
+      padding:9px 14px;
+      border-radius:999px;
+      font-weight:700;
+      text-decoration:none;
+      font-size:0.95rem;
+      text-align:center;
+    }
+    .btn-mini.secondary{
+      background: linear-gradient(180deg, #f4effa 0%, #f2fbf6 100%);
+      color: var(--roxo);
+      border: 1px solid rgba(127,191,154,0.55);
+      box-shadow:none;
+    }
+    .btn-mini.secondary:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(107,72,168,0.10);
     }
 
-    .faq-item.ativo .faq-answer {
-      max-height: 200px;
-      padding-top: 10px;
-    }
-
-    .faq-icon {
-      font-size: 1.3rem;
-      color: #7a56b2;
-      transition: transform 0.3s ease;
-    }
-
-    .faq-item.ativo .faq-icon {
-      transform: rotate(180deg);
-    }
-
-    @media (max-width: 768px) {
-      .hero-faq h2 {
-        font-size: 1.6rem;
-      }
-
-      .faq-question {
-        font-size: 1rem;
-      }
+    @media (max-width: 768px){
+      .faq-question{ font-size:1rem; }
+      .card-section{ padding:22px 18px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- ================== CABEÇALHO ================== -->
+  <!-- CABEÇALHO -->
   <header class="cabecalho">
     <div class="logo-area" style="display:flex; align-items:center; gap:18px; padding:14px 18px;">
       <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" class="logo" style="width:56px; height:56px;">
@@ -207,71 +258,91 @@
     </nav>
   </header>
 
-  <!-- ================== HERO FAQ ================== -->
-  <section class="hero-faq fade-section visivel">
-    <h2>Perguntas Frequentes</h2>
-    <p>Reuni aqui algumas das dúvidas mais comuns sobre o processo terapêutico, atendimento psicológico e funcionamento das sessões. Clique nas perguntas para visualizar as respostas.</p>
-  </section>
+  <main>
+    <section class="shell" aria-label="FAQ">
+      <div class="card-section">
+        <h2 class="title">Perguntas Frequentes</h2>
+        <p class="lead">
+          Reuni aqui algumas dúvidas comuns sobre o processo terapêutico, atendimento psicológico e funcionamento das sessões.
+          Clique nas perguntas para visualizar as respostas.
+        </p>
 
-  <!-- ================== CONTEÚDO FAQ ================== -->
-  <section class="faq-container animar visivel">
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Como funciona o processo de psicoterapia?</span>
-        <span class="faq-icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>O processo terapêutico acontece em encontros semanais, com duração média de 50 minutos. É um espaço de escuta, acolhimento e autoconhecimento, onde o paciente pode compreender emoções, comportamentos e desenvolver novas formas de lidar com desafios.</p>
-      </div>
-    </div>
+        <div class="faq-wrap">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Como funciona o processo de psicoterapia?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O processo terapêutico acontece em encontros semanais, com duração média de 50 minutos. É um espaço de escuta,
+                acolhimento e autoconhecimento, onde o paciente pode compreender emoções, comportamentos e desenvolver novas formas
+                de lidar com desafios.
+              </p>
+            </div>
+          </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>As sessões são sigilosas?</span>
-        <span class="faq-icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Sim. Todo o conteúdo das sessões é confidencial, de acordo com o Código de Ética Profissional do Psicólogo. A privacidade e o respeito são princípios fundamentais no atendimento.</p>
-      </div>
-    </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>As sessões são sigilosas?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim. Todo o conteúdo das sessões é confidencial, de acordo com o Código de Ética Profissional do Psicólogo.
+                A privacidade e o respeito são princípios fundamentais no atendimento.
+              </p>
+            </div>
+          </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Posso fazer terapia online?</span>
-        <span class="faq-icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Sim, a terapia online é autorizada pelo Conselho Federal de Psicologia e segue os mesmos princípios e sigilo do atendimento presencial. É uma ótima opção para quem busca praticidade e conforto.</p>
-      </div>
-    </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Posso fazer terapia online?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Sim, a terapia online é autorizada pelo Conselho Federal de Psicologia e segue os mesmos princípios e sigilo do
+                atendimento presencial. É uma ótima opção para quem busca praticidade e conforto.
+              </p>
+            </div>
+          </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Quantas sessões são necessárias?</span>
-        <span class="faq-icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>O número de sessões varia conforme a necessidade e o ritmo de cada pessoa. O importante é respeitar o processo e manter uma frequência para que o trabalho psicológico seja efetivo.</p>
-      </div>
-    </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Quantas sessões são necessárias?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                O número de sessões varia conforme a necessidade e o ritmo de cada pessoa. O importante é respeitar o processo
+                e manter uma frequência para que o trabalho psicológico seja efetivo.
+              </p>
+            </div>
+          </div>
 
-    <div class="faq-item">
-      <div class="faq-question">
-        <span>Como agendar uma sessão?</span>
-        <span class="faq-icon">▼</span>
-      </div>
-      <div class="faq-answer">
-        <p>Você pode entrar em contato pelo WhatsApp, e-mail ou através do formulário disponível na seção de contato do site. Juntas encontraremos o melhor horário para você.</p>
-      </div>
-    </div>
-  </section>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Como agendar uma sessão?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Você pode entrar em contato pelo WhatsApp, e-mail ou através do formulário disponível na seção de contato do site.
+                Juntas encontraremos o melhor horário para você.
+              </p>
+            </div>
+          </div>
+        </div>
 
-  <!-- ================== VOLTAR PARA O INÍCIO ================== -->
-  <div style="text-align:center; margin-bottom:80px;">
-    <a href="index.html" class="btn-recursos">Voltar para o Início</a>
-  </div>
+        <div style="text-align:center; margin-top:18px;">
+          <a href="index.html" class="btn-mini secondary">Voltar para o Início</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- ================== RODAPÉ PADRONIZADO ================== -->
+  <!-- RODAPÉ -->
   <footer class="rodape" style="background:#f4effa;padding:26px 18px;text-align:center;margin-top:18px;">
     <div style="max-width:1000px;margin:0 auto;">
       <p style="margin:6px 0;">
@@ -290,17 +361,14 @@
 
       <p style="margin:6px 0;">
         <strong>Telefone:</strong>
-        <a href="https://wa.me/5515996760791"
-           target="_blank"
-           style="text-decoration:underline;">
+        <a href="https://wa.me/5515996760791" target="_blank" style="text-decoration:underline;">
           (15) 99676-0791
         </a>
       </p>
 
       <p style="margin:6px 0;">
         <strong>E-mail:</strong>
-        <a href="mailto:contato@anapaulaapvieirapsi.com.br"
-           style="text-decoration:underline;">
+        <a href="mailto:contato@anapaulaapvieirapsi.com.br" style="text-decoration:underline;">
           contato@anapaulaapvieirapsi.com.br
         </a>
       </p>
@@ -309,33 +377,44 @@
 
       <div style="margin-top:8px;">
         <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
-        <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" style="text-decoration:underline;">Facebook</a> |
+        <a href="https://www.facebook.com/anapaulaapvieirapsi.com.br" target="_blank" style="text-decoration:underline;">Facebook</a> |
         <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" style="text-decoration:underline;">LinkedIn</a>
       </div>
     </div>
   </footer>
 
-<button id='btn-topo' class='btn-topo' title='Voltar ao início'>↑</button>
+  <button id="btn-topo" class="btn-topo" title="Voltar ao início">↑</button>
 
-<a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
-  <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
-</a>
+  <a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
+    <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
+  </a>
 
-<script src="app.js"></script>
-<script>
-
-  <!-- ================== SCRIPTS ================== -->
+  <script src="app.js"></script>
   <script>
-    // FAQ: abrir/fechar respostas
+    // FAQ: abre/fecha com altura dinâmica (evita cortar texto)
     document.addEventListener('DOMContentLoaded', function () {
       const itens = document.querySelectorAll('.faq-item');
 
       itens.forEach((item) => {
         const pergunta = item.querySelector('.faq-question');
-        if (!pergunta) return;
+        const resposta = item.querySelector('.faq-answer');
+        if (!pergunta || !resposta) return;
 
         pergunta.addEventListener('click', () => {
-          item.classList.toggle('ativo');
+          const ativo = item.classList.contains('ativo');
+
+          // fecha todos
+          itens.forEach((i) => {
+            i.classList.remove('ativo');
+            const r = i.querySelector('.faq-answer');
+            if (r) r.style.maxHeight = '0px';
+          });
+
+          // abre o clicado
+          if (!ativo) {
+            item.classList.add('ativo');
+            resposta.style.maxHeight = resposta.scrollHeight + 'px';
+          }
         });
       });
 
@@ -345,18 +424,11 @@
         window.addEventListener('scroll', () => {
           btnTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
         });
-
         btnTopo.addEventListener('click', () => {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       }
     });
   </script>
-
-  <script src="app.js"></script>
 </body>
 </html>
-
-
-
-
