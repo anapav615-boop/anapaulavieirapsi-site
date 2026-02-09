@@ -47,14 +47,30 @@
       padding: 18px;
       box-sizing: border-box;
     }
-   .card-section {
+   
+.card-section{
   background: rgba(255,255,255,0.94);
-  border: 2px solid #7fbf9a; /* verde contornando */
+  border: 3px solid rgba(127,191,154,0.95); /* verde mais visível */
   border-radius: 22px;
   padding: 26px 22px;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.05); /* sombra mais suave */
+  position: relative;
 }
+/* leve “filete” interno para destacar o contorno */
+.card-section::before{
+  content:"";
+  position:absolute;
+  inset: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(127,191,154,0.25);
+  pointer-events:none;
+}
+
+    .card-hero{
+      box-shadow: 0 8px 18px rgba(0,0,0,0.04); /* ainda mais leve no primeiro bloco */
     }
+    .card-hero::before{ inset: 12px; }
+
 
     .title {
       margin: 0 0 12px;
@@ -63,11 +79,40 @@
       font-size: 1.55rem;
       line-height: 1.25;
     }
-    .lead {
+    
+    h2, h3.section-title { text-align: center; }
+.lead {
       text-align: center;
       max-width: 900px;
       margin: 0 auto 12px;
       line-height: 1.75;
+    }
+
+
+    /* ===== Form (Contato) ===== */
+    .form-contato .form-row{ display:flex; flex-direction:column; gap:6px; margin-bottom:12px; }
+    .form-contato input, .form-contato textarea{
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(230,219,246,0.95);
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      background: rgba(255,255,255,0.98);
+    }
+    .form-contato input:focus, .form-contato textarea:focus{
+      border-color: rgba(107,72,168,0.55);
+      box-shadow: 0 0 0 4px rgba(107,72,168,0.10);
+    }
+    .btn-enviar{
+      padding: 10px 18px;
+      border-radius: 28px;
+      border: none;
+      background: var(--roxo);
+      color:#fff;
+      font-weight: 700;
+      cursor:pointer;
+      box-shadow: 0 10px 22px rgba(107,72,168,0.18);
     }
 
     /* ===== Botões ===== */
@@ -233,6 +278,30 @@
     /* ===== Depoimentos ===== */
     .center-btn { text-align:center; margin-top:10px; }
 
+    
+    /* ===== Recursos (imagens alinhadas e cards consistentes) ===== */
+    .recurso-card{ display:flex; flex-direction:column; gap:10px; }
+    .recurso-img{
+      width:100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius:12px;
+      margin-bottom:2px;
+      display:block;
+    }
+    .recurso-thumb{
+      width:100%;
+      height: 170px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size: 2.2rem;
+      background: linear-gradient(180deg, rgba(244,239,250,1) 0%, rgba(242,251,246,1) 100%);
+      border: 1px solid rgba(230,219,246,0.95);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+    }
+
     /* ===== Ajustes mobile ===== */
     @media (max-width: 780px) {
       .hero-box h1 { font-size: 1.35rem; }
@@ -267,7 +336,7 @@
 
   <!-- HERO -->
   <section class="shell" aria-label="Abertura">
-    <div class="card-section">
+    <div class="card-section card-hero">
       <div class="hero">
         <div class="hero-media">
           <picture>
@@ -378,22 +447,21 @@
         <article class="mini-card">
           <h3>Psicoterapia para Adolescentes</h3>
           <p>
-            Espaço seguro para adolescentes compreenderem emoções, 
-            conflitos internos e desafios relacionais, favorecendo
-            autonomia, identidade e desenvolvimento emocional saudável.
+            Um espaço seguro para falar sobre emoções, conflitos, escola, amizades e família — sem rótulos e sem julgamentos.
+            Trabalhamos juntos o fortalecimento da identidade, autonomia, autoestima e habilidades de comunicação,
+            respeitando o tempo e o jeito de cada adolescente.
           </p>
+        </article>
 
         <article class="mini-card">
           <h3>Psicoterapia para Adultos</h3>
           <p>
-            <p>
-            Um processo terapêutico para aprofundar o autoconhecimento,
-            elaborar experiências e construir novas formas de lidar com
-            ansiedade, cansaço emocional e padrões nos relacionamentos.
-           </p>
+            Um processo terapêutico para aprofundar o autoconhecimento, organizar pensamentos e emoções,
+            e desenvolver estratégias mais saudáveis para lidar com ansiedade, sobrecarga, autocobrança e desafios nos relacionamentos.
+            Você não precisa dar conta de tudo sozinho(a).
           </p>
         </article>
-      </div>
+</div>
 
       <p class="lead" style="margin-top:14px;">
         Atendimento <strong style="color:var(--roxo);">presencial em Itapetininga-SP</strong> e <strong style="color:var(--roxo);">online</strong> para todo o Brasil.
@@ -451,51 +519,95 @@
     </div>
   </section>
 
+  
   <!-- RECURSOS -->
-  <div class="cards-recursos grid">
+  <section class="shell" aria-label="Recursos">
+    <div class="card-section">
+      <h2 class="title">Recursos e conteúdos de apoio</h2>
+      <p class="lead">
+        Materiais pensados para orientar, acolher e ajudar você a compreender melhor o que está vivendo.
+        Se fizer sentido, você também pode levar esses temas para a terapia.
+      </p>
 
-  <article class="mini-card">
-    <img src="imagens/psicoterapia-infantil.jpg" alt="Psicoterapia infantil" style="width:100%;border-radius:12px;margin-bottom:10px;">
-    <h3>Psicoterapia Infantil</h3>
-    <p>
-      Espaço lúdico e acolhedor para que a criança possa expressar emoções,
-      elaborar vivências e desenvolver recursos emocionais com segurança.
-    </p>
-  </article>
+      <div class="grid cards-recursos" style="margin-top:14px;">
+        <article class="mini-card recurso-card">
+          <img src="imagens/psicoterapia-infantil.jpg" alt="Psicoterapia infantil" class="recurso-img">
+          <h3>Psicoterapia Infantil</h3>
+          <p>
+            Espaço lúdico e acolhedor para que a criança possa expressar emoções,
+            elaborar vivências e desenvolver recursos emocionais com segurança.
+          </p>
+        </article>
 
-  <article class="mini-card">
-    <img src="imagens/psicoterapia-adolescentes.jpg" alt="Psicoterapia para adolescentes" style="width:100%;border-radius:12px;margin-bottom:10px;">
-    <h3>Psicoterapia para Adolescentes</h3>
-    <p>
-      Um espaço de escuta e construção emocional para adolescentes lidarem com
-      conflitos, identidade, ansiedade e mudanças dessa fase, fortalecendo
-      autonomia, vínculos e autoestima.
-    </p>
-  </article>
+        <article class="mini-card recurso-card">
+          <img src="imagens/psicoterapia-adolescentes.jpg" alt="Psicoterapia para adolescentes" class="recurso-img">
+          <h3>Psicoterapia para Adolescentes</h3>
+          <p>
+            Um espaço de escuta e construção emocional para lidar com conflitos, identidade,
+            ansiedade e mudanças dessa fase, fortalecendo autonomia, vínculos e autoestima.
+          </p>
+        </article>
 
-  <article class="mini-card">
-    <img src="imagens/psicoterapia-adultos.jpg" alt="Psicoterapia para adultos" style="width:100%;border-radius:12px;margin-bottom:10px;">
-    <h3>Psicoterapia para Adultos</h3>
-    <p>
-      Acompanhamento terapêutico para compreender padrões emocionais,
-      elaborar experiências e desenvolver novas formas de lidar com ansiedade,
-      sobrecarga e desafios nos relacionamentos.
-    </p>
-  </article>
+        <article class="mini-card recurso-card">
+          <img src="imagens/psicoterapia-adultos.jpg" alt="Psicoterapia para adultos" class="recurso-img">
+          <h3>Psicoterapia para Adultos</h3>
+          <p>
+            Acompanhamento terapêutico para compreender padrões emocionais,
+            elaborar experiências e desenvolver novas formas de lidar com ansiedade,
+            sobrecarga e desafios nos relacionamentos.
+          </p>
+        </article>
 
-  <article class="mini-card">
-    <img src="imagens/orientacao-parental.jpg" alt="Orientação parental" style="width:100%;border-radius:12px;margin-bottom:10px;">
-    <h3>Orientação Parental</h3>
-    <p>
-      Apoio a pais e responsáveis para fortalecer vínculos,
-      compreender comportamentos e construir estratégias educativas
-      com mais segurança emocional.
-    </p>
-  </article>
+        <article class="mini-card recurso-card">
+          <img src="imagens/orientacao-parental.jpg" alt="Orientação parental" class="recurso-img">
+          <h3>Orientação Parental</h3>
+          <p>
+            Apoio a pais e responsáveis para fortalecer vínculos,
+            compreender comportamentos e construir estratégias educativas
+            com mais segurança emocional.
+          </p>
+        </article>
 
-</div>
+        <!-- Cards extras (sem depender de novas imagens no servidor) -->
+        <article class="mini-card recurso-card">
+          <div class="recurso-thumb" aria-hidden="true">🫶</div>
+          <h3>Ansiedade</h3>
+          <p>
+            Entenda sinais comuns, gatilhos e caminhos de cuidado.
+            <a href="ansiedade.html" style="text-decoration:underline; color: var(--roxo); font-weight:600;">Ler conteúdo</a>
+          </p>
+        </article>
 
-  <!-- CONTATO -->
+        <article class="mini-card recurso-card">
+          <div class="recurso-thumb" aria-hidden="true">🌿</div>
+          <h3>Cansaço emocional</h3>
+          <p>
+            Quando a mente não desliga e o corpo pede pausa.
+            <a href="exaustao-emocional.html" style="text-decoration:underline; color: var(--roxo); font-weight:600;">Ler conteúdo</a>
+          </p>
+        </article>
+
+        <article class="mini-card recurso-card">
+          <div class="recurso-thumb" aria-hidden="true">✨</div>
+          <h3>Autoestima</h3>
+          <p>
+            Autocobrança, insegurança e valor pessoal: por onde começar.
+            <a href="autoestima.html" style="text-decoration:underline; color: var(--roxo); font-weight:600;">Ler conteúdo</a>
+          </p>
+        </article>
+
+        <article class="mini-card recurso-card">
+          <div class="recurso-thumb" aria-hidden="true">🤝</div>
+          <h3>Relacionamentos</h3>
+          <p>
+            Padrões, limites e comunicação: construindo vínculos mais saudáveis.
+            <a href="relacionamentos.html" style="text-decoration:underline; color: var(--roxo); font-weight:600;">Ler conteúdo</a>
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+<!-- CONTATO -->
   <section class="shell" id="contato" aria-label="Contato">
     <div class="card-section">
       <h2 class="title">Você não precisa enfrentar isso sem apoio.</h2>
