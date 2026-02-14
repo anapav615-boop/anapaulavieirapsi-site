@@ -348,23 +348,24 @@
   white-space: nowrap;
 }
 
-/* ===== Alinhar CTAs lado a lado (desktop) ===== */
-.cta-row{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:14px;
-  flex-wrap:nowrap;           /* não deixa quebrar no desktop */
+/* ===== Ajuste definitivo botões hero ===== */
+.cta-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap; /* permite quebrar se faltar espaço */
 }
 
-/* faz os botões ficarem com largura "do conteúdo", não 100% */
 .cta-row .btn-primary,
-.cta-row .btn-cta{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:auto !important;
-  white-space:nowrap;
+.cta-row .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
+  white-space: normal; /* permite quebrar texto se necessário */
+  text-align: center;
 }
 
 /* ===== No mobile, pode quebrar para ficar confortável ===== */
