@@ -348,6 +348,32 @@
   white-space: nowrap;
 }
 
+/* ===== Alinhar CTAs lado a lado (desktop) ===== */
+.cta-row{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  flex-wrap:nowrap;           /* não deixa quebrar no desktop */
+}
+
+/* faz os botões ficarem com largura "do conteúdo", não 100% */
+.cta-row .btn-primary,
+.cta-row .btn-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:auto !important;
+  white-space:nowrap;
+}
+
+/* ===== No mobile, pode quebrar para ficar confortável ===== */
+@media (max-width: 780px){
+  .cta-row{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
   </style>
 </head>
 
