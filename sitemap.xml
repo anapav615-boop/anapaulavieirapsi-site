@@ -4,7 +4,7 @@
   <!-- HOME -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/</loc>
-    <lastmod>2026-02-09</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -40,9 +40,9 @@
 
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/recursos.html</loc>
-    <lastmod>2026-02-09</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
 
   <url>
@@ -57,6 +57,14 @@
     <lastmod>2026-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+
+  <!-- NOVO ARTIGO -->
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/baixa-autoestima.html</loc>
+    <lastmod>2026-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <!-- Artigos / Saúde emocional -->
@@ -137,7 +145,6 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- NOVAS PÁGINAS -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/relacionamentos.html</loc>
     <lastmod>2026-02-09</lastmod>
@@ -150,64 +157,6 @@
     <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
-  </url>
-
-  <!-- Atendimento / Família -->
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/orientacao-parental.html</loc>
-    <lastmod>2025-11-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/psicoterapia-infantil.html</loc>
-    <lastmod>2025-11-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/psicoterapia-infantil-como-ajuda.html</loc>
-    <lastmod>2025-11-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/artigo-psicoterapia-infantil.html</loc>
-    <lastmod>2025-11-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/psicoterapia-adolescentes.html</loc>
-    <lastmod>2025-11-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/psicoterapia-adolescentes-como-ajuda.html</loc>
-    <lastmod>2025-11-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- Recursos -->
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/fe-e-psicologia.html</loc>
-    <lastmod>2025-12-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/forca-interior.html</loc>
-    <lastmod>2025-12-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
   </url>
 
 </urlset>
