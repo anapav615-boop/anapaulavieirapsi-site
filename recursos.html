@@ -71,7 +71,7 @@
       line-height:1.25;
     }
 
-    /* HERO (imagem ao lado do texto) */
+    /* HERO */
     .hero{
       display:flex;
       gap:22px;
@@ -220,6 +220,18 @@
       font-size:1.25rem;
     }
 
+    .badge-soft{
+      display:inline-block;
+      font-size:0.85rem;
+      font-weight:700;
+      color: var(--roxo);
+      background: linear-gradient(180deg, rgba(244,239,250,0.95) 0%, rgba(242,251,246,0.95) 100%);
+      border:1px solid rgba(127,191,154,0.55);
+      border-radius:999px;
+      padding:6px 10px;
+      margin-top:10px;
+    }
+
     @media (max-width:780px){
       .mini-card{ width:100%; max-width:520px; }
       .card-section{ padding:22px 18px; }
@@ -265,15 +277,41 @@
               A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
             </p>
             <p>
-              Se algum tema fizer sentido, você pode levar para a terapia e aprofundar no seu ritmo.
+              Há artigos gratuitos e, em alguns temas, guias digitais (conteúdos pagos) para quem deseja aprofundar com mais estrutura.
             </p>
 
             <div class="hero-actions">
+              <a class="btn-mini secondary" href="#materiais">Ver guias digitais</a>
               <a class="btn-mini secondary" href="#psicoeducacao">Ver saúde emocional</a>
               <a class="btn-mini secondary" href="#infancia">Ver infância e adolescência</a>
-              <a class="btn-mini secondary" href="#materiais">Ver materiais digitais</a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO: MATERIAIS DIGITAIS (À VENDA) -->
+    <section class="shell" id="materiais" aria-label="Materiais digitais">
+      <div class="card-section">
+        <h3 class="block-title">Guias digitais (conteúdos pagos)</h3>
+        <p class="section-subtitle">
+          Materiais psicoeducativos em formato digital, feitos com cuidado para apoiar sua compreensão emocional.
+          Se fizer sentido para você agora, pode acessar de forma imediata após a compra.
+        </p>
+
+        <div class="grid">
+          <article class="mini-card recurso-card">
+            <img src="imagens/capa-guia-esgotamento.png" alt="Guia psicoeducativo: Quando tudo pesa demais" class="recurso-img">
+            <h3>Quando tudo pesa demais</h3>
+            <p>
+              Um guia para compreender sinais de esgotamento emocional, reconhecer limites e iniciar um caminho de cuidado consigo mesmo(a),
+              com acolhimento e clareza.
+            </p>
+            <span class="badge-soft">Conteúdo pago • acesso imediato</span>
+            <div class="recurso-actions">
+              <a href="https://pay.kiwify.com.br/U8fisuP" target="_blank" class="btn-mini secondary">Conhecer o guia</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -292,7 +330,7 @@
             <h3>Sobre o Atendimento</h3>
             <p>
               Você não precisa estar “no limite” para buscar ajuda. Entenda como funciona a psicoterapia, o que esperar das sessões
-              e como esse espaço pode apoiar fases difíceis e sofrimento emocional.
+              e como esse espaço pode apoiar fases difíceis.
             </p>
             <div class="recurso-actions">
               <a href="sobre-o-atendimento.html" class="btn-mini secondary">Ler artigo</a>
@@ -303,8 +341,8 @@
             <img src="imagens/sala-terapia-infantil-itapetininga.jpg" alt="Psicoterapia infantil" class="recurso-img">
             <h3>Psicoterapia Infantil</h3>
             <p>
-              Mudanças de comportamento, choro frequente, irritação, regressões ou dificuldades na escola, podem ser sinais emocionais.
-              Saiba quando procurar psicoterapia infantil e como o cuidado acontece com acolhimento.
+              Mudanças de comportamento, choro frequente, irritação, regressões ou dificuldades na escola podem ser sinais emocionais.
+              Saiba quando procurar e como o cuidado acontece.
             </p>
             <div class="recurso-actions">
               <a href="psicoterapia-infantil.html" class="btn-mini secondary">Ler artigo</a>
@@ -315,7 +353,7 @@
             <img src="imagens/psicoterapia-adolescentes.jpg" alt="Psicoterapia para adolescentes" class="recurso-img">
             <h3>Psicoterapia para Adolescentes</h3>
             <p>
-              Adolescência envolve identidade, pertencimento, autoestima, conflitos e mudanças intensas.
+              Adolescência envolve identidade, pertencimento, autoestima e mudanças intensas.
               A terapia é um espaço de escuta sem julgamento para organizar emoções e fortalecer autonomia.
             </p>
             <div class="recurso-actions">
@@ -327,7 +365,7 @@
             <img src="imagens/psicoterapia-adultos-itapetininga.jpg" alt="Psicoterapia para adultos" class="recurso-img">
             <h3>Psicoterapia para Adultos</h3>
             <p>
-              Ansiedade, autocobrança, cansaço mental, relacionamentos difíceis e sobrecarga podem virar um ciclo silencioso.
+              Ansiedade, autocobrança, cansaço mental e sobrecarga podem virar um ciclo silencioso.
               A psicoterapia ajuda a compreender padrões e construir caminhos mais leves.
             </p>
             <div class="recurso-actions">
@@ -339,8 +377,8 @@
             <img src="imagens/orientacao-parental-itapetininga.jpg" alt="Orientação parental" class="recurso-img">
             <h3>Orientação Parental</h3>
             <p>
-              Educar pode gerar culpa, exaustão e insegurança, especialmente quando surgem birras, desafios e conflitos.
-              O acompanhamento psicológico oferece apoio para fortalecer vínculos, construir limites e organizar a rotina com segurança emocional.
+              Educar pode gerar culpa, exaustão e insegurança. O acompanhamento psicológico oferece apoio para fortalecer vínculos,
+              construir limites e organizar a rotina com segurança emocional.
             </p>
             <div class="recurso-actions">
               <a href="orientacao-parental.html" class="btn-mini secondary">Ler artigo</a>
@@ -349,35 +387,6 @@
         </div>
       </div>
     </section>
-    
-     <!-- BLOCO: MATERIAIS DIGITAIS (À VENDA) -->
-<section class="shell" id="materiais" aria-label="Materiais digitais">
-  <div class="card-section">
-    <p>
-Este material foi desenvolvido com cuidado como um recurso de apoio emocional. Caso você sinta que pode te ajudar neste momento, ele está disponível para acesso em formato digital.
-</p>
-    <p class="section-subtitle">
-      Guias psicoeducativos em formato digital, feitos com cuidado para apoiar sua compreensão emocional.
-      Os artigos gratuitos seguem logo abaixo.
-    </p>
-
-    <div class="grid">
-      <article class="mini-card recurso-card">
-        <img src="imagens/capa-guia-esgotamento.png" alt="Guia psicoeducativo: Quando tudo pesa demais" class="recurso-img">
-        <h3>Quando tudo pesa demais</h3>
-        <p>
-          Um guia psicoeducativo para compreender sinais de esgotamento emocional, reconhecer limites e iniciar um caminho
-          de cuidado consigo mesmo(a), com acolhimento e clareza.
-          <br><strong>Material digital à venda (acesso imediato).</strong>
-        </p>
-        <div class="recurso-actions">
-          <a href="https://pay.kiwify.com.br/U8fisuP" target="_blank" class="btn-mini secondary">Conhecer o guia</a>
-        </div>
-      </article>
-    </div>
-
-  </div>
-</section>
 
     <!-- BLOCO 2 -->
     <section class="shell" id="psicoeducacao" aria-label="Psicoeducação em saúde mental">
@@ -388,25 +397,24 @@ Este material foi desenvolvido com cuidado como um recurso de apoio emocional. C
         </p>
 
         <div class="grid">
-              <!-- NOVO: BAIXA AUTOESTIMA -->
-        <article class="mini-card recurso-card">
-        <img src="imagens/baixa-autoestima.jpg" alt="Baixa autoestima e autocrítica" class="recurso-img">
-        <h3>Baixa autoestima</h3>
-        <p>
-        Quando você aprende a se tratar com dureza demais, a autocrítica vira rotina e o valor próprio passa a depender de desempenho e aprovação.
-        Entenda sinais, impactos emocionais e como a psicoterapia ajuda a reconstruir uma relação mais gentil consigo mesmo.
-        </p>
-  <div class="recurso-actions">
-    <a href="baixa-autoestima.html" class="btn-mini secondary">Ler artigo</a>
-  </div>
-</article>
+          <article class="mini-card recurso-card">
+            <img src="imagens/baixa-autoestima.jpg" alt="Baixa autoestima e autocrítica" class="recurso-img">
+            <h3>Baixa autoestima</h3>
+            <p>
+              Quando a autocrítica vira rotina, o valor próprio passa a depender de desempenho e aprovação.
+              Entenda sinais e como a psicoterapia ajuda a reconstruir uma relação mais gentil consigo mesmo.
+            </p>
+            <div class="recurso-actions">
+              <a href="baixa-autoestima.html" class="btn-mini secondary">Ler artigo</a>
+            </div>
+          </article>
 
           <article class="mini-card recurso-card">
             <img src="imagens/ansiedade-mulheres.jpg" alt="Ansiedade em mulheres" class="recurso-img">
             <h3>Ansiedade em mulheres</h3>
             <p>
               Excesso de responsabilidade, autocobrança e a sensação de “não poder parar” podem virar ansiedade.
-              Veja sinais, gatilhos comuns e caminhos de cuidado emocional.
+              Veja sinais, gatilhos e caminhos de cuidado emocional.
             </p>
             <div class="recurso-actions">
               <a href="ansiedade-em-mulheres.html" class="btn-mini secondary">Ler artigo</a>
@@ -441,7 +449,7 @@ Este material foi desenvolvido com cuidado como um recurso de apoio emocional. C
             <img src="imagens/exaustao-emocional-acolhimento.jpg" alt="Exaustão emocional" class="recurso-img">
             <h3>Exaustão emocional</h3>
             <p>
-              Quando você continua fazendo tudo, mas por dentro já pediu pausa: irritabilidade, apatia, falta de energia e sobrecarga mental.
+              Quando você continua fazendo tudo, mas por dentro já pediu pausa: irritabilidade, apatia e sobrecarga mental.
               Saiba como identificar e começar a se cuidar.
             </p>
             <div class="recurso-actions">
@@ -453,7 +461,7 @@ Este material foi desenvolvido com cuidado como um recurso de apoio emocional. C
             <img src="imagens/cansaco-emocional.jpg" alt="Cansaço emocional" class="recurso-img">
             <h3>Cansaço emocional</h3>
             <p>
-              Descansar e ainda assim acordar cansado(a), perder o prazer nas coisas e sentir que nada é suficiente, pode ser esgotamento emocional.
+              Descansar e ainda assim acordar cansado(a), perder o prazer nas coisas e sentir que nada é suficiente pode ser esgotamento.
               Entenda o que está por trás e como buscar apoio.
             </p>
             <div class="recurso-actions">
@@ -489,7 +497,7 @@ Este material foi desenvolvido com cuidado como um recurso de apoio emocional. C
             <img src="imagens/autoestima.jpg" alt="Autoestima" class="recurso-img">
             <h3>Autoestima e autoconhecimento</h3>
             <p>
-              Autocrítica, comparação, insegurança e dificuldade de se valorizar podem afetar relações e escolhas.
+              Autocrítica, comparação e insegurança podem afetar relações e escolhas.
               Entenda como a autoestima se constrói e por onde recomeçar com mais gentileza.
             </p>
             <div class="recurso-actions">
@@ -509,26 +517,24 @@ Este material foi desenvolvido com cuidado como um recurso de apoio emocional. C
             </div>
           </article>
 
-          <!-- ✅ NOVO: RELACIONAMENTOS -->
           <article class="mini-card recurso-card">
             <img src="imagens/relacionamentos.jpg" alt="Dificuldades nos relacionamentos" class="recurso-img">
             <h3>Relacionamentos</h3>
             <p>
-              Você sente que repete os mesmos padrões? Dificuldade de colocar limites, medo de desagradar,
-              discussões que viram distância… Entenda como comunicação e vínculo podem ser construídos com cuidado.
+              Dificuldade de colocar limites, medo de desagradar, discussões que viram distância…
+              Entenda como comunicação e vínculo podem ser construídos com cuidado.
             </p>
             <div class="recurso-actions">
               <a href="relacionamentos.html" class="btn-mini secondary">Ler artigo</a>
             </div>
           </article>
 
-          <!-- ✅ NOVO: CULPA MATERNA -->
           <article class="mini-card recurso-card">
             <img src="imagens/culpa-materna.jpg" alt="Culpa materna: mães se sentem insuficientes" class="recurso-img">
             <h3>Culpa materna</h3>
             <p>
               “Será que estou sendo uma boa mãe?” Entenda por que a culpa materna é tão frequente,
-              como ela se manifesta no dia a dia e de que forma a terapia ajuda a construir uma maternidade mais gentil.
+              como ela se manifesta e como a terapia ajuda a construir uma maternidade mais gentil.
             </p>
             <div class="recurso-actions">
               <a href="culpa-materna.html" class="btn-mini secondary">Ler artigo</a>
@@ -540,7 +546,7 @@ Este material foi desenvolvido com cuidado como um recurso de apoio emocional. C
             <h3>Relações saudáveis</h3>
             <p>
               Limites, comunicação e vínculos: quando a relação faz mais bem do que mal.
-              Entenda sinais de relações saudáveis e como construir conexão com respeito.
+              Entenda sinais e como construir conexão com respeito.
             </p>
             <div class="recurso-actions">
               <a href="artigo-relacoes-saudaveis-vinculos-emocionais.html" class="btn-mini secondary">Ler artigo</a>
