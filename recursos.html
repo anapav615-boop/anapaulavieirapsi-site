@@ -169,6 +169,7 @@
       line-height:1.7;
     }
 
+    /* IMAGENS DOS ARTIGOS (mantém bonito) */
     .recurso-img{
       width:100%;
       height:170px;
@@ -232,34 +233,24 @@
       margin-top:10px;
     }
 
+    /* ===== AJUSTES APENAS PARA O BLOCO DE EBOOKS (não cortar a capa) ===== */
+    #materiais .grid{
+      justify-content:center;
+    }
+    #materiais .recurso-img{
+      height:260px;               /* altura fixa elegante */
+      object-fit:contain;         /* não corta texto */
+      background:#fff;
+      padding:6px;
+      box-sizing:border-box;
+    }
+
     @media (max-width:780px){
       .mini-card{ width:100%; max-width:520px; }
       .card-section{ padding:22px 18px; }
       .hero-media img{ max-height:320px; }
+      #materiais .recurso-img{ height:240px; }
     }
-   /* ===== Ajuste cards Recursos (lado a lado) ===== */
-.grid{
-  display:flex;
-  flex-wrap:wrap;
-  gap:24px;
-  justify-content:flex-start;
-}
-
-/* cada card */
-.mini-card.recurso-card{
-  flex: 1 1 320px;
-  max-width: 380px;
-  width:100%;
-}
-
-/* imagem da capa NÃO cortar */
-.recurso-img{
-  width:100%;
-  height:auto !important;
-  object-fit:contain !important;
-  border-radius:12px;
-  display:block;
-}
   </style>
 </head>
 
@@ -385,13 +376,15 @@
       </div>
     </section>
 
-     <!-- BLOCO: MATERIAIS DIGITAIS (À VENDA) -->
+    <!-- BLOCO: MATERIAIS DIGITAIS (À VENDA) -->
     <section class="shell" id="materiais" aria-label="Materiais digitais">
       <div class="card-section">
         <h3 class="block-title">Guias digitais de apoio emocional </h3>
         <p class="section-subtitle">
           Materiais psicoeducativos em formato digital, desenvolvidos como conteúdos de apoio e orientação emocional.
-          Alguns materiais estão disponíveis para acesso imediato mediante aquisição, enquanto outros conteúdos deste espaço permanecem gratuitos, com o mesmo cuidado           e compromisso com sua compreensão emocional.        </p>
+          Alguns materiais estão disponíveis para acesso imediato mediante aquisição, enquanto outros conteúdos deste espaço permanecem gratuitos, com o mesmo cuidado
+          e compromisso com sua compreensão emocional.
+        </p>
 
         <div class="grid">
           <article class="mini-card recurso-card">
@@ -403,24 +396,27 @@
             </p>
             <span class="badge-soft">Conteúdo pago • acesso imediato</span>
             <div class="recurso-actions">
-             <a href="https://go.hotmart.com/X104585504M?dp=1" target="_blank" class="btn-mini secondary">Acessar o guia agora</a>            </div>
+              <a href="https://go.hotmart.com/X104585504M?dp=1" target="_blank" class="btn-mini secondary">Acessar o guia agora</a>
+            </div>
+          </article>
+
+          <!-- NOVO GUIA: ANSIEDADE (AGORA DENTRO DO GRID) -->
+          <article class="mini-card recurso-card">
+            <img src="imagens/capa-guia-ansiedade.png" alt="Guia psicoeducativo: Quando a mente não desacelera" class="recurso-img">
+            <h3>Quando a mente não desacelera</h3>
+            <p>
+              Guia psicoeducativo para compreender a ansiedade e os pensamentos acelerados, com linguagem acessível,
+              acolhedora e baseada na Psicologia científica.
+            </p>
+            <span class="badge-soft">Conteúdo pago • acesso imediato</span>
+            <div class="recurso-actions">
+              <a href="https://go.hotmart.com/I104591180F?dp=1" target="_blank" rel="noopener" class="btn-mini secondary">
+                Acessar o guia agora
+              </a>
+            </div>
           </article>
         </div>
-     <!-- NOVO GUIA: ANSIEDADE -->
-<article class="mini-card recurso-card">
-  <img src="imagens/capa-guia-ansiedade.png" alt="Guia psicoeducativo: Quando a mente não desacelera" class="recurso-img">
-  <h3>Quando a mente não desacelera</h3>
-  <p>
-    Guia psicoeducativo para compreender a ansiedade e os pensamentos acelerados, com linguagem acessível,
-    acolhedora e baseada na Psicologia científica.
-  </p>
-  <span class="badge-soft">Conteúdo pago • acesso imediato</span>
-  <div class="recurso-actions">
-    <a href="https://go.hotmart.com/I104591180F?dp=1" target="_blank" rel="noopener" class="btn-mini secondary">
-      Acessar o guia agora
-    </a>
-  </div>
-</article>
+      </div>
     </section>
 
     <!-- BLOCO 2 -->
