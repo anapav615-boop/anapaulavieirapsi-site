@@ -237,6 +237,29 @@
       .card-section{ padding:22px 18px; }
       .hero-media img{ max-height:320px; }
     }
+   /* ===== Ajuste cards Recursos (lado a lado) ===== */
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:24px;
+  justify-content:flex-start;
+}
+
+/* cada card */
+.mini-card.recurso-card{
+  flex: 1 1 320px;
+  max-width: 380px;
+  width:100%;
+}
+
+/* imagem da capa NÃO cortar */
+.recurso-img{
+  width:100%;
+  height:auto !important;
+  object-fit:contain !important;
+  border-radius:12px;
+  display:block;
+}
   </style>
 </head>
 
