@@ -313,6 +313,19 @@
       margin-bottom:2px;
       display:block;
     }
+
+    /* ===== Capas de guias (não cortar texto da imagem) ===== */
+.ebook-cover{
+  height: 260px;         /* altura “tipo capa” */
+  object-fit: contain;   /* não corta */
+  background:#fff;
+  padding:6px;
+  box-sizing:border-box;
+}
+
+@media (max-width: 780px){
+  .ebook-cover{ height: 240px; }
+}
     .recurso-thumb{
       width:100%;
       height: 170px;
