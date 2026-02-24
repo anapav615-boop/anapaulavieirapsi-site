@@ -301,7 +301,39 @@
 
     
     /* ===== Recursos (imagens alinhadas e cards consistentes) ===== */
-    .recurso-card{ display:flex; flex-direction:column; gap:10px; }
+    /* ===== FIX: alinhar cards do bloco recursos lado a lado (escopado) ===== */
+section[aria-label="Recursos"] .recurso-card{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  flex: 1 1 320px;      /* base desktop */
+  max-width: 360px;     /* mantém visual do card */
+}
+
+/* grid APENAS do bloco Recursos */
+section[aria-label="Recursos"] .grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+  align-items:stretch;
+}
+
+/* Responsivo: 2 por linha (tablet) */
+@media (max-width: 1024px){
+  section[aria-label="Recursos"] .recurso-card{
+    flex-basis: calc(50% - 20px);
+    max-width: 520px;
+  }
+}
+
+/* Responsivo: 1 por linha (mobile) */
+@media (max-width: 780px){
+  section[aria-label="Recursos"] .recurso-card{
+    flex-basis: 100%;
+    max-width: 520px;
+  }
+}
     .recurso-card p{ margin:0; line-height:1.7; }
     .recurso-card .recurso-actions{ margin-top:auto; }
 
@@ -748,6 +780,17 @@
     Guia psicoeducativo para compreender a ansiedade e os pensamentos acelerados,
     com linguagem acessível, acolhedora e baseada na Psicologia científica.
   </p>
+
+  <div class="recurso-actions">
+    <a href="https://go.hotmart.com/I104591180F?dp=1"
+       class="btn-mini secondary"
+       target="_blank"
+       rel="noopener">
+      Acessar o guia agora
+    </a>
+  </div>
+</article>
+
 <!-- NOVO GUIA: AUTOESTIMA E AUTOCRÍTICA -->
 <article class="mini-card recurso-card">
   <img src="imagens/capa-guia-autoestima-autocritica.png"
