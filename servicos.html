@@ -21,68 +21,108 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Psychologist",
-  "@id": "https://anapaulaapvieirapsi.com.br/#business",
-  "name": "Ana Paula Ap. Vieira | Psicóloga Clínica",
-  "url": "https://anapaulaapvieirapsi.com.br/",
-  "image": "https://anapaulaapvieirapsi.com.br/imagens/consultorio.jpg",
-  "telephone": "+55-15-99676-0791",
-  "email": "contato@anapaulaapvieirapsi.com.br",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "R. Nazareth, 84 - Vila São Pedro",
-    "addressLocality": "Itapetininga",
-    "addressRegion": "SP",
-    "addressCountry": "BR"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Itapetininga"
-  },
-  "sameAs": [
-    "https://www.instagram.com/anapaulapsico/",
-    "https://www.facebook.com/anapaulaapvieirapsico/",
-    "https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
-  ]
-}
-</script> 
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#service",
-      "name": "Serviços Psicológicos — Ana Paula Ap. Vieira",
-      "url": "https://anapaulaapvieirapsi.com.br/servicos.html",
-      "description": "Serviços psicológicos com foco em psicoterapia para adultos, adolescentes e infantil. Atendimento online para todo o Brasil e presencial em Itapetininga-SP.",
-      "provider": {
-        "@id": "https://anapaulaapvieirapsi.com.br/#business"
-      },
-      "serviceType": [
-        "Psicoterapia para adultos",
-        "Psicoterapia para adolescentes",
-        "Psicoterapia infantil",
-        "Orientação parental"
-      ],
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Itapetininga"
-        },
-        {
-          "@type": "Country",
-          "name": "Brazil"
-        }
-      ]
-    },
+  "@graph": [
     {
       "@type": "WebPage",
       "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#webpage",
       "url": "https://anapaulaapvieirapsi.com.br/servicos.html",
       "name": "Serviços — Ana Paula Ap. Vieira | Psicóloga Clínica",
-      "about": {
-        "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#service"
-      },
-      "isPartOf": {
-        "@id": "https://anapaulaapvieirapsi.com.br/#business"
+      "description": "Serviços psicológicos com foco em psicoterapia para adultos, adolescentes e infantil, com atendimento online e presencial em Itapetininga-SP.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://anapaulaapvieirapsi.com.br/#website" },
+      "about": { "@id": "https://anapaulaapvieirapsi.com.br/#business" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://anapaulaapvieirapsi.com.br/#website",
+      "url": "https://anapaulaapvieirapsi.com.br/",
+      "name": "Ana Paula Ap. Vieira | Psicóloga Clínica",
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://anapaulaapvieirapsi.com.br/#business",
+      "name": "Ana Paula Ap. Vieira | Psicóloga Clínica",
+      "url": "https://anapaulaapvieirapsi.com.br/",
+      "image": "https://anapaulaapvieirapsi.com.br/imagens/consultorio.jpg",
+      "telephone": "+55-15-99676-0791",
+      "email": "contato@anapaulaapvieirapsi.com.br",
+      "knowsLanguage": ["pt-BR"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Nazareth, 84 - Vila São Pedro",
+        "addressLocality": "Itapetininga",
+        "addressRegion": "SP",
+        "postalCode": "18204-030",
+        "addressCountry": "BR"
       }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#services",
+      "name": "Serviços de psicoterapia",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#psicoterapia-adultos",
+            "name": "Psicoterapia para adultos",
+            "serviceType": "Psicoterapia",
+            "provider": { "@id": "https://anapaulaapvieirapsi.com.br/#business" },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Itapetininga - SP" },
+              { "@type": "Country", "name": "BR" }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#psicoterapia-adolescentes",
+            "name": "Psicoterapia para adolescentes",
+            "serviceType": "Psicoterapia",
+            "provider": { "@id": "https://anapaulaapvieirapsi.com.br/#business" },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Itapetininga - SP" },
+              { "@type": "Country", "name": "BR" }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#psicoterapia-infantil",
+            "name": "Psicoterapia infantil",
+            "serviceType": "Psicoterapia",
+            "provider": { "@id": "https://anapaulaapvieirapsi.com.br/#business" },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Itapetininga - SP" },
+              { "@type": "Country", "name": "BR" }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#orientacao-parental",
+            "name": "Orientação parental",
+            "serviceType": "Acompanhamento psicológico",
+            "provider": { "@id": "https://anapaulaapvieirapsi.com.br/#business" },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Itapetininga - SP" },
+              { "@type": "Country", "name": "BR" }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
