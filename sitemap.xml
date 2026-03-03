@@ -1,183 +1,205 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOME -->
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<!-- HOME -->
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/</loc>
+<lastmod>2026-02-24</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
 
-  <!-- Páginas principais -->
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/quem-sou.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
+<!-- Páginas principais -->
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/quem-sou.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.90</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/servicos.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/servicos.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.90</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/sobre-o-atendimento.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/sobre-o-atendimento.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.85</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/preco.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/preco.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.85</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/recursos.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/recursos.html</loc>
+<lastmod>2026-02-24</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.95</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/depoimentos.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/depoimentos.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/faq.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/faq.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
 
-  <!-- NOVOS ARTIGOS: TRISTEZA -->
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/tristeza-persistente.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
+<!-- ================= NOVAS PÁGINAS SEO LOCAL ================= -->
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/tristeza-adolescente.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/psicologa-em-itapetininga.html</loc>
+<lastmod>2026-03-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.95</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/crianca-triste.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/ansiedade-em-itapetininga.html</loc>
+<lastmod>2026-03-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.92</priority>
+</url>
 
-  <!-- Artigos existentes -->
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/baixa-autoestima.html</loc>
-    <lastmod>2026-02-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/burnout-emocional-trabalho.html</loc>
+<lastmod>2026-03-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.90</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/ansiedade.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<!-- ================= ARTIGOS EXISTENTES ================= -->
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/ansiedade-2.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/tristeza-persistente.html</loc>
+<lastmod>2026-02-24</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.90</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/depressao.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/tristeza-adolescente.html</loc>
+<lastmod>2026-02-24</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.90</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/depressao-2.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/crianca-triste.html</loc>
+<lastmod>2026-02-24</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.90</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/exaustao-emocional.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/baixa-autoestima.html</loc>
+<lastmod>2026-02-17</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.90</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/esgotamento-trabalho.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/ansiedade.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/autoestima.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/ansiedade-2.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/autoconhecimento.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/depressao.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/autocuidado-emocional.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/depressao-2.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/autocuidado-emocional-2.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/exaustao-emocional.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/artigo-relacoes-saudaveis-vinculos-emocionais.html</loc>
-    <lastmod>2026-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/esgotamento-trabalho.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/relacionamentos.html</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/autoestima.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
 
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/culpa-materna.html</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/autoconhecimento.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/autocuidado-emocional.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.75</priority>
+</url>
+
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/autocuidado-emocional-2.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.75</priority>
+</url>
+
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/artigo-relacoes-saudaveis-vinculos-emocionais.html</loc>
+<lastmod>2026-01-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/relacionamentos.html</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
+
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/culpa-materna.html</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.80</priority>
+</url>
 
 </urlset>
