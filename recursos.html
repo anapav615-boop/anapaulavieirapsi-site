@@ -17,15 +17,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Recursos e Artigos sobre Saúde Emocional",
-  "url": "https://anapaulaapvieirapsi.com.br/recursos.html",
-  "description": "Artigos e conteúdos sobre ansiedade, autoestima, exaustão emocional e relacionamentos."
-}
-</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Recursos e Artigos sobre Saúde Emocional",
+    "url": "https://anapaulaapvieirapsi.com.br/recursos.html",
+    "description": "Artigos e conteúdos sobre ansiedade, autoestima, exaustão emocional e relacionamentos."
+  }
+  </script>
 
   <style>
     :root{
@@ -89,6 +89,8 @@
       align-items:stretch;
       margin-top:14px;
     }
+
+    /* ✅ AJUSTE PRINCIPAL: garante altura “real” igual ao box e imagem preenchendo */
     .hero-media{
       flex:1.15;
       min-width:320px;
@@ -96,14 +98,16 @@
       overflow:hidden;
       background:#fff;
       box-shadow:0 12px 28px rgba(0,0,0,0.08);
+      min-height:320px;
+      display:flex;
     }
     .hero-media img{
       width:100%;
       height:100%;
-      max-height:420px;
       object-fit:cover;
       display:block;
     }
+
     .hero-box{
       flex:1;
       min-width:300px;
@@ -181,7 +185,7 @@
       line-height:1.7;
     }
 
-    /* IMAGENS DOS ARTIGOS (mantém bonito) */
+    /* IMAGENS DOS ARTIGOS */
     .recurso-img{
       width:100%;
       height:170px;
@@ -255,7 +259,7 @@
       margin-top:10px;
     }
 
-    /* ===== AJUSTES APENAS PARA O BLOCO DE EBOOKS (não cortar a capa) ===== */
+    /* ===== AJUSTES PARA O BLOCO DE EBOOKS (não cortar a capa) ===== */
     #materiais .grid{
       justify-content:center;
     }
@@ -270,7 +274,7 @@
     @media (max-width:780px){
       .mini-card{ width:100%; max-width:420px; }
       .card-section{ padding:22px 18px; }
-      .hero-media img{ max-height:320px; }
+      .hero-media{ min-height:260px; }
       #materiais .recurso-img{ height:240px; }
     }
   </style>
@@ -308,13 +312,15 @@
 
           <div class="hero-box">
             <h3>Materiais para você se reconhecer no que está vivendo e encontrar caminhos de cuidado.</h3>
-            <p>
-Aqui você encontra conteúdos psicoeducativos sobre ansiedade, cansaço emocional, autoestima, relações e fases da vida. 
-Se você procura <a href="psicologa-em-itapetininga.html">psicóloga em Itapetininga</a> ou deseja iniciar 
-<a href="psicologa-em-itapetininga.html">psicoterapia em Itapetininga</a>, conheça também meu atendimento clínico presencial e online. 
-A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
-</p>            
 
+            <p>
+              Aqui você encontra conteúdos psicoeducativos sobre ansiedade, cansaço emocional, autoestima, relações e fases da vida.
+              Se você procura <a href="psicologa-em-itapetininga.html">psicóloga em Itapetininga</a> ou deseja iniciar
+              <a href="psicologa-em-itapetininga.html">psicoterapia em Itapetininga</a>, conheça também meu atendimento clínico presencial e online.
+              A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
+            </p>
+
+            <p>
               Há artigos gratuitos e, em alguns temas, guias digitais (conteúdos pagos) para quem deseja aprofundar com mais estrutura.
             </p>
 
@@ -424,7 +430,6 @@ A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
             </div>
           </article>
 
-          <!-- NOVO GUIA: ANSIEDADE (AGORA DENTRO DO GRID) -->
           <article class="mini-card recurso-card">
             <img src="imagens/capa-guia-ansiedade.png" alt="Guia psicoeducativo: Quando a mente não desacelera" class="recurso-img">
             <h3>Quando a mente não desacelera</h3>
@@ -440,11 +445,8 @@ A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
             </div>
           </article>
 
-          <!-- NOVO GUIA: AUTOESTIMA E AUTOCRÍTICA -->
           <article class="mini-card recurso-card">
-            <img src="imagens/capa-guia-autoestima-autocritica.png"
-                 alt="Guia psicoeducativo: Autoestima e Autocrítica"
-                 class="recurso-img">
+            <img src="imagens/capa-guia-autoestima-autocritica.png" alt="Guia psicoeducativo: Autoestima e Autocrítica" class="recurso-img">
             <h3>Autoestima e Autocrítica</h3>
             <p>
               Guia psicoeducativo para compreender a autoestima, reduzir a autocrítica e desenvolver
@@ -452,17 +454,12 @@ A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
             </p>
             <span class="badge-soft">Conteúdo pago • acesso imediato</span>
             <div class="recurso-actions">
-              <a href="https://go.hotmart.com/H104601392B?dp=1"
-                 target="_blank" rel="noopener"
-                 class="btn-mini secondary">Acessar o guia agora</a>
+              <a href="https://go.hotmart.com/H104601392B?dp=1" target="_blank" rel="noopener" class="btn-mini secondary">Acessar o guia agora</a>
             </div>
           </article>
 
-          <!-- NOVO GUIA: EXAUSTÃO EMOCIONAL NO TRABALHO -->
           <article class="mini-card recurso-card">
-            <img src="imagens/capa-guia-exaustao-emocional-trabalho.png"
-                 alt="Guia psicoeducativo: Exaustão Emocional no Trabalho"
-                 class="recurso-img">
+            <img src="imagens/capa-guia-exaustao-emocional-trabalho.png" alt="Guia psicoeducativo: Exaustão Emocional no Trabalho" class="recurso-img">
             <h3>Exaustão Emocional no Trabalho</h3>
             <p>
               Guia psicoeducativo para identificar sinais de esgotamento, compreender causas e iniciar
@@ -470,9 +467,7 @@ A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
             </p>
             <span class="badge-soft">Conteúdo pago • acesso imediato</span>
             <div class="recurso-actions">
-              <a href="https://go.hotmart.com/H104601780L?dp=1"
-                 target="_blank" rel="noopener"
-                 class="btn-mini secondary">Acessar o guia agora</a>
+              <a href="https://go.hotmart.com/H104601780L?dp=1" target="_blank" rel="noopener" class="btn-mini secondary">Acessar o guia agora</a>
             </div>
           </article>
         </div>
@@ -488,8 +483,41 @@ A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
         </p>
 
         <div class="grid">
+          <!-- ✅ NOVOS CARDS (páginas de hoje) -->
+          <article class="mini-card recurso-card">
+            <img src="imagens/psicologa-itapetininga.jpg" alt="Psicóloga em Itapetininga - psicoterapia presencial e online" class="recurso-img">
+            <h3>Psicóloga em Itapetininga</h3>
+            <p>
+              Atendimento psicológico presencial e online, com acolhimento e escuta profissional. Saiba como funciona e quando procurar terapia.
+            </p>
+            <div class="recurso-actions">
+              <a href="psicologa-em-itapetininga.html" class="btn-mini secondary">Ver página</a>
+            </div>
+          </article>
 
-          <!-- NOVO: Tristeza persistente (adulto) -->
+          <article class="mini-card recurso-card">
+            <img src="imagens/ansiedade-itapetininga.jpg" alt="Ansiedade em Itapetininga - quando procurar ajuda" class="recurso-img">
+            <h3>Ansiedade em Itapetininga</h3>
+            <p>
+              Pensamentos acelerados, tensão no corpo e medo constante? Entenda sinais de ansiedade e como a psicoterapia pode ajudar.
+            </p>
+            <div class="recurso-actions">
+              <a href="ansiedade-em-itapetininga.html" class="btn-mini secondary">Ler artigo</a>
+            </div>
+          </article>
+
+          <article class="mini-card recurso-card">
+            <img src="imagens/burnout-emocional-trabalho.jpg" alt="Burnout emocional no trabalho" class="recurso-img">
+            <h3>Burnout emocional no trabalho</h3>
+            <p>
+              Quando o trabalho começa a adoecer por dentro: sinais de burnout, causas e caminhos de cuidado para recuperar energia e limites.
+            </p>
+            <div class="recurso-actions">
+              <a href="burnout-emocional-trabalho.html" class="btn-mini secondary">Ler artigo</a>
+            </div>
+          </article>
+
+          <!-- existentes -->
           <article class="mini-card recurso-card">
             <img src="imagens/tristeza-persistente.jpg" alt="Tristeza persistente e sofrimento emocional" class="recurso-img">
             <h3>Tristeza persistente</h3>
@@ -502,7 +530,6 @@ A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
             </div>
           </article>
 
-          <!-- NOVO: Tristeza na adolescência -->
           <article class="mini-card recurso-card">
             <img src="imagens/tristeza-adolescente.jpg" alt="Tristeza na adolescência e sofrimento emocional" class="recurso-img">
             <h3>Tristeza na adolescência</h3>
@@ -515,7 +542,6 @@ A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
             </div>
           </article>
 
-          <!-- NOVO: Criança triste com frequência -->
           <article class="mini-card recurso-card">
             <img src="imagens/crianca-triste.jpg" alt="Criança triste com frequência e sinais emocionais" class="recurso-img">
             <h3>Criança triste com frequência</h3>
@@ -771,7 +797,7 @@ A ideia é orientar com acolhimento e clareza, sem rótulos e sem julgamentos.
 
       <div style="margin-top:8px;">
         <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
-        <a href="https://www.facebook.com/anapaulaapvieirapsi.com.br" target="_blank" style="text-decoration:underline;">Facebook</a> |
+        <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" style="text-decoration:underline;">Facebook</a> |
         <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" style="text-decoration:underline;">LinkedIn</a>
       </div>
     </div>
