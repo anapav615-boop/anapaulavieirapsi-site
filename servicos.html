@@ -18,17 +18,34 @@
 
   <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/servicos.html">
 
- <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "WebSite",
+      "@id": "https://anapaulaapvieirapsi.com.br/#website",
+      "url": "https://anapaulaapvieirapsi.com.br/",
+      "name": "Ana Paula Ap. Vieira | Psicóloga Clínica",
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#webpage",
+      "url": "https://anapaulaapvieirapsi.com.br/servicos.html",
+      "name": "Serviços — Ana Paula Ap. Vieira | Psicóloga Clínica",
+      "description": "Serviços psicológicos com foco em psicoterapia para adultos, adolescentes e infantil. Atendimento online e presencial em Itapetininga-SP.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://anapaulaapvieirapsi.com.br/#website" },
+      "about": { "@id": "https://anapaulaapvieirapsi.com.br/#business" }
+    },
+    {
+      "@type": ["LocalBusiness", "MedicalBusiness"],
       "@id": "https://anapaulaapvieirapsi.com.br/#business",
       "name": "Ana Paula Ap. Vieira | Psicóloga Clínica",
       "url": "https://anapaulaapvieirapsi.com.br/",
       "image": "https://anapaulaapvieirapsi.com.br/imagens/consultorio.jpg",
-      "telephone": "+55-15-99676-0791",
+      "telephone": "+55 15 99676-0791",
       "email": "contato@anapaulaapvieirapsi.com.br",
       "address": {
         "@type": "PostalAddress",
@@ -48,101 +65,47 @@
       ]
     },
     {
-      "@type": "WebSite",
-      "@id": "https://anapaulaapvieirapsi.com.br/#website",
-      "url": "https://anapaulaapvieirapsi.com.br/",
-      "name": "Ana Paula Ap. Vieira | Psicóloga Clínica",
-      "publisher": { "@id": "https://anapaulaapvieirapsi.com.br/#business" },
-      "inLanguage": "pt-BR"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#service",
+      "@type": "OfferCatalog",
+      "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#catalog",
       "name": "Serviços psicológicos",
-      "url": "https://anapaulaapvieirapsi.com.br/servicos.html",
-      "description": "Serviços psicológicos com foco em psicoterapia para adultos, adolescentes e infantil. Atendimento presencial em Itapetininga-SP e online.",
-      "provider": { "@id": "https://anapaulaapvieirapsi.com.br/#business" },
-      "serviceType": [
-        "Psicoterapia para adultos",
-        "Psicoterapia para adolescentes",
-        "Psicoterapia infantil",
-        "Orientação parental"
-      ],
-      "areaServed": [
-        { "@type": "City", "name": "Itapetininga" },
-        { "@type": "Country", "name": "BR" }
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Psicoterapia para adultos",
+            "provider": { "@id": "https://anapaulaapvieirapsi.com.br/#business" }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Psicoterapia para adolescentes",
+            "provider": { "@id": "https://anapaulaapvieirapsi.com.br/#business" }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Psicoterapia infantil",
+            "provider": { "@id": "https://anapaulaapvieirapsi.com.br/#business" }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Orientação parental",
+            "provider": { "@id": "https://anapaulaapvieirapsi.com.br/#business" }
+          }
+        }
       ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#webpage",
-      "url": "https://anapaulaapvieirapsi.com.br/servicos.html",
-      "name": "Serviços — Ana Paula Ap. Vieira | Psicóloga Clínica",
-      "description": "Serviços psicológicos: psicoterapia para adultos, adolescentes e infantil, e orientação parental. Atendimento presencial em Itapetininga e online.",
-      "inLanguage": "pt-BR",
-      "isPartOf": { "@id": "https://anapaulaapvieirapsi.com.br/#website" },
-      "about": { "@id": "https://anapaulaapvieirapsi.com.br/servicos.html#service" }
     }
   ]
 }
 </script>
-
-  <!-- OPEN GRAPH -->
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica">
-  <meta property="og:title" content="Serviços — Psicoterapia para Adultos, Adolescentes e Infantil">
-  <meta property="og:description" content="Psicoterapia individual para adultos, adolescentes e crianças. Atendimento presencial em Itapetininga-SP e online para todo o Brasil.">
-  <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/servicos.html">
-  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg">
-  <meta property="og:image:alt" content="Serviços psicológicos — Ana Paula Ap. Vieira">
-
-  <!-- TWITTER -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Serviços — Psicoterapia para Adultos, Adolescentes e Infantil">
-  <meta name="twitter:description" content="Atendimentos presenciais e online com foco em acolhimento, autoconhecimento e cuidado emocional.">
-  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg">
-
-  <!-- JSON-LD (mantido, apenas ajustável se você quiser depois) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://anapaulaapvieirapsi.com.br/#person",
-        "name": "Ana Paula Ap. Vieira",
-        "jobTitle": "Psicóloga Clínica",
-        "identifier": "CRP 06/217114",
-        "url": "https://anapaulaapvieirapsi.com.br/quem-sou.html",
-        "description": "Psicóloga clínica que atua com abordagem psicanalítica. Formação complementar em ABA, Psicologia Hospitalar e Psicologia Organizacional. Atendimento presencial em Itapetininga-SP e online para todo o Brasil.",
-        "sameAs": [
-          "https://www.instagram.com/anapaulapsico/",
-          "https://www.facebook.com/anapaulaapvieirapsico/",
-          "https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
-        ],
-        "telephone": "+55-15-996760791"
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://anapaulaapvieirapsi.com.br/#service",
-        "name": "Serviços Psicológicos — Ana Paula Ap. Vieira",
-        "url": "https://anapaulaapvieirapsi.com.br/servicos.html",
-        "description": "Psicoterapia para adultos, adolescentes e infantil. Atendimento online para todo o Brasil e presencial em Itapetininga-SP.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Nazareth, 84, Vila São Pedro",
-          "addressLocality": "Itapetininga",
-          "addressRegion": "SP",
-          "postalCode": "18204-030",
-          "addressCountry": "BR"
-        },
-        "areaServed": "BR",
-        "availableLanguage": "pt-BR"
-      }
-    ]
-  }
-  </script>
 
   <!-- Estilo local (somente para padronizar com o INDEX + faixa verde nos cards) -->
   <style>
