@@ -484,6 +484,41 @@
     .mini-card { width: 100%; max-width: 520px; }
     .card-section { padding: 22px 18px; }
   }
+/* ===== FIX Samsung: texto cortando na borda direita (apenas HERO) ===== */
+section[aria-label="Abertura"] .card-section,
+section[aria-label="Abertura"] .card-hero,
+section[aria-label="Abertura"] .hero,
+section[aria-label="Abertura"] .hero-box{
+  overflow: visible !important; /* ✅ correto */
+  box-sizing: border-box;
+}
+
+/* garante que o “filete” interno NÃO fique por cima do texto (Samsung) */
+section[aria-label="Abertura"] .card-section{
+  position: relative;
+}
+section[aria-label="Abertura"] .card-section::before{
+  z-index: 0 !important;
+}
+section[aria-label="Abertura"] .card-section > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* “respiro” extra para evitar o corte na borda (Samsung) */
+@media (max-width: 768px){
+  section[aria-label="Abertura"] .hero-box{
+    padding-right: 22px !important;
+    padding-left: 22px !important;
+  }
+
+  section[aria-label="Abertura"] .btn-cta{
+    box-sizing: border-box;
+    overflow: visible !important;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
 </style>
 </head><body>
 <header class="cabecalho">
