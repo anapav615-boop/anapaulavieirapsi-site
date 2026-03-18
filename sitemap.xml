@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <!-- HOME -->
 <url>
 <loc>https://anapaulaapvieirapsi.com.br/</loc>
-<lastmod>2026-02-24</lastmod>
+<lastmod>2026-03-17</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1.0</priority>
 </url>
@@ -39,7 +40,7 @@
 
 <url>
 <loc>https://anapaulaapvieirapsi.com.br/recursos.html</loc>
-<lastmod>2026-02-24</lastmod>
+<lastmod>2026-03-17</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.95</priority>
 </url>
@@ -58,8 +59,7 @@
 <priority>0.80</priority>
 </url>
 
-<!-- ================= NOVAS PÁGINAS SEO LOCAL ================= -->
-
+<!-- SEO LOCAL -->
 <url>
 <loc>https://anapaulaapvieirapsi.com.br/psicologa-em-itapetininga.html</loc>
 <lastmod>2026-03-03</lastmod>
@@ -74,18 +74,17 @@
 <priority>0.92</priority>
 </url>
 
+<!-- ARTIGOS -->
 <url>
-<loc>https://anapaulaapvieirapsi.com.br/burnout-emocional-trabalho.html</loc>
-<lastmod>2026-03-03</lastmod>
+<loc>https://anapaulaapvieirapsi.com.br/ansiedade-trabalho.html</loc>
+<lastmod>2026-03-10</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.90</priority>
 </url>
 
-<!-- ================= ARTIGOS EXISTENTES ================= -->
-
 <url>
-<loc>https://anapaulaapvieirapsi.com.br/ansiedade-trabalho.html</loc>
-<lastmod>2026-03-10</lastmod>
+<loc>https://anapaulaapvieirapsi.com.br/burnout-emocional-trabalho.html</loc>
+<lastmod>2026-03-03</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.90</priority>
 </url>
@@ -126,21 +125,7 @@
 </url>
 
 <url>
-<loc>https://anapaulaapvieirapsi.com.br/ansiedade-2.html</loc>
-<lastmod>2026-01-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.80</priority>
-</url>
-
-<url>
 <loc>https://anapaulaapvieirapsi.com.br/depressao.html</loc>
-<lastmod>2026-01-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.80</priority>
-</url>
-
-<url>
-<loc>https://anapaulaapvieirapsi.com.br/depressao-2.html</loc>
 <lastmod>2026-01-18</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.80</priority>
@@ -182,13 +167,6 @@
 </url>
 
 <url>
-<loc>https://anapaulaapvieirapsi.com.br/autocuidado-emocional-2.html</loc>
-<lastmod>2026-01-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.75</priority>
-</url>
-
-<url>
 <loc>https://anapaulaapvieirapsi.com.br/artigo-relacoes-saudaveis-vinculos-emocionais.html</loc>
 <lastmod>2026-01-18</lastmod>
 <changefreq>monthly</changefreq>
@@ -204,9 +182,17 @@
 
 <url>
 <loc>https://anapaulaapvieirapsi.com.br/culpa-materna.html</loc>
-<lastmod>2026-02-09</lastmod>
+<lastmod>2026-03-17</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.80</priority>
+<priority>0.85</priority>
+</url>
+
+<!-- NOVO ARTIGO -->
+<url>
+<loc>https://anapaulaapvieirapsi.com.br/maternidade-real-sobrecarga-materna.html</loc>
+<lastmod>2026-03-17</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.88</priority>
 </url>
 
 </urlset>
