@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Espaço Seguro | Apoio emocional | Ana Paula Ap. Vieira</title>
   <meta name="description" content="Espaço Seguro: apoio emocional com check-in, diário das emoções, exercícios terapêuticos, áudios de acolhimento e contato com a psicóloga Ana Paula Ap. Vieira." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Ana Paula Ap. Vieira" />
+  <link rel="icon" type="image/png" href="imagens/favicon.png" />
+  <link rel="manifest" href="manifest.json" />
   <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/espaco-seguro.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica" />
@@ -19,632 +17,1046 @@
   <meta property="og:description" content="Um espaço acolhedor para respirar, escrever, ouvir áudios terapêuticos e encontrar apoio psicológico." />
   <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/espaco-seguro.html" />
   <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/espaco-seguro-capa.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Espaço Seguro | Apoio emocional | Ana Paula Ap. Vieira" />
+  <meta name="twitter:description" content="Check-in emocional, diário das emoções, exercícios terapêuticos, áudios de acolhimento e contato com a psicóloga Ana Paula Ap. Vieira." />
+  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/espaco-seguro-capa.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
 
   <style>
-    :root{
-      --bg:#f7f3ef;
-      --bg-soft:#efe7e1;
-      --card:#ffffff;
-      --primary:#7d8f7a;
-      --primary-dark:#5f715d;
-      --secondary:#b58b7a;
-      --text:#3d3835;
-      --muted:#6f6762;
-      --line:#e6ddd7;
-      --shadow:0 14px 34px rgba(74,66,60,.08);
-      --radius-xl:30px;
-      --radius-lg:22px;
-      --radius-md:16px;
-      --max:1160px;
+    :root {
+      --roxo-principal: #6b48a8;
+      --roxo-escuro: #56378d;
+      --roxo-claro: #f4effa;
+      --lavanda: #efe7fb;
+      --rosa-claro: #f9f2f7;
+      --bege: #faf7f3;
+      --texto: #4b4354;
+      --texto-suave: #72697c;
+      --borda: #e8deef;
+      --branco: #ffffff;
+      --sombra: 0 14px 34px rgba(107, 72, 168, 0.10);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1180px;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Poppins',Arial,sans-serif;
-      color:var(--text);
-      background:linear-gradient(180deg,#fcfaf8 0%,var(--bg) 100%);
-      line-height:1.7;
-    }
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    .container{width:min(var(--max),92%);margin:0 auto}
-    .topbar{
-      position:sticky;top:0;z-index:20;
-      background:rgba(252,250,248,.92);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .topbar-inner{
-      min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px;
-    }
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{width:52px;height:52px;border-radius:50%}
-    .brand strong{display:block;color:var(--primary-dark);font-size:1rem}
-    .brand span{font-size:.88rem;color:var(--muted)}
-    .nav{display:flex;flex-wrap:wrap;gap:14px;color:var(--muted);font-size:.95rem}
-    .nav a:hover{color:var(--primary-dark)}
 
-    .hero{padding:42px 0 20px}
-    .hero-box{
-      display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center;
-      background:linear-gradient(135deg,#fff 0%,#f4ede7 100%);
-      border:1px solid var(--line);border-radius:34px;padding:34px;box-shadow:var(--shadow);
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fcfafe 0%, #f8f3fb 100%);
+      color: var(--texto);
+      line-height: 1.7;
     }
-    .tag{
-      display:inline-block;padding:8px 14px;border-radius:999px;
-      background:#eef3ed;color:var(--primary-dark);font-size:.9rem;font-weight:600;margin-bottom:16px;
-    }
-    h1{
-      font-size:clamp(2.1rem,4vw,3.6rem);
-      line-height:1.12;color:var(--primary-dark);letter-spacing:-.03em;margin-bottom:16px;
-    }
-    .hero p{color:var(--muted);font-size:1.03rem;margin-bottom:18px}
-    .hero-list{
-      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 24px;
-    }
-    .hero-list span{
-      background:rgba(255,255,255,.8);border:1px solid var(--line);border-radius:14px;padding:12px 14px;
-      color:var(--primary-dark);font-size:.95rem;font-weight:500;
-    }
-    .hero-card{
-      background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:26px;padding:24px;box-shadow:var(--shadow);
-    }
-    .hero-card h2{font-size:1.2rem;color:var(--primary-dark);margin-bottom:10px}
-    .hero-card p{font-size:.98rem;color:var(--muted)}
-    .hero-note{display:grid;gap:10px;margin-top:14px}
-    .hero-note div{background:var(--bg-soft);border-radius:16px;padding:12px 14px;color:var(--muted)}
-    .actions{display:flex;flex-wrap:wrap;gap:12px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:14px 22px;border-radius:999px;font-weight:600;border:none;cursor:pointer;font-family:inherit;
-      transition:.2s ease;
-    }
-    .btn-primary{background:var(--primary);color:#fff}
-    .btn-primary:hover{transform:translateY(-1px);filter:brightness(.98)}
-    .btn-secondary{background:#fff;color:var(--primary-dark);border:1px solid var(--line)}
-    section{padding:28px 0}
-    .section-head{text-align:center;max-width:760px;margin:0 auto 22px}
-    .section-head h2{font-size:clamp(1.7rem,3vw,2.4rem);color:var(--primary-dark);margin-bottom:8px}
-    .section-head p{color:var(--muted)}
-    .grid{display:grid;gap:18px}
-    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .card{
-      background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);
-      padding:24px;box-shadow:var(--shadow);
-    }
-    .card h3{color:var(--primary-dark);font-size:1.14rem;margin-bottom:10px}
-    .card p,.card li,.card label,.card input,.card textarea,.card select,.card small{color:var(--muted);font-size:.97rem}
-    .icon{
-      width:48px;height:48px;border-radius:15px;display:grid;place-items:center;
-      background:#eef3ed;margin-bottom:14px;font-size:1.15rem;
-    }
-    .two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
-    .form-group{margin-bottom:16px}
-    label{display:block;margin-bottom:8px;font-weight:600;color:var(--text)}
-    input,textarea,select{
-      width:100%;padding:14px 15px;border:1px solid var(--line);border-radius:16px;background:#fff;
-      font-family:inherit;outline:none;
-    }
-    textarea{min-height:150px;resize:vertical}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-    .chips span{
-      border:1px solid var(--line);background:#faf7f4;border-radius:999px;padding:10px 14px;
-      color:var(--primary-dark);font-size:.92rem;font-weight:500;
-    }
-    .soft-box{
-      margin-top:16px;padding:16px;border-radius:18px;background:#f7f2ed;border:1px solid var(--line);
-    }
-    .journal-list{display:grid;gap:12px;margin-top:16px}
-    .entry{
-      background:#fcfaf8;border:1px solid var(--line);border-radius:16px;padding:14px;
-    }
-    .entry strong{display:block;color:var(--primary-dark);margin-bottom:6px}
-    .empty{
-      border:1px dashed var(--line);border-radius:16px;padding:14px;color:var(--muted);background:#fcfaf8;
-    }
-    .exercise{background:linear-gradient(180deg,#fff 0%,#fcf8f5 100%)}
-    .exercise ul,.deep ul,.deep ol{padding-left:20px}
-    .mini-link{display:inline-block;margin-top:12px;color:var(--primary-dark);font-weight:600}
-    .deep{
-      background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:var(--shadow);margin-top:16px;
-    }
-    .deep h3{color:var(--primary-dark);margin-bottom:10px}
-    .deep h4{color:var(--primary-dark);margin:16px 0 8px}
-    audio{width:100%;margin-top:12px}
-    details{
-      background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 18px;box-shadow:var(--shadow);
-    }
-    details+details{margin-top:14px}
-    summary{cursor:pointer;font-weight:600;color:var(--primary-dark);list-style:none}
-    summary::-webkit-details-marker{display:none}
-    details p{margin-top:10px;color:var(--muted)}
-    .cta{
-      background:linear-gradient(135deg,var(--primary) 0%,#96a592 100%);
-      color:#fff;border-radius:30px;padding:34px 24px;text-align:center;box-shadow:0 16px 36px rgba(95,113,93,.18);
-    }
-    .cta h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:10px}
-    .cta p{max-width:760px;margin:0 auto 18px}
-    .cta .btn-secondary{border:none}
-    footer{padding:24px 0 44px;text-align:center;color:var(--muted);font-size:.95rem}
-    .signature{margin-top:8px;color:var(--primary-dark);font-weight:600}
-    .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:14px}
-    .success{
-      display:none;margin-top:14px;padding:14px 16px;border-radius:16px;background:#eef3ed;
-      color:var(--primary-dark);border:1px solid #d8e4d5;font-weight:500;
-    }
-    .success.show{display:block}
 
-    @media (max-width:1024px){
-      .hero-box,.two-col{grid-template-columns:1fr}
-      .grid-4,.grid-3{grid-template-columns:1fr 1fr}
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(var(--max), 92%); margin: 0 auto; }
+
+    .cabecalho {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--borda);
     }
-    @media (max-width:760px){
-      .topbar-inner{flex-direction:column;align-items:flex-start;padding:14px 0}
-      .nav,.hero-list,.grid-4,.grid-3,.grid-2{grid-template-columns:1fr}
-      .grid-4,.grid-3,.grid-2{display:grid}
-      .hero-box,.card,.deep,.cta{padding:22px}
-      .hero-list{display:grid}
+
+    .cabecalho-topo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-area img {
+      width: 58px;
+      height: 58px;
+    }
+
+    .marca strong {
+      display: block;
+      color: var(--roxo-principal);
+      font-size: 1.2rem;
+    }
+
+    .marca span {
+      color: var(--texto-suave);
+      font-size: 0.92rem;
+    }
+
+    .menu-nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .menu-nav a {
+      color: var(--texto-suave);
+      font-weight: 500;
+    }
+
+    .menu-nav a:hover {
+      color: var(--roxo-principal);
+    }
+
+    .hero-app {
+      padding: 34px 0 18px;
+    }
+
+    .hero-box {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: center;
+      background: linear-gradient(135deg, #ffffff 0%, #f5eefc 100%);
+      border: 1px solid var(--borda);
+      border-radius: 34px;
+      box-shadow: var(--sombra);
+      padding: 30px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-box::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(107,72,168,0.10), transparent 70%);
+      pointer-events: none;
+    }
+
+    .tag-app {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--lavanda);
+      color: var(--roxo-principal);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+
+    .hero-box h1 {
+      font-size: clamp(2.1rem, 4vw, 3.6rem);
+      line-height: 1.1;
+      color: var(--roxo-principal);
+      margin-bottom: 16px;
+    }
+
+    .hero-box p {
+      color: var(--texto-suave);
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+
+    .hero-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+
+    .hero-cards span {
+      background: rgba(255,255,255,0.8);
+      border: 1px solid var(--borda);
+      border-radius: 16px;
+      padding: 12px 14px;
+      color: var(--roxo-escuro);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .botoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-app {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: none;
+      font-family: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .btn-primario {
+      background: linear-gradient(135deg, var(--roxo-principal) 0%, #8a63ca 100%);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(107,72,168,0.18);
+    }
+
+    .btn-secundario {
+      background: #fff;
+      color: var(--roxo-principal);
+      border: 1px solid var(--borda);
+    }
+
+    .btn-app:hover {
+      transform: translateY(-2px);
+    }
+
+    .app-preview {
+      background: linear-gradient(180deg, #fff 0%, #faf6ff 100%);
+      border: 1px solid var(--borda);
+      border-radius: 28px;
+      padding: 22px;
+      box-shadow: var(--sombra);
+    }
+
+    .app-preview h2 {
+      color: var(--roxo-principal);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .app-preview p {
+      font-size: 0.96rem;
+      margin-bottom: 8px;
+    }
+
+    .mini-blocos {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .mini-blocos div {
+      background: var(--rosa-claro);
+      border-radius: 16px;
+      padding: 12px 14px;
+      color: var(--texto-suave);
+      border: 1px solid #f0e4ee;
+    }
+
+    section {
+      padding: 24px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 22px;
+    }
+
+    .section-head h2 {
+      color: var(--roxo-principal);
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      margin-bottom: 8px;
+    }
+
+    .section-head p {
+      color: var(--texto-suave);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card-app {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      box-shadow: var(--sombra);
+    }
+
+    .card-app h3 {
+      color: var(--roxo-principal);
+      margin-bottom: 10px;
+      font-size: 1.12rem;
+    }
+
+    .card-app p,
+    .card-app li,
+    .card-app label,
+    .card-app small,
+    .card-app input,
+    .card-app textarea,
+    .card-app select {
+      color: var(--texto-suave);
+      font-size: 0.96rem;
+    }
+
+    .icone-card {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: var(--lavanda);
+      margin-bottom: 14px;
+      font-size: 1.2rem;
+    }
+
+    .layout-duplo {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--texto);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 14px 15px;
+      border-radius: 16px;
+      border: 1px solid var(--borda);
+      background: #fff;
+      font-family: inherit;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #cdb8ec;
+      box-shadow: 0 0 0 3px rgba(107,72,168,0.08);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .chips span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #fbf8fe;
+      border: 1px solid var(--borda);
+      color: var(--roxo-escuro);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .app-box {
+      background: linear-gradient(180deg, #fff 0%, #fcf9ff 100%);
+      border: 1px solid var(--borda);
+      border-radius: 22px;
+      padding: 18px;
+      margin-top: 14px;
+    }
+
+    .app-box strong {
+      display: block;
+      color: var(--roxo-principal);
+      margin-bottom: 6px;
+    }
+
+    .entries-box {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .entry-item {
+      background: #fcf9ff;
+      border: 1px solid var(--borda);
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .entry-item strong {
+      display: block;
+      color: var(--roxo-principal);
+      margin-bottom: 6px;
+    }
+
+    .empty-state {
+      background: #fcf9ff;
+      border: 1px dashed #d7c9ec;
+      border-radius: 16px;
+      padding: 14px;
+      color: var(--texto-suave);
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: var(--lavanda);
+      color: var(--roxo-principal);
+      border: 1px solid #dbcaf5;
+      font-weight: 500;
+    }
+
+    .success-message.show {
+      display: block;
+    }
+
+    .exercise-card {
+      background: linear-gradient(180deg, #fff 0%, #faf7fe 100%);
+    }
+
+    .exercise-card ul,
+    .deep-section ul,
+    .deep-section ol {
+      padding-left: 20px;
+    }
+
+    .mini-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--roxo-principal);
+      font-weight: 600;
+    }
+
+    .deep-section {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: var(--sombra);
+      margin-top: 16px;
+    }
+
+    .deep-section h3,
+    .deep-section h4 {
+      color: var(--roxo-principal);
+    }
+
+    .deep-section h3 {
+      margin-bottom: 10px;
+    }
+
+    .deep-section h4 {
+      margin: 16px 0 8px;
+    }
+
+    .audio-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .audio-card::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(107,72,168,0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid var(--borda);
+      border-radius: 18px;
+      padding: 16px 18px;
+      box-shadow: var(--sombra);
+    }
+
+    details + details {
+      margin-top: 14px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--roxo-principal);
+      font-weight: 600;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    details p {
+      margin-top: 10px;
+      color: var(--texto-suave);
+    }
+
+    .cta-app {
+      background: linear-gradient(135deg, #6b48a8 0%, #8a63ca 100%);
+      color: #fff;
+      border-radius: 30px;
+      padding: 34px 24px;
+      box-shadow: 0 18px 36px rgba(107,72,168,0.18);
+      text-align: center;
+    }
+
+    .cta-app h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin-bottom: 10px;
+    }
+
+    .cta-app p {
+      max-width: 760px;
+      margin: 0 auto 18px;
+      opacity: 0.95;
+    }
+
+    .rodape {
+      background: #f4effa;
+      padding: 26px 18px;
+      text-align: center;
+      margin-top: 18px;
+      color: var(--texto-suave);
+    }
+
+    .rodape a {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-box,
+      .layout-duplo { grid-template-columns: 1fr; }
+      .grid-4,
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .cabecalho-topo {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .menu-nav ul,
+      .hero-cards,
+      .grid-4,
+      .grid-3 { grid-template-columns: 1fr; }
+      .menu-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+      .hero-box,
+      .card-app,
+      .deep-section,
+      .cta-app { padding: 22px; }
+      .hero-cards { display: grid; }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a href="index.html" class="brand" aria-label="Ir para a página inicial">
-        <img src="imagens/logo-simbolo.png" alt="Logo Ana Paula Ap. Vieira Psicóloga Clínica">
-        <div>
-          <strong>Ana Paula Ap. Vieira</strong>
-          <span>Psicóloga Clínica • CRP 06/217114</span>
-        </div>
-      </a>
-      <nav class="nav" aria-label="Menu principal">
-        <a href="index.html">Início</a>
-        <a href="quem-sou.html">Quem Sou</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="#checkin">Check-in</a>
-        <a href="#diario">Diário</a>
-        <a href="#exercicios">Exercícios</a>
-        <a href="#audios">Áudios</a>
-        <a href="#acolhimento">Contato</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-box">
-          <div>
-            <span class="tag">🌿 Apoio emocional acolhedor</span>
-            <h1>Espaço Seguro para respirar, escrever e se acolher com mais gentileza</h1>
-            <p>
-              Este espaço foi criado para momentos de ansiedade, cansaço, sobrecarga emocional e necessidade de pausa.
-              Aqui você encontra recursos simples e humanos: check-in emocional, diário das emoções, exercícios terapêuticos,
-              áudios de acolhimento e um caminho para entrar em contato comigo quando sentir que precisa de apoio psicológico.
-            </p>
-            <div class="hero-list">
-              <span>Check-in emocional</span>
-              <span>Diário das emoções</span>
-              <span>Exercícios terapêuticos</span>
-              <span>Áudios de acolhimento</span>
+<header class="cabecalho">
+  <div class="container cabecalho-topo">
+    <div class="logo-area">
+      <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" />
+      <div class="marca">
+        <strong>Ana Paula Ap. Vieira</strong>
+        <span>Psicóloga Clínica • CRP 06/217114</span>
+      </div>
+    </div>
+
+    <nav class="menu-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="quem-sou.html">Quem Sou</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="#checkin">Check-in</a></li>
+        <li><a href="#diario">Diário</a></li>
+        <li><a href="#audios">Áudios</a></li>
+        <li><a href="#acolhimento">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero-app">
+    <div class="container">
+      <div class="hero-box">
+        <div>
+          <span class="tag-app">💜 Um app terapêutico acolhedor</span>
+          <h1>Espaço Seguro para respirar, escrever e se acolher no seu tempo</h1>
+          <p>
+            Um espaço criado para momentos de ansiedade, cansaço, sobrecarga emocional e necessidade de pausa. Aqui você encontra check-in emocional, diário das emoções, exercícios terapêuticos e áudios de acolhimento em uma experiência mais leve, bonita e intuitiva.
+          </p>
+
+          <div class="hero-cards">
+            <span>Check-in emocional</span>
+            <span>Diário das emoções</span>
+            <span>Exercícios terapêuticos</span>
+            <span>Áudios de acolhimento</span>
+          </div>
+
+          <div class="botoes">
+            <a href="#checkin" class="btn-app btn-primario">Começar agora</a>
+            <a href="#audios" class="btn-app btn-secundario">Ouvir áudios</a>
+          </div>
+        </div>
+
+        <aside class="app-preview">
+          <h2>Talvez você precise ouvir isso hoje</h2>
+          <p>
+            Você não precisa estar bem o tempo todo. Nem precisa dar conta de tudo sozinha. Às vezes, o primeiro passo é apenas respirar e reconhecer o que sente.
+          </p>
+          <div class="mini-blocos">
+            <div>🌷 Pare por um minuto e observe como você está agora.</div>
+            <div>🫶 Escreva o que sente sem pressa e sem julgamento.</div>
+            <div>✨ Escolha um recurso e permita-se esse cuidado.</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Uma experiência mais próxima de um app terapêutico</h2>
+        <p>
+          Menos poluição visual, mais respiro, acolhimento e organização. Cada área foi separada para a pessoa se sentir conduzida, não sobrecarregada.
+        </p>
+      </div>
+
+      <div class="grid grid-4">
+        <article class="card-app">
+          <div class="icone-card">🫁</div>
+          <h3>Respirar e desacelerar</h3>
+          <p>Recursos simples para dias em que a mente acelera e o corpo pede pausa.</p>
+        </article>
+        <article class="card-app">
+          <div class="icone-card">🧠</div>
+          <h3>Organizar emoções</h3>
+          <p>Espaços de escrita e exercícios terapêuticos para dar nome ao que você sente.</p>
+        </article>
+        <article class="card-app">
+          <div class="icone-card">🎧</div>
+          <h3>Receber acolhimento</h3>
+          <p>Áudios curtos e suaves para reduzir a aceleração e trazer presença.</p>
+        </article>
+        <article class="card-app">
+          <div class="icone-card">💬</div>
+          <h3>Buscar ajuda</h3>
+          <p>Quando sentir necessidade, você pode entrar em contato comigo pelo WhatsApp.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="checkin">
+    <div class="container">
+      <div class="section-head">
+        <h2>Check-in emocional</h2>
+        <p>Um primeiro passo simples para perceber como você está hoje.</p>
+      </div>
+
+      <div class="layout-duplo">
+        <article class="card-app">
+          <form id="checkinForm">
+            <div class="form-group">
+              <label for="nome">Seu nome</label>
+              <input type="text" id="nome" placeholder="Digite seu nome" />
             </div>
-            <div class="actions">
-              <a href="#checkin" class="btn btn-primary">Começar agora</a>
-              <a href="#audios" class="btn btn-secondary">Ouvir áudios</a>
+
+            <div class="form-group">
+              <label for="emocao">Qual emoção se aproxima mais do que você sente hoje?</label>
+              <select id="emocao">
+                <option value="">Escolha uma emoção</option>
+                <option>Ansiedade</option>
+                <option>Cansaço</option>
+                <option>Tristeza</option>
+                <option>Sobrecarga</option>
+                <option>Solidão</option>
+                <option>Insegurança</option>
+                <option>Irritação</option>
+                <option>Medo</option>
+                <option>Esperança</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="intensidade">De 0 a 10, qual a intensidade do que você sente?</label>
+              <input type="number" id="intensidade" min="0" max="10" placeholder="Ex.: 7" />
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">O que mais está pesando dentro de você hoje?</label>
+              <textarea id="mensagem" placeholder="Escreva livremente. Às vezes, colocar em palavras já é o começo do alívio."></textarea>
+            </div>
+
+            <button type="submit" class="btn-app btn-primario">Registrar meu check-in</button>
+            <div id="checkinSuccess" class="success-message">Seu check-in foi salvo neste dispositivo.</div>
+          </form>
+        </article>
+
+        <aside class="card-app">
+          <h3>Você pode começar assim</h3>
+          <p>Nem sempre é fácil saber exatamente o que se sente. Escolher uma frase que se aproxime do seu momento já ajuda.</p>
+
+          <div class="chips">
+            <span>Estou cansada de sustentar tudo.</span>
+            <span>Minha mente não desacelera.</span>
+            <span>Estou me sentindo sobrecarregada.</span>
+            <span>Não sei bem o que estou sentindo.</span>
+            <span>Preciso de uma pausa sem culpa.</span>
+            <span>Hoje eu só precisava de acolhimento.</span>
+          </div>
+
+          <div class="app-box">
+            <strong>Depois do check-in</strong>
+            <p>Você pode seguir para o diário, um exercício terapêutico ou um áudio de acolhimento.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="diario">
+    <div class="container">
+      <div class="section-head">
+        <h2>Diário das emoções</h2>
+        <p>Um espaço mais íntimo para escrever, organizar o que viveu e reler depois com mais calma.</p>
+      </div>
+
+      <div class="layout-duplo">
+        <article class="card-app">
+          <form id="journalForm">
+            <div class="form-group">
+              <label for="journalDate">Data</label>
+              <input type="date" id="journalDate" />
+            </div>
+
+            <div class="form-group">
+              <label for="journalTitle">Como você nomearia este momento?</label>
+              <input type="text" id="journalTitle" placeholder="Ex.: Um dia difícil, mas eu sobrevivi" />
+            </div>
+
+            <div class="form-group">
+              <label for="journalEmotion">Qual emoção predominou hoje?</label>
+              <input type="text" id="journalEmotion" placeholder="Ex.: ansiedade, tristeza, esperança, cansaço" />
+            </div>
+
+            <div class="form-group">
+              <label for="journalText">Escreva o que está acontecendo dentro de você</label>
+              <textarea id="journalText" placeholder="Você pode escrever sem se corrigir e sem tentar deixar bonito. Apenas escreva."></textarea>
+            </div>
+
+            <div class="botoes">
+              <button type="submit" class="btn-app btn-primario">Salvar no diário</button>
+              <button type="button" id="clearJournal" class="btn-app btn-secundario">Limpar diário</button>
+            </div>
+            <div id="journalSuccess" class="success-message">Seu registro foi salvo neste dispositivo.</div>
+          </form>
+        </article>
+
+        <aside class="card-app">
+          <h3>Escrever também é uma forma de cuidado</h3>
+          <p>Quando a pessoa coloca em palavras o que sente, muitas vezes já começa a organizar o que parecia confuso.</p>
+
+          <div class="app-box">
+            <strong>Se quiser, você pode começar assim</strong>
+            <div class="chips">
+              <span>Hoje eu me senti...</span>
+              <span>O que mais pesou foi...</span>
+              <span>O que eu precisava ouvir hoje era...</span>
+              <span>Uma pequena coisa que eu preciso agora é...</span>
             </div>
           </div>
 
-          <aside class="hero-card">
-            <h2>Talvez você precise ouvir isso hoje</h2>
-            <p>
-              Você não precisa estar bem o tempo todo. Nem precisa dar conta de tudo sozinha.
-              Às vezes, o primeiro passo não é resolver tudo — é apenas respirar, perceber o que sente
-              e se tratar com um pouco mais de carinho.
-            </p>
-            <div class="hero-note">
-              <div>💜 Pare por um minuto e observe como você está agora.</div>
-              <div>🫶 Escreva o que sente sem pressa e sem julgamento.</div>
-              <div>🌷 Siga no seu tempo. Este espaço foi pensado para acolher, não para cobrar.</div>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>Um espaço de cuidado para o seu dia a dia emocional</h2>
-          <p>
-            Um lugar simples, leve e acolhedor para quem precisa respirar, organizar emoções e se sentir acompanhada.
-          </p>
-        </div>
-        <div class="grid grid-4">
-          <article class="card">
-            <div class="icon">🫁</div>
-            <h3>Respirar e desacelerar</h3>
-            <p>Recursos para os dias em que a mente acelera e o corpo pede pausa.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🧠</div>
-            <h3>Organizar emoções</h3>
-            <p>Exercícios e escrita terapêutica para dar nome ao que você sente.</p>
-          </article>
-          <article class="card">
-            <div class="icon">🌿</div>
-            <h3>Praticar autocuidado</h3>
-            <p>Convites gentis ao descanso, à pausa e ao cuidado sem culpa.</p>
-          </article>
-          <article class="card">
-            <div class="icon">💬</div>
-            <h3>Buscar apoio</h3>
-            <p>Quando sentir necessidade, você pode falar comigo pelo WhatsApp.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="checkin">
-      <div class="container">
-        <div class="section-head">
-          <h2>Check-in emocional</h2>
-          <p>Um pequeno espaço para perceber o que você sente hoje e se escutar com mais presença.</p>
-        </div>
-        <div class="two-col">
-          <article class="card">
-            <form id="checkinForm">
-              <div class="form-group">
-                <label for="nome">Seu nome</label>
-                <input type="text" id="nome" placeholder="Digite seu nome">
-              </div>
-              <div class="form-group">
-                <label for="emocao">Qual emoção se aproxima mais do que você sente hoje?</label>
-                <select id="emocao">
-                  <option value="">Escolha uma emoção</option>
-                  <option>Ansiedade</option>
-                  <option>Cansaço</option>
-                  <option>Tristeza</option>
-                  <option>Sobrecarga</option>
-                  <option>Solidão</option>
-                  <option>Insegurança</option>
-                  <option>Irritação</option>
-                  <option>Medo</option>
-                  <option>Esperança</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="intensidade">De 0 a 10, qual a intensidade do que você sente?</label>
-                <input type="number" id="intensidade" min="0" max="10" placeholder="Ex.: 7">
-              </div>
-              <div class="form-group">
-                <label for="mensagem">O que mais está pesando dentro de você hoje?</label>
-                <textarea id="mensagem" placeholder="Escreva livremente. Colocar em palavras já pode ser o começo do alívio."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Registrar meu check-in</button>
-              <div id="checkinSuccess" class="success">Seu check-in foi salvo neste dispositivo.</div>
-            </form>
-          </article>
-
-          <aside class="card">
-            <h3>Você pode começar assim</h3>
-            <p>Nem sempre é fácil saber exatamente o que se sente. Escolher uma frase que se aproxime do seu momento já ajuda.</p>
-            <div class="chips">
-              <span>Estou cansada de sustentar tudo.</span>
-              <span>Minha mente não desacelera.</span>
-              <span>Estou me sentindo sobrecarregada.</span>
-              <span>Não sei bem o que estou sentindo.</span>
-              <span>Preciso de uma pausa sem culpa.</span>
-              <span>Hoje eu só precisava de acolhimento.</span>
-            </div>
-            <div class="soft-box">
-              Depois do check-in, você pode seguir para o diário das emoções, um exercício terapêutico ou um áudio curto.
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="diario">
-      <div class="container">
-        <div class="section-head">
-          <h2>Diário das emoções</h2>
-          <p>Um espaço para escrever, organizar o que viveu e reler depois com mais calma.</p>
-        </div>
-        <div class="two-col">
-          <article class="card">
-            <form id="journalForm">
-              <div class="form-group">
-                <label for="journalDate">Data</label>
-                <input type="date" id="journalDate">
-              </div>
-              <div class="form-group">
-                <label for="journalTitle">Como você nomearia este momento?</label>
-                <input type="text" id="journalTitle" placeholder="Ex.: Um dia pesado, mas eu sobrevivi">
-              </div>
-              <div class="form-group">
-                <label for="journalEmotion">Qual emoção predominou hoje?</label>
-                <input type="text" id="journalEmotion" placeholder="Ex.: ansiedade, tristeza, esperança, cansaço">
-              </div>
-              <div class="form-group">
-                <label for="journalText">Escreva o que está acontecendo dentro de você</label>
-                <textarea id="journalText" placeholder="Você pode escrever sem se corrigir, sem se explicar demais e sem tentar deixar bonito."></textarea>
-              </div>
-              <div class="actions">
-                <button type="submit" class="btn btn-primary">Salvar no diário</button>
-                <button type="button" id="clearJournal" class="btn btn-secondary">Limpar diário</button>
-              </div>
-              <div id="journalSuccess" class="success">Seu registro foi salvo neste dispositivo.</div>
-            </form>
-          </article>
-
-          <aside class="card">
-            <h3>Por que escrever pode ajudar?</h3>
-            <p>Escrever ajuda a organizar o que parece confuso por dentro. Não precisa ficar bonito. Precisa ser verdadeiro.</p>
-            <div class="soft-box">
-              <strong style="color:var(--primary-dark);display:block;margin-bottom:8px">Sugestões de começo</strong>
-              <div class="chips">
-                <span>Hoje eu me senti...</span>
-                <span>O que mais pesou foi...</span>
-                <span>O que eu precisava ouvir hoje era...</span>
-                <span>Uma pequena coisa que eu preciso agora é...</span>
-              </div>
-            </div>
-            <div class="journal-list" id="journalEntries">
-              <div class="empty">Seus registros salvos vão aparecer aqui neste dispositivo.</div>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="exercicios">
-      <div class="container">
-        <div class="section-head">
-          <h2>Exercícios terapêuticos</h2>
-          <p>Práticas simples para momentos de sobrecarga, confusão emocional e autocobrança.</p>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="card exercise">
-            <h3>Quando tudo pesa demais</h3>
-            <p>Para dias de sobrecarga e exaustão emocional.</p>
-            <ul>
-              <li>Ajuda a identificar o que está consumindo sua energia.</li>
-              <li>Convida a reconhecer limites sem culpa.</li>
-              <li>Favorece clareza emocional.</li>
-            </ul>
-            <a href="#exercicio-1" class="mini-link">Ler exercício completo</a>
-          </article>
-          <article class="card exercise">
-            <h3>Nomeando emoções</h3>
-            <p>Para quando tudo parece confuso e difícil de explicar.</p>
-            <ul>
-              <li>Amplia consciência emocional.</li>
-              <li>Ajuda a diferenciar emoção e necessidade.</li>
-              <li>Promove autorregulação.</li>
-            </ul>
-            <a href="#exercicio-2" class="mini-link">Ler exercício completo</a>
-          </article>
-          <article class="card exercise">
-            <h3>Autocuidado sem culpa</h3>
-            <p>Para quem vive com autocobrança e dificuldade de descansar.</p>
-            <ul>
-              <li>Trabalha culpa e rigidez interna.</li>
-              <li>Reforça a legitimidade do descanso.</li>
-              <li>Estimula um cuidado mais gentil.</li>
-            </ul>
-            <a href="#exercicio-3" class="mini-link">Ler exercício completo</a>
-          </article>
-        </div>
-
-        <div id="exercicio-1" class="deep">
-          <h3>Exercício 1 — Quando tudo pesa demais</h3>
-          <p>Este exercício é para os momentos em que você sente que está carregando muitas coisas ao mesmo tempo.</p>
-          <h4>Passo a passo</h4>
-          <ol>
-            <li>Pegue papel e caneta ou abra as notas do celular.</li>
-            <li>Escreva: “O que está pesando em mim hoje?”</li>
-            <li>Liste tudo o que vier: tarefas, preocupações, pessoas, cobranças, medos e pensamentos repetitivos.</li>
-            <li>Marque com um círculo o que realmente depende de você agora.</li>
-            <li>Marque com um traço aquilo que não será resolvido hoje.</li>
-            <li>Escolha apenas uma pequena ação possível para este momento.</li>
-          </ol>
-          <h4>Frase de encerramento</h4>
-          <p>Nem tudo precisa ser resolvido de uma vez. O cuidado começa quando você deixa de se exigir o impossível.</p>
-        </div>
-
-        <div id="exercicio-2" class="deep">
-          <h3>Exercício 2 — Nomeando emoções</h3>
-          <p>Nomear o que se sente pode trazer clareza e suavizar a confusão emocional.</p>
-          <h4>Passo a passo</h4>
-          <ol>
-            <li>Respire lentamente três vezes.</li>
-            <li>Pergunte a si mesma: “O que eu estou sentindo agora?”</li>
-            <li>Escolha até três palavras, como tristeza, irritação, medo, cansaço, insegurança ou frustração.</li>
-            <li>Pergunte: “O que pode ter despertado isso em mim?”</li>
-            <li>Complete a frase: “O que eu preciso hoje é...”</li>
-          </ol>
-          <h4>Frase de encerramento</h4>
-          <p>Sentir não é fraqueza. Dar nome ao que você sente é uma forma de cuidar de si com mais verdade.</p>
-        </div>
-
-        <div id="exercicio-3" class="deep">
-          <h3>Exercício 3 — Autocuidado sem culpa</h3>
-          <p>O descanso não é prêmio. É necessidade humana.</p>
-          <h4>Passo a passo</h4>
-          <ol>
-            <li>Escreva: “Quando eu paro, eu penso que...”</li>
-            <li>Anote tudo o que aparece: culpa, medo de julgamento, improdutividade, cobrança interna.</li>
-            <li>Escreva: “Se eu tratasse alguém que amo com a mesma exigência que me trato, como isso soaria?”</li>
-            <li>Leia em voz alta o que escreveu.</li>
-            <li>Finalize com a frase: “Hoje eu me autorizo a...”</li>
-          </ol>
-          <h4>Frase de encerramento</h4>
-          <p>Você não precisa adoecer para legitimar a sua pausa. Descansar também é uma forma de continuar.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="audios">
-      <div class="container">
-        <div class="section-head">
-          <h2>Áudios de acolhimento</h2>
-          <p>Áudios curtos para desacelerar, acolher emoções e voltar para si com mais suavidade.</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="card">
-            <h3>Respire devagar</h3>
-            <p>Para quando o corpo está acelerado e a mente inquieta.</p>
-            <audio controls preload="none">
-              <source src="audios/respire-devagar.mp3" type="audio/mpeg">
-            </audio>
-          </article>
-          <article class="card">
-            <h3>Você não precisa ser forte o tempo todo</h3>
-            <p>Uma mensagem de acolhimento para dias em que tudo pesa demais.</p>
-            <audio controls preload="none">
-              <source src="audios/voce-nao-precisa-ser-forte.mp3" type="audio/mpeg">
-            </audio>
-          </article>
-          <article class="card">
-            <h3>Volte para o momento presente</h3>
-            <p>Para ancorar a atenção no aqui e agora quando a mente estiver cheia.</p>
-            <audio controls preload="none">
-              <source src="audios/volte-para-o-momento-presente.mp3" type="audio/mpeg">
-            </audio>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>Perguntas frequentes</h2>
-          <p>Algumas respostas importantes para quem chegou até aqui em busca de acolhimento emocional.</p>
-        </div>
-        <details>
-          <summary>Este espaço substitui psicoterapia?</summary>
-          <p>Não. O Espaço Seguro é um recurso de apoio emocional e acolhimento. Ele não substitui psicoterapia, avaliação clínica, atendimento de urgência ou emergência.</p>
-        </details>
-        <details>
-          <summary>Onde o diário das emoções fica salvo?</summary>
-          <p>Nesta versão, os registros ficam salvos apenas no próprio dispositivo e navegador da pessoa. Isso mantém o uso simples e sem custo.</p>
-        </details>
-        <details>
-          <summary>Posso usar estes exercícios mesmo sem fazer terapia?</summary>
-          <p>Sim. Eles foram escritos de forma acessível e acolhedora. Ainda assim, se o sofrimento for frequente ou intenso, buscar acompanhamento psicológico pode ser um passo importante.</p>
-        </details>
-      </div>
-    </section>
-
-    <section id="acolhimento">
-      <div class="container">
-        <div class="cta">
-          <h2>Se você precisa de um cuidado mais próximo, eu posso caminhar com você</h2>
-          <p>
-            A psicoterapia é um espaço de escuta, acolhimento e elaboração. Se quiser conversar sobre atendimento psicológico, clique abaixo e fale comigo pelo WhatsApp.
-          </p>
-          <a href="https://wa.me/5515996760791" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Falar com a psicóloga</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>Este espaço não substitui psicoterapia, atendimento médico, situações de urgência ou emergência.</p>
-      <p class="signature">Ana Paula Ap. Vieira | Psicóloga Clínica • CRP 06/217114</p>
-      <div class="footer-links">
-        <a href="https://www.instagram.com/anapaulapsico/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="recursos.html">Recursos</a>
-        <a href="index.html">Voltar ao início</a>
+          <div class="entries-box" id="journalEntries">
+            <div class="empty-state">Seus registros salvos vão aparecer aqui neste dispositivo.</div>
+          </div>
+        </aside>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    const checkinForm = document.getElementById('checkinForm');
-    const checkinSuccess = document.getElementById('checkinSuccess');
-    const journalForm = document.getElementById('journalForm');
-    const journalSuccess = document.getElementById('journalSuccess');
-    const journalEntries = document.getElementById('journalEntries');
-    const clearJournalBtn = document.getElementById('clearJournal');
-    const journalDate = document.getElementById('journalDate');
+  <section id="exercicios">
+    <div class="container">
+      <div class="section-head">
+        <h2>Exercícios terapêuticos</h2>
+        <p>Práticas simples para momentos de sobrecarga, confusão emocional e autocobrança.</p>
+      </div>
 
-    if (journalDate) {
-      const today = new Date();
-      journalDate.value = today.toISOString().split('T')[0];
+      <div class="grid grid-3">
+        <article class="card-app exercise-card">
+          <h3>Quando tudo pesa demais</h3>
+          <p>Para dias de sobrecarga e exaustão emocional.</p>
+          <ul>
+            <li>Ajuda a identificar o que está consumindo sua energia.</li>
+            <li>Convida a reconhecer limites sem culpa.</li>
+            <li>Favorece clareza emocional.</li>
+          </ul>
+          <a href="#exercicio-1" class="mini-link">Ler exercício completo</a>
+        </article>
+
+        <article class="card-app exercise-card">
+          <h3>Nomeando emoções</h3>
+          <p>Para quando tudo parece confuso e difícil de explicar.</p>
+          <ul>
+            <li>Amplia consciência emocional.</li>
+            <li>Ajuda a diferenciar emoção e necessidade.</li>
+            <li>Promove autorregulação.</li>
+          </ul>
+          <a href="#exercicio-2" class="mini-link">Ler exercício completo</a>
+        </article>
+
+        <article class="card-app exercise-card">
+          <h3>Autocuidado sem culpa</h3>
+          <p>Para quem vive com autocobrança e dificuldade de descansar.</p>
+          <ul>
+            <li>Trabalha culpa e rigidez interna.</li>
+            <li>Reforça a legitimidade do descanso.</li>
+            <li>Estimula um cuidado mais gentil.</li>
+          </ul>
+          <a href="#exercicio-3" class="mini-link">Ler exercício completo</a>
+        </article>
+      </div>
+
+      <div id="exercicio-1" class="deep-section">
+        <h3>Exercício 1 — Quando tudo pesa demais</h3>
+        <p>Este exercício é para os momentos em que você sente que está carregando muitas coisas ao mesmo tempo.</p>
+        <h4>Passo a passo</h4>
+        <ol>
+          <li>Pegue papel e caneta ou abra as notas do celular.</li>
+          <li>Escreva: “O que está pesando em mim hoje?”</li>
+          <li>Liste tudo o que vier: tarefas, preocupações, pessoas, cobranças, medos e pensamentos repetitivos.</li>
+          <li>Marque com um círculo o que realmente depende de você agora.</li>
+          <li>Marque com um traço aquilo que não será resolvido hoje.</li>
+          <li>Escolha apenas uma pequena ação possível para este momento.</li>
+        </ol>
+        <h4>Frase de encerramento</h4>
+        <p>Nem tudo precisa ser resolvido de uma vez. O cuidado começa quando você deixa de se exigir o impossível.</p>
+      </div>
+
+      <div id="exercicio-2" class="deep-section">
+        <h3>Exercício 2 — Nomeando emoções</h3>
+        <p>Nomear o que se sente pode trazer clareza e suavizar a confusão emocional.</p>
+        <h4>Passo a passo</h4>
+        <ol>
+          <li>Respire lentamente três vezes.</li>
+          <li>Pergunte a si mesma: “O que eu estou sentindo agora?”</li>
+          <li>Escolha até três palavras, como tristeza, irritação, medo, cansaço, insegurança ou frustração.</li>
+          <li>Pergunte: “O que pode ter despertado isso em mim?”</li>
+          <li>Complete a frase: “O que eu preciso hoje é...”</li>
+        </ol>
+        <h4>Frase de encerramento</h4>
+        <p>Sentir não é fraqueza. Dar nome ao que você sente é uma forma de cuidar de si com mais verdade.</p>
+      </div>
+
+      <div id="exercicio-3" class="deep-section">
+        <h3>Exercício 3 — Autocuidado sem culpa</h3>
+        <p>O descanso não é prêmio. É necessidade humana.</p>
+        <h4>Passo a passo</h4>
+        <ol>
+          <li>Escreva: “Quando eu paro, eu penso que...”</li>
+          <li>Anote tudo o que aparece: culpa, medo de julgamento, improdutividade, cobrança interna.</li>
+          <li>Escreva: “Se eu tratasse alguém que amo com a mesma exigência que me trato, como isso soaria?”</li>
+          <li>Leia em voz alta o que escreveu.</li>
+          <li>Finalize com a frase: “Hoje eu me autorizo a...”</li>
+        </ol>
+        <h4>Frase de encerramento</h4>
+        <p>Você não precisa adoecer para legitimar a sua pausa. Descansar também é uma forma de continuar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="audios">
+    <div class="container">
+      <div class="section-head">
+        <h2>Áudios de acolhimento</h2>
+        <p>Áudios curtos para desacelerar, acolher emoções e voltar para si com mais suavidade.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card-app audio-card">
+          <h3>Respire devagar</h3>
+          <p>Para quando o corpo está acelerado e a mente inquieta.</p>
+          <audio controls preload="none">
+            <source src="audios/respire-devagar.mp3" type="audio/mpeg" />
+          </audio>
+        </article>
+
+        <article class="card-app audio-card">
+          <h3>Você não precisa ser forte o tempo todo</h3>
+          <p>Uma mensagem de acolhimento para dias em que tudo pesa demais.</p>
+          <audio controls preload="none">
+            <source src="audios/voce-nao-precisa-ser-forte.mp3" type="audio/mpeg" />
+          </audio>
+        </article>
+
+        <article class="card-app audio-card">
+          <h3>Volte para o momento presente</h3>
+          <p>Para ancorar a atenção no aqui e agora quando a mente estiver cheia.</p>
+          <audio controls preload="none">
+            <source src="audios/volte-para-o-momento-presente.mp3" type="audio/mpeg" />
+          </audio>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Perguntas frequentes</h2>
+        <p>Algumas respostas importantes para quem chegou até aqui em busca de acolhimento emocional.</p>
+      </div>
+
+      <details>
+        <summary>Este espaço substitui psicoterapia?</summary>
+        <p>Não. O Espaço Seguro é um recurso de apoio emocional e acolhimento. Ele não substitui psicoterapia, avaliação clínica, atendimento de urgência ou emergência.</p>
+      </details>
+
+      <details>
+        <summary>Onde o diário das emoções fica salvo?</summary>
+        <p>Nesta versão, os registros ficam salvos apenas no próprio dispositivo e navegador da pessoa. Isso mantém o uso simples e sem custo.</p>
+      </details>
+
+      <details>
+        <summary>Posso usar estes exercícios mesmo sem fazer terapia?</summary>
+        <p>Sim. Eles foram escritos de forma acessível e acolhedora. Ainda assim, se o sofrimento for frequente ou intenso, buscar acompanhamento psicológico pode ser um passo importante.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="acolhimento">
+    <div class="container">
+      <div class="cta-app">
+        <h2>Se você precisa de um cuidado mais próximo, eu posso caminhar com você</h2>
+        <p>
+          A psicoterapia é um espaço de escuta, acolhimento e elaboração. Se quiser conversar sobre atendimento psicológico, clique abaixo e fale comigo pelo WhatsApp.
+        </p>
+        <a href="https://wa.me/5515996760791" class="btn-app btn-secundario" target="_blank">Falar com a psicóloga</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container">
+    <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP" target="_blank">R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP</a></p>
+    <p><strong>Telefone:</strong> <a href="https://wa.me/5515996760791" target="_blank">(15) 99676-0791</a></p>
+    <p><strong>E-mail:</strong> <a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a></p>
+    <p style="margin-top:8px;">© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
+  <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
+</a>
+
+<script>
+  const checkinForm = document.getElementById('checkinForm');
+  const checkinSuccess = document.getElementById('checkinSuccess');
+  const journalForm = document.getElementById('journalForm');
+  const journalSuccess = document.getElementById('journalSuccess');
+  const journalEntries = document.getElementById('journalEntries');
+  const clearJournalBtn = document.getElementById('clearJournal');
+  const journalDate = document.getElementById('journalDate');
+
+  if (journalDate) {
+    const today = new Date();
+    journalDate.value = today.toISOString().split('T')[0];
+  }
+
+  function getStoredEntries() {
+    try {
+      return JSON.parse(localStorage.getItem('espacoSeguroDiario')) || [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function saveStoredEntries(entries) {
+    localStorage.setItem('espacoSeguroDiario', JSON.stringify(entries));
+  }
+
+  function renderEntries() {
+    const entries = getStoredEntries();
+    if (!entries.length) {
+      journalEntries.innerHTML = '<div class="empty-state">Seus registros salvos vão aparecer aqui neste dispositivo.</div>';
+      return;
     }
 
-    function getStoredEntries() {
-      try {
-        return JSON.parse(localStorage.getItem('espacoSeguroDiario')) || [];
-      } catch (e) {
-        return [];
-      }
-    }
+    journalEntries.innerHTML = entries.slice().reverse().map(entry => `
+      <div class="entry-item">
+        <strong>${entry.date || 'Sem data'} — ${entry.title || 'Registro emocional'}</strong>
+        <p><strong style="display:inline;color:#6b48a8;">Emoção:</strong> ${entry.emotion || 'Não informada'}</p>
+        <p>${entry.text || ''}</p>
+      </div>
+    `).join('');
+  }
 
-    function saveStoredEntries(entries) {
-      localStorage.setItem('espacoSeguroDiario', JSON.stringify(entries));
-    }
+  checkinForm?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = {
+      nome: document.getElementById('nome').value,
+      emocao: document.getElementById('emocao').value,
+      intensidade: document.getElementById('intensidade').value,
+      mensagem: document.getElementById('mensagem').value,
+      date: new Date().toLocaleString('pt-BR')
+    };
+    localStorage.setItem('espacoSeguroCheckin', JSON.stringify(data));
+    checkinSuccess.classList.add('show');
+    setTimeout(() => checkinSuccess.classList.remove('show'), 4000);
+  });
 
-    function renderEntries() {
-      const entries = getStoredEntries();
-      if (!entries.length) {
-        journalEntries.innerHTML = '<div class="empty">Seus registros salvos vão aparecer aqui neste dispositivo.</div>';
-        return;
-      }
-
-      journalEntries.innerHTML = entries.slice().reverse().map(entry => `
-        <div class="entry">
-          <strong>${entry.date || 'Sem data'} — ${entry.title || 'Registro emocional'}</strong>
-          <p><strong style="display:inline;color:var(--primary-dark)">Emoção:</strong> ${entry.emotion || 'Não informada'}</p>
-          <p>${entry.text || ''}</p>
-        </div>
-      `).join('');
-    }
-
-    checkinForm?.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const data = {
-        nome: document.getElementById('nome').value,
-        emocao: document.getElementById('emocao').value,
-        intensidade: document.getElementById('intensidade').value,
-        mensagem: document.getElementById('mensagem').value,
-        date: new Date().toLocaleString('pt-BR')
-      };
-      localStorage.setItem('espacoSeguroCheckin', JSON.stringify(data));
-      checkinSuccess.classList.add('show');
-      setTimeout(() => checkinSuccess.classList.remove('show'), 4000);
+  journalForm?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const entries = getStoredEntries();
+    entries.push({
+      date: document.getElementById('journalDate').value,
+      title: document.getElementById('journalTitle').value,
+      emotion: document.getElementById('journalEmotion').value,
+      text: document.getElementById('journalText').value
     });
-
-    journalForm?.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const entries = getStoredEntries();
-      entries.push({
-        date: document.getElementById('journalDate').value,
-        title: document.getElementById('journalTitle').value,
-        emotion: document.getElementById('journalEmotion').value,
-        text: document.getElementById('journalText').value
-      });
-      saveStoredEntries(entries);
-      renderEntries();
-      journalSuccess.classList.add('show');
-      journalForm.reset();
-      const today = new Date();
-      journalDate.value = today.toISOString().split('T')[0];
-      setTimeout(() => journalSuccess.classList.remove('show'), 4000);
-    });
-
-    clearJournalBtn?.addEventListener('click', function() {
-      localStorage.removeItem('espacoSeguroDiario');
-      renderEntries();
-    });
-
+    saveStoredEntries(entries);
     renderEntries();
-  </script>
+    journalSuccess.classList.add('show');
+    journalForm.reset();
+    const today = new Date();
+    journalDate.value = today.toISOString().split('T')[0];
+    setTimeout(() => journalSuccess.classList.remove('show'), 4000);
+  });
+
+  clearJournalBtn?.addEventListener('click', function() {
+    localStorage.removeItem('espacoSeguroDiario');
+    renderEntries();
+  });
+
+  renderEntries();
+</script>
+<script src="app.js"></script>
 </body>
 </html>
