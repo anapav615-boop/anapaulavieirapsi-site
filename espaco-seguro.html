@@ -8,395 +8,134 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-body {
-  margin:0;
-  font-family:'Poppins', sans-serif;
-  background: radial-gradient(circle at top left, #f7f2ff 0%, #eef7f2 45%, #fcfbfe 100%);
-  color:#4b3f72;
-  overflow-x:hidden;
+body{
+margin:0;
+font-family:'Poppins', sans-serif;
+background: radial-gradient(circle at top,#f5f0ff,#eef7f2);
+color:#4b3f72;
 }
 
-body::before, body::after {
-  content:"";
-  position:fixed;
-  width:420px;
-  height:420px;
-  border-radius:50%;
-  filter:blur(110px);
-  z-index:-2;
-  opacity:.8;
-}
-
-body::before {
-  background:linear-gradient(135deg,#d9c8ff,#f1dfff);
-  top:-120px;
-  left:-110px;
-}
-
-body::after {
-  background:linear-gradient(135deg,#b9e4c9,#dcf4e4);
-  bottom:-120px;
-  right:-110px;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 0;
-}
-
-.logo{
-  font-weight:600;
-  color:#6b48a8;
-}
+.container{max-width:1100px;margin:auto;padding:20px}
 
 .hero{
-  backdrop-filter: blur(14px);
-  background: linear-gradient(135deg, rgba(255,255,255,0.70), rgba(248,242,255,0.62));
-  border:1px solid rgba(255,255,255,0.35);
-  border-radius:28px;
-  padding:30px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-  box-shadow:0 18px 40px rgba(107,72,168,0.12);
-  animation:fadeUp 0.8s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:auto -40px -55px auto;
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(127,191,154,0.18), transparent 68%);
-  pointer-events:none;
-}
-
-.hero h1{
-  font-size:2rem;
-  margin-bottom:10px;
+background:linear-gradient(135deg,#ffffff,#f6f1ff);
+padding:30px;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(107,72,168,0.1);
 }
 
 .cards{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-  margin-top:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:20px;
 }
 
 .card{
-  padding:18px;
-  border-radius:22px;
-  backdrop-filter: blur(16px);
-  background: linear-gradient(135deg, rgba(255,255,255,0.62), rgba(244,236,255,0.42));
-  border:1px solid rgba(255,255,255,0.45);
-  box-shadow:0 12px 28px rgba(0,0,0,0.05);
-  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  position:relative;
-  overflow:hidden;
+padding:18px;
+border-radius:20px;
+background:linear-gradient(135deg,#ffffff,#efe8ff);
+display:flex;
+align-items:center;
+gap:10px;
+cursor:pointer;
+transition:.3s;
 }
 
-.card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg, rgba(255,255,255,0.20), transparent 45%);
-  pointer-events:none;
-}
+.card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(107,72,168,0.15)}
 
-.card i{
-  color:#6b48a8;
-  font-size:18px;
-}
-
-.card:hover{
-  transform:translateY(-6px) scale(1.02);
-  box-shadow:0 22px 42px rgba(107,72,168,0.18);
-  border-color:rgba(214,195,245,0.9);
-}
-
-.section{
-  margin-top:40px;
-  animation:fadeUp 1s ease;
-}
+.section{margin-top:40px}
 
 .audio-card{
-  backdrop-filter: blur(14px);
-  background: linear-gradient(135deg, rgba(255,255,255,0.72), rgba(238,247,242,0.55));
-  border:1px solid rgba(255,255,255,0.42);
-  padding:22px;
-  border-radius:22px;
-  box-shadow:0 12px 24px rgba(0,0,0,0.05);
-  margin-bottom:15px;
-  transition:transform .35s ease, box-shadow .35s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-.audio-card::after{
-  content:"";
-  position:absolute;
-  top:-20px;
-  right:-15px;
-  width:90px;
-  height:90px;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(107,72,168,0.10), transparent 68%);
-  pointer-events:none;
-}
-
-.audio-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 18px 30px rgba(107,72,168,0.12);
-}
-
-.audio-card i{
-  margin-right:10px;
-  color:#7fbf9a;
+background:linear-gradient(135deg,#ffffff,#eef7f2);
+padding:20px;
+border-radius:20px;
+margin-bottom:15px;
 }
 
 .devolutiva{
-  background:linear-gradient(135deg,#6b48a8 0%, #8e63c8 38%, #7fbf9a 100%);
-  color:white;
-  padding:26px;
-  border-radius:26px;
-  margin-top:30px;
-  display:flex;
-  align-items:center;
-  gap:15px;
-  animation:fadeUp 0.8s ease;
-  box-shadow:0 18px 34px rgba(107,72,168,0.18);
-  position:relative;
-  overflow:hidden;
+display:none;
+background:linear-gradient(135deg,#6b48a8,#7fbf9a);
+color:white;
+padding:20px;
+border-radius:20px;
+margin-top:20px;
+display:flex;
+align-items:center;
+gap:15px;
 }
 
-.devolutiva::before{
-  content:"";
-  position:absolute;
-  top:-30px;
-  right:-20px;
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%);
-}
+.devolutiva img{width:60px;height:60px;border-radius:50%}
 
-.devolutiva img{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid white;
-  box-shadow:0 8px 18px rgba(0,0,0,0.12);
-  position:relative;
-  z-index:1;
-}
+.btn{background:#6b48a8;color:white;padding:10px;border:none;border-radius:15px;margin-top:10px}
 
-.btn-whats, .save-btn, .action-btn, .card {
-  -webkit-tap-highlight-color: transparent;
-}
+.btn-whats{background:#25D366;color:white;padding:10px;border:none;border-radius:15px;margin-top:10px}
 
-.btn-whats{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:linear-gradient(135deg,#25D366,#1ebe5b);
-  color:white;
-  border:none;
-  padding:11px 18px;
-  border-radius:20px;
-  cursor:pointer;
-  margin-top:10px;
-  transition:transform .18s ease, box-shadow .18s ease;
-  box-shadow:0 10px 20px rgba(37,211,102,0.22);
-  animation:pulseGlow 2.6s ease-in-out infinite;
-}
-
-.btn-whats:active,
-.save-btn:active,
-.action-btn:active,
-.card:active{
-  transform:scale(.97);
-}
-
-textarea{
-  width:100%;
-  height:100px;
-  border-radius:16px;
-  border:1px solid rgba(220,220,230,0.9);
-  padding:12px;
-  backdrop-filter: blur(8px);
-  background: rgba(255,255,255,0.88);
-}
-
-.save-btn{
-  margin-top:10px;
-  padding:11px 16px;
-  border:none;
-  border-radius:16px;
-  background:linear-gradient(135deg,#6b48a8,#8a63ca);
-  color:white;
-  box-shadow:0 12px 22px rgba(107,72,168,0.16);
-  cursor:pointer;
-  transition:transform .18s ease, box-shadow .18s ease;
-  animation:pulseGlowSoft 3s ease-in-out infinite;
-}
-
-.action-btn{
-  padding:12px 18px;
-  border-radius:30px;
-  border:none;
-  background:linear-gradient(135deg,#ede6ff,#f7f2ff);
-  cursor:pointer;
-  transition:transform .18s ease, box-shadow .18s ease;
-}
-
-.action-btn.primary{
-  background:linear-gradient(135deg,#6b48a8,#8a63ca);
-  color:white;
-}
-
-.action-btn:hover,
-.save-btn:hover,
-.btn-whats:hover{
-  transform:translateY(-2px);
-}
-
-.screen {
-  opacity: 0;
-  transform: translateY(16px) scale(.99);
-  transition: opacity .45s ease, transform .45s ease;
-  pointer-events:none;
-  height:0;
-  overflow:hidden;
-}
-
-.screen.active {
-  opacity:1;
-  transform: translateY(0) scale(1);
-  pointer-events:auto;
-  height:auto;
-  overflow:visible;
-}
-
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(20px)}
-  to{opacity:1; transform:translateY(0)}
-}
-
-@keyframes pulseGlow {
-  0%,100% { box-shadow:0 10px 20px rgba(37,211,102,0.20); }
-  50% { box-shadow:0 14px 28px rgba(37,211,102,0.34); }
-}
-
-@keyframes pulseGlowSoft {
-  0%,100% { box-shadow:0 12px 22px rgba(107,72,168,0.14); }
-  50% { box-shadow:0 16px 28px rgba(107,72,168,0.24); }
-}
+textarea{width:100%;height:100px;border-radius:15px;padding:10px}
 
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<div class="header">
-<div class="logo">Ana Paula Ap. Vieira</div>
-<div></div>
-</div>
-
 <div class="hero">
-
-<div>
 <h1>Espaço Seguro</h1>
 <p>Como você está agora? Escolha por onde começar.</p>
 
 <div class="cards">
-<div class="card" onclick="mostrarTela('screen-diary')"><i class="fa-solid fa-brain"></i>Check-in emocional</div>
-<div class="card" onclick="mostrarTela('screen-diary')"><i class="fa-solid fa-pen"></i>Diário das emoções</div>
-<div class="card" onclick="mostrarTela('screen-audios')"><i class="fa-solid fa-headphones"></i>Áudios de acolhimento</div>
-<div class="card" onclick="mostrarTela('screen-audios')"><i class="fa-solid fa-spa"></i>Exercícios terapêuticos</div>
+<div class="card"><i class="fa-solid fa-brain"></i>Check-in emocional</div>
+<div class="card"><i class="fa-solid fa-pen"></i>Diário das emoções</div>
+<div class="card"><i class="fa-solid fa-headphones"></i>Áudios de acolhimento</div>
+<div class="card"><i class="fa-solid fa-spa"></i>Exercícios terapêuticos</div>
+</div>
 </div>
 
-</div>
-
-<div>
-<p><b>Um passo de cada vez</b></p>
-<p>Você não precisa dar conta de tudo agora.</p>
-</div>
-
-</div>
-
-<div class="section screen active" id="screen-diary">
-<h2><i class="fa-solid fa-pen"></i> Diário</h2>
+<div class="section">
+<h2>Diário</h2>
+<p>Você pode escrever sem se corrigir. Só seja verdadeiro.</p>
 <textarea id="texto"></textarea>
-<button class="save-btn" onclick="salvar()">Salvar</button>
-<div id="resposta"></div>
+<button class="btn" onclick="salvar()">Salvar</button>
+
+<div class="devolutiva" id="box">
+<img src="imagens/caricatura.png">
+<div>
+<p id="resposta"></p>
+<button class="btn-whats">Falar comigo</button>
+</div>
+</div>
 </div>
 
-<div class="section screen" id="screen-audios">
-<h2><i class="fa-solid fa-headphones"></i> Áudios</h2>
+<div class="section">
+<h2>Áudios</h2>
 
 <div class="audio-card">
-<p><i class="fa-solid fa-wind"></i>Respire devagar</p>
+<p>Respire devagar</p>
 <audio controls src="audios/audio1.mp3"></audio>
 </div>
 
 <div class="audio-card">
-<p><i class="fa-solid fa-wave-square"></i>Volte para o momento presente</p>
+<p>Volte para o momento presente</p>
 <audio controls src="audios/audio2.mp3"></audio>
 </div>
 
-</div>
-
-<div class="devolutiva" id="boxDevolutiva" style="display:none">
-<img src="imagens/caricatura.png">
-<div>
-<p id="textoDevolutiva"></p>
-<button class="btn-whats">Falar comigo</button>
-</div>
 </div>
 
 </div>
 
 <script>
 function salvar(){
-  let texto=document.getElementById("texto").value.toLowerCase();
-  let resposta="";
+let texto=document.getElementById("texto").value.toLowerCase();
+let resposta="";
 
-  if(texto.includes("ansiedade")){
-    resposta="Percebo que sua mente pode estar acelerada agora. Talvez você só precise respirar um pouco.";
-  }else{
-    resposta="Você não precisa dar conta de tudo hoje. Vá com calma.";
-  }
-
-  document.getElementById("textoDevolutiva").innerText=resposta;
-  document.getElementById("boxDevolutiva").style.display="flex";
+if(texto.includes("ansiedade")){
+resposta="Percebo que sua mente pode estar acelerada agora. Talvez você só precise respirar um pouco.";
+}else{
+resposta="Você não precisa dar conta de tudo hoje. Vá com calma.";
 }
 
-function mostrarTela(id){
-  document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
-  const alvo = document.getElementById(id);
-  if(alvo){
-    alvo.classList.add('active');
-    alvo.scrollIntoView({behavior:'smooth', block:'start'});
-  }
+document.getElementById("resposta").innerText=resposta;
+document.getElementById("box").style.display="flex";
 }
 </script>
 
