@@ -1,1297 +1,404 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Espaço Seguro | Apoio emocional | Ana Paula Ap. Vieira</title>
-  <meta name="description" content="Espaço Seguro: apoio emocional com check-in, diário das emoções, devolutiva acolhedora, exercícios terapêuticos, áudios e contato com a psicóloga Ana Paula Ap. Vieira." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="author" content="Ana Paula Ap. Vieira" />
-  <link rel="icon" type="image/png" href="imagens/favicon.png" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/espaco-seguro.html" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica" />
-  <meta property="og:title" content="Espaço Seguro | Apoio emocional" />
-  <meta property="og:description" content="Um espaço acolhedor para respirar, escrever, ouvir áudios terapêuticos e cuidar de si com mais gentileza." />
-  <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/espaco-seguro.html" />
-  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/espaco-seguro-capa.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Espaço Seguro | Apoio emocional" />
-  <meta name="twitter:description" content="Check-in emocional, diário das emoções, exercícios terapêuticos, áudios de acolhimento e contato com a psicóloga Ana Paula Ap. Vieira." />
-  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/espaco-seguro-capa.jpg" />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
-
-  <style>
-    :root {
-      --roxo-principal: #6b48a8;
-      --roxo-escuro: #56378d;
-      --roxo-suave: #f4effa;
-      --lavanda: #efe7fb;
-      --lavanda-2: #faf8ff;
-      --texto: #5b5570;
-      --texto-suave: #756f87;
-      --borda: #e9e0f4;
-      --branco: #ffffff;
-      --rosa-suave: #fbf7fd;
-      --verde-suave: #eef6f1;
-      --verde-principal: #7fbf9a;
-      --verde-escuro: #5e9d79;
-      --verde-texto: #567266;
-      --sombra: 0 16px 36px rgba(107, 72, 168, 0.09);
-      --sombra-premium: 0 20px 46px rgba(107, 72, 168, 0.12);
-      --radius-xl: 30px;
-      --radius-lg: 22px;
-      --radius-md: 16px;
-      --max: 1100px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(127,191,154,0.10), transparent 22%),
-        radial-gradient(circle at top right, rgba(107,72,168,0.10), transparent 26%),
-        linear-gradient(180deg, #fcfbfe 0%, #f8f3fc 100%);
-      color: var(--texto);
-      line-height: 1.65;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    button, input, textarea, select { font: inherit; }
-    .container { width: min(var(--max), 92%); margin: 0 auto; }
-
-    .cabecalho {
-      background: rgba(255,255,255,0.92);
-      border-bottom: 1px solid var(--borda);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-    }
-
-    .cabecalho-topo {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 14px 0;
-    }
-
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .logo-area img { width: 56px; height: 56px; }
-
-    .marca h1 {
-      margin: 0;
-      color: var(--roxo-principal);
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-
-    .marca p {
-      margin-top: 2px;
-      color: var(--texto-suave);
-      font-size: 0.92rem;
-    }
-
-    .menu-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .menu-nav a {
-      color: var(--texto-suave);
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    .menu-nav a:hover { color: var(--roxo-principal); }
-
-    .app-shell { padding: 24px 0 14px; }
-
-    .top-banner {
-      background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(244,239,250,0.96) 100%);
-      border: 1px solid var(--borda);
-      border-radius: 30px;
-      box-shadow: var(--sombra-premium);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .top-banner::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 18% 20%, rgba(127,191,154,0.08), transparent 18%), radial-gradient(circle at 80% 20%, rgba(107,72,168,0.08), transparent 22%);
-      pointer-events: none;
-    }
-
-    .top-banner-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    .top-copy { padding: 30px; }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      background: var(--lavanda);
-      color: var(--roxo-principal);
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      margin-bottom: 14px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
-    }
-
-    .top-copy h2 {
-      color: var(--roxo-principal);
-      font-size: clamp(1.7rem, 3vw, 2.25rem);
-      line-height: 1.2;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-
-    .top-copy p {
-      color: var(--texto-suave);
-      font-size: 0.96rem;
-      max-width: 560px;
-    }
-
-    .atalhos-hero {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .atalhos-hero button,
-    .modern-card {
-      border: 1px solid rgba(233,224,244,0.95);
-      background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(252,249,255,0.96) 100%);
-      color: var(--roxo-principal);
-      border-radius: 18px;
-      padding: 14px 15px;
-      text-align: left;
-      cursor: pointer;
-      font-weight: 600;
-      transition: 0.28s ease;
-      box-shadow: 0 12px 20px rgba(107,72,168,0.05);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .atalhos-hero button::after,
-    .modern-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -20% -65% auto;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(107,72,168,0.08), transparent 68%);
-      pointer-events: none;
-    }
-
-    .atalhos-hero button:hover,
-    .modern-card:hover,
-    .card:hover,
-    .audio-card:hover,
-    .exercise-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 30px rgba(107,72,168,0.10);
-      border-color: #d9caef;
-    }
-
-    .top-side {
-      background: linear-gradient(180deg, #fbf8ff 0%, #f4effa 100%);
-      border-left: 1px solid var(--borda);
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .top-side h3 {
-      color: var(--roxo-principal);
-      font-size: 1.05rem;
-      margin-bottom: 10px;
-    }
-
-    .top-side p {
-      color: var(--texto-suave);
-      font-size: 0.94rem;
-      margin-bottom: 14px;
-    }
-
-    .micro-list { display: grid; gap: 10px; }
-
-    .micro-list div {
-      background: rgba(255,255,255,0.80);
-      border: 1px solid var(--borda);
-      border-radius: 18px;
-      padding: 13px 14px;
-      color: var(--texto-suave);
-      font-size: 0.92rem;
-      box-shadow: 0 10px 18px rgba(107,72,168,0.03);
-    }
-
-    .menu-app-wrap { padding: 14px 0 10px; }
-    .menu-app {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      scrollbar-width: none;
-      padding-bottom: 4px;
-    }
-    .menu-app::-webkit-scrollbar { display: none; }
-
-    .menu-app button {
-      border: 1px solid var(--borda);
-      background: rgba(255,255,255,0.95);
-      color: var(--roxo-principal);
-      border-radius: 999px;
-      padding: 12px 16px;
-      white-space: nowrap;
-      cursor: pointer;
-      font-size: 0.88rem;
-      font-weight: 600;
-      transition: 0.25s ease;
-      box-shadow: 0 8px 16px rgba(107,72,168,0.04);
-    }
-
-    .menu-app button.ativo,
-    .menu-app button:hover {
-      background: linear-gradient(135deg, var(--roxo-principal) 0%, #8a63ca 100%);
-      color: #fff;
-      border-color: var(--roxo-principal);
-    }
-
-    .telas { padding: 8px 0 20px; }
-    .tela { display: none; animation: fadeIn 0.25s ease; }
-    .tela.ativa { display: block; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .bloco-principal {
-      background: linear-gradient(180deg, #fff 0%, #fcf9ff 100%);
-      border: 1px solid var(--borda);
-      border-radius: 28px;
-      box-shadow: var(--sombra-premium);
-      padding: 24px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .bloco-principal::before {
-      content: "";
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(127,191,154,0.12), transparent 68%);
-      pointer-events: none;
-    }
-
-    .section-head { margin-bottom: 18px; position: relative; z-index: 1; }
-    .section-head h2 {
-      color: var(--roxo-principal);
-      font-size: 1.3rem;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-    .section-head p {
-      color: var(--texto-suave);
-      font-size: 0.94rem;
-      max-width: 700px;
-    }
-
-    .layout-duplo {
-      display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
-      gap: 18px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(252,249,255,0.96) 100%);
-      border: 1px solid var(--borda);
-      border-radius: 24px;
-      padding: 20px;
-      box-shadow: 0 10px 22px rgba(107,72,168,0.04);
-      transition: transform 0.28s ease, box-shadow 0.28s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::after {
-      content: "";
-      position: absolute;
-      inset: auto -18% -55% auto;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(127,191,154,0.10), transparent 68%);
-      pointer-events: none;
-    }
-
-    .card h3 {
-      color: var(--roxo-principal);
-      font-size: 1rem;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    .card p,
-    .card li,
-    .card small,
-    .card label,
-    .card input,
-    .card textarea,
-    .card select {
-      color: var(--texto-suave);
-      font-size: 0.93rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .form-group { margin-bottom: 15px; }
-    label {
-      display: block;
-      margin-bottom: 7px;
-      font-weight: 600;
-      color: var(--texto);
-      font-size: 0.92rem;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      border: 1px solid var(--borda);
-      border-radius: 16px;
-      background: #fff;
-      padding: 13px 14px;
-      outline: none;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    input:focus, textarea:focus, select:focus {
-      border-color: #cfbff0;
-      box-shadow: 0 0 0 3px rgba(107,72,168,0.08);
-    }
-
-    textarea { min-height: 140px; resize: vertical; }
-
-    .botoes { display: flex; flex-wrap: wrap; gap: 10px; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      padding: 13px 18px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: 0.25s ease;
-      border: none;
-    }
-
-    .btn-primario {
-      background: linear-gradient(135deg, var(--roxo-principal) 0%, #8a63ca 100%);
-      color: #fff;
-      box-shadow: 0 12px 24px rgba(107,72,168,0.14);
-    }
-
-    .btn-secundario {
-      background: #fff;
-      color: var(--roxo-principal);
-      border: 1px solid var(--borda);
-    }
-
-    .btn:hover { transform: translateY(-1px); }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 10px;
-    }
-
-    .chips span {
-      padding: 9px 13px;
-      border-radius: 999px;
-      background: var(--lavanda-2);
-      border: 1px solid var(--borda);
-      color: var(--roxo-escuro);
-      font-size: 0.85rem;
-      font-weight: 500;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
-    }
-
-    .box-info {
-      margin-top: 16px;
-      background: linear-gradient(180deg, #fbf8ff 0%, #ffffff 100%);
-      border: 1px solid var(--borda);
-      border-radius: 18px;
-      padding: 16px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
-    }
-
-    .box-info strong {
-      display: block;
-      color: var(--roxo-principal);
-      margin-bottom: 6px;
-      font-size: 0.94rem;
-    }
-
-    .success {
-      display: none;
-      margin-top: 12px;
-      padding: 13px 14px;
-      border-radius: 16px;
-      background: var(--verde-suave);
-      border: 1px solid #dbe9df;
-      color: var(--verde-texto);
-      font-size: 0.92rem;
-      font-weight: 500;
-    }
-
-    .success.show { display: block; }
-
-    .devolutiva {
-      display: none;
-      margin-top: 16px;
-      padding: 18px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #f8f4ff 0%, #ffffff 100%);
-      border: 1px solid var(--borda);
-      box-shadow: 0 10px 20px rgba(107,72,168,0.05);
-    }
-
-    .devolutiva.show { display: block; }
-
-    .devolutiva-head {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .devolutiva-avatar {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      overflow: hidden;
-      flex-shrink: 0;
-      border: 2px solid rgba(107,72,168,0.10);
-      background: #fff;
-      box-shadow: 0 8px 18px rgba(107,72,168,0.08);
-    }
-
-    .devolutiva-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .devolutiva-head strong {
-      display: block;
-      color: var(--roxo-principal);
-      margin-bottom: 3px;
-      font-size: 0.96rem;
-    }
-
-    .devolutiva-head span {
-      color: var(--texto-suave);
-      font-size: 0.86rem;
-    }
-
-    .devolutiva p {
-      color: var(--texto-suave);
-      font-size: 0.93rem;
-      margin-bottom: 14px;
-    }
-
-    .devolutiva-acoes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .btn-whats {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, var(--verde-principal) 0%, #6eaf8a 100%);
-      color: #fff;
-      padding: 12px 16px;
-      border-radius: 999px;
-      font-weight: 600;
-      box-shadow: 0 10px 20px rgba(127,191,154,0.18);
-    }
-
-    .btn-whats img {
-      width: 18px;
-      height: 18px;
-    }
-
-    .entries {
-      display: grid;
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .entry {
-      background: #fcf9ff;
-      border: 1px solid var(--borda);
-      border-radius: 16px;
-      padding: 13px;
-    }
-
-    .entry strong {
-      display: block;
-      color: var(--roxo-principal);
-      margin-bottom: 6px;
-      font-size: 0.92rem;
-    }
-
-    .empty {
-      background: #fcf9ff;
-      border: 1px dashed #d8caef;
-      border-radius: 16px;
-      padding: 14px;
-      color: var(--texto-suave);
-      font-size: 0.92rem;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .audio-card,
-    .exercise-card {
-      background: linear-gradient(180deg, #fff 0%, #fcf9ff 100%);
-      border: 1px solid var(--borda);
-      border-radius: 24px;
-      padding: 20px;
-      box-shadow: 0 10px 22px rgba(107,72,168,0.04);
-      transition: transform 0.28s ease, box-shadow 0.28s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .audio-card::after,
-    .exercise-card::after {
-      content: "";
-      position: absolute;
-      top: -25px;
-      right: -25px;
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(127,191,154,0.12), transparent 68%);
-      pointer-events: none;
-    }
-
-    .audio-card h3,
-    .exercise-card h3 {
-      color: var(--roxo-principal);
-      font-size: 0.98rem;
-      margin-bottom: 8px;
-      font-weight: 600;
-      position: relative;
-      z-index: 1;
-    }
-
-    .audio-card p,
-    .exercise-card p,
-    .exercise-card li,
-    .audio-card small {
-      color: var(--texto-suave);
-      font-size: 0.92rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .exercise-card ul { padding-left: 18px; margin-top: 10px; }
-    .exercise-card a {
-      display: inline-block;
-      margin-top: 10px;
-      color: var(--roxo-principal);
-      font-weight: 600;
-      font-size: 0.9rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    audio { width: 100%; margin-top: 12px; position: relative; z-index: 1; }
-
-    .deep {
-      margin-top: 16px;
-      background: #fff;
-      border: 1px solid var(--borda);
-      border-radius: 22px;
-      padding: 22px;
-      box-shadow: 0 10px 22px rgba(107,72,168,0.04);
-    }
-
-    .deep h3,
-    .deep h4 {
-      color: var(--roxo-principal);
-      font-weight: 600;
-    }
-
-    .deep h3 { font-size: 1rem; margin-bottom: 8px; }
-    .deep h4 { margin: 14px 0 8px; font-size: 0.95rem; }
-    .deep p,
-    .deep li { color: var(--texto-suave); font-size: 0.92rem; }
-    .deep ol { padding-left: 20px; }
-
-    .cta {
-      margin-top: 10px;
-      background: linear-gradient(135deg, var(--roxo-principal) 0%, #8a63ca 100%);
-      border-radius: 30px;
-      padding: 30px 24px;
-      color: #fff;
-      box-shadow: 0 18px 34px rgba(107,72,168,0.16);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta::after {
-      content: "";
-      position: absolute;
-      top: -40px;
-      right: -30px;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.16), transparent 68%);
-      pointer-events: none;
-    }
-
-    .cta h2 {
-      font-size: 1.3rem;
-      margin-bottom: 8px;
-      font-weight: 600;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta p {
-      font-size: 0.94rem;
-      max-width: 680px;
-      margin: 0 auto 16px;
-      opacity: 0.96;
-      position: relative;
-      z-index: 1;
-    }
-
-    .cta .btn-secundario { border: none; position: relative; z-index: 1; }
-
-    .rodape {
-      background: linear-gradient(180deg, #f4effa 0%, #f8f3fc 100%);
-      padding: 26px 18px;
-      text-align: center;
-      margin-top: 18px;
-      color: var(--texto-suave);
-      font-size: 0.9rem;
-      border-top: 1px solid var(--borda);
-    }
-
-    .rodape p { margin: 6px 0; }
-    .rodape a { text-decoration: underline; }
-    .redes { margin-top: 8px; }
-
-    .btn-topo {
-      position: fixed;
-      right: 22px;
-      bottom: 104px;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: none;
-      background: linear-gradient(135deg, var(--roxo-principal) 0%, #8a63ca 100%);
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 8px 18px rgba(107,72,168,0.18);
-      display: none;
-      z-index: 998;
-    }
-
-    .whatsapp-btn {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 999;
-    }
-
-    .whatsapp-btn img {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    }
-
-    @media (max-width: 1024px) {
-      .top-banner-grid,
-      .layout-duplo,
-      .grid-3 { grid-template-columns: 1fr; }
-      .top-side { border-left: none; border-top: 1px solid var(--borda); }
-    }
-
-    @media (max-width: 760px) {
-      .cabecalho-topo { flex-direction: column; align-items: flex-start; }
-      .menu-nav ul { justify-content: flex-start; }
-      .top-copy,
-      .top-side,
-      .bloco-principal,
-      .card,
-      .deep,
-      .cta { padding: 20px; }
-      .atalhos-hero { grid-template-columns: 1fr; }
-      .btn-topo { bottom: 92px; }
-      .whatsapp-btn img { width: 68px; height: 68px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espaço Seguro</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background: radial-gradient(circle at top left, #f7f2ff 0%, #eef7f2 45%, #fcfbfe 100%);
+  color:#4b3f72;
+  overflow-x:hidden;
+}
+
+body::before, body::after {
+  content:"";
+  position:fixed;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  filter:blur(110px);
+  z-index:-2;
+  opacity:.8;
+}
+
+body::before {
+  background:linear-gradient(135deg,#d9c8ff,#f1dfff);
+  top:-120px;
+  left:-110px;
+}
+
+body::after {
+  background:linear-gradient(135deg,#b9e4c9,#dcf4e4);
+  bottom:-120px;
+  right:-110px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
+}
+
+.logo{
+  font-weight:600;
+  color:#6b48a8;
+}
+
+.hero{
+  backdrop-filter: blur(14px);
+  background: linear-gradient(135deg, rgba(255,255,255,0.70), rgba(248,242,255,0.62));
+  border:1px solid rgba(255,255,255,0.35);
+  border-radius:28px;
+  padding:30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  box-shadow:0 18px 40px rgba(107,72,168,0.12);
+  animation:fadeUp 0.8s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:auto -40px -55px auto;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(127,191,154,0.18), transparent 68%);
+  pointer-events:none;
+}
+
+.hero h1{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:20px;
+}
+
+.card{
+  padding:18px;
+  border-radius:22px;
+  backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, rgba(255,255,255,0.62), rgba(244,236,255,0.42));
+  border:1px solid rgba(255,255,255,0.45);
+  box-shadow:0 12px 28px rgba(0,0,0,0.05);
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(255,255,255,0.20), transparent 45%);
+  pointer-events:none;
+}
+
+.card i{
+  color:#6b48a8;
+  font-size:18px;
+}
+
+.card:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 22px 42px rgba(107,72,168,0.18);
+  border-color:rgba(214,195,245,0.9);
+}
+
+.section{
+  margin-top:40px;
+  animation:fadeUp 1s ease;
+}
+
+.audio-card{
+  backdrop-filter: blur(14px);
+  background: linear-gradient(135deg, rgba(255,255,255,0.72), rgba(238,247,242,0.55));
+  border:1px solid rgba(255,255,255,0.42);
+  padding:22px;
+  border-radius:22px;
+  box-shadow:0 12px 24px rgba(0,0,0,0.05);
+  margin-bottom:15px;
+  transition:transform .35s ease, box-shadow .35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.audio-card::after{
+  content:"";
+  position:absolute;
+  top:-20px;
+  right:-15px;
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(107,72,168,0.10), transparent 68%);
+  pointer-events:none;
+}
+
+.audio-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 30px rgba(107,72,168,0.12);
+}
+
+.audio-card i{
+  margin-right:10px;
+  color:#7fbf9a;
+}
+
+.devolutiva{
+  background:linear-gradient(135deg,#6b48a8 0%, #8e63c8 38%, #7fbf9a 100%);
+  color:white;
+  padding:26px;
+  border-radius:26px;
+  margin-top:30px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  animation:fadeUp 0.8s ease;
+  box-shadow:0 18px 34px rgba(107,72,168,0.18);
+  position:relative;
+  overflow:hidden;
+}
+
+.devolutiva::before{
+  content:"";
+  position:absolute;
+  top:-30px;
+  right:-20px;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%);
+}
+
+.devolutiva img{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid white;
+  box-shadow:0 8px 18px rgba(0,0,0,0.12);
+  position:relative;
+  z-index:1;
+}
+
+.btn-whats, .save-btn, .action-btn, .card {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-whats{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:linear-gradient(135deg,#25D366,#1ebe5b);
+  color:white;
+  border:none;
+  padding:11px 18px;
+  border-radius:20px;
+  cursor:pointer;
+  margin-top:10px;
+  transition:transform .18s ease, box-shadow .18s ease;
+  box-shadow:0 10px 20px rgba(37,211,102,0.22);
+  animation:pulseGlow 2.6s ease-in-out infinite;
+}
+
+.btn-whats:active,
+.save-btn:active,
+.action-btn:active,
+.card:active{
+  transform:scale(.97);
+}
+
+textarea{
+  width:100%;
+  height:100px;
+  border-radius:16px;
+  border:1px solid rgba(220,220,230,0.9);
+  padding:12px;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.88);
+}
+
+.save-btn{
+  margin-top:10px;
+  padding:11px 16px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg,#6b48a8,#8a63ca);
+  color:white;
+  box-shadow:0 12px 22px rgba(107,72,168,0.16);
+  cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease;
+  animation:pulseGlowSoft 3s ease-in-out infinite;
+}
+
+.action-btn{
+  padding:12px 18px;
+  border-radius:30px;
+  border:none;
+  background:linear-gradient(135deg,#ede6ff,#f7f2ff);
+  cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+
+.action-btn.primary{
+  background:linear-gradient(135deg,#6b48a8,#8a63ca);
+  color:white;
+}
+
+.action-btn:hover,
+.save-btn:hover,
+.btn-whats:hover{
+  transform:translateY(-2px);
+}
+
+.screen {
+  opacity: 0;
+  transform: translateY(16px) scale(.99);
+  transition: opacity .45s ease, transform .45s ease;
+  pointer-events:none;
+  height:0;
+  overflow:hidden;
+}
+
+.screen.active {
+  opacity:1;
+  transform: translateY(0) scale(1);
+  pointer-events:auto;
+  height:auto;
+  overflow:visible;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(20px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
+@keyframes pulseGlow {
+  0%,100% { box-shadow:0 10px 20px rgba(37,211,102,0.20); }
+  50% { box-shadow:0 14px 28px rgba(37,211,102,0.34); }
+}
+
+@keyframes pulseGlowSoft {
+  0%,100% { box-shadow:0 12px 22px rgba(107,72,168,0.14); }
+  50% { box-shadow:0 16px 28px rgba(107,72,168,0.24); }
+}
+
+</style>
 </head>
+
 <body>
 
-<header class="cabecalho">
-  <div class="container cabecalho-topo">
-    <div class="logo-area">
-      <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" />
-      <div class="marca">
-        <h1>Ana Paula Ap. Vieira | Psicóloga Clínica</h1>
-        <p>CRP 06/217114</p>
-      </div>
-    </div>
-    <nav class="menu-nav">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="quem-sou.html">Quem Sou</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="preco.html">Preços</a></li>
-        <li><a href="recursos.html">Recursos</a></li>
-        <li><a href="depoimentos.html">Depoimentos</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<div class="container">
 
-<main>
-  <section class="app-shell">
-    <div class="container">
+<div class="header">
+<div class="logo">Ana Paula Ap. Vieira</div>
+<div></div>
+</div>
 
-      <div class="top-banner">
-        <div class="top-banner-grid">
-          <div class="top-copy">
-            <span class="tag">💜 Espaço terapêutico digital</span>
-            <h2>Espaço Seguro</h2>
-            <p>Como você está agora? Escolha por onde deseja começar. Este espaço foi pensado para acolher, desacelerar e ajudar você a se perceber com mais gentileza.</p>
+<div class="hero">
 
-            <div class="atalhos-hero">
-              <button type="button" onclick="abrirTela('checkin', document.querySelector('.menu-app button[data-tela=checkin]'))">Check-in emocional</button>
-              <button type="button" onclick="abrirTela('diario', document.querySelector('.menu-app button[data-tela=diario]'))">Diário das emoções</button>
-              <button type="button" onclick="abrirTela('audios', document.querySelector('.menu-app button[data-tela=audios]'))">Áudios de acolhimento</button>
-              <button type="button" onclick="abrirTela('exercicios', document.querySelector('.menu-app button[data-tela=exercicios]'))">Exercícios terapêuticos</button>
-            </div>
-          </div>
+<div>
+<h1>Espaço Seguro</h1>
+<p>Como você está agora? Escolha por onde começar.</p>
 
-          <aside class="top-side">
-            <h3>Um passo de cada vez</h3>
-            <p>Você não precisa organizar tudo de uma vez. Pode apenas escolher um pequeno gesto de cuidado para este momento.</p>
-            <div class="micro-list">
-              <div>🌷 Perceba como você está.</div>
-              <div>🫶 Escreva o que sente sem se julgar.</div>
-              <div>🎧 Ouça um áudio e volte para si.</div>
-            </div>
-          </aside>
-        </div>
-      </div>
+<div class="cards">
+<div class="card" onclick="mostrarTela('screen-diary')"><i class="fa-solid fa-brain"></i>Check-in emocional</div>
+<div class="card" onclick="mostrarTela('screen-diary')"><i class="fa-solid fa-pen"></i>Diário das emoções</div>
+<div class="card" onclick="mostrarTela('screen-audios')"><i class="fa-solid fa-headphones"></i>Áudios de acolhimento</div>
+<div class="card" onclick="mostrarTela('screen-audios')"><i class="fa-solid fa-spa"></i>Exercícios terapêuticos</div>
+</div>
 
-      <div class="menu-app-wrap">
-        <div class="menu-app">
-          <button class="ativo" data-tela="checkin" onclick="abrirTela('checkin', this)">Quero entender como estou</button>
-          <button data-tela="diario" onclick="abrirTela('diario', this)">Preciso colocar para fora</button>
-          <button data-tela="audios" onclick="abrirTela('audios', this)">Quero um pouco de silêncio</button>
-          <button data-tela="exercicios" onclick="abrirTela('exercicios', this)">Quero me acolher melhor</button>
-        </div>
-      </div>
+</div>
 
-      <section class="telas">
+<div>
+<p><b>Um passo de cada vez</b></p>
+<p>Você não precisa dar conta de tudo agora.</p>
+</div>
 
-        <div id="checkin" class="tela ativa">
-          <div class="bloco-principal">
-            <div class="section-head">
-              <h2>Check-in emocional</h2>
-              <p>Um pequeno espaço para reconhecer o que você sente hoje, sem pressa e sem cobrança.</p>
-            </div>
+</div>
 
-            <div class="layout-duplo">
-              <div class="card">
-                <form id="checkinForm">
-                  <div class="form-group">
-                    <label for="nome">Seu nome</label>
-                    <input type="text" id="nome" placeholder="Digite seu nome" />
-                  </div>
+<div class="section screen active" id="screen-diary">
+<h2><i class="fa-solid fa-pen"></i> Diário</h2>
+<textarea id="texto"></textarea>
+<button class="save-btn" onclick="salvar()">Salvar</button>
+<div id="resposta"></div>
+</div>
 
-                  <div class="form-group">
-                    <label for="emocao">Qual emoção se aproxima mais do que você sente hoje?</label>
-                    <select id="emocao">
-                      <option value="">Escolha uma emoção</option>
-                      <option>Ansiedade</option>
-                      <option>Cansaço</option>
-                      <option>Tristeza</option>
-                      <option>Sobrecarga</option>
-                      <option>Solidão</option>
-                      <option>Insegurança</option>
-                      <option>Irritação</option>
-                      <option>Medo</option>
-                      <option>Esperança</option>
-                    </select>
-                  </div>
+<div class="section screen" id="screen-audios">
+<h2><i class="fa-solid fa-headphones"></i> Áudios</h2>
 
-                  <div class="form-group">
-                    <label for="intensidade">De 0 a 10, qual a intensidade do que você sente?</label>
-                    <input type="number" id="intensidade" min="0" max="10" placeholder="Ex.: 7" />
-                  </div>
+<div class="audio-card">
+<p><i class="fa-solid fa-wind"></i>Respire devagar</p>
+<audio controls src="audios/audio1.mp3"></audio>
+</div>
 
-                  <div class="form-group">
-                    <label for="mensagem">O que mais está pesando dentro de você hoje?</label>
-                    <textarea id="mensagem" placeholder="Escreva livremente. Às vezes, colocar em palavras já é o começo do alívio."></textarea>
-                  </div>
+<div class="audio-card">
+<p><i class="fa-solid fa-wave-square"></i>Volte para o momento presente</p>
+<audio controls src="audios/audio2.mp3"></audio>
+</div>
 
-                  <button type="submit" class="btn btn-primario">Salvar meu check-in</button>
-                  <div id="checkinSuccess" class="success">Seu check-in foi salvo neste dispositivo.</div>
-                </form>
-              </div>
+</div>
 
-              <aside class="card">
-                <h3>Você pode começar assim</h3>
-                <p>Nem sempre é fácil saber exatamente o que se sente. Escolher uma frase que se aproxime do seu momento já ajuda.</p>
-                <div class="chips">
-                  <span>Estou cansada de sustentar tudo.</span>
-                  <span>Minha mente não desacelera.</span>
-                  <span>Estou me sentindo sobrecarregada.</span>
-                  <span>Não sei bem o que estou sentindo.</span>
-                  <span>Preciso de uma pausa sem culpa.</span>
-                  <span>Hoje eu só precisava de acolhimento.</span>
-                </div>
-                <div class="box-info">
-                  <strong>Depois do check-in</strong>
-                  <p>Você pode seguir para o diário das emoções, ouvir um áudio de acolhimento ou fazer um exercício terapêutico.</p>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </div>
+<div class="devolutiva" id="boxDevolutiva" style="display:none">
+<img src="imagens/caricatura.png">
+<div>
+<p id="textoDevolutiva"></p>
+<button class="btn-whats">Falar comigo</button>
+</div>
+</div>
 
-        <div id="diario" class="tela">
-          <div class="bloco-principal">
-            <div class="section-head">
-              <h2>Diário das emoções</h2>
-              <p>Um espaço íntimo para escrever, se ouvir e receber uma devolutiva acolhedora automática.</p>
-            </div>
-
-            <div class="layout-duplo">
-              <div class="card">
-                <form id="journalForm">
-                  <div class="form-group">
-                    <label for="journalDate">Data</label>
-                    <input type="date" id="journalDate" />
-                  </div>
-
-                  <div class="form-group">
-                    <label for="journalTitle">Como você nomearia este momento?</label>
-                    <input type="text" id="journalTitle" placeholder="Ex.: Um dia difícil, mas eu sobrevivi" />
-                  </div>
-
-                  <div class="form-group">
-                    <label for="journalEmotion">Qual emoção predominou hoje?</label>
-                    <input type="text" id="journalEmotion" placeholder="Ex.: ansiedade, tristeza, cansaço, sobrecarga" />
-                  </div>
-
-                  <div class="form-group">
-                    <label for="journalText">Escreva o que está acontecendo dentro de você</label>
-                    <textarea id="journalText" placeholder="Você pode escrever sem se corrigir e sem tentar deixar bonito. Apenas escreva."></textarea>
-                  </div>
-
-                  <div class="botoes">
-                    <button type="submit" class="btn btn-primario">Salvar no diário</button>
-                    <button type="button" id="clearJournal" class="btn btn-secundario">Limpar diário</button>
-                  </div>
-                  <div id="journalSuccess" class="success">Seu registro foi salvo neste dispositivo.</div>
-                </form>
-
-                <div id="devolutivaAutomatica" class="devolutiva">
-                  <div class="devolutiva-head">
-                    <div class="devolutiva-avatar">
-                      <img src="imagens/caricatura-ana-paula.png" alt="Caricatura Ana Paula" onerror="this.src='imagens/logo-simbolo.png'" />
-                    </div>
-                    <div>
-                      <strong>Uma devolutiva para este momento</strong>
-                      <span>Cuidado emocional com acolhimento</span>
-                    </div>
-                  </div>
-                  <p id="textoDevolutiva"></p>
-                  <div class="devolutiva-acoes">
-                    <a href="https://wa.me/5515996760791" class="btn-whats" target="_blank" rel="noopener noreferrer">
-                      <img src="imagens/whatsapp-icon.png" alt="WhatsApp" />
-                      Falar com a psicóloga
-                    </a>
-                    <a href="servicos.html">Conhecer meu atendimento</a>
-                  </div>
-                </div>
-              </div>
-
-              <aside class="card">
-                <h3>Escrever também é uma forma de cuidado</h3>
-                <p>Quando você coloca em palavras o que sente, muitas vezes já começa a organizar o que parecia confuso.</p>
-                <div class="box-info">
-                  <strong>Se quiser, você pode começar assim</strong>
-                  <div class="chips">
-                    <span>Hoje eu me senti...</span>
-                    <span>O que mais pesou foi...</span>
-                    <span>O que eu precisava ouvir hoje era...</span>
-                    <span>Uma pequena coisa que eu preciso agora é...</span>
-                  </div>
-                </div>
-
-                <div class="entries" id="journalEntries">
-                  <div class="empty">Seus registros salvos vão aparecer aqui neste dispositivo.</div>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </div>
-
-        <div id="audios" class="tela">
-          <div class="bloco-principal">
-            <div class="section-head">
-              <h2>Áudios de acolhimento</h2>
-              <p>Escolha um áudio e permita-se alguns minutos de pausa, respiração e presença.</p>
-            </div>
-
-            <div class="grid-3">
-              <article class="audio-card">
-                <h3>Respire devagar</h3>
-                <p>Para quando o corpo está acelerado e a mente inquieta.</p>
-                <audio controls preload="none">
-                  <source src="audios/respire-devagar.mp3" type="audio/mpeg" />
-                </audio>
-              </article>
-
-              <article class="audio-card">
-                <h3>Você não precisa ser forte o tempo todo</h3>
-                <p>Uma mensagem de acolhimento para dias em que tudo pesa demais.</p>
-                <audio controls preload="none">
-                  <source src="audios/voce-nao-precisa-ser-forte.mp3" type="audio/mpeg" />
-                </audio>
-              </article>
-
-              <article class="audio-card">
-                <h3>Volte para o momento presente</h3>
-                <p>Para ancorar a atenção no aqui e agora quando a mente estiver cheia.</p>
-                <audio controls preload="none">
-                  <source src="audios/volte-para-o-momento-presente.mp3" type="audio/mpeg" />
-                </audio>
-              </article>
-            </div>
-          </div>
-        </div>
-
-        <div id="exercicios" class="tela">
-          <div class="bloco-principal">
-            <div class="section-head">
-              <h2>Exercícios terapêuticos</h2>
-              <p>Práticas simples para momentos de sobrecarga, confusão emocional e autocobrança.</p>
-            </div>
-
-            <div class="grid-3">
-              <article class="exercise-card">
-                <h3>Quando tudo pesa demais</h3>
-                <p>Para dias de sobrecarga e exaustão emocional.</p>
-                <ul>
-                  <li>Ajuda a identificar o que está consumindo sua energia.</li>
-                  <li>Convida a reconhecer limites sem culpa.</li>
-                  <li>Favorece clareza emocional.</li>
-                </ul>
-                <a href="#ex1">Ler exercício completo</a>
-              </article>
-
-              <article class="exercise-card">
-                <h3>Nomeando emoções</h3>
-                <p>Para quando tudo parece confuso e difícil de explicar.</p>
-                <ul>
-                  <li>Amplia consciência emocional.</li>
-                  <li>Ajuda a diferenciar emoção e necessidade.</li>
-                  <li>Promove autorregulação.</li>
-                </ul>
-                <a href="#ex2">Ler exercício completo</a>
-              </article>
-
-              <article class="exercise-card">
-                <h3>Autocuidado sem culpa</h3>
-                <p>Para quem vive com autocobrança e dificuldade de descansar.</p>
-                <ul>
-                  <li>Trabalha culpa e rigidez interna.</li>
-                  <li>Reforça a legitimidade do descanso.</li>
-                  <li>Estimula um cuidado mais gentil.</li>
-                </ul>
-                <a href="#ex3">Ler exercício completo</a>
-              </article>
-            </div>
-
-            <div id="ex1" class="deep">
-              <h3>Exercício 1 — Quando tudo pesa demais</h3>
-              <p>Este exercício é para os momentos em que você sente que está carregando muitas coisas ao mesmo tempo.</p>
-              <h4>Passo a passo</h4>
-              <ol>
-                <li>Pegue papel e caneta ou abra as notas do celular.</li>
-                <li>Escreva: “O que está pesando em mim hoje?”</li>
-                <li>Liste tudo o que vier: tarefas, preocupações, pessoas, cobranças, medos e pensamentos repetitivos.</li>
-                <li>Marque com um círculo o que realmente depende de você agora.</li>
-                <li>Marque com um traço aquilo que não será resolvido hoje.</li>
-                <li>Escolha apenas uma pequena ação possível para este momento.</li>
-              </ol>
-              <h4>Frase de encerramento</h4>
-              <p>Nem tudo precisa ser resolvido de uma vez. O cuidado começa quando você deixa de se exigir o impossível.</p>
-            </div>
-
-            <div id="ex2" class="deep">
-              <h3>Exercício 2 — Nomeando emoções</h3>
-              <p>Nomear o que se sente pode trazer clareza e suavizar a confusão emocional.</p>
-              <h4>Passo a passo</h4>
-              <ol>
-                <li>Respire lentamente três vezes.</li>
-                <li>Pergunte a si mesma: “O que eu estou sentindo agora?”</li>
-                <li>Escolha até três palavras, como tristeza, irritação, medo, cansaço, insegurança ou frustração.</li>
-                <li>Pergunte: “O que pode ter despertado isso em mim?”</li>
-                <li>Complete a frase: “O que eu preciso hoje é...”</li>
-              </ol>
-              <h4>Frase de encerramento</h4>
-              <p>Sentir não é fraqueza. Dar nome ao que você sente é uma forma de cuidar de si com mais verdade.</p>
-            </div>
-
-            <div id="ex3" class="deep">
-              <h3>Exercício 3 — Autocuidado sem culpa</h3>
-              <p>O descanso não é prêmio. É necessidade humana.</p>
-              <h4>Passo a passo</h4>
-              <ol>
-                <li>Escreva: “Quando eu paro, eu penso que...”</li>
-                <li>Anote tudo o que aparece: culpa, medo de julgamento, improdutividade, cobrança interna.</li>
-                <li>Escreva: “Se eu tratasse alguém que amo com a mesma exigência que me trato, como isso soaria?”</li>
-                <li>Leia em voz alta o que escreveu.</li>
-                <li>Finalize com a frase: “Hoje eu me autorizo a...”</li>
-              </ol>
-              <h4>Frase de encerramento</h4>
-              <p>Você não precisa adoecer para legitimar a sua pausa. Descansar também é uma forma de continuar.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cta">
-          <h2>Se você sentir que precisa de um cuidado mais próximo, eu posso caminhar com você</h2>
-          <p>A psicoterapia é um espaço de escuta, acolhimento e elaboração. Se quiser conversar sobre atendimento psicológico, fale comigo pelo WhatsApp.</p>
-          <a href="https://wa.me/5515996760791" class="btn btn-secundario" target="_blank" rel="noopener noreferrer">Falar com a psicóloga</a>
-        </div>
-
-      </section>
-    </div>
-  </section>
-</main>
-
-<footer class="rodape">
-  <div style="max-width:1000px;margin:0 auto;">
-    <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP" target="_blank">R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP</a></p>
-    <p>Este site utiliza práticas básicas de navegação. Saiba mais em nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
-    <p><strong>Telefone:</strong> <a href="https://wa.me/5515996760791" target="_blank">(15) 99676-0791</a></p>
-    <p><strong>E-mail:</strong> <a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a></p>
-    <p>© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
-    <div class="redes">
-      <a href="https://www.instagram.com/anapaulapsico/" target="_blank">Instagram</a> |
-      <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank">Facebook</a> |
-      <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank">LinkedIn</a>
-    </div>
-  </div>
-</footer>
-
-<button id="btn-topo" class="btn-topo" title="Voltar ao início">↑</button>
-
-<a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-  <img src="imagens/whatsapp-icon.png" alt="WhatsApp" />
-</a>
+</div>
 
 <script>
-  function abrirTela(id, botao) {
-    document.querySelectorAll('.tela').forEach(tela => tela.classList.remove('ativa'));
-    document.querySelectorAll('.menu-app button').forEach(btn => btn.classList.remove('ativo'));
-    const tela = document.getElementById(id);
-    if (tela) tela.classList.add('ativa');
-    if (botao) botao.classList.add('ativo');
-    const alvo = document.querySelector('.telas');
-    if (alvo) alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+function salvar(){
+  let texto=document.getElementById("texto").value.toLowerCase();
+  let resposta="";
+
+  if(texto.includes("ansiedade")){
+    resposta="Percebo que sua mente pode estar acelerada agora. Talvez você só precise respirar um pouco.";
+  }else{
+    resposta="Você não precisa dar conta de tudo hoje. Vá com calma.";
   }
 
-  const checkinForm = document.getElementById('checkinForm');
-  const checkinSuccess = document.getElementById('checkinSuccess');
-  const journalForm = document.getElementById('journalForm');
-  const journalSuccess = document.getElementById('journalSuccess');
-  const journalEntries = document.getElementById('journalEntries');
-  const clearJournalBtn = document.getElementById('clearJournal');
-  const journalDate = document.getElementById('journalDate');
-  const devolutivaBox = document.getElementById('devolutivaAutomatica');
-  const textoDevolutiva = document.getElementById('textoDevolutiva');
-  const btnTopo = document.getElementById('btn-topo');
+  document.getElementById("textoDevolutiva").innerText=resposta;
+  document.getElementById("boxDevolutiva").style.display="flex";
+}
 
-  if (journalDate) {
-    const today = new Date();
-    journalDate.value = today.toISOString().split('T')[0];
+function mostrarTela(id){
+  document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
+  const alvo = document.getElementById(id);
+  if(alvo){
+    alvo.classList.add('active');
+    alvo.scrollIntoView({behavior:'smooth', block:'start'});
   }
-
-  function getStoredEntries() {
-    try {
-      return JSON.parse(localStorage.getItem('espacoSeguroDiario')) || [];
-    } catch (e) {
-      return [];
-    }
-  }
-
-  function saveStoredEntries(entries) {
-    localStorage.setItem('espacoSeguroDiario', JSON.stringify(entries));
-  }
-
-  function renderEntries() {
-    const entries = getStoredEntries();
-    if (!entries.length) {
-      journalEntries.innerHTML = '<div class="empty">Seus registros salvos vão aparecer aqui neste dispositivo.</div>';
-      return;
-    }
-
-    journalEntries.innerHTML = entries.slice().reverse().map(entry => `
-      <div class="entry">
-        <strong>${entry.date || 'Sem data'} — ${entry.title || 'Registro emocional'}</strong>
-        <p><strong style="display:inline;color:#6b48a8;">Emoção:</strong> ${entry.emotion || 'Não informada'}</p>
-        <p>${entry.text || ''}</p>
-      </div>
-    `).join('');
-  }
-
-  function gerarDevolutiva(emocao, texto) {
-    const valor = (emocao + ' ' + texto).toLowerCase();
-
-    if (valor.includes('ansiedade') || valor.includes('ansiosa') || valor.includes('acelerada')) {
-      return 'Percebo o quanto sua mente pode estar acelerada agora. Talvez este não seja o momento de resolver tudo, mas de se tratar com mais suavidade e voltar, aos poucos, para a sua respiração.';
-    }
-    if (valor.includes('cansaço') || valor.includes('cansada') || valor.includes('exausta') || valor.includes('esgotada')) {
-      return 'O cansaço também comunica algo importante. Talvez você tenha sustentado mais do que devia. Hoje, em vez de se cobrar mais, tente reconhecer o seu limite com mais gentileza.';
-    }
-    if (valor.includes('tristeza') || valor.includes('triste') || valor.includes('vazio') || valor.includes('solidão')) {
-      return 'Há momentos em que o coração fica mais silencioso e pesado. Você não precisa atravessar isso se invalidando. Talvez, por agora, o mais importante seja se acolher sem exigir que a dor desapareça imediatamente.';
-    }
-    if (valor.includes('sobrecarga') || valor.includes('sobrecarregada') || valor.includes('pressão') || valor.includes('peso')) {
-      return 'Quando tudo parece demais, o corpo e a mente pedem pausa. Nem tudo precisa ser resolvido hoje. Talvez você só precise escolher uma coisa por vez e respirar antes do próximo passo.';
-    }
-    if (valor.includes('insegurança') || valor.includes('medo') || valor.includes('incerteza')) {
-      return 'É compreensível se sentir insegura em momentos difíceis. Você não precisa ter todas as respostas agora. Às vezes, o cuidado começa quando você se permite seguir com mais delicadeza, mesmo sem controle total.';
-    }
-    if (valor.includes('irritação') || valor.includes('raiva') || valor.includes('frustração')) {
-      return 'A irritação também pode ser um sinal de excesso, acúmulo ou necessidade não reconhecida. Em vez de se julgar por sentir isso, tente se perguntar com honestidade: do que eu precisei e não consegui nomear?';
-    }
-    if (valor.includes('esperança') || valor.includes('alívio') || valor.includes('leveza')) {
-      return 'É importante reconhecer quando algo dentro de você também aponta para respiro e possibilidade. Guardar esses pequenos sinais de esperança pode ser uma forma bonita de fortalecer seu cuidado emocional.';
-    }
-    return 'Obrigada por se permitir escrever. Dar nome ao que você sente já é um gesto de cuidado. Você não precisa resolver tudo agora. Pode apenas permanecer com mais gentileza diante do que está vivendo.';
-  }
-
-  checkinForm?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const data = {
-      nome: document.getElementById('nome').value,
-      emocao: document.getElementById('emocao').value,
-      intensidade: document.getElementById('intensidade').value,
-      mensagem: document.getElementById('mensagem').value,
-      date: new Date().toLocaleString('pt-BR')
-    };
-    localStorage.setItem('espacoSeguroCheckin', JSON.stringify(data));
-    checkinSuccess.classList.add('show');
-    setTimeout(() => checkinSuccess.classList.remove('show'), 4000);
-  });
-
-  journalForm?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const date = document.getElementById('journalDate').value;
-    const title = document.getElementById('journalTitle').value;
-    const emotion = document.getElementById('journalEmotion').value;
-    const text = document.getElementById('journalText').value;
-
-    const entries = getStoredEntries();
-    entries.push({ date, title, emotion, text });
-    saveStoredEntries(entries);
-    renderEntries();
-
-    const resposta = gerarDevolutiva(emotion, text);
-    textoDevolutiva.textContent = resposta;
-    devolutivaBox.classList.add('show');
-
-    journalSuccess.classList.add('show');
-    setTimeout(() => journalSuccess.classList.remove('show'), 4000);
-  });
-
-  clearJournalBtn?.addEventListener('click', function() {
-    localStorage.removeItem('espacoSeguroDiario');
-    renderEntries();
-    devolutivaBox.classList.remove('show');
-    if (journalForm) {
-      journalForm.reset();
-      const today = new Date();
-      journalDate.value = today.toISOString().split('T')[0];
-    }
-  });
-
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 300) {
-      btnTopo.style.display = 'block';
-    } else {
-      btnTopo.style.display = 'none';
-    }
-  });
-
-  btnTopo?.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  renderEntries();
+}
 </script>
+
 </body>
 </html>
