@@ -86,9 +86,8 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255,255,255,0.92);
-      border-bottom: 1px solid rgba(230,219,246,0.95);
-      backdrop-filter: blur(10px);
+      background: transparent;
+      backdrop-filter: blur(6px);
     }
 
     .cabecalho .shell {
@@ -103,15 +102,42 @@
     .logo-area {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 14px;
       min-width: 0;
     }
 
-    .logo {
+    .logo-link,
+    .map-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       width: 56px;
       height: 56px;
       border-radius: 50%;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(230,219,246,0.95);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+      color: var(--roxo);
       flex-shrink: 0;
+      transition: transform .18s ease, box-shadow .18s ease;
+      text-decoration: none;
+    }
+
+    .logo-link:hover,
+    .map-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(107,72,168,0.12);
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .map-link i {
+      font-size: 1.15rem;
     }
 
     .logo-area h1 {
@@ -127,24 +153,9 @@
       font-size: 0.92rem;
     }
 
-    .menu-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 18px;
-      margin: 0;
-      padding: 0;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+    .menu-nav {
+      display: none;
     }
-
-    .menu-nav a {
-      color: #6e6680;
-      text-decoration: none;
-      font-weight: 500;
-      transition: .2s ease;
-    }
-
-    .menu-nav a:hover { color: var(--roxo); }
 
     .intro-grid {
       display: grid;
@@ -632,6 +643,7 @@
       text-align:center;
       margin-top:18px;
       border-top: 1px solid rgba(230,219,246,0.95);
+      color:#5f576f;
     }
 
     .rodape .inner {
@@ -641,6 +653,11 @@
 
     .rodape p { margin: 6px 0; }
 
+    .rodape a {
+      color:#6b48a8;
+      text-decoration: underline;
+    }
+
     .btn-topo {
       position:fixed;
       right:22px;
@@ -649,7 +666,7 @@
       height:44px;
       border:none;
       border-radius:50%;
-      background: var(--roxo);
+      background:#6b48a8;
       color:white;
       cursor:pointer;
       box-shadow:0 8px 18px rgba(0,0,0,0.12);
@@ -669,6 +686,7 @@
       height:72px;
       border-radius:50%;
       box-shadow:0 8px 20px rgba(0,0,0,0.12);
+      background:#6b48a8;
     }
 
     @keyframes floatAvatar {
@@ -682,12 +700,9 @@
     }
 
     @media (max-width: 1024px) {
-      .cabecalho .shell,
       .intro-grid { grid-template-columns: 1fr; }
       .icon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .cabecalho .shell { flex-direction: column; align-items: flex-start; }
-      .menu-nav ul { justify-content: flex-start; }
-      .intro-grid { display:grid; }
+      .cabecalho .shell { padding-top: 12px; padding-bottom: 12px; }
     }
 
     @media (max-width: 780px) {
@@ -711,23 +726,18 @@
 <header class="cabecalho">
   <div class="shell">
     <div class="logo-area">
-      <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" class="logo">
+      <a href="index.html" class="logo-link" aria-label="Ir para a página inicial">
+        <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" class="logo">
+      </a>
       <div>
         <h1>Ana Paula Ap. Vieira | Psicóloga Clínica</h1>
         <p>CRP 06/217114</p>
       </div>
     </div>
-    <nav class="menu-nav">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="quem-sou.html">Quem Sou</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="preco.html">Preços</a></li>
-        <li><a href="recursos.html">Recursos</a></li>
-        <li><a href="depoimentos.html">Depoimentos</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
+
+    <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP" class="map-link" target="_blank" rel="noopener noreferrer" aria-label="Ver endereço do consultório no mapa">
+      <i class="fa-solid fa-location-dot"></i>
+    </a>
   </div>
 </header>
 
@@ -1091,61 +1101,29 @@
   </section>
 </main>
 
-<footer class="rodape" style="background:#f4effa;padding:26px 18px;text-align:center;margin-top:18px;">
-  <div style="max-width:1000px;margin:0 auto;">
-    <p style="margin:6px 0;">
-      <strong>Endereço:</strong>
-      <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP"
-         target="_blank"
-         style="text-decoration:underline;">
-        R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP
-      </a>
-    </p>
-
-    <p class="rodape-privacidade">
-      Este site utiliza práticas básicas de navegação. Saiba mais em nossa
-      <a href="privacidade.html">Política de Privacidade</a>.
-    </p>
-
-    <p style="margin:6px 0;">
-      <strong>Telefone:</strong>
-      <a href="https://wa.me/5515996760791"
-         target="_blank"
-         style="text-decoration:underline;">
-        (15) 99676-0791
-      </a>
-    </p>
-
-    <p style="margin:6px 0;">
-      <strong>E-mail:</strong>
-      <a href="mailto:contato@anapaulaapvieirapsi.com.br"
-         style="text-decoration:underline;">
-        contato@anapaulaapvieirapsi.com.br
-      </a>
-    </p>
-
-    <p style="margin:6px 0;">© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
+<footer class="rodape">
+  <div class="inner">
+    <p><strong>Endereço:</strong> <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP" target="_blank">R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP</a></p>
+    <p>Este site utiliza práticas básicas de navegação. Saiba mais em nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
+    <p><strong>Telefone:</strong> <a href="https://wa.me/5515996760791" target="_blank">(15) 99676-0791</a></p>
+    <p><strong>E-mail:</strong> <a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a></p>
+    <p>© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
 
     <div style="margin-top:8px;">
-      <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
-      <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" style="text-decoration:underline;">Facebook</a> |
-      <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" style="text-decoration:underline;">LinkedIn</a>
+      <a href="https://www.instagram.com/anapaulapsico/" target="_blank">Instagram</a> |
+      <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank">Facebook</a> |
+      <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank">LinkedIn</a>
     </div>
   </div>
 </footer>
 
-<button id='btn-topo' class='btn-topo' title='Voltar ao início'>↑</button>
+<button id="btn-topo" class="btn-topo" title="Voltar ao início">↑</button>
 
-<a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
-  <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
+<a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank">
+  <img src="imagens/whatsapp-icon.png" alt="WhatsApp">
 </a>
 
-<script src="app.js"></script>
 <script>
-</script>
-</body>
-</html>
-
   function abrirSecao(id) {
     const secoes = document.querySelectorAll('.hidden-section, .visible-section');
     secoes.forEach(secao => {
