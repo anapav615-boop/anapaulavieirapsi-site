@@ -197,6 +197,7 @@
     gap: 22px;
     flex-wrap: wrap;
     align-items: stretch;
+    overflow: hidden;
   }
 
   /* IMAGEM */
@@ -204,11 +205,19 @@
     flex: 1.15;
     min-width: 0;
     max-width: 100%;
+    width: 100%;
     border-radius: 18px;
     overflow: hidden;
     background: #fff;
     box-shadow: 0 12px 28px rgba(0,0,0,0.08);
     min-height: 420px;
+  }
+
+  
+  .hero-media picture {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
   .hero-media img {
@@ -281,6 +290,7 @@
   /* ===== MOBILE ===== */
   @media (max-width: 768px) {
     .hero {
+      flex-direction: column;
       gap: 16px;
     }
 
@@ -290,10 +300,12 @@
       height: 220px;
       min-width: 0;
       min-height: unset;
+      flex: none;
     }
 
     .hero-box {
-      min-width: 100%;
+      width: 100%;
+      min-width: 0;
       padding-left: 16px;
       padding-right: 16px;
     }
@@ -521,147 +533,110 @@ section[aria-label="Abertura"] .card-section > *{
     padding-right: 18px;
     padding-left: 18px;
   }
-}
 
-/* ===== Destaque principal: Espaço Seguro ===== */
-.btn-app{
-  background: linear-gradient(135deg, #6b48a8 0%, #8a63cc 100%);
-  color:#fff;
-  border:1px solid rgba(255,255,255,0.25);
-  box-shadow: 0 14px 28px rgba(107,72,168,0.22);
-}
 
-.hero-highlight{
-  margin-top: 6px;
-  padding: 16px;
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(244,239,250,0.95) 0%, rgba(242,251,246,0.95) 100%);
-  border: 1px solid rgba(127,191,154,0.55);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
-}
-.hero-highlight strong{ color: var(--roxo); }
-.hero-highlight p{ margin:0 0 12px; }
 
-.recurso-card.app-featured{
-  position: relative;
-  background: linear-gradient(180deg, #f4effa 0%, #f2fbf6 100%);
-  border: 2px solid rgba(107,72,168,0.22);
-  box-shadow: 0 18px 34px rgba(107,72,168,0.10);
-  overflow:hidden;
-}
-
-.recurso-card.app-featured::before{
-  content: "Destaque";
-  position:absolute;
-  top:14px;
-  right:14px;
-  background: var(--roxo);
-  color:#fff;
-  font-size:0.78rem;
-  font-weight:600;
-  padding:6px 10px;
-  border-radius:999px;
-  box-shadow: 0 8px 18px rgba(107,72,168,0.16);
-}
-
-.app-preview{
-  width:100%;
-  min-height: 230px;
-  border-radius:16px;
-  background: linear-gradient(160deg, rgba(255,255,255,0.95) 0%, rgba(246,252,249,0.96) 100%);
-  border: 1px solid rgba(230,219,246,0.95);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), 0 10px 24px rgba(0,0,0,0.04);
-  padding:16px;
-  box-sizing:border-box;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-
-.app-preview-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.app-preview-head strong{
-  color:var(--roxo);
-  font-size:1.15rem;
-  line-height:1.3;
-}
-
-.app-dot-group{ display:flex; gap:6px; }
-.app-dot{ width:8px; height:8px; border-radius:50%; background:#d8cdee; }
-
-.app-grid{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap:10px;
-}
-
-.app-mini{
-  background:#fff;
-  border:1px solid rgba(230,219,246,0.95);
-  border-radius:14px;
-  padding:12px 10px;
-  min-height:82px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
-}
-
-.app-mini span{
-  display:block;
-  color:var(--roxo);
-  font-weight:600;
-  font-size:0.92rem;
-  line-height:1.3;
-  margin-bottom:4px;
-}
-
-.app-mini small{
-  color:#6a6570;
-  line-height:1.4;
-  font-size:0.79rem;
-}
-
-.app-card-copy{
-  margin-top:4px !important;
-}
-
-.app-featured h3{
-  font-size:1.18rem;
-  line-height:1.35;
-  margin-top:2px;
-}
-
-.app-featured .btn-mini.primary{
-  width:100%;
-  text-align:center;
-  padding:12px 16px;
-}
-
-.badge-soft{
-  display:inline-block;
-  margin-top:4px;
-  font-size:0.82rem;
-  color:var(--roxo);
-  background:#fbf8ff;
-  border:1px solid #e6dbf6;
-  padding:6px 10px;
-  border-radius:999px;
-}
-
-@media (max-width: 780px){
-  .app-grid{ grid-template-columns: 1fr; }
-  .recurso-card.app-featured::before{ top:12px; right:12px; }
-  .app-preview{ min-height:auto; }
-  .hero-highlight > div > div{
-    grid-template-columns: 1fr !important;
+  /* ===== Destaque principal: Espaço Seguro ===== */
+  .btn-app{
+    background: linear-gradient(135deg, #6b48a8 0%, #8a63cc 100%);
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 14px 28px rgba(107,72,168,0.22);
   }
-}
+
+  .hero-highlight{
+    margin-top: 6px;
+    padding: 16px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(244,239,250,0.95) 0%, rgba(242,251,246,0.95) 100%);
+    border: 1px solid rgba(127,191,154,0.55);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+  }
+  .hero-highlight strong{ color: var(--roxo); }
+  .hero-highlight p{ margin:0 0 12px; }
+
+  .recurso-card.app-featured{
+    position: relative;
+    background: linear-gradient(180deg, #f4effa 0%, #f2fbf6 100%);
+    border: 2px solid rgba(107,72,168,0.22);
+    box-shadow: 0 18px 34px rgba(107,72,168,0.10);
+    overflow:hidden;
+  }
+  .recurso-card.app-featured::before{
+    content: "Destaque";
+    position:absolute;
+    top:14px;
+    right:14px;
+    background: var(--roxo);
+    color:#fff;
+    font-size:0.78rem;
+    font-weight:600;
+    padding:6px 10px;
+    border-radius:999px;
+    box-shadow: 0 8px 18px rgba(107,72,168,0.16);
+  }
+  .app-preview{
+    width:100%;
+    min-height: 190px;
+    border-radius:16px;
+    background: linear-gradient(160deg, rgba(255,255,255,0.95) 0%, rgba(246,252,249,0.96) 100%);
+    border: 1px solid rgba(230,219,246,0.95);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.85), 0 10px 24px rgba(0,0,0,0.04);
+    padding:16px;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .app-preview-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .app-preview-head strong{
+    color:var(--roxo);
+    font-size:1rem;
+  }
+  .app-dot-group{ display:flex; gap:6px; }
+  .app-dot{ width:8px; height:8px; border-radius:50%; background:#d8cdee; }
+  .app-grid{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap:10px;
+  }
+  .app-mini{
+    background:#fff;
+    border:1px solid rgba(230,219,246,0.95);
+    border-radius:14px;
+    padding:12px 10px;
+    min-height:70px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+  }
+  .app-mini span{
+    display:block;
+    color:var(--roxo);
+    font-weight:600;
+    font-size:0.92rem;
+    line-height:1.3;
+  }
+  .app-mini small{
+    color:#6a6570;
+    line-height:1.35;
+    margin-top:4px;
+    font-size:0.78rem;
+  }
+  .app-card-copy{
+    margin-top:2px;
+  }
+
+  @media (max-width: 780px){
+    .app-grid{ grid-template-columns: 1fr; }
+    .recurso-card.app-featured::before{ top:12px; right:12px; }
+  }
 
 </style>
 </head><body>
@@ -724,50 +699,17 @@ section[aria-label="Abertura"] .card-section > *{
         </p>
 
         <div class="hero-highlight">
-
-          <div style="display:flex; flex-direction:column; gap:10px;">
-
-            <strong style="color:#6b48a8;">🌿 Espaço Seguro: comece por aqui</strong>
-
-            <p style="margin:0;">
-              Um espaço acolhedor para você entender o que está sentindo,
-              se expressar com leveza e iniciar seu cuidado emocional no seu tempo.
-            </p>
-
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:6px;">
-
-              <div style="background:#fff; border-radius:10px; padding:8px; font-size:0.8rem;">
-                😊 Check-in
-              </div>
-
-              <div style="background:#fff; border-radius:10px; padding:8px; font-size:0.8rem;">
-                📝 Diário
-              </div>
-
-              <div style="background:#fff; border-radius:10px; padding:8px; font-size:0.8rem;">
-                🎧 Áudios
-              </div>
-
-              <div style="background:#fff; border-radius:10px; padding:8px; font-size:0.8rem;">
-                💜 Exercícios
-              </div>
-
-            </div>
-
-            <a href="espaco-seguro.html" class="btn-cta btn-app" style="margin-top:6px;">
-              Começar agora
-            </a>
-
+          <p><strong>Novo:</strong> conheça o <strong>Espaço Seguro</strong>, um ambiente de acolhimento com check-in emocional, diário das emoções, áudios e exercícios terapêuticos para você começar no seu tempo.</p>
+          <div class="cta-row" style="margin-top:0;">
+            <a href="espaco-seguro.html" class="btn-cta btn-app">Começar pelo Espaço Seguro</a>
           </div>
-
-        </div></div>
+        </div>
 
       </div>
 
     </div>
   </div>
 </section>
-
 
   <!-- APRESENTAÇÃO -->
   <section class="shell" aria-label="Apresentação">
@@ -920,8 +862,10 @@ section[aria-label="Abertura"] .card-section > *{
       </div>
     </div>
   </section>
+    
+       <div class="grid">
 
-  <!-- RECURSOS -->
+      <!-- RECURSOS -->
   <section class="shell" aria-label="Recursos">
     <div class="card-section">
       <h2 class="title">Recursos e conteúdos de apoio</h2>
@@ -932,14 +876,29 @@ section[aria-label="Abertura"] .card-section > *{
 
       <div class="grid">
 
-<article class="mini-card recurso-card">
-  <img src="imagens/caricatura-ana-paula.png" alt="Espaço Seguro - acolhimento emocional" class="recurso-img">
-  <h3>Espaço Seguro</h3>
-  <p>
-    Um espaço psicoeducativo com check-in emocional, diário das emoções, áudios de acolhimento e exercícios terapêuticos.
+<article class="mini-card recurso-card app-featured">
+  <div class="app-preview" aria-hidden="true">
+    <div class="app-preview-head">
+      <strong>Espaço Seguro</strong>
+      <div class="app-dot-group">
+        <span class="app-dot"></span>
+        <span class="app-dot"></span>
+        <span class="app-dot"></span>
+      </div>
+    </div>
+    <div class="app-grid">
+      <div class="app-mini"><span>Check-in</span><small>Reconheça o que sente hoje</small></div>
+      <div class="app-mini"><span>Diário</span><small>Escreva sem julgamentos</small></div>
+      <div class="app-mini"><span>Áudios</span><small>Volte para si com suavidade</small></div>
+      <div class="app-mini"><span>Exercícios</span><small>Práticas terapêuticas</small></div>
+    </div>
+  </div>
+  <h3>Espaço Seguro: comece por aqui</h3>
+  <p class="app-card-copy">
+    Um espaço acolhedor para você entender o que está sentindo, se expressar com leveza e iniciar seu cuidado emocional no seu tempo.
   </p>
   <div class="recurso-actions">
-    <a href="espaco-seguro.html" class="btn-mini secondary">Acessar recurso</a>
+    <a href="espaco-seguro.html" class="btn-mini primary">Começar agora</a>
   </div>
 </article>
 
@@ -1179,8 +1138,65 @@ Material psicoeducativo em PDF, com acesso imediato após a compra, para ajudar 
     com linguagem acessível, acolhedora e baseada na Psicologia científica.
   </p>
 
+  <div class="recurso-actions">
+    <a href="https://go.hotmart.com/I104591180F?dp=1"
+       class="btn-mini secondary"
+       target="_blank"
+       rel="noopener">
+      Acessar o guia agora
+    </a>
+  </div>
+</article>
+
+<!-- NOVO GUIA: AUTOESTIMA E AUTOCRÍTICA -->
+<article class="mini-card recurso-card">
+ <img src="imagens/capa-guia-autoestima-autocritica.png"
+     alt="Guia psicoeducativo: Autoestima e Autocrítica"
+     class="recurso-img ebook-cover">
+  <h3>Autoestima e Autocrítica</h3>
+  <p>
+    Guia psicoeducativo para compreender a autoestima, reduzir a autocrítica e desenvolver
+    uma relação mais saudável consigo mesmo(a), com linguagem acolhedora e clara.
+  </p>
+  <span class="badge-soft">Conteúdo pago • acesso imediato</span>
+  <div class="recurso-actions">
+    <a href="https://go.hotmart.com/H104601392B?dp=1"
+       target="_blank" rel="noopener"
+       class="btn-mini secondary">Acessar o guia agora</a>
+  </div>
+</article>
+
+<!-- NOVO GUIA: EXAUSTÃO EMOCIONAL NO TRABALHO -->
+<article class="mini-card recurso-card">
+  <img src="imagens/capa-guia-exaustao-emocional-trabalho.png"
+     alt="Guia psicoeducativo: Exaustão Emocional no Trabalho"
+     class="recurso-img ebook-cover">
+  <h3>Exaustão Emocional no Trabalho</h3>
+  <p>
+    Guia psicoeducativo para identificar sinais de esgotamento, compreender causas e iniciar
+    um caminho de cuidado e recuperação do equilíbrio emocional no trabalho.
+  </p>
+  <span class="badge-soft">Conteúdo pago • acesso imediato</span>
+  <div class="recurso-actions">
+    <a href="https://go.hotmart.com/H104601780L?dp=1"
+       target="_blank" rel="noopener"
+       class="btn-mini secondary">Acessar o guia agora</a>
+  </div>
+</article>
+
+  <div class="recurso-actions">
+    <a href="https://go.hotmart.com/I104591180F?dp=1"
+       class="btn-mini secondary"
+       target="_blank"
+       rel="noopener">
+      Acessar o guia agora
+    </a>
+  </div>
+</article>
       </div><!-- /grid -->
     </div><!-- /card-section -->
+  </section>
+    </div>
   </section>
 <!-- CONTATO -->
   <section class="shell" id="contato" aria-label="Contato">
