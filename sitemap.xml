@@ -4,7 +4,7 @@
   <!-- HOME -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/</loc>
-    <lastmod>2026-03-17</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -40,7 +40,7 @@
 
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/recursos.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -194,12 +194,19 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- NOVO ARTIGO -->
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/maternidade-real-sobrecarga-materna.html</loc>
     <lastmod>2026-03-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
+  </url>
+
+  <!-- NOVO ARTIGO -->
+  <url>
+    <loc>https://anapaulaapvieirapsi.com.br/dificuldade-em-dizer-nao.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.91</priority>
   </url>
 
 </urlset>
