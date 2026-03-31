@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ana Paula Ap. Vieira | Psicóloga em Itapetininga e Online</title>
+  <title>Ana Paula Ap. Vieira | Psicóloga Clínica</title>
 
-  <meta name="description" content="Ana Paula Ap. Vieira é psicóloga clínica em Itapetininga (SP), com atendimento presencial e online. Um espaço de escuta e acolhimento para ansiedade, exaustão emocional, autoestima, relacionamentos e sofrimento emocional." />
+  <meta name="description" content="Psicoterapia presencial em Itapetininga (SP) e online para todo o Brasil. Um espaço seguro de escuta e acolhimento para ansiedade, cansaço emocional, autoestima e relacionamentos." />
   <meta name="robots" content="index, follow" />
 
   <link rel="icon" type="image/png" href="imagens/favicon.png">
@@ -20,7 +20,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Psychologist",
+  "@type": "LocalBusiness",
   "name": "Ana Paula Ap. Vieira | Psicóloga Clínica",
   "url": "https://anapaulaapvieirapsi.com.br/",
   "image": "https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg",
@@ -68,10 +68,12 @@
       radial-gradient(900px 520px at 88% 10%, rgba(127,191,154,0.18) 0%, rgba(127,191,154,0.00) 62%),
       linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 55%, rgba(244,239,250,0.74) 100%);
 
+    /* ✅ evita hifenização no site todo (remove tor- nar, es- cuta...) */
     -webkit-hyphens: none;
     hyphens: none;
   }
 
+  /* ===== Estrutura padrão: tudo centralizado e em cards ===== */
   .shell {
     max-width: 1200px;
     margin: 0 auto;
@@ -119,6 +121,7 @@
     line-height: 1.75;
   }
 
+  /* ===== Form (Contato) ===== */
   .form-contato .form-row{ display:flex; flex-direction:column; gap:6px; margin-bottom:12px; }
   .form-contato input, .form-contato textarea{
     padding: 12px 12px;
@@ -166,6 +169,7 @@
     box-shadow: 0 10px 22px rgba(107,72,168,0.18);
   }
 
+  /* ===== Botões ===== */
   .btn-cta {
     display: inline-block;
     padding: 10px 18px;
@@ -176,7 +180,7 @@
     color: #fff;
     box-shadow: 0 10px 22px rgba(107,72,168,0.18);
     max-width: 100%;
-    white-space: normal;
+    white-space: normal; /* ✅ deixa quebrar linha se precisar */
     text-align: center;
   }
 
@@ -187,6 +191,7 @@
     border: 1px solid rgba(127,191,154,0.55);
   }
 
+  /* ===== HERO ===== */
   .hero {
     display: flex;
     gap: 22px;
@@ -195,6 +200,7 @@
     overflow: hidden;
   }
 
+  /* IMAGEM */
   .hero-media {
     flex: 1.15;
     min-width: 0;
@@ -214,6 +220,7 @@
     display: block;
   }
 
+  /* TEXTO */
   .hero-box {
     flex: 1;
     min-width: 300px;
@@ -227,10 +234,11 @@
     gap: 12px;
 
     max-width: 100%;
-    overflow-wrap: break-word;
+    overflow-wrap: break-word; /* ✅ quebra normal, sem hifenizar */
     word-wrap: break-word;
     word-break: normal;
 
+    /* ✅ remove hifenização aqui também (garantia) */
     -webkit-hyphens: none;
     hyphens: none;
   }
@@ -252,6 +260,7 @@
     hyphens: none;
   }
 
+  /* CTA do HERO */
   .cta-row {
     display: flex;
     justify-content: center;
@@ -271,6 +280,7 @@
     text-align: center;
   }
 
+  /* ===== MOBILE ===== */
   @media (max-width: 768px) {
     .hero {
       gap: 16px;
@@ -296,6 +306,7 @@
       font-size: clamp(22px, 6vw, 30px);
     }
 
+    /* botões 1 por linha */
     .cta-row {
       flex-direction: column;
       align-items: stretch;
@@ -307,6 +318,7 @@
     }
   }
 
+  /* ===== Apresentação ===== */
   .about {
     display:flex;
     gap:22px;
@@ -340,6 +352,7 @@
   }
   .about-box p { margin:0 0 12px; line-height:1.75; }
 
+  /* ===== Chips (temas) ===== */
   .chips-box {
     max-width: 1050px;
     margin: 0 auto;
@@ -374,6 +387,7 @@
     line-height:1.75;
   }
 
+  /* ===== Cards internos (centralizados) ===== */
   .grid {
     display:flex;
     flex-wrap:wrap;
@@ -398,8 +412,10 @@
   }
   .mini-card p { margin:0; line-height:1.7; }
 
+  /* ===== Depoimentos ===== */
   .center-btn { text-align:center; margin-top:10px; }
 
+  /* ===== Recursos ===== */
   section[aria-label="Recursos"] .recurso-card{
     display:flex;
     flex-direction:column;
@@ -467,6 +483,7 @@
     box-shadow: 0 10px 24px rgba(0,0,0,0.04);
   }
 
+  /* ===== Ajustes mobile gerais ===== */
   @media (max-width: 780px) {
     .hero-box h1 { font-size: 1.35rem; }
     .hero-media img { max-height: 360px; }
@@ -474,15 +491,16 @@
     .mini-card { width: 100%; max-width: 520px; }
     .card-section { padding: 22px 18px; }
   }
-
+/* ===== FIX Samsung: texto cortando na borda direita (apenas HERO) ===== */
 section[aria-label="Abertura"] .card-section,
 section[aria-label="Abertura"] .card-hero,
 section[aria-label="Abertura"] .hero,
 section[aria-label="Abertura"] .hero-box{
-  overflow: visible !important;
+  overflow: visible !important; /* ✅ correto */
   box-sizing: border-box;
 }
 
+/* garante que o “filete” interno NÃO fique por cima do texto (Samsung) */
 section[aria-label="Abertura"] .card-section{
   position: relative;
 }
@@ -494,6 +512,7 @@ section[aria-label="Abertura"] .card-section > *{
   z-index: 1;
 }
 
+/* “respiro” extra para evitar o corte na borda (Samsung) */
 @media (max-width: 768px){
   section[aria-label="Abertura"] .hero-box{
     padding-right: 22px !important;
@@ -506,7 +525,7 @@ section[aria-label="Abertura"] .card-section > *{
     padding-right: 18px;
     padding-left: 18px;
   }
-}
+
 </style>
 </head><body>
 <header class="cabecalho">
@@ -529,6 +548,7 @@ section[aria-label="Abertura"] .card-section > *{
 
 <main>
 
+<!-- HERO -->
 <section class="shell" aria-label="Abertura">
   <div class="card-section card-hero">
     <div class="hero">
@@ -542,12 +562,12 @@ section[aria-label="Abertura"] .card-section > *{
 
       <div class="hero-box">
 
-        <h1>Psicóloga em Itapetininga: acolhimento emocional, escuta e cuidado psicológico para o seu momento de vida</h1>
+        <h1>Psicóloga em Itapetininga: um espaço de escuta, acolhimento e cuidado para o seu equilíbrio emocional.</h1>
 
         <p>
-          Se você tem se sentido ansiosa, emocionalmente cansada, sobrecarregada ou vivendo conflitos difíceis,
-          a <a href="psicologa-em-itapetininga.html">psicoterapia</a> pode ser um espaço seguro de escuta e acolhimento
-          para compreender o que está acontecendo e construir novos caminhos de cuidado emocional.
+          Ansiedade, exaustão, conflitos ou fases difíceis podem tornar o dia a dia pesado.
+          Ofereço <a href="psicologa-em-itapetininga.html">psicoterapia</a> em um espaço seguro de escuta e acolhimento
+          para organizar pensamentos, compreender emoções e construir novos caminhos.
         </p>
 
         <div class="cta-row">
@@ -561,10 +581,6 @@ section[aria-label="Abertura"] .card-section > *{
           </a>
         </div>
 
-        <p style="text-align:center; font-weight:500; color:#6b48a8;">
-          Você não precisa enfrentar tudo sozinha.
-        </p>
-
         <p class="hero-local">
           Atendimento <strong class="roxo">presencial em Itapetininga-SP</strong> e
           <strong class="roxo">online</strong> para todo o Brasil.
@@ -576,398 +592,630 @@ section[aria-label="Abertura"] .card-section > *{
   </div>
 </section>
 
-<section class="shell" aria-label="Apresentação">
-  <div class="card-section">
-    <h2 class="title">Um espaço de escuta, cuidado e respeito pela sua história</h2>
+  <!-- APRESENTAÇÃO -->
+  <section class="shell" aria-label="Apresentação">
+    <div class="card-section">
+      <h2 class="title">Um espaço de escuta, cuidado e respeito pela sua história</h2>
 
-    <div class="about">
-      <div class="about-photo">
-        <img src="imagens/sua-foto.jpg" alt="Ana Paula Ap. Vieira - Psicóloga Clínica">
-      </div>
+      <div class="about">
+        <div class="about-photo">
+          <img src="imagens/sua-foto.jpg" alt="Ana Paula Ap. Vieira - Psicóloga Clínica">
+        </div>
 
-      <div class="about-box">
-        <p>
-          Olá, eu sou <strong>Ana Paula Ap. Vieira</strong>, Psicóloga Clínica (<strong>CRP 06/217114</strong>).
-          Meu trabalho é oferecer um espaço ético, humano e acolhedor para pessoas que precisam de apoio emocional,
-          escuta e cuidado psicológico em momentos de ansiedade, sobrecarga, conflitos e sofrimento emocional.
-        </p>
+        <div class="about-box">
+          <p>
+            Olá, eu sou <strong>Ana Paula Ap. Vieira</strong>, Psicóloga Clínica (<strong>CRP 06/217114</strong>).
+            Meu trabalho é oferecer um ambiente ético, humano e acolhedor para que você possa falar sobre suas dores,
+            pensamentos e sentimentos sem julgamentos.
+          </p>
 
-        <p>
-          Atendo de forma presencial em <strong>Itapetininga-SP</strong> e também <strong>online</strong> para todo o Brasil,
-          respeitando o seu ritmo, a singularidade da sua história e o momento que você está vivendo.
-        </p>
+          <p>
+            Atendo de forma presencial em <strong>Itapetininga-SP</strong> e também <strong>online</strong> para todo o Brasil,
+            respeitando o seu ritmo e a singularidade da sua história.
+          </p>
 
-        <p style="margin-bottom:0;">
-          Se fizer sentido para você, podemos conversar e entender qual caminho de cuidado é mais adequado neste momento.
-        </p>
+          <p style="margin-bottom:0;">
+            Se fizer sentido para você, podemos conversar e entender qual caminho de cuidado é mais adequado neste momento.
+          </p>
 
-        <div class="cta-row" style="margin-top:14px;">
-          <a class="btn-cta sec" href="quem-sou.html">Conhecer minha abordagem</a>
-          <a class="btn-cta" href="#contato">Quero agendar</a>
+          <div class="cta-row" style="margin-top:14px;">
+            <a class="btn-cta sec" href="quem-sou.html">Conhecer minha abordagem</a>
+            <a class="btn-cta" href="#contato">Quero agendar</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="shell" aria-label="Identificação">
-  <div class="card-section">
-    <h2 class="title">Talvez você esteja vivendo…</h2>
+  <!-- IDENTIFICAÇÃO -->
+  <section class="shell" aria-label="Identificação">
+    <div class="card-section">
+      <h2 class="title">Talvez você esteja vivendo…</h2>
 
-    <div class="chips-box">
-      <div class="chips" aria-label="Temas de cuidado emocional">
-        <a class="chip-link" href="ansiedade.html"><span class="chip"><strong>Ansiedade</strong> que não desacelera</span></a>
-        <a class="chip-link" href="exaustao-emocional.html"><span class="chip"><strong>Cansaço emocional</strong> constante</span></a>
-        <a class="chip-link" href="autoconhecimento.html"><span class="chip">Sobrecarga e dificuldade para descansar</span></a>
-        <a class="chip-link" href="relacionamentos.html"><span class="chip">Conflitos nos relacionamentos</span></a>
-        <a class="chip-link" href="autoestima.html"><span class="chip">Autocobrança e sensação de insuficiência</span></a>
-        <a class="chip-link" href="autoconhecimento.html"><span class="chip">Fases difíceis e mudanças de vida</span></a>
+      <div class="chips-box">
+        <div class="chips" aria-label="Temas de cuidado emocional">
+          <a class="chip-link" href="ansiedade.html"><span class="chip"><strong>Ansiedade</strong> que não desacelera</span></a>
+          <a class="chip-link" href="exaustao-emocional.html"><span class="chip"><strong>Cansaço emocional</strong> constante</span></a>
+          <a class="chip-link" href="autoconhecimento.html"><span class="chip">Sobrecarga mental</span></a>
+          <a class="chip-link" href="relacionamentos.html"><span class="chip">Dificuldades nos relacionamentos</span></a>
+          <a class="chip-link" href="autoestima.html"><span class="chip">Insegurança e autocobrança</span></a>
+          <a class="chip-link" href="autoconhecimento.html"><span class="chip">Fases de transição e mudanças</span></a>
+        </div>
+
+        <p class="chips-text">
+          A terapia pode ser um suporte importante para compreender essas experiências,
+          fortalecer recursos internos e construir formas mais saudáveis de se relacionar consigo e com a vida.
+        </p>
       </div>
+    </div>
+  </section>
 
-      <p class="chips-text">
-        A terapia pode ser um suporte importante para compreender essas experiências,
-        fortalecer recursos internos e construir formas mais saudáveis de se relacionar consigo e com a vida.
+  <!-- COMO POSSO TE AJUDAR -->
+  <section class="shell" aria-label="Serviços">
+    <div class="card-section">
+      <h2 class="title">Como posso te ajudar</h2>
+
+      <p class="lead">
+        O atendimento é pensado para acolher diferentes fases da vida — infância, adolescência e vida adulta —
+        sempre com ética, escuta e respeito à singularidade de cada pessoa.
       </p>
+
+      <div class="grid">
+        <article class="mini-card">
+          <h3>Psicoterapia Infantil</h3>
+          <p>
+            Acolhimento emocional para a criança, auxiliando na expressão de sentimentos e no desenvolvimento saudável.
+            Quando necessário, também realizo <strong>orientação parental</strong> para apoiar pais e responsáveis.
+          </p>
+        </article>
+
+        <article class="mini-card">
+          <h3>Psicoterapia para Adolescentes</h3>
+          <p>
+            Um espaço seguro para falar sobre emoções, conflitos, escola, amizades e família — sem rótulos e sem julgamentos.
+            Trabalhamos juntos o fortalecimento da identidade, autonomia, autoestima e habilidades de comunicação,
+            respeitando o tempo e o jeito de cada adolescente.
+          </p>
+        </article>
+
+        <article class="mini-card">
+          <h3>Psicoterapia para Adultos</h3>
+          <p>
+            Um processo terapêutico para aprofundar o autoconhecimento, organizar pensamentos e emoções,
+            e desenvolver estratégias mais saudáveis para lidar com ansiedade, sobrecarga, autocobrança e desafios nos relacionamentos.
+            Você não precisa dar conta de tudo sozinho(a).
+          </p>
+        </article>
+</div>
+
+      <p class="lead" style="margin-top:14px;">
+        Atendimento <strong style="color:var(--roxo);">presencial em Itapetininga-SP</strong> e <strong style="color:var(--roxo);">online</strong> para todo o Brasil.
+      </p>
+
+      <div class="center-btn">
+        <a href="servicos.html" class="btn-cta">Conhecer todos os serviços</a>
+      </div>
     </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="shell" aria-label="Como funciona a terapia">
+    <div class="card-section">
+      <h2 class="title">Como funciona a terapia</h2>
+
+      <div class="grid">
+        <article class="mini-card">
+          <h3>Frequência e duração</h3>
+          <p>As sessões acontecem, em geral, uma vez por semana, com duração média de 50 minutos. Em alguns casos, podemos avaliar outra frequência junto com você.</p>
+        </article>
+
+        <article class="mini-card">
+          <h3>Valores</h3>
+          <p>Os valores das sessões são combinados diretamente com cada pessoa, considerando sua realidade e possibilidades. Entre em contato para saber mais.</p>
+        </article>
+
+        <article class="mini-card">
+          <h3>Primeiro contato</h3>
+          <p>No primeiro contato, você pode tirar dúvidas sobre a forma de atendimento, valores e horários disponíveis, sem compromisso.</p>
+        </article>
+      </div>
+
+      <p class="lead" style="margin-top:14px;">
+        Ficou com alguma dúvida sobre o funcionamento, valores ou como começar? Veja as respostas às perguntas mais comuns no FAQ.
+      </p>
+
+      <div class="center-btn">
+        <a href="faq.html" class="btn-cta sec">Ver perguntas frequentes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="shell" aria-label="Depoimentos">
+    <div class="card-section">
+      <h2 class="title">O que as pessoas dizem sobre a experiência em terapia</h2>
+      <p class="lead">
+        A experiência terapêutica é única para cada pessoa. Na página de depoimentos, você encontra relatos de forma respeitosa e sigilosa,
+        preservando a identidade de cada paciente.
+      </p>
+      <div class="center-btn">
+        <a href="depoimentos.html" class="btn-cta">Ver depoimentos</a>
+      </div>
+    </div>
+  </section>
+    
+       <div class="grid">
+
+      <!-- RECURSOS -->
+  <section class="shell" aria-label="Recursos">
+    <div class="card-section">
+      <h2 class="title">Recursos e conteúdos de apoio</h2>
+      <p class="lead">
+        Materiais pensados para orientar, acolher e ajudar você a compreender melhor o que está vivendo.
+        Se fizer sentido, você também pode levar esses temas para a terapia.
+      </p>
+
+      <div class="grid">
+
+<article class="mini-card recurso-card">
+  <img src="imagens/caricatura-ana-paula.png" alt="Espaço Seguro - acolhimento emocional" class="recurso-img">
+  <h3>Espaço Seguro</h3>
+  <p>
+    Um espaço psicoeducativo com check-in emocional, diário das emoções, áudios de acolhimento e exercícios terapêuticos.
+  </p>
+  <div class="recurso-actions">
+    <a href="espaco-seguro.html" class="btn-mini secondary">Acessar recurso</a>
   </div>
-</section>
+</article>
 
-<section class="shell" aria-label="Serviços">
-  <div class="card-section">
-    <h2 class="title">Como posso te ajudar</h2>
-
-    <p class="lead">
-      O atendimento é pensado para acolher diferentes fases da vida — infância, adolescência e vida adulta —
-      sempre com ética, escuta e respeito à singularidade de cada pessoa.
-    </p>
-
-    <div class="grid">
-      <article class="mini-card">
-        <h3>Psicoterapia Infantil</h3>
-        <p>
-          Acolhimento emocional para a criança, auxiliando na expressão de sentimentos e no desenvolvimento saudável.
-          Quando necessário, também realizo <strong>orientação parental</strong> para apoiar pais e responsáveis.
-        </p>
-      </article>
-
-      <article class="mini-card">
-        <h3>Psicoterapia para Adolescentes</h3>
-        <p>
-          Um espaço seguro para falar sobre emoções, conflitos, escola, amizades e família — sem rótulos e sem julgamentos.
-          Trabalhamos juntos o fortalecimento da identidade, autonomia, autoestima e habilidades de comunicação,
-          respeitando o tempo e o jeito de cada adolescente.
-        </p>
-      </article>
-
-      <article class="mini-card">
-        <h3>Psicoterapia para Adultos</h3>
-        <p>
-          Um processo terapêutico para compreender emoções, organizar pensamentos e desenvolver formas mais saudáveis
-          de lidar com ansiedade, sobrecarga, autocobrança, insegurança e desafios nos relacionamentos.
-          Você não precisa dar conta de tudo sozinho(a).
-        </p>
-      </article>
-    </div>
-
-    <p class="lead" style="margin-top:14px;">
-      Atendimento <strong style="color:var(--roxo);">presencial em Itapetininga-SP</strong> e <strong style="color:var(--roxo);">online</strong> para todo o Brasil.
-    </p>
-
-    <div class="center-btn">
-      <a href="servicos.html" class="btn-cta">Conhecer todos os serviços</a>
-    </div>
+<!-- NOVAS PÁGINAS (Itapetininga + Burnout) -->
+<article class="mini-card recurso-card">
+  <img src="imagens/psicologa-itapetininga.jpg" alt="Psicóloga em Itapetininga - psicoterapia presencial e online" class="recurso-img">
+  <h3>Psicóloga em Itapetininga</h3>
+  <p>
+    Atendimento psicológico presencial e online, com acolhimento e escuta profissional. Saiba como funciona e quando procurar terapia.
+  </p>
+  <div class="recurso-actions">
+    <a href="psicologa-em-itapetininga.html" class="btn-mini secondary">Ver página</a>
   </div>
-</section>
-
-<section class="shell" aria-label="Como funciona a terapia">
-  <div class="card-section">
-    <h2 class="title">Como funciona a terapia</h2>
-
-    <div class="grid">
-      <article class="mini-card">
-        <h3>Frequência e duração</h3>
-        <p>As sessões acontecem, em geral, uma vez por semana, com duração média de 50 minutos. Em alguns casos, podemos avaliar outra frequência junto com você.</p>
-      </article>
-
-      <article class="mini-card">
-        <h3>Valores</h3>
-        <p>Os valores das sessões são informados no primeiro contato, de forma clara e respeitosa. Entre em contato para saber mais sobre horários, formato de atendimento e investimento.</p>
-      </article>
-
-      <article class="mini-card">
-        <h3>Primeiro contato</h3>
-        <p>No primeiro contato, você pode tirar dúvidas sobre a forma de atendimento, valores e horários disponíveis, sem compromisso.</p>
-      </article>
-    </div>
-
-    <p class="lead" style="margin-top:14px;">
-      Ficou com alguma dúvida sobre o funcionamento, valores ou como começar? Veja as respostas às perguntas mais comuns no FAQ.
-    </p>
-
-    <div class="center-btn">
-      <a href="faq.html" class="btn-cta sec">Ver perguntas frequentes</a>
-    </div>
+</article>
+<article class="mini-card recurso-card">
+  <img src="imagens/ansiedade-trabalho.jpg" alt="Ansiedade no ambiente de trabalho" class="recurso-img">
+  <h3>Ansiedade no ambiente de trabalho</h3>
+  <p>
+    Quando a cobrança, a pressão e o medo de errar transformam o trabalho em fonte de sofrimento emocional.
+    Entenda os sinais e como a psicoterapia pode ajudar.
+  </p>
+  <div class="recurso-actions">
+    <a href="ansiedade-trabalho.html" class="btn-mini secondary">Ler artigo</a>
   </div>
-</section>
+</article>
 
-<section class="shell" aria-label="Depoimentos">
-  <div class="card-section">
-    <h2 class="title">O que as pessoas dizem sobre a experiência em terapia</h2>
-    <p class="lead">
-      A experiência terapêutica é única para cada pessoa. Na página de depoimentos, você encontra relatos de forma respeitosa e sigilosa,
-      preservando a identidade de cada paciente.
-    </p>
-    <div class="center-btn">
-      <a href="depoimentos.html" class="btn-cta">Ver depoimentos</a>
-    </div>
+<article class="mini-card recurso-card">
+  <img src="imagens/ansiedade-itapetininga.jpg" alt="Ansiedade em Itapetininga - quando procurar ajuda" class="recurso-img">
+  <h3>Ansiedade em Itapetininga</h3>
+  <p>
+    Pensamentos acelerados, tensão no corpo e medo constante? Entenda sinais de ansiedade e como a psicoterapia pode ajudar.
+  </p>
+  <div class="recurso-actions">
+    <a href="ansiedade-em-itapetininga.html" class="btn-mini secondary">Ler artigo</a>
   </div>
-</section>
+</article>
 
-<section class="shell" aria-label="Recursos">
-  <div class="card-section">
-    <h2 class="title">Recursos e conteúdos de apoio</h2>
-    <p class="lead">
-      Materiais pensados para orientar, acolher e ajudar você a compreender melhor o que está vivendo.
-      Se fizer sentido, você também pode levar esses temas para a terapia.
-    </p>
+<article class="mini-card recurso-card">
+  <img src="imagens/burnout-emocional-trabalho.jpg" alt="Burnout emocional no trabalho" class="recurso-img">
+  <h3>Burnout emocional no trabalho</h3>
+  <p>
+    Quando o trabalho começa a adoecer por dentro: sinais de burnout, causas e caminhos de cuidado para recuperar energia e limites.
+  </p>
+  <div class="recurso-actions">
+    <a href="burnout-emocional-trabalho.html" class="btn-mini secondary">Ler artigo</a>
+  </div>
+</article>
 
-    <div class="grid">
+<!-- NOVO: Tristeza persistente (adulto) -->
+          <article class="mini-card recurso-card">
+            <img src="imagens/tristeza-persistente.jpg" alt="Tristeza persistente e sofrimento emocional" class="recurso-img">
+            <h3>Tristeza persistente</h3>
+            <p>
+              Quando a tristeza deixa de ser passageira e passa a fazer parte do cotidiano,
+              pode ser um sinal de sofrimento emocional. Entenda os sinais e quando buscar ajuda.
+            </p>
+            <div class="recurso-actions">
+              <a href="tristeza-persistente.html" class="btn-mini secondary">Ler artigo</a>
+            </div>
+          </article>
 
-      <article class="mini-card recurso-card">
-        <img src="imagens/caricatura-ana-paula.png" alt="Espaço Seguro - acolhimento emocional" class="recurso-img">
-        <h3>Espaço Seguro</h3>
-        <p>
-          Um espaço psicoeducativo com check-in emocional, diário das emoções, áudios de acolhimento e exercícios terapêuticos.
-        </p>
-        <div class="recurso-actions">
-          <a href="espaco-seguro.html" class="btn-mini secondary">Acessar recurso</a>
-        </div>
-      </article>
+          <!-- NOVO: Tristeza na adolescência -->
+          <article class="mini-card recurso-card">
+            <img src="imagens/tristeza-adolescente.jpg" alt="Tristeza na adolescência e sofrimento emocional" class="recurso-img">
+            <h3>Tristeza na adolescência</h3>
+            <p>
+              Nem sempre é rebeldia. O isolamento, a irritabilidade e o silêncio podem ser
+              sinais de sofrimento emocional no adolescente.
+            </p>
+            <div class="recurso-actions">
+              <a href="tristeza-adolescente.html" class="btn-mini secondary">Ler artigo</a>
+            </div>
+          </article>
 
-      <article class="mini-card recurso-card">
-        <img src="imagens/psicologa-itapetininga.jpg" alt="Psicóloga em Itapetininga - psicoterapia presencial e online" class="recurso-img">
-        <h3>Psicóloga em Itapetininga</h3>
-        <p>
-          Atendimento psicológico presencial e online, com acolhimento e escuta profissional. Saiba como funciona e quando procurar terapia.
-        </p>
-        <div class="recurso-actions">
-          <a href="psicologa-em-itapetininga.html" class="btn-mini secondary">Ver página</a>
-        </div>
-      </article>
+          <!-- NOVO: Criança triste com frequência -->
+          <article class="mini-card recurso-card">
+            <img src="imagens/crianca-triste.jpg" alt="Criança triste com frequência e sinais emocionais" class="recurso-img">
+            <h3>Criança triste com frequência</h3>
+            <p>
+              Mudanças no comportamento, choro frequente ou isolamento podem ser sinais
+              emocionais importantes na infância.
+            </p>
+            <div class="recurso-actions">
+              <a href="crianca-triste.html" class="btn-mini secondary">Ler artigo</a>
+            </div>
+          </article>
 
-      <article class="mini-card recurso-card">
-        <img src="imagens/ansiedade-trabalho.jpg" alt="Ansiedade no ambiente de trabalho" class="recurso-img">
-        <h3>Ansiedade no ambiente de trabalho</h3>
-        <p>
-          Quando a cobrança, a pressão e o medo de errar transformam o trabalho em fonte de sofrimento emocional.
-          Entenda os sinais e como a psicoterapia pode ajudar.
-        </p>
-        <div class="recurso-actions">
-          <a href="ansiedade-trabalho.html" class="btn-mini secondary">Ler artigo</a>
-        </div>
-      </article>
-
-      <article class="mini-card recurso-card">
-        <img src="imagens/ansiedade-itapetininga.jpg" alt="Ansiedade em Itapetininga - quando procurar ajuda" class="recurso-img">
-        <h3>Ansiedade em Itapetininga</h3>
-        <p>
-          Pensamentos acelerados, tensão no corpo e medo constante? Entenda sinais de ansiedade e como a psicoterapia pode ajudar.
-        </p>
-        <div class="recurso-actions">
-          <a href="ansiedade-em-itapetininga.html" class="btn-mini secondary">Ler artigo</a>
-        </div>
-      </article>
-
-      <article class="mini-card recurso-card">
-        <img src="imagens/burnout-emocional-trabalho.jpg" alt="Burnout emocional no trabalho" class="recurso-img">
-        <h3>Burnout emocional no trabalho</h3>
-        <p>
-          Quando o trabalho começa a adoecer por dentro: sinais de burnout, causas e caminhos de cuidado para recuperar energia e limites.
-        </p>
-        <div class="recurso-actions">
-          <a href="burnout-emocional-trabalho.html" class="btn-mini secondary">Ler artigo</a>
-        </div>
-      </article>
-
-      <article class="mini-card recurso-card">
-        <img src="imagens/tristeza-persistente.jpg" alt="Tristeza persistente e sofrimento emocional" class="recurso-img">
-        <h3>Tristeza persistente</h3>
-        <p>
-          Quando a tristeza deixa de ser passageira e passa a fazer parte do cotidiano, pode ser um sinal de sofrimento emocional.
-          Entenda os sinais e quando buscar ajuda.
-        </p>
-        <div class="recurso-actions">
-          <a href="tristeza-persistente.html" class="btn-mini secondary">Ler artigo</a>
-        </div>
-      </article>
-
-      <article class="mini-card recurso-card">
-        <img src="imagens/tristeza-adolescente.jpg" alt="Tristeza na adolescência e sofrimento emocional" class="recurso-img">
-        <h3>Tristeza na adolescência</h3>
-        <p>
-          Nem sempre é rebeldia. O isolamento, a irritabilidade e o silêncio podem ser sinais de sofrimento emocional no adolescente.
-        </p>
-        <div class="recurso-actions">
-          <a href="tristeza-adolescente.html" class="btn-mini secondary">Ler artigo</a>
-        </div>
-      </article>
-
-      <article class="mini-card recurso-card">
-        <img src="imagens/crianca-triste.jpg" alt="Criança triste com frequência e sinais emocionais" class="recurso-img">
-        <h3>Criança triste com frequência</h3>
-        <p>
-          Mudanças no comportamento, choro frequente ou isolamento podem ser sinais emocionais importantes na infância.
-        </p>
-        <div class="recurso-actions">
-          <a href="crianca-triste.html" class="btn-mini secondary">Ler artigo</a>
-        </div>
-      </article>
-
-      <article class="mini-card recurso-card">
-        <img src="imagens/psicoterapia-infantil-artigo1.jpg" alt="Psicoterapia infantil" class="recurso-img">
-        <h3>Psicoterapia Infantil</h3>
-        <p>
+        <!-- Psicoterapia Infantil -->
+        <article class="mini-card recurso-card">
+          <img src="imagens/psicoterapia-infantil-artigo1.jpg" alt="Psicoterapia infantil" class="recurso-img">
+          <h3>Psicoterapia Infantil</h3>
+          <p>
           Quando a criança muda o comportamento, chora mais, fica irritada ou “se fecha”, isso também é linguagem emocional.
           Um espaço lúdico e acolhedor para ajudar a criança a nomear sentimentos e fortalecer recursos com segurança.
-        </p>
-        <div class="recurso-actions">
-          <a href="psicoterapia-infantil.html" class="btn-mini secondary">Leia mais</a>
-        </div>
-      </article>
+          </p>
 
-      <article class="mini-card recurso-card">
-        <img src="imagens/psicoterapia-adolescentes.jpg" alt="Psicoterapia adolescente" class="recurso-img">
-        <h3>Psicoterapia para Adolescentes</h3>
-        <p>
-          A adolescência pode ser uma fase intensa, com conflitos, inseguranças, mudanças e sofrimento emocional.
-          A psicoterapia oferece escuta, acolhimento e apoio nesse processo.
-        </p>
-        <div class="recurso-actions">
-          <a href="psicoterapia-adolescentes.html" class="btn-mini secondary">Leia mais</a>
-        </div>
-      </article>
+          <div class="recurso-actions">
+            <a href="psicoterapia-infantil.html" class="btn-mini secondary">Leia mais</a>
+          </div>
+        </article>
 
-      <article class="mini-card recurso-card">
-        <img src="imagens/capa-guia-autoestima-autocritica.png" alt="Guia psicoeducativo: Autoestima e Autocrítica" class="recurso-img ebook-cover">
-        <h3>Autoestima e Autocrítica</h3>
-        <p>
-          Guia psicoeducativo para compreender a autoestima, reduzir a autocrítica e desenvolver uma relação mais saudável consigo mesmo(a), com linguagem acolhedora e clara.
-        </p>
-        <div class="recurso-actions">
-          <a href="https://go.hotmart.com/H104601392B?dp=1" target="_blank" rel="noopener" class="btn-mini secondary">Acessar o guia agora</a>
-        </div>
-      </article>
+        <!-- Psicoterapia Adolescente -->
+        <article class="mini-card recurso-card">
+          <img src="imagens/psicoterapia-adolescentes.jpg" alt="Psicoterapia adolescente" class="recurso-img">
+          <h3>Psicoterapia para Adolescentes</h3>
+          <p>
+          Adolescência pode ser confusa: oscilação de humor, inseguranças, conflitos em casa, na escola e com amigos.
+          A terapia é um lugar de escuta sem julgamento para construir identidade, autonomia e autoestima.
+          </p>
 
-      <article class="mini-card recurso-card">
-        <img src="imagens/capa-guia-exaustao-emocional-trabalho.png" alt="Guia psicoeducativo: Exaustão Emocional no Trabalho" class="recurso-img ebook-cover">
-        <h3>Exaustão Emocional no Trabalho</h3>
-        <p>
-          Guia psicoeducativo para identificar sinais de esgotamento, compreender causas e iniciar um caminho de cuidado e recuperação do equilíbrio emocional no trabalho.
-        </p>
-        <div class="recurso-actions">
-          <a href="https://go.hotmart.com/H104601780L?dp=1" target="_blank" rel="noopener" class="btn-mini secondary">Acessar o guia agora</a>
-        </div>
-      </article>
+          <div class="recurso-actions">
+            <a href="psicoterapia-adolescentes.html" class="btn-mini secondary">Leia mais</a>
+          </div>
+        </article>
 
-      <article class="mini-card recurso-card">
-        <img src="imagens/capa-guia-ansiedade.png" alt="Guia psicoeducativo sobre ansiedade" class="recurso-img ebook-cover">
-        <h3>Guia sobre Ansiedade</h3>
-        <p>
-          Material psicoeducativo para compreender melhor os sinais da ansiedade e aprender caminhos iniciais de cuidado emocional.
-        </p>
-        <div class="recurso-actions">
-          <a href="https://go.hotmart.com/I104591180F?dp=1" target="_blank" rel="noopener" class="btn-mini secondary">Acessar o guia agora</a>
-        </div>
-      </article>
+        <!-- Psicoterapia Adultos -->
+        <article class="mini-card recurso-card">
+          <img src="imagens/consultorio.jpg" alt="Psicoterapia adultos" class="recurso-img">
+          <h3>Psicoterapia para Adultos</h3>
+          <p>
+          Você segue funcionando, mas por dentro está sobrecarregado(a): ansiedade, autocobrança, cansaço mental e dificuldades nos vínculos.
+          A terapia ajuda a organizar emoções, compreender padrões e criar formas mais leves de lidar com a vida.
+          </p>
 
-    </div>
+          <div class="recurso-actions">
+            <a href="psicoterapia-adultos.html" class="btn-mini secondary">Leia mais</a>
+          </div>
+        </article>
+
+        <!-- Orientação Parental -->
+        <article class="mini-card recurso-card">
+          <img src="imagens/orientacao-parental-itapetininga.jpg" alt="Orientação parental" class="recurso-img">
+          <h3>Orientação Parental</h3>
+          <p>
+          Educar cansa — e às vezes dá a sensação de que nada funciona. Birras, desafios, limites e culpa parental são mais comuns do que parecem.
+          O suporte psicológico contribui para compreender comportamentos e fortalecer o vínculo com mais segurança emocional.
+         </p>
+
+          <div class="recurso-actions">
+            <a href="orientacao-parental.html" class="btn-mini secondary">Leia mais</a>
+          </div>
+        </article>
+
+        <!-- Ansiedade -->
+        <article class="mini-card recurso-card">
+          <img src="imagens/ansiedade.jpg" alt="Ansiedade" class="recurso-img">
+          <h3>Ansiedade</h3>
+          <p>
+           Pensamentos acelerados, tensão no corpo, medo do futuro e sensação de que você nunca descansa?
+           Entenda sinais, gatilhos e caminhos de cuidado para desacelerar com mais gentileza.
+          </p>
+
+          <div class="recurso-actions">
+            <a href="ansiedade.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
+        </article>
+
+        <!-- Cansaço emocional -->
+        <article class="mini-card recurso-card">
+          <img src="imagens/cansaco-emocional.jpg" alt="Cansaço emocional" class="recurso-img">
+          <h3>Cansaço emocional</h3>
+          <p>
+          Quando a mente não desliga, tudo pesa: irritabilidade, desânimo, sensação de “estar no limite” e falta de energia até para o que você gosta.
+          Saiba como identificar e começar a se cuidar.
+          </p>
+
+          <div class="recurso-actions">
+            <a href="exaustao-emocional.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
+        </article>
+
+       <article class="mini-card recurso-card">
+  <img src="imagens/maternidade-real-sobrecarga-materna.jpg" alt="Maternidade real e sobrecarga materna" class="recurso-img">
+  <h3>Maternidade real</h3>
+  <p>
+    Cansaço, culpa, sobrecarga e a sensação de não dar conta de tudo.
+    Entenda a maternidade real e por que você não precisa carregar tudo sozinha.
+  </p>
+  <div class="recurso-actions">
+    <a href="maternidade-real-sobrecarga-materna.html" class="btn-mini secondary">Ler artigo</a>
   </div>
-</section>
+</article>
 
-<section class="shell" id="contato" aria-label="Contato">
-  <div class="card-section">
-    <h2 class="title">Você não precisa enfrentar isso sem apoio.</h2>
-    <p class="lead">
-      Se você deseja agendar uma sessão ou tirar dúvidas, preencha o formulário abaixo com seus dados e uma breve descrição do motivo do contato.
-      Se preferir, envie mensagem pelo WhatsApp.
-    </p>
+        <!-- Autoestima -->
+        <article class="mini-card recurso-card">
+          <img src="imagens/autoestima.jpg" alt="Autoestima" class="recurso-img">
+          <h3>Autoestima</h3>
+          <p>
+          Autocrítica constante, comparação, insegurança e dificuldade de reconhecer o próprio valor podem virar um ciclo silencioso.
+          Um espaço de leitura para entender a raiz disso e dar os primeiros passos com mais compaixão.
+          </p>
 
-    <form id="form-contato" class="form-contato" style="max-width:640px; margin:0 auto;">
-      <div class="form-row">
-        <label for="nome">Nome</label>
-        <input id="nome" name="nome" type="text" required placeholder="Seu nome completo">
-      </div>
+          <div class="recurso-actions">
+            <a href="autoestima.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
+        </article>
 
-      <div class="form-row">
-        <label for="email">E-mail</label>
-        <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
-      </div>
+<article class="mini-card recurso-card">
+  <img src="imagens/autocritica-excessiva.jpg" alt="Autocrítica excessiva e autocobrança emocional" class="recurso-img">
+  
+  <h3>Autocrítica excessiva</h3>
+  
+  <p>
+    Quando você sente que nunca faz o suficiente, se culpa com frequência e se cobra o tempo todo,
+    pode haver um padrão de autocrítica excessiva por trás desse sofrimento emocional.
+  </p>
 
-      <div class="form-row">
-        <label for="telefone">Telefone (WhatsApp)</label>
-        <input id="telefone" name="telefone" type="tel" placeholder="(15) 9xxxx-xxxx">
-      </div>
-
-      <div class="form-row">
-        <label for="mensagem">Mensagem (breve descrição do motivo do contato)</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem."></textarea>
-      </div>
-
-      <div class="form-row form-actions" style="text-align:left;">
-        <button type="submit" class="btn-enviar">Enviar</button>
-      </div>
-    </form>
-
-    <div class="center-btn" style="margin-top:12px;">
-      <a class="btn-cta sec" href="https://wa.me/5515996760791" target="_blank" rel="noopener noreferrer">Ou fale direto no WhatsApp</a>
-    </div>
+  <div class="recurso-actions">
+    <a href="autocritica-excessiva.html" class="btn-mini secondary">Ler artigo</a>
   </div>
-</section>
+</article>
+
+      <article class="mini-card recurso-card">
+  <img src="imagens/dizer-nao.jpg" alt="Dificuldade em dizer não e limites emocionais" class="recurso-img">
+  
+  <h3>Dificuldade em dizer não</h3>
+  
+  <p>
+    Dizer “sim” quando você queria dizer “não” pode gerar cansaço, culpa e sobrecarga emocional.
+    Entenda o que está por trás dessa dificuldade e como aprender a colocar limites com mais segurança.
+  </p>
+
+  <div class="recurso-actions">
+    <a href="dificuldade-em-dizer-nao.html" class="btn-mini secondary">Ler artigo</a>
+  </div>
+</article>
+
+        <!-- Relacionamentos -->
+        <article class="mini-card recurso-card">
+          <img src="imagens/relacoes-saudaveis-capa.jpg" alt="Relacionamentos" class="recurso-img">
+          <h3>Relacionamentos</h3>
+          <p>
+          Você sente que repete os mesmos padrões? Dificuldade de colocar limites, medo de desagradar, discussões que viram distância…
+          Comunicação e vínculo podem ser construídos — com clareza e cuidado.
+         </p>
+
+          <div class="recurso-actions">
+            <a href="relacionamentos.html" class="btn-mini secondary">Ler artigo</a>
+          </div>
+        </article>
+
+        <!-- Guia digital (pago) -->
+        <article class="mini-card recurso-card">
+          <img src="imagens/capa-guia-esgotamento.png"
+     alt="Guia digital: Quando tudo pesa demais"
+     class="recurso-img ebook-cover">
+
+<h3>Guia digital: Quando tudo pesa demais</h3>
+<p>          
+Material psicoeducativo em PDF, com acesso imediato após a compra, para ajudar você a reconhecer sinais de esgotamento emocional e encontrar caminhos de cuidado.
+          </p>
+
+          <div class="recurso-actions">
+            <a href="https://go.hotmart.com/X104585504M?dp=1" class="btn-mini secondary" target="_blank" rel="noopener">Acessar o guia agora</a>          </div>
+        </article>
+    
+<!-- Guia digital (pago) - Ansiedade -->
+<article class="mini-card recurso-card">
+  <img src="imagens/capa-guia-ansiedade.png"
+       alt="Guia digital: Quando a mente não desacelera"
+       class="recurso-img ebook-cover">
+
+  <h3>Guia digital: Quando a mente não desacelera</h3>
+
+  <p>
+    Guia psicoeducativo para compreender a ansiedade e os pensamentos acelerados,
+    com linguagem acessível, acolhedora e baseada na Psicologia científica.
+  </p>
+
+  <div class="recurso-actions">
+    <a href="https://go.hotmart.com/I104591180F?dp=1"
+       class="btn-mini secondary"
+       target="_blank"
+       rel="noopener">
+      Acessar o guia agora
+    </a>
+  </div>
+</article>
+
+<!-- NOVO GUIA: AUTOESTIMA E AUTOCRÍTICA -->
+<article class="mini-card recurso-card">
+ <img src="imagens/capa-guia-autoestima-autocritica.png"
+     alt="Guia psicoeducativo: Autoestima e Autocrítica"
+     class="recurso-img ebook-cover">
+  <h3>Autoestima e Autocrítica</h3>
+  <p>
+    Guia psicoeducativo para compreender a autoestima, reduzir a autocrítica e desenvolver
+    uma relação mais saudável consigo mesmo(a), com linguagem acolhedora e clara.
+  </p>
+  <span class="badge-soft">Conteúdo pago • acesso imediato</span>
+  <div class="recurso-actions">
+    <a href="https://go.hotmart.com/H104601392B?dp=1"
+       target="_blank" rel="noopener"
+       class="btn-mini secondary">Acessar o guia agora</a>
+  </div>
+</article>
+
+<!-- NOVO GUIA: EXAUSTÃO EMOCIONAL NO TRABALHO -->
+<article class="mini-card recurso-card">
+  <img src="imagens/capa-guia-exaustao-emocional-trabalho.png"
+     alt="Guia psicoeducativo: Exaustão Emocional no Trabalho"
+     class="recurso-img ebook-cover">
+  <h3>Exaustão Emocional no Trabalho</h3>
+  <p>
+    Guia psicoeducativo para identificar sinais de esgotamento, compreender causas e iniciar
+    um caminho de cuidado e recuperação do equilíbrio emocional no trabalho.
+  </p>
+  <span class="badge-soft">Conteúdo pago • acesso imediato</span>
+  <div class="recurso-actions">
+    <a href="https://go.hotmart.com/H104601780L?dp=1"
+       target="_blank" rel="noopener"
+       class="btn-mini secondary">Acessar o guia agora</a>
+  </div>
+</article>
+
+  <div class="recurso-actions">
+    <a href="https://go.hotmart.com/I104591180F?dp=1"
+       class="btn-mini secondary"
+       target="_blank"
+       rel="noopener">
+      Acessar o guia agora
+    </a>
+  </div>
+</article>
+      </div><!-- /grid -->
+    </div><!-- /card-section -->
+  </section>
+    </div>
+  </section>
+<!-- CONTATO -->
+  <section class="shell" id="contato" aria-label="Contato">
+    <div class="card-section">
+      <h2 class="title">Você não precisa enfrentar isso sem apoio.</h2>
+      <p class="lead">
+        Se você deseja agendar uma sessão ou tirar dúvidas, preencha o formulário abaixo com seus dados e uma breve descrição do motivo do contato.
+        Se preferir, envie mensagem pelo WhatsApp.
+      </p>
+
+      <form id="form-contato" class="form-contato" style="max-width:640px; margin:0 auto;">
+        <div class="form-row">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" required placeholder="Seu nome completo">
+        </div>
+
+        <div class="form-row">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
+        </div>
+
+        <div class="form-row">
+          <label for="telefone">Telefone (WhatsApp)</label>
+          <input id="telefone" name="telefone" type="tel" placeholder="(15) 9xxxx-xxxx">
+        </div>
+
+        <div class="form-row">
+          <label for="mensagem">Mensagem (breve descrição do motivo do contato)</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem..."></textarea>
+        </div>
+
+        <div class="form-row form-actions" style="text-align:left;">
+          <button type="submit" class="btn-enviar">Enviar</button>
+        </div>
+      </form>
+
+      <div class="center-btn" style="margin-top:12px;">
+        <a class="btn-cta sec" href="https://wa.me/5515996760791" target="_blank" rel="noopener noreferrer">Ou fale direto no WhatsApp</a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
 <footer class="rodape" style="background:#f4effa;padding:26px 18px;text-align:center;margin-top:18px;">
-  <div style="max-width:1000px;margin:0 auto;">
-    <p style="margin:6px 0;">
-      <strong>Endereço:</strong>
-      <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP"
-         target="_blank"
-         style="text-decoration:underline;">
-        R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP
-      </a>
-    </p>
+    <div style="max-width:1000px;margin:0 auto;">
+      <p style="margin:6px 0;">
+        <strong>Endereço:</strong>
+        <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP"
+           target="_blank"
+           style="text-decoration:underline;">
+          R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP
+        </a>
+      </p>
 
-    <p class="rodape-privacidade">
-      Este site utiliza práticas básicas de navegação. Saiba mais em nossa
-      <a href="privacidade.html">Política de Privacidade</a>.
-    </p>
+      <p class="rodape-privacidade">
+        Este site utiliza práticas básicas de navegação. Saiba mais em nossa
+        <a href="privacidade.html">Política de Privacidade</a>.
+      </p>
 
-    <p style="margin:6px 0;">
-      <strong>Telefone:</strong>
-      <a href="https://wa.me/5515996760791"
-         target="_blank"
-         style="text-decoration:underline;">
-        (15) 99676-0791
-      </a>
-    </p>
+      <p style="margin:6px 0;">
+        <strong>Telefone:</strong>
+        <a href="https://wa.me/5515996760791"
+           target="_blank"
+           style="text-decoration:underline;">
+          (15) 99676-0791
+        </a>
+      </p>
 
-    <p style="margin:6px 0;">
-      <strong>E-mail:</strong>
-      <a href="mailto:contato@anapaulaapvieirapsi.com.br"
-         style="text-decoration:underline;">
-        contato@anapaulaapvieirapsi.com.br
-      </a>
-    </p>
+      <p style="margin:6px 0;">
+        <strong>E-mail:</strong>
+        <a href="mailto:contato@anapaulaapvieirapsi.com.br"
+           style="text-decoration:underline;">
+          contato@anapaulaapvieirapsi.com.br
+        </a>
+      </p>
 
-    <p style="margin:6px 0;">© 2026 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
+      <p style="margin:6px 0;">© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
 
-    <div style="margin-top:8px;">
-      <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
-      <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" style="text-decoration:underline;">Facebook</a> |
-      <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" style="text-decoration:underline;">LinkedIn</a>
+      <div style="margin-top:8px;">
+        <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
+        <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" style="text-decoration:underline;">Facebook</a> |
+        <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" style="text-decoration:underline;">LinkedIn</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
+<button id='btn-topo' class='btn-topo' title='Voltar ao início'>↑</button>
+
+<a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
+  <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
+</a>
+
+<script src="app.js"></script>
+<script>
+    (function () {
+      const form = document.getElementById("form-contato");
+      if (!form) return;
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const telefone = document.getElementById("telefone").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        const numeroWhatsApp = "5515996760791";
+
+        const texto =
+          `Olá, Ana Paula!%0A%0A` +
+          `Nome: ${encodeURIComponent(nome)}%0A` +
+          `E-mail: ${encodeURIComponent(email)}%0A` +
+          `Telefone: ${encodeURIComponent(telefone)}%0A%0A` +
+          `Mensagem: ${encodeURIComponent(mensagem)}%0A%0A` +
+          `Enviado pelo formulário do site.`;
+
+        const url = `https://wa.me/${numeroWhatsApp}?text=${texto}`;
+
+        window.open(url, "_blank", "noopener,noreferrer");
+        window.location.href = "obrigado.html";
+      });
+    })();
+  </script>
 </body>
 </html>
