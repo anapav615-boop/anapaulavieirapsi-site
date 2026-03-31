@@ -140,9 +140,9 @@
   }
 
   .form-contato textarea{
-    height: 110px;
-    resize: none;
-  }
+  height: 100px;
+  resize: none;
+}
 
   .form-contato label{
     font-size: 0.92rem;
@@ -432,20 +432,33 @@
   }
 
   #contato .card-section{
-    max-width:760px;
-    margin:0 auto;
-  }
+  max-width: 680px;
+  margin: 0 auto;
+  padding-left: 18px;
+  padding-right: 18px;
+  box-sizing: border-box;
+}
 
-  #contato .lead{
-    max-width:620px;
-    margin:0 auto 18px;
-    font-size:0.96rem;
-  }
+#contato .lead{
+  max-width: 540px;
+  margin: 0 auto 18px;
+  font-size: 0.95rem;
+}
 
-  #form-contato{
-    max-width:520px !important;
-    margin:0 auto !important;
-  }
+#form-contato{
+  width: 100%;
+  max-width: 460px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box;
+}
+
+#form-contato .form-row,
+#form-contato input,
+#form-contato textarea,
+#form-contato button{
+  width: 100%;
+  box-sizing: border-box;
+}
 
   @media (max-width: 1024px){
     section[aria-label="Recursos"] .recurso-card{
