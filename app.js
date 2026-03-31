@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    document.addEventListener("click", (e) => {
-      if (!menuNav.contains(e.target) && !menuToggle.contains(e.target)) {
+    document.addEventListener("click", (event) => {
+      if (!menuNav.contains(event.target) && !menuToggle.contains(event.target)) {
         menuNav.classList.remove("aberto");
         menuToggle.setAttribute("aria-expanded", "false");
         menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
@@ -33,8 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const cabecalho = document.querySelector(".cabecalho");
   function atualizarCabecalho() {
     if (!cabecalho) return;
-    if (window.scrollY > 20) cabecalho.classList.add("scrolled");
-    else cabecalho.classList.remove("scrolled");
+    if (window.scrollY > 20) {
+      cabecalho.classList.add("scrolled");
+    } else {
+      cabecalho.classList.remove("scrolled");
+    }
   }
   atualizarCabecalho();
   window.addEventListener("scroll", atualizarCabecalho);
@@ -55,14 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const linksInternos = document.querySelectorAll('a[href^="#"]');
   linksInternos.forEach((link) => {
-    link.addEventListener("click", (e) => {
+    link.addEventListener("click", (event) => {
       const id = link.getAttribute("href");
       if (!id || id === "#") return;
 
       const destino = document.querySelector(id);
       if (!destino) return;
 
-      e.preventDefault();
+      event.preventDefault();
 
       const alturaHeader = document.querySelector(".cabecalho")?.offsetHeight || 90;
       const topo = destino.getBoundingClientRect().top + window.scrollY - alturaHeader - 12;
@@ -77,9 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const elementosAnimar = document.querySelectorAll(".animar");
   function animarAoEntrar() {
     const alturaTela = window.innerHeight;
-    elementosAnimar.forEach((el) => {
-      if (el.getBoundingClientRect().top < alturaTela - 80) {
-        el.classList.add("visivel");
+    elementosAnimar.forEach((elemento) => {
+      if (elemento.getBoundingClientRect().top < alturaTela - 80) {
+        elemento.classList.add("visivel");
       }
     });
   }
@@ -118,14 +121,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
   destacarMenu();
   window.addEventListener("scroll", destacarMenu);
 
   const formContato = document.getElementById("form-contato");
   if (formContato) {
-    formContato.addEventListener("submit", (e) => {
-      e.preventDefault();
+    formContato.addEventListener("submit", (event) => {
+      event.preventDefault();
 
       const nome = document.getElementById("nome")?.value.trim();
       const email = document.getElementById("email")?.value.trim();
