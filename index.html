@@ -124,7 +124,7 @@
     line-height: 1.75;
   }
 
-  .form-contato .form-row{ display:flex; flex-direction:column; gap:6px; margin-bottom:10px; }
+  .form-contato .form-row{ display:flex; flex-direction:column; gap:6px; margin-bottom:8px; }
   .form-contato input, .form-contato textarea{
     padding: 10px 12px;
     border-radius: 14px;
@@ -140,7 +140,7 @@
   }
 
   .form-contato textarea{
-  height: 100px;
+  height: 80px;
   resize: none;
 }
 
@@ -170,7 +170,7 @@
   }
 
   .btn-enviar{
-    padding: 10px 18px;
+    padding: 9px 16px;
     border-radius: 28px;
     border: none;
     background: var(--roxo);
@@ -432,22 +432,27 @@
   }
 
   #contato .card-section{
-  max-width: 680px;
+  max-width: 640px;
   margin: 0 auto;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding: 20px 18px;
   box-sizing: border-box;
 }
 
+#contato .title{
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
 #contato .lead{
-  max-width: 540px;
-  margin: 0 auto 18px;
-  font-size: 0.95rem;
+  max-width: 500px;
+  margin: 0 auto 14px;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
 #form-contato{
   width: 100%;
-  max-width: 460px !important;
+  max-width: 440px !important;
   margin: 0 auto !important;
   box-sizing: border-box;
 }
@@ -460,7 +465,43 @@
   box-sizing: border-box;
 }
 
-  @media (max-width: 1024px){
+.contact-highlights{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin:0 auto 14px;
+  max-width:540px;
+}
+
+.contact-highlights span{
+  font-size:0.88rem;
+  color:var(--roxo);
+  background: rgba(255,255,255,0.92);
+  border:1px solid rgba(127,191,154,0.35);
+  border-radius:999px;
+  padding:7px 12px;
+}
+
+  
+.info-highlights{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin: 4px auto 8px;
+  max-width:760px;
+}
+
+.info-highlights span{
+  font-size:0.9rem;
+  color:var(--roxo);
+  background: rgba(255,255,255,0.92);
+  border:1px solid rgba(127,191,154,0.35);
+  border-radius:999px;
+  padding:7px 12px;
+}
+@media (max-width: 1024px){
     section[aria-label="Recursos"] .recurso-card{
       flex-basis: calc(50% - 20px);
       max-width: 420px;
@@ -584,6 +625,12 @@
           a compreender emoções e construir novos caminhos com mais equilíbrio.
         </p>
 
+        <div class="info-highlights">
+          <span>📍 Presencial em Itapetininga</span>
+          <span>💻 Atendimento online</span>
+          <span>🤍 Escuta acolhedora</span>
+        </div>
+
         <div class="cta-row">
           <a href="#contato" class="btn-primary btn-cta">Quero agendar minha primeira sessão</a>
 
@@ -596,7 +643,7 @@
         </div>
 
         <p style="text-align:center; font-weight:500; color:#6b48a8;">
-          Um cuidado psicológico respeitoso, ético e acolhedor para cada fase da vida.
+          Cuidado psicológico ético e acolhedor em cada fase da vida.
         </p>
 
         <p class="hero-local" style="text-align:center;">
@@ -721,17 +768,17 @@
 
     <div class="grid">
       <article class="mini-card">
-        <h3>Frequência e duração</h3>
+        <h3>🕒 Frequência e duração</h3>
         <p>As sessões acontecem, em geral, uma vez por semana, com duração média de 50 minutos. Em alguns casos, podemos avaliar outra frequência junto com você.</p>
       </article>
 
       <article class="mini-card">
-        <h3>Valores</h3>
+        <h3>💬 Valores</h3>
         <p>Os valores das sessões são informados no primeiro contato, de forma clara e respeitosa. Entre em contato para saber mais.</p>
       </article>
 
       <article class="mini-card">
-        <h3>Primeiro contato</h3>
+        <h3>🌿 Primeiro contato</h3>
         <p>No primeiro contato, você pode tirar dúvidas sobre a forma de atendimento, valores e horários disponíveis, sem compromisso.</p>
       </article>
     </div>
@@ -844,11 +891,16 @@
 <!-- CONTATO -->
 <section class="shell" id="contato" aria-label="Contato">
   <div class="card-section">
-    <h2 class="title">Cuidar da saúde emocional também é um passo importante.</h2>
+    <h2 class="title">Vamos conversar?</h2>
     <p class="lead">
-      Se você deseja agendar uma sessão ou tirar dúvidas, preencha o formulário abaixo com seus dados e uma breve descrição do motivo do contato.
-      Se preferir, envie mensagem pelo WhatsApp.
+      Se você deseja agendar uma sessão ou tirar dúvidas, preencha o formulário abaixo ou, se preferir, fale pelo WhatsApp.
     </p>
+
+    <div class="contact-highlights">
+      <span>📍 Presencial e online</span>
+      <span>🤍 Escuta acolhedora</span>
+      <span>📲 Resposta pelo WhatsApp</span>
+    </div>
 
     <form id="form-contato" class="form-contato" style="max-width:640px; margin:0 auto;">
       <div class="form-row">
