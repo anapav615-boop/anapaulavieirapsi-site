@@ -1,160 +1,144 @@
-/* ================================
-   APP.JS - SITE ANA PAULA VIEIRA
-   Integrado com ADMIN (posts automáticos)
-   ================================ */
-
 document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuNav = document.getElementById("menu-nav");
+  const menuLinks = document.querySelectorAll(".menu-nav a");
 
-  /* ------------------- BOTÃO VOLTAR AO TOPO ------------------- */
+  if (menuToggle && menuNav) {
+    menuToggle.addEventListener("click", () => {
+      menuNav.classList.toggle("aberto");
+      const aberto = menuNav.classList.contains("aberto");
+      menuToggle.setAttribute("aria-expanded", aberto ? "true" : "false");
+      menuToggle.innerHTML = aberto
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuNav.classList.remove("aberto");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menuNav.contains(e.target) && !menuToggle.contains(e.target)) {
+        menuNav.classList.remove("aberto");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    });
+  }
+
+  const cabecalho = document.querySelector(".cabecalho");
+  function atualizarCabecalho() {
+    if (!cabecalho) return;
+    if (window.scrollY > 20) cabecalho.classList.add("scrolled");
+    else cabecalho.classList.remove("scrolled");
+  }
+  atualizarCabecalho();
+  window.addEventListener("scroll", atualizarCabecalho);
+
   const btnTopo = document.getElementById("btn-topo");
   if (btnTopo) {
-    btnTopo.style.display = "none";
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) btnTopo.style.display = "block";
-      else btnTopo.style.display = "none";
-    });
+    function toggleTopo() {
+      btnTopo.style.display = window.scrollY > 300 ? "grid" : "none";
+    }
+
+    toggleTopo();
+    window.addEventListener("scroll", toggleTopo);
+
     btnTopo.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 
-  /* ------------------- ROLAGEM SUAVE ------------------- */
   const linksInternos = document.querySelectorAll('a[href^="#"]');
-  linksInternos.forEach(link => {
+  linksInternos.forEach((link) => {
     link.addEventListener("click", (e) => {
-      const targetId = link.getAttribute("href");
-      if (targetId.length > 1) {
-        e.preventDefault();
-        const target = document.querySelector(targetId);
-        if (target)
-          window.scrollTo({ top: target.offsetTop - 60, behavior: "smooth" });
+      const id = link.getAttribute("href");
+      if (!id || id === "#") return;
+
+      const destino = document.querySelector(id);
+      if (!destino) return;
+
+      e.preventDefault();
+
+      const alturaHeader = document.querySelector(".cabecalho")?.offsetHeight || 90;
+      const topo = destino.getBoundingClientRect().top + window.scrollY - alturaHeader - 12;
+
+      window.scrollTo({
+        top: topo,
+        behavior: "smooth"
+      });
+    });
+  });
+
+  const elementosAnimar = document.querySelectorAll(".animar");
+  function animarAoEntrar() {
+    const alturaTela = window.innerHeight;
+    elementosAnimar.forEach((el) => {
+      if (el.getBoundingClientRect().top < alturaTela - 80) {
+        el.classList.add("visivel");
       }
     });
-  });
-
-  /* ------------------- ANIMAÇÃO ------------------- */
-  const elementosAnimar = document.querySelectorAll(".animar");
-  function verificarAnimacao() {
-    const altura = window.innerHeight;
-    elementosAnimar.forEach(el => {
-      if (el.getBoundingClientRect().top < altura - 100) el.classList.add("visivel");
-    });
   }
-  verificarAnimacao();
-  window.addEventListener("scroll", verificarAnimacao);
+  animarAoEntrar();
+  window.addEventListener("scroll", animarAoEntrar);
 
-  /* ------------------- HERO ------------------- */
-  const heroImg = document.querySelector(".hero img, .hero-img, .hero-recursos img");
-  if (heroImg) heroImg.classList.add("loaded");
-
-  /* -----------------------------------------------------
-     🔥 PARTE IMPORTANTE: CARREGAR RECURSOS DO JSON + ADMIN
-     ----------------------------------------------------- */
-  const container = document.querySelector(".conteudo-recursos");
-  if (container) {
-    container.innerHTML = "<p>Carregando conteúdos...</p>";
-
-    // 1) Carregar JSON fixo
-    fetch("dados/recursos.json")
-      .then(r => r.json())
-      .then(jsonFixos => {
-
-        // 2) Carregar posts criados no Admin (localStorage)
-        const postsAdmin = JSON.parse(localStorage.getItem("recursosPosts")) || [];
-
-        // 3) Unir as duas listas
-        const listaFinal = [
-          ...postsAdmin.map(post => ({
-            titulo: post.titulo,
-            imagem: post.imagem || "imagens/default.jpg",
-            descricao: post.conteudo.substring(0, 160) + "...",
-            link: `artigo.html?id=${post.id}`,
-            data: post.data
-          })),
-          ...jsonFixos
-        ];
-
-        // 4) Limpar área
-        container.innerHTML = "";
-
-        // 5) Criar cards
-        listaFinal.forEach((item, i) => {
-          const card = document.createElement("div");
-          card.className = "card-post";
-          card.innerHTML = `
-            <img src="${item.imagem}" alt="${item.titulo}"
-                 onerror="this.src='imagens/default.jpg'">
-            <div class="card-conteudo">
-              <h3>${item.titulo}</h3>
-              <p>${item.descricao}</p>
-              <a href="${item.link}" class="btn-leia">Saiba mais</a>
-            </div>
-          `;
-          container.appendChild(card);
-        });
-      })
-      .catch(() => {
-        container.innerHTML = `<p style="color:#6b4a99; text-align:center;">
-          Conteúdos temporariamente indisponíveis.
-        </p>`;
-      });
-  }
-});
-
-/* ------------------- ARTIGO AUTOMÁTICO ------------------- */
-(function carregarArtigo() {
-  const artigoContainer = document.getElementById("artigo-container");
-  if (!artigoContainer) return;
-
-  const url = new URL(window.location.href);
-  const id = Number(url.searchParams.get("id"));
-  if (!id) {
-    artigoContainer.innerHTML = "<p>Artigo não encontrado.</p>";
-    return;
-  }
-
-  const postsAdmin = JSON.parse(localStorage.getItem("recursosPosts")) || [];
-  const post = postsAdmin.find(p => p.id === id);
-
-  if (!post) {
-    artigoContainer.innerHTML = "<p>Artigo não encontrado.</p>";
-    return;
-  }
-
-  artigoContainer.innerHTML = `
-    <div class="artigo-capa">
-      <img src="${post.imagem}" alt="${post.titulo}">
-    </div>
-
-    <h1>${post.titulo}</h1>
-    <p class="data-artigo">${post.data}</p>
-
-    <div class="texto-artigo">
-      ${post.conteudo.replace(/\n/g, "<br>")}
-    </div>
-
-    <a href="recursos.html" class="btn-voltar-artigos">← Voltar aos recursos</a>
-  `;
-})();
-// FAQ: abrir/fechar respostas
-document.addEventListener('DOMContentLoaded', function () {
-  const perguntas = document.querySelectorAll('.faq-pergunta');
-
+  const perguntas = document.querySelectorAll(".faq-pergunta");
   perguntas.forEach((pergunta) => {
-    pergunta.addEventListener('click', () => {
-      const item = pergunta.closest('.faq-item');
+    pergunta.addEventListener("click", () => {
+      const item = pergunta.closest(".faq-item");
       if (!item) return;
 
-      // fecha outros (se quiser só um aberto por vez)
-      document.querySelectorAll('.faq-item').forEach((outro) => {
-        if (outro !== item) {
-          outro.classList.remove('ativo');
-        }
+      document.querySelectorAll(".faq-item").forEach((outro) => {
+        if (outro !== item) outro.classList.remove("ativo");
       });
 
-      // abre/fecha o clicado
-      item.classList.toggle('ativo');
+      item.classList.toggle("ativo");
     });
   });
-});
 
+  const secoes = document.querySelectorAll("section[id]");
+  function destacarMenu() {
+    const posicao = window.scrollY + 140;
+
+    secoes.forEach((secao) => {
+      const topo = secao.offsetTop;
+      const altura = secao.offsetHeight;
+      const id = secao.getAttribute("id");
+      const link = document.querySelector(`.menu-nav a[href="#${id}"]`);
+
+      if (!link) return;
+
+      if (posicao >= topo && posicao < topo + altura) {
+        document.querySelectorAll(".menu-nav a").forEach((a) => a.classList.remove("ativo"));
+        link.classList.add("ativo");
+      }
+    });
+  }
+
+  destacarMenu();
+  window.addEventListener("scroll", destacarMenu);
+
+  const formContato = document.getElementById("form-contato");
+  if (formContato) {
+    formContato.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const nome = document.getElementById("nome")?.value.trim();
+      const email = document.getElementById("email")?.value.trim();
+      const telefone = document.getElementById("telefone")?.value.trim();
+      const mensagem = document.getElementById("mensagem")?.value.trim();
+
+      if (!nome || !email || !telefone || !mensagem) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+
+      alert("Mensagem enviada com sucesso!");
+      formContato.reset();
+    });
+  }
+});
