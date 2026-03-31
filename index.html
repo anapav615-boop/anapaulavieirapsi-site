@@ -290,17 +290,17 @@
   }
 
   .about-box {
-  flex:1;
-  min-width: 300px;
-  background: rgba(255,255,255,0.98);
-  border: 2px solid rgba(127, 191, 154, 0.48);
-  border-radius:18px;
-  padding:20px 22px;
-  box-shadow:
-    0 10px 24px rgba(0,0,0,0.04),
-    inset 0 0 0 1px rgba(255,255,255,0.55);
-  .about-box p { margin:0 0 12px; line-height:1.75; 
- }
+    flex:1;
+    min-width: 300px;
+    background: rgba(255,255,255,0.98);
+    border: 2px solid rgba(127, 191, 154, 0.48);
+    border-radius:18px;
+    padding:20px 22px;
+    box-shadow:
+      0 10px 24px rgba(0,0,0,0.04),
+      inset 0 0 0 1px rgba(255,255,255,0.55);
+  }
+  .about-box p { margin:0 0 12px; line-height:1.75; }
 
   .chips-box {
     max-width: 1050px;
@@ -345,17 +345,20 @@
     margin-top:14px;
   }
  .mini-card {
-  width: 320px;
-  background: rgba(255,255,255,0.98);
-  border: 2px solid rgba(127, 191, 154, 0.48);
-  border-radius: 18px;
-  padding: 18px 20px;
-  box-shadow:
-    0 10px 24px rgba(0,0,0,0.04),
-    inset 0 0 0 1px rgba(255,255,255,0.55);
-  box-sizing: border-box;
-  text-align: left;
-
+    width: 100%;
+    max-width: 320px;
+    background: rgba(255,255,255,0.98);
+    border: 2px solid rgba(127, 191, 154, 0.48);
+    border-radius: 18px;
+    padding: 18px 20px;
+    box-shadow:
+      0 10px 24px rgba(0,0,0,0.04),
+      inset 0 0 0 1px rgba(255,255,255,0.55);
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   .mini-card h3 {
     margin:0 0 8px;
@@ -365,6 +368,10 @@
   .mini-card p { margin:0; line-height:1.7; }
 
   .center-btn { text-align:center; margin-top:10px; }
+
+  .mini-card p { flex-grow: 1; }
+  .recurso-card { min-height: 420px; }
+
 
   section[aria-label="Recursos"] .recurso-card{
     display:flex;
@@ -390,10 +397,10 @@
 
   .recurso-img{
     width:100%;
-    height: 170px;
+    height:170px;
     object-fit: cover;
     border-radius:12px;
-    margin-bottom:2px;
+    margin-bottom:10px;
     display:block;
   }
 
