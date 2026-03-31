@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Psicóloga em Itapetininga | Ana Paula Ap. Vieira | Terapia Presencial e Online</title>
 
-  <meta name="description" content="Ana Paula Ap. Vieira é psicóloga clínica em Itapetininga (SP), com atendimento presencial e online. Um espaço de escuta e acolhimento para ansiedade, exaustão emocional, autoestima, relacionamentos e sofrimento emocional." />
+  <title>Psicóloga em Itapetininga | Ana Paula Ap. Vieira | Psicoterapia Presencial e Online</title>
+
+  <meta name="description" content="Ana Paula Ap. Vieira é psicóloga clínica em Itapetininga (SP), com atendimento presencial e online. Psicoterapia com escuta, acolhimento e cuidado emocional para crianças, adolescentes e adultos em diferentes momentos da vida." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/">
 
   <link rel="icon" type="image/png" href="imagens/favicon.png">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -32,10 +33,16 @@
       "addressRegion": "SP",
       "addressCountry": "BR"
     },
-    "areaServed": {
-      "@type": "City",
-      "name": "Itapetininga"
-    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Itapetininga"
+      },
+      {
+        "@type": "Country",
+        "name": "Brasil"
+      }
+    ],
     "sameAs": [
       "https://www.instagram.com/anapaulapsico/",
       "https://www.facebook.com/anapaulaapvieirapsico/",
@@ -200,25 +207,6 @@
     flex-wrap: wrap;
     align-items: stretch;
     overflow: hidden;
-  }
-
-  .hero-media {
-    flex: 1.15;
-    min-width: 0;
-    max-width: 100%;
-    width: 100%;
-    border-radius: 18px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-    min-height: 420px;
-  }
-
-  .hero-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
   }
 
   .hero-box {
@@ -414,31 +402,16 @@
   }
 
   .hero-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.52));
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display:none;
+  }
+
+  .impact-phrase{
     text-align:center;
-    padding:24px;
-  }
-
-  .hero-overlay-content{
-    color:#fff;
-    max-width:720px;
-  }
-
-  .hero-overlay-content h1{
-    margin:0 0 10px;
-    font-size:1.9rem;
-    line-height:1.2;
-    color:#fff;
-  }
-
-  .hero-overlay-content p{
-    margin:0;
-    font-size:1.05rem;
+    margin:18px auto 0;
+    max-width:760px;
+    color:#6b48a8;
+    font-size:1.15rem;
+    font-weight:600;
     line-height:1.7;
   }
 
@@ -471,8 +444,7 @@
     .mini-card { width: 100%; max-width: 520px; }
     .card-section { padding: 22px 18px; }
     .hero-banner img{ height:240px; }
-    .hero-overlay-content h1{ font-size:1.45rem; }
-    .hero-overlay-content p{ font-size:0.95rem; }
+    .impact-phrase{ font-size:1rem; }
     section[aria-label="Recursos"] .recurso-card{
       flex-basis: 100%;
       max-width: 520px;
@@ -534,7 +506,9 @@
     z-index: 1;
   }
 </style>
-</head><body>
+</head>
+<body>
+
 <header class="cabecalho">
   <div class="logo-area" style="display:flex; align-items:center; gap:18px; padding:14px 18px;">
     <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" class="logo" style="width:56px; height:56px;">
@@ -560,13 +534,11 @@
   <div class="card-section card-hero">
     <div class="hero-banner">
       <img src="imagens/consultorio.jpg" alt="Consultório de psicologia em Itapetininga">
-      <div class="hero-overlay">
-        <div class="hero-overlay-content">
-          <h1>Ana Paula Ap. Vieira</h1>
-          <p>Psicóloga Clínica • CRP 06/217114</p>
-        </div>
-      </div>
     </div>
+
+    <p class="impact-phrase">
+      Um espaço de escuta, acolhimento e cuidado para diferentes momentos da vida.
+    </p>
   </div>
 </section>
 
@@ -575,12 +547,12 @@
   <div class="card-section card-hero">
     <div class="hero">
       <div class="hero-box" style="max-width:860px; margin:0 auto;">
-        <h1>Psicóloga em Itapetininga: acolhimento emocional, escuta e cuidado para o seu momento de vida</h1>
+        <h1>Psicóloga em Itapetininga: escuta, acolhimento e cuidado psicológico em diferentes momentos da vida</h1>
 
         <p>
-          Se você tem se sentido ansiosa, emocionalmente cansada, sobrecarregada ou vivendo conflitos difíceis,
-          a <a href="psicologa-em-itapetininga.html">psicoterapia</a> pode ser um espaço seguro de escuta e acolhimento
-          para compreender o que está acontecendo e construir novos caminhos.
+          A psicoterapia pode ser um espaço de cuidado, compreensão e desenvolvimento emocional para crianças, adolescentes e adultos.
+          Em momentos de ansiedade, sobrecarga, conflitos, inseguranças ou fases difíceis, o acompanhamento psicológico pode ajudar
+          a compreender emoções e construir novos caminhos com mais equilíbrio.
         </p>
 
         <div class="cta-row">
@@ -595,12 +567,12 @@
         </div>
 
         <p style="text-align:center; font-weight:500; color:#6b48a8;">
-          Você não precisa enfrentar tudo sozinha.
+          Um cuidado psicológico respeitoso, ético e acolhedor para cada fase da vida.
         </p>
 
         <p class="hero-local" style="text-align:center;">
-          Atendimento <strong class="roxo">presencial em Itapetininga-SP</strong> e
-          <strong class="roxo">online</strong> para todo o Brasil.
+          Atendimento <strong style="color:#6b48a8;">presencial em Itapetininga-SP</strong> e
+          <strong style="color:#6b48a8;">online</strong> para todo o Brasil.
         </p>
       </div>
     </div>
@@ -620,17 +592,17 @@
       <div class="about-box">
         <p>
           Olá, eu sou <strong>Ana Paula Ap. Vieira</strong>, Psicóloga Clínica (<strong>CRP 06/217114</strong>).
-          Meu trabalho é oferecer um ambiente ético, humano e acolhedor para pessoas que precisam de apoio emocional,
-          escuta e cuidado psicológico em momentos de ansiedade, sobrecarga, conflitos e sofrimento emocional.
+          Meu trabalho é oferecer um ambiente ético, humano e acolhedor para crianças, adolescentes e adultos,
+          com escuta e cuidado psicológico em diferentes momentos da vida.
         </p>
 
         <p>
           Atendo de forma presencial em <strong>Itapetininga-SP</strong> e também <strong>online</strong> para todo o Brasil,
-          respeitando o seu ritmo e a singularidade da sua história.
+          respeitando o ritmo, a história e as necessidades emocionais de cada pessoa.
         </p>
 
         <p style="margin-bottom:0;">
-          Se fizer sentido para você, podemos conversar e entender qual caminho de cuidado é mais adequado neste momento.
+          Se fizer sentido para você ou para sua família, podemos conversar e entender qual caminho de cuidado pode ser mais adequado neste momento.
         </p>
 
         <div class="cta-row" style="margin-top:14px;">
@@ -658,8 +630,8 @@
       </div>
 
       <p class="chips-text">
-        A terapia pode ser um suporte importante para compreender essas experiências,
-        fortalecer recursos internos e construir formas mais saudáveis de se relacionar consigo e com a vida.
+        A psicoterapia pode ser um suporte importante para compreender essas experiências,
+        fortalecer recursos emocionais e construir formas mais saudáveis de lidar com a vida e com os relacionamentos.
       </p>
     </div>
   </div>
@@ -698,7 +670,7 @@
         <p>
           Um processo terapêutico para compreender emoções, organizar pensamentos e desenvolver estratégias mais saudáveis
           para lidar com ansiedade, sobrecarga, autocobrança e desafios nos relacionamentos.
-          Você não precisa dar conta de tudo sozinho(a).
+          Um espaço de cuidado para homens e mulheres em diferentes fases da vida.
         </p>
       </article>
     </div>
@@ -843,7 +815,7 @@
 <!-- CONTATO -->
 <section class="shell" id="contato" aria-label="Contato">
   <div class="card-section">
-    <h2 class="title">Você não precisa enfrentar isso sem apoio.</h2>
+    <h2 class="title">Cuidar da saúde emocional também é um passo importante.</h2>
     <p class="lead">
       Se você deseja agendar uma sessão ou tirar dúvidas, preencha o formulário abaixo com seus dados e uma breve descrição do motivo do contato.
       Se preferir, envie mensagem pelo WhatsApp.
@@ -963,5 +935,6 @@
     });
   })();
 </script>
+
 </body>
 </html>
