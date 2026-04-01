@@ -52,6 +52,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   />
+
   <link rel="stylesheet" href="style.css" />
   <script defer src="app.js"></script>
 
@@ -138,7 +139,7 @@
   </header>
 
   <main>
-    <!-- 1. IMAGEM DO CONSULTÓRIO -->
+    <!-- IMAGEM DO CONSULTÓRIO -->
     <section class="hero-home" id="inicio">
       <div class="container">
         <div class="hero-imagem-unica">
@@ -150,7 +151,7 @@
       </div>
     </section>
 
-    <!-- 2. FRASE DE ACOLHIMENTO -->
+    <!-- FRASE DE ACOLHIMENTO -->
     <section class="secao secao-acolhimento" aria-labelledby="acolhimento-titulo">
       <div class="container">
         <div class="bloco-texto-central">
@@ -164,7 +165,7 @@
       </div>
     </section>
 
-    <!-- 3. SOBRE MIM -->
+    <!-- SOBRE MIM -->
     <section class="secao" id="sobre" aria-labelledby="sobre-titulo">
       <div class="container">
         <div class="bloco-sobre">
@@ -195,7 +196,7 @@
       </div>
     </section>
 
-    <!-- 4. BLOCO PRINCIPAL -->
+    <!-- BLOCO PRINCIPAL -->
     <section class="secao" aria-labelledby="principal-titulo">
       <div class="container">
         <div class="bloco-principal">
@@ -236,14 +237,49 @@
       </div>
     </section>
 
-    <!-- 5. RECURSOS -->
+    <!-- SERVIÇOS -->
+    <section class="secao" id="servicos-home" aria-labelledby="servicos-home-titulo">
+      <div class="container">
+        <div class="secao-titulo">
+          <h2 id="servicos-home-titulo">Atendimento para diferentes fases da vida</h2>
+          <p>
+            Um cuidado psicológico pensado para as necessidades emocionais de cada fase.
+          </p>
+        </div>
+
+        <div class="grid-servicos">
+          <a href="psicoterapia-infantil.html" class="card-servico">
+            <h3>Psicoterapia Infantil</h3>
+            <p>
+              Um espaço para acolher emoções, fortalecer vínculos e apoiar o desenvolvimento saudável da criança.
+            </p>
+          </a>
+
+          <a href="psicoterapia-adolescentes.html" class="card-servico">
+            <h3>Psicoterapia para Adolescentes</h3>
+            <p>
+              Escuta acolhedora para conflitos emocionais, autoestima, identidade, tristeza e ansiedade.
+            </p>
+          </a>
+
+          <a href="psicoterapia-adultos.html" class="card-servico">
+            <h3>Psicoterapia para Adultos</h3>
+            <p>
+              Apoio para ansiedade, sobrecarga, relacionamentos, autoestima e autoconhecimento.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEÚDOS -->
     <section class="secao" id="conteudos" aria-labelledby="conteudos-titulo">
       <div class="container">
         <div class="secao-titulo">
           <h2 id="conteudos-titulo">Conteúdos sobre saúde emocional</h2>
           <p>
-            Reflexões e orientações sobre emoções, relações, sofrimento emocional
-            e cuidado psicológico.
+            Talvez você esteja se sentindo sobrecarregado(a), ansioso(a), triste ou confuso(a).
+            Em alguns momentos, compreender o que se passa dentro de você pode ser o primeiro passo para cuidar melhor de si.
           </p>
         </div>
 
@@ -279,7 +315,7 @@
       </div>
     </section>
 
-    <!-- 6. COMO FUNCIONA -->
+    <!-- COMO FUNCIONA -->
     <section class="secao" id="como-funciona">
       <div class="container">
         <div class="secao-titulo">
@@ -318,7 +354,7 @@
       </div>
     </section>
 
-    <!-- 7. CTA FINAL -->
+    <!-- CTA FINAL -->
     <section class="secao">
       <div class="container">
         <div class="cta-final">
@@ -342,6 +378,15 @@
   </main>
 
   <a
+    href="https://maps.google.com/?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+    class="endereco-flutuante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Abrir endereço no mapa"
+    style="display:none;"
+  ></a>
+
+  <a
     href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
     class="whatsapp-btn"
     target="_blank"
@@ -361,17 +406,19 @@
         <p><strong>Ana Paula Ap. Vieira | Psicóloga Clínica</strong></p>
         <p>CRP 06/217114</p>
         <p>Itapetininga – SP</p>
-        <p>Rua Nazareth, 84</p>
+        <p>
+          <a
+            href="https://maps.google.com/?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Rua Nazareth, 84
+          </a>
+        </p>
         <p><a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a></p>
       </div>
 
       <div class="footer-links">
-        <a href="servicos.html">Serviços</a>
-        <a href="quem-sou.html">Quem Sou</a>
-        <a href="depoimentos.html">Depoimentos</a>
-        <a href="faq.html">FAQ</a>
-        <a href="recursos.html">Conteúdos</a>
-        <a href="preco.html">Preço</a>
         <a href="privacidade.html">Privacidade</a>
       </div>
 
