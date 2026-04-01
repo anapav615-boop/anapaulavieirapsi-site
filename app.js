@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function atualizarCabecalho() {
     if (!cabecalho) return;
+
     if (window.scrollY > 20) {
       cabecalho.classList.add("scrolled");
     } else {
