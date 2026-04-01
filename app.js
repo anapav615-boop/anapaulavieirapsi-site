@@ -1,8 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");
   const menuNav = document.getElementById("menu-nav");
-  const menuLinks = document.querySelectorAll('.menu-nav a[href^="#"]');
+  const cabecalho = document.querySelector(".cabecalho");
+  const btnTopo = document.getElementById("btn-topo");
 
+  const menuLinks = document.querySelectorAll('.menu-nav a[href^="#"]');
+  const linksInternos = document.querySelectorAll('a[href^="#"]');
+  const secoes = document.querySelectorAll("section[id]");
+  const elementosAnimar = document.querySelectorAll(".animar");
+  const perguntas = document.querySelectorAll(".faq-pergunta");
+
+  /* =========================
+     MENU MOBILE
+  ========================= */
   if (menuToggle && menuNav) {
     menuToggle.addEventListener("click", () => {
       menuNav.classList.toggle("aberto");
@@ -12,14 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
       menuToggle.innerHTML = aberto
         ? '<i class="fa-solid fa-xmark"></i>'
         : '<i class="fa-solid fa-bars"></i>';
-    });
-
-    menuLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        menuNav.classList.remove("aberto");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      });
     });
 
     document.addEventListener("click", (event) => {
@@ -35,8 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const cabecalho = document.querySelector(".cabecalho");
-
+  /* =========================
+     CABEÇALHO AO ROLAR
+  ========================= */
   function atualizarCabecalho() {
     if (!cabecalho) return;
 
@@ -50,8 +53,74 @@ document.addEventListener("DOMContentLoaded", () => {
   atualizarCabecalho();
   window.addEventListener("scroll", atualizarCabecalho);
 
-  const btnTopo = document.getElementById("btn-topo");
+  /* =========================
+     ROLAGEM SUAVE PARA ÂNCORAS
+  ========================= */
+  function rolarParaSecao(id) {
+    if (!id || id === "#") return;
 
+    const destino = document.querySelector(id);
+    if (!destino) return;
+
+    const alturaHeader = cabecalho ? cabecalho.offsetHeight : 90;
+    const topo = destino.offsetTop - alturaHeader - 12;
+
+    window.scrollTo({
+      top: topo,
+      behavior: "smooth"
+    });
+  }
+
+  linksInternos.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const id = link.getAttribute("href");
+
+      if (!id || !id.startsWith("#")) return;
+
+      const destino = document.querySelector(id);
+      if (!destino) return;
+
+      event.preventDefault();
+      rolarParaSecao(id);
+
+      if (menuNav && menuNav.classList.contains("aberto")) {
+        menuNav.classList.remove("aberto");
+        if (menuToggle) {
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+      }
+    });
+  });
+
+  /* =========================
+     DESTAQUE DO MENU ATIVO
+  ========================= */
+  function destacarMenu() {
+    const alturaHeader = cabecalho ? cabecalho.offsetHeight : 90;
+    const posicao = window.scrollY + alturaHeader + 60;
+
+    secoes.forEach((secao) => {
+      const topo = secao.offsetTop;
+      const altura = secao.offsetHeight;
+      const id = secao.getAttribute("id");
+      const link = document.querySelector(`.menu-nav a[href="#${id}"]`);
+
+      if (!link) return;
+
+      if (posicao >= topo && posicao < topo + altura) {
+        menuLinks.forEach((a) => a.classList.remove("ativo"));
+        link.classList.add("ativo");
+      }
+    });
+  }
+
+  destacarMenu();
+  window.addEventListener("scroll", destacarMenu);
+
+  /* =========================
+     BOTÃO TOPO
+  ========================= */
   if (btnTopo) {
     function toggleTopo() {
       btnTopo.style.display = window.scrollY > 300 ? "grid" : "none";
@@ -68,35 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const linksInternos = document.querySelectorAll('a[href^="#"]');
-
-  linksInternos.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const id = link.getAttribute("href");
-
-      if (!id || id === "#") return;
-
-      const destino = document.querySelector(id);
-
-      if (!destino) return;
-
-      event.preventDefault();
-
-      const alturaHeader =
-        document.querySelector(".cabecalho")?.offsetHeight || 90;
-
-      const topo =
-        destino.getBoundingClientRect().top + window.scrollY - alturaHeader - 12;
-
-      window.scrollTo({
-        top: topo,
-        behavior: "smooth"
-      });
-    });
-  });
-
-  const elementosAnimar = document.querySelectorAll(".animar");
-
+  /* =========================
+     ANIMAÇÃO AO ENTRAR
+  ========================= */
   function animarAoEntrar() {
     const alturaTela = window.innerHeight;
 
@@ -110,8 +153,9 @@ document.addEventListener("DOMContentLoaded", () => {
   animarAoEntrar();
   window.addEventListener("scroll", animarAoEntrar);
 
-  const perguntas = document.querySelectorAll(".faq-pergunta");
-
+  /* =========================
+     FAQ
+  ========================= */
   perguntas.forEach((pergunta) => {
     pergunta.addEventListener("click", () => {
       const item = pergunta.closest(".faq-item");
@@ -126,30 +170,4 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.toggle("ativo");
     });
   });
-
-  const secoes = document.querySelectorAll("section[id]");
-
-  function destacarMenu() {
-    const posicao = window.scrollY + 160;
-
-    secoes.forEach((secao) => {
-      const topo = secao.offsetTop;
-      const altura = secao.offsetHeight;
-      const id = secao.getAttribute("id");
-      const link = document.querySelector(`.menu-nav a[href="#${id}"]`);
-
-      if (!link) return;
-
-      if (posicao >= topo && posicao < topo + altura) {
-        document.querySelectorAll('.menu-nav a[href^="#"]').forEach((a) => {
-          a.classList.remove("ativo");
-        });
-
-        link.classList.add("ativo");
-      }
-    });
-  }
-
-  destacarMenu();
-  window.addEventListener("scroll", destacarMenu);
 });
