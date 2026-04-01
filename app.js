@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const linksInternos = document.querySelectorAll('a[href^="#"]');
   const secoes = document.querySelectorAll("section[id], footer[id]");
   const elementosAnimar = document.querySelectorAll(".animar");
-  const perguntas = document.querySelectorAll(".faq-pergunta");
 
   function getHeaderOffset() {
     return cabecalho ? cabecalho.offsetHeight + 14 : 104;
@@ -16,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function fecharMenuMobile() {
     if (!menuNav || !menuToggle) return;
+
     menuNav.classList.remove("aberto");
     menuToggle.setAttribute("aria-expanded", "false");
     menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function abrirMenuMobile() {
     if (!menuNav || !menuToggle) return;
+
     menuNav.classList.add("aberto");
     menuToggle.setAttribute("aria-expanded", "true");
     menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
@@ -71,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     menuLinks.forEach((link) => link.classList.remove("ativo"));
+
     if (linkAtivo) {
       linkAtivo.classList.add("ativo");
     }
@@ -81,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elementosAnimar.forEach((elemento) => {
       const topoElemento = elemento.getBoundingClientRect().top;
+
       if (topoElemento < alturaTela - 80) {
         elemento.classList.add("visivel");
       }
@@ -113,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
   linksInternos.forEach((link) => {
     link.addEventListener("click", (event) => {
       const hash = link.getAttribute("href");
+
       if (!hash || !hash.startsWith("#")) return;
 
       const destino = document.querySelector(hash);
@@ -140,19 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-  perguntas.forEach((pergunta) => {
-    pergunta.addEventListener("click", () => {
-      const item = pergunta.closest(".faq-item");
-      if (!item) return;
-
-      document.querySelectorAll(".faq-item").forEach((outro) => {
-        if (outro !== item) outro.classList.remove("ativo");
-      });
-
-      item.classList.toggle("ativo");
-    });
-  });
 
   atualizarCabecalho();
   destacarMenu();
