@@ -22,6 +22,10 @@
     content="Atendimento psicológico presencial em Itapetininga-SP e online para todo o Brasil."
   />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg" />
+
+  <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/" />
+  <link rel="icon" type="image/png" href="imagens/favicon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,6 +40,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header class="cabecalho">
     <div class="container header-wrap">
       <a href="#inicio" class="logo-area" aria-label="Página inicial">
@@ -64,25 +69,24 @@
           <li><a href="#recursos">Recursos</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#preco">Preço</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="preco.html">Preço</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO COM IMAGEM PRIMEIRO -->
-    <section class="hero hero-simples" id="inicio">
+    <section class="hero" id="inicio">
       <div class="container">
-        <div class="hero-imagem hero-imagem-unica animar">
+        <div class="hero-imagem-card animar">
           <img
             src="imagens/consultorio.jpg"
             alt="Consultório acolhedor de psicologia em Itapetininga"
+            class="hero-imagem"
           />
         </div>
 
-        <div class="hero-frase animar">
+        <div class="hero-frase-card animar">
           <span class="selo">Psicóloga em Itapetininga • presencial e online</span>
           <h1>
             Psicóloga em Itapetininga com atendimento acolhedor para crianças,
@@ -90,11 +94,10 @@
           </h1>
         </div>
 
-        <div class="hero-texto-bloco animar">
+        <div class="hero-texto-card animar">
           <p>
             Atendimento psicológico presencial em Itapetininga-SP e online para todo o
-            Brasil. Um espaço de escuta, acolhimento e cuidado emocional para
-            diferentes fases da vida.
+            Brasil, com escuta, acolhimento e cuidado emocional em diferentes fases da vida.
           </p>
 
           <ul class="lista-destaques">
@@ -104,7 +107,14 @@
           </ul>
 
           <div class="hero-botoes">
-            <a href="#contato" class="btn-primario">Agendar atendimento</a>
+            <a
+              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primario"
+            >
+              Agendar pelo WhatsApp
+            </a>
             <a href="#sobre" class="btn-secundario">Conheça meu trabalho</a>
           </div>
         </div>
@@ -141,12 +151,12 @@
 
               <p>
                 A psicoterapia pode ser um caminho de escuta, cuidado e fortalecimento
-                emocional, ajudando cada pessoa a compreender melhor o que sente e a
-                viver com mais clareza, equilíbrio e acolhimento.
+                emocional, ajudando você a compreender melhor o que sente e a construir
+                novas formas de lidar com a vida.
               </p>
             </div>
 
-            <div class="sobre-info">
+            <aside class="sobre-info">
               <ul>
                 <li>
                   <i class="fa-solid fa-location-dot"></i>
@@ -162,8 +172,15 @@
                 </li>
               </ul>
 
-              <a href="#contato" class="btn-primario">Quero agendar</a>
-            </div>
+              <a
+                href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primario"
+              >
+                Quero agendar
+              </a>
+            </aside>
           </div>
         </div>
       </div>
@@ -176,24 +193,27 @@
             <h2>Atendimento psicológico para diferentes fases da vida</h2>
             <p>
               Um espaço de escuta e acolhimento para crianças, adolescentes e adultos,
-              respeitando a singularidade, a história e as necessidades emocionais de
-              cada pessoa.
+              respeitando a singularidade e o momento de cada pessoa.
             </p>
           </div>
 
           <div class="grid-3">
-            <article class="card-servico card-verde">
-              <div class="icone-bolha"><i class="fa-solid fa-child-reaching"></i></div>
+            <article class="card-servico">
+              <div class="icone-bolha">
+                <i class="fa-solid fa-child-reaching"></i>
+              </div>
               <h3>Psicoterapia Infantil</h3>
               <p>
                 Um espaço acolhedor para a criança expressar emoções, desenvolver
-                recursos emocionais e receber cuidado psicológico com sensibilidade e
-                atenção ao seu momento de vida.
+                recursos emocionais e receber cuidado psicológico com sensibilidade
+                e atenção ao seu momento de vida.
               </p>
             </article>
 
-            <article class="card-servico card-verde">
-              <div class="icone-bolha"><i class="fa-solid fa-seedling"></i></div>
+            <article class="card-servico">
+              <div class="icone-bolha">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
               <h3>Psicoterapia para Adolescentes</h3>
               <p>
                 Apoio emocional para questões relacionadas à autoestima, ansiedade,
@@ -202,13 +222,15 @@
               </p>
             </article>
 
-            <article class="card-servico card-verde">
-              <div class="icone-bolha"><i class="fa-solid fa-heart"></i></div>
+            <article class="card-servico">
+              <div class="icone-bolha">
+                <i class="fa-solid fa-heart"></i>
+              </div>
               <h3>Psicoterapia para Adultos</h3>
               <p>
                 Atendimento psicológico para ansiedade, sobrecarga emocional,
-                autocobrança, autoestima, relacionamentos e diferentes desafios da vida
-                adulta.
+                autocobrança, autoestima, relacionamentos e diferentes desafios
+                da vida adulta.
               </p>
             </article>
           </div>
@@ -222,35 +244,35 @@
           <div class="secao-titulo">
             <h2>Talvez você esteja vivendo...</h2>
             <p>
-              Algumas dores emocionais nem sempre aparecem por fora, mas pesam por
-              dentro. A psicoterapia pode ser um espaço para compreender o que você
-              sente e encontrar novas formas de cuidado.
+              Algumas experiências emocionais podem tornar o dia a dia mais difícil.
+              A psicoterapia pode ajudar a compreender o que você está sentindo e
+              construir caminhos com mais equilíbrio.
             </p>
           </div>
 
           <div class="grid-4">
-            <article class="card-questao card-verde">
+            <article class="card-questao">
               <img src="imagens/ansiedade.jpg" alt="Ansiedade em Itapetininga" />
               <div class="conteudo">
-                <h3>Ansiedade em Itapetininga</h3>
+                <h3>Ansiedade</h3>
               </div>
             </article>
 
-            <article class="card-questao card-verde">
+            <article class="card-questao">
               <img src="imagens/tristeza-persistente.jpg" alt="Tristeza persistente" />
               <div class="conteudo">
                 <h3>Tristeza e desânimo</h3>
               </div>
             </article>
 
-            <article class="card-questao card-verde">
+            <article class="card-questao">
               <img src="imagens/relacionamentos.jpg" alt="Conflitos de relacionamento" />
               <div class="conteudo">
                 <h3>Conflitos de relacionamento</h3>
               </div>
             </article>
 
-            <article class="card-questao card-verde">
+            <article class="card-questao">
               <img src="imagens/baixa-autoestima.jpg" alt="Baixa autoestima" />
               <div class="conteudo">
                 <h3>Baixa autoestima</h3>
@@ -266,32 +288,29 @@
         <div class="bloco-padrao animar">
           <div class="secao-titulo">
             <h2>Como funciona</h2>
-            <p>
-              Um processo acolhedor, claro e respeitoso desde o primeiro contato.
-            </p>
+            <p>Um processo acolhedor, claro e respeitoso desde o primeiro contato.</p>
           </div>
 
-          <div class="como-grid">
-            <article class="passo card-verde">
-              <div class="passo-numero">01</div>
+          <div class="grid-3 passos-grid">
+            <article class="passo-card">
+              <div class="passo-numero">1</div>
               <h3>Primeiro contato</h3>
               <p>
-                Você entra em contato pelo WhatsApp ou formulário para tirar dúvidas e
-                verificar disponibilidade.
+                Você entra em contato para tirar dúvidas e verificar disponibilidade.
               </p>
             </article>
 
-            <article class="passo card-verde">
-              <div class="passo-numero">02</div>
+            <article class="passo-card">
+              <div class="passo-numero">2</div>
               <h3>Atendimento</h3>
               <p>
-                As sessões acontecem com escuta acolhedora, respeitando sua história,
-                seu momento e suas necessidades emocionais.
+                Os encontros acontecem com escuta acolhedora, respeitando sua história
+                e seu momento.
               </p>
             </article>
 
-            <article class="passo card-verde">
-              <div class="passo-numero">03</div>
+            <article class="passo-card">
+              <div class="passo-numero">3</div>
               <h3>Cuidado contínuo</h3>
               <p>
                 A psicoterapia pode favorecer compreensão, fortalecimento emocional e
@@ -309,51 +328,51 @@
           <div class="secao-titulo">
             <h2>Conteúdos e Materiais</h2>
             <p>
-              Conteúdos pensados para orientar, acolher e fortalecer sua jornada de
+              Conteúdos pensados para orientar, acolher e apoiar sua jornada de
               cuidado emocional.
             </p>
           </div>
 
           <div class="recursos-grid">
-            <article class="card-recurso card-verde">
+            <article class="card-recurso">
               <img src="imagens/psicologa-itapetininga.jpg" alt="Psicóloga em Itapetininga" />
               <div class="texto">
                 <h3>Psicóloga em Itapetininga</h3>
               </div>
             </article>
 
-            <article class="card-recurso card-verde">
+            <article class="card-recurso">
               <img src="imagens/ansiedade-itapetininga.jpg" alt="Ansiedade em Itapetininga" />
               <div class="texto">
                 <h3>Ansiedade em Itapetininga</h3>
               </div>
             </article>
 
-            <article class="card-recurso card-verde">
-              <img src="imagens/ansiedade-trabalho.jpg" alt="Terapia para ansiedade" />
+            <article class="card-recurso">
+              <img src="imagens/ansiedade-trabalho.jpg" alt="Ansiedade no trabalho" />
               <div class="texto">
-                <h3>Terapia para ansiedade</h3>
+                <h3>Ansiedade no trabalho</h3>
               </div>
             </article>
 
-            <article class="card-recurso card-verde">
+            <article class="card-recurso">
               <img src="imagens/burnout-emocional-trabalho.jpg" alt="Burnout emocional" />
               <div class="texto">
                 <h3>Burnout emocional</h3>
               </div>
             </article>
 
-            <article class="card-recurso card-verde">
-              <img src="imagens/baixa-autoestima.jpg" alt="Baixa autoestima" />
+            <article class="card-recurso">
+              <img src="imagens/orientacao-parental-itapetininga.jpg" alt="Orientação parental em Itapetininga" />
               <div class="texto">
-                <h3>Baixa autoestima</h3>
+                <h3>Orientação parental em Itapetininga</h3>
               </div>
             </article>
 
-            <article class="card-recurso card-verde">
-              <img src="imagens/consultorio-mobile.jpg" alt="Terapia online" />
+            <article class="card-recurso">
+              <img src="imagens/psicoterapia-adultos-itapetininga.jpg" alt="Psicoterapia para adultos em Itapetininga" />
               <div class="texto">
-                <h3>Terapia online</h3>
+                <h3>Psicoterapia para adultos em Itapetininga</h3>
               </div>
             </article>
           </div>
@@ -367,21 +386,20 @@
           <div class="secao-titulo">
             <h2>Depoimentos</h2>
             <p>
-              Um espaço para compartilhar percepções sobre acolhimento, escuta e cuidado
-              emocional.
+              Um espaço de escuta e cuidado refletido na experiência de quem já passou pelo atendimento.
             </p>
           </div>
 
-          <div class="grid-3 depoimentos-grid">
-            <article class="card-servico depoimento-card card-verde">
+          <div class="grid-3">
+            <article class="card-depoimento">
               <p>“Um atendimento muito acolhedor, com escuta cuidadosa e sensível.”</p>
             </article>
 
-            <article class="card-servico depoimento-card card-verde">
+            <article class="card-depoimento">
               <p>“Me senti respeitado(a) e ouvido(a) em um momento muito importante da minha vida.”</p>
             </article>
 
-            <article class="card-servico depoimento-card card-verde">
+            <article class="card-depoimento">
               <p>“Um espaço seguro para falar sobre emoções e encontrar mais clareza.”</p>
             </article>
           </div>
@@ -398,7 +416,7 @@
           </div>
 
           <div class="faq">
-            <div class="card-faq faq-item card-verde">
+            <div class="faq-item">
               <button class="faq-pergunta" type="button">
                 <span>Você atende crianças, adolescentes e adultos?</span>
                 <i class="fa-solid fa-chevron-down"></i>
@@ -411,7 +429,7 @@
               </div>
             </div>
 
-            <div class="card-faq faq-item card-verde">
+            <div class="faq-item">
               <button class="faq-pergunta" type="button">
                 <span>Você atende online?</span>
                 <i class="fa-solid fa-chevron-down"></i>
@@ -424,7 +442,7 @@
               </div>
             </div>
 
-            <div class="card-faq faq-item card-verde">
+            <div class="faq-item">
               <button class="faq-pergunta" type="button">
                 <span>Como saber se a terapia é para mim?</span>
                 <i class="fa-solid fa-chevron-down"></i>
@@ -432,21 +450,21 @@
               <div class="faq-resposta">
                 <p>
                   A terapia pode ajudar quando existe sofrimento emocional, ansiedade,
-                  sobrecarga, conflitos, tristeza, dificuldades nos relacionamentos ou
-                  desejo de se compreender melhor.
+                  sobrecarga, conflitos, tristeza, dificuldades nos relacionamentos
+                  ou desejo de se compreender melhor.
                 </p>
               </div>
             </div>
 
-            <div class="card-faq faq-item card-verde">
+            <div class="faq-item">
               <button class="faq-pergunta" type="button">
                 <span>Como faço para agendar?</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
               <div class="faq-resposta">
                 <p>
-                  Você pode preencher o formulário da página ou entrar em contato
-                  diretamente pelo WhatsApp.
+                  Você pode entrar em contato diretamente pelo WhatsApp para verificar
+                  disponibilidade e tirar dúvidas.
                 </p>
               </div>
             </div>
@@ -455,95 +473,33 @@
       </div>
     </section>
 
-    <section class="secao" id="preco">
-      <div class="container">
-        <div class="bloco-padrao animar">
-          <div class="secao-titulo">
-            <h2>Preço</h2>
-            <p>
-              Para informações sobre valores, disponibilidade e modalidade de atendimento,
-              entre em contato pelo WhatsApp. Assim consigo te orientar da forma mais
-              cuidadosa e adequada.
-            </p>
-          </div>
-
-          <div class="preco-box card-verde">
-            <a
-              href="https://wa.me/5515996760791"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-whats-card"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-              Consultar valor pelo WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" id="contato">
+    <section class="secao" id="contato-whats">
       <div class="container">
         <div class="bloco-padrao animar">
           <div class="secao-titulo">
             <h2>Vamos conversar?</h2>
             <p>
-              Se você deseja agendar uma sessão ou tirar dúvidas, preencha o formulário
-              abaixo ou entre em contato pelo WhatsApp.
+              Se você deseja agendar uma sessão ou tirar dúvidas, pode entrar em contato
+              diretamente pelo WhatsApp.
             </p>
           </div>
 
-          <div class="contato-grid">
-            <div class="form-card card-verde">
-              <form id="form-contato" action="obrigado.html" method="get">
-                <div class="campo">
-                  <label for="nome">Nome</label>
-                  <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
-                </div>
+          <div class="contato-whats-card">
+            <ul class="contato-lista">
+              <li><strong>WhatsApp:</strong> <a href="https://wa.me/5515996760791" target="_blank" rel="noopener noreferrer">(15) 99676-0791</a></li>
+              <li><strong>E-mail:</strong> <a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a></li>
+              <li><strong>Presencial:</strong> Itapetininga-SP</li>
+              <li><strong>Online:</strong> atendimento para todo o Brasil</li>
+            </ul>
 
-                <div class="campo">
-                  <label for="email">E-mail</label>
-                  <input type="email" id="email" name="email" placeholder="seu@exemplo.com" required />
-                </div>
-
-                <div class="campo">
-                  <label for="telefone">Telefone</label>
-                  <input type="text" id="telefone" name="telefone" placeholder="(15) 99676-0791" required />
-                </div>
-
-                <div class="campo">
-                  <label for="mensagem">Mensagem</label>
-                  <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" required></textarea>
-                </div>
-
-                <button type="submit" class="btn-formulario">Enviar mensagem</button>
-              </form>
-            </div>
-
-            <div class="contato-card card-verde">
-              <h3>Fale pelo WhatsApp</h3>
-              <p>
-                Se preferir, você também pode entrar em contato diretamente para saber
-                mais sobre horários, atendimento presencial ou online.
-              </p>
-
-              <ul class="contato-lista">
-                <li><strong>WhatsApp:</strong> <a href="tel:+5515996760791">(15) 99676-0791</a></li>
-                <li><strong>E-mail:</strong> <a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a></li>
-                <li><strong>Presencial:</strong> Itapetininga-SP</li>
-                <li><strong>Online:</strong> atendimento para todo o Brasil</li>
-              </ul>
-
-              <a
-                href="https://wa.me/5515996760791"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-whats-card"
-              >
-                <i class="fa-brands fa-whatsapp"></i>
-                Chamar no WhatsApp
-              </a>
-            </div>
+            <a
+              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primario"
+            >
+              Chamar no WhatsApp
+            </a>
           </div>
         </div>
       </div>
@@ -566,12 +522,14 @@
 
         <p>
           Este site utiliza práticas básicas de navegação. Saiba mais em nossa
-          <a href="politica-de-privacidade.html">Política de Privacidade</a>.
+          <a href="privacidade.html">Política de Privacidade</a>.
         </p>
 
         <p>
           <strong>Telefone:</strong>
-          <a href="tel:+5515996760791">(15) 99676-0791</a>
+          <a href="https://wa.me/5515996760791" target="_blank" rel="noopener noreferrer">
+            (15) 99676-0791
+          </a>
         </p>
 
         <p>
@@ -583,31 +541,37 @@
 
         <p>© 2026 Ana Paula Ap. Vieira | Psicóloga Clínica | CRP 06/217114</p>
 
-        <div class="footer-links-redes">
-          <a href="https://www.instagram.com/anapaulapsico/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <span>|</span>
-          <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <span>|</span>
-          <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <div class="footer-redes">
+          <a href="https://www.instagram.com/anapaulapsico/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 
-  <div class="whatsapp-btn" aria-label="WhatsApp">
-    <a
-      href="https://wa.me/5515996760791"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Falar no WhatsApp"
-    >
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-  </div>
-
   <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
+
+  <a
+    href="https://wa.me/5515996760791"
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+  >
+    <img src="imagens/whatsapp-icon.png" alt="WhatsApp" />
+  </a>
 
   <script src="app.js"></script>
 </body>
