@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuNav = document.getElementById("menu-nav");
   const menuLinks = document.querySelectorAll(".menu-nav a");
 
+  // MENU MOBILE
   if (menuToggle && menuNav) {
     menuToggle.addEventListener("click", () => {
       menuNav.classList.toggle("aberto");
@@ -23,7 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.addEventListener("click", (event) => {
-      if (!menuNav.contains(event.target) && !menuToggle.contains(event.target)) {
+      if (
+        menuNav.classList.contains("aberto") &&
+        !menuNav.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
         menuNav.classList.remove("aberto");
         menuToggle.setAttribute("aria-expanded", "false");
         menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
@@ -31,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // HEADER AO ROLAR
   const cabecalho = document.querySelector(".cabecalho");
 
   function atualizarCabecalho() {
@@ -46,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   atualizarCabecalho();
   window.addEventListener("scroll", atualizarCabecalho);
 
+  // BOTÃO VOLTAR AO TOPO
   const btnTopo = document.getElementById("btn-topo");
 
   if (btnTopo) {
@@ -64,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ROLAGEM SUAVE DOS LINKS INTERNOS
   const linksInternos = document.querySelectorAll('a[href^="#"]');
 
   linksInternos.forEach((link) => {
@@ -91,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // ANIMAÇÃO AO ENTRAR NA TELA
   const elementosAnimar = document.querySelectorAll(".animar");
 
   function animarAoEntrar() {
@@ -106,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
   animarAoEntrar();
   window.addEventListener("scroll", animarAoEntrar);
 
+  // FAQ
   const perguntas = document.querySelectorAll(".faq-pergunta");
 
   perguntas.forEach((pergunta) => {
@@ -123,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // MENU ATIVO CONFORME SEÇÃO
   const secoes = document.querySelectorAll("section[id]");
 
   function destacarMenu() {
