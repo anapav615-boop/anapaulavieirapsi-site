@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.addEventListener("click", () => {
       menuNav.classList.toggle("aberto");
       const aberto = menuNav.classList.contains("aberto");
+
       menuToggle.setAttribute("aria-expanded", aberto ? "true" : "false");
       menuToggle.innerHTML = aberto
         ? '<i class="fa-solid fa-xmark"></i>'
@@ -31,15 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const cabecalho = document.querySelector(".cabecalho");
+
   function atualizarCabecalho() {
     if (!cabecalho) return;
-    if (window.scrollY > 20) cabecalho.classList.add("scrolled");
-    else cabecalho.classList.remove("scrolled");
+
+    if (window.scrollY > 20) {
+      cabecalho.classList.add("scrolled");
+    } else {
+      cabecalho.classList.remove("scrolled");
+    }
   }
+
   atualizarCabecalho();
   window.addEventListener("scroll", atualizarCabecalho);
 
   const btnTopo = document.getElementById("btn-topo");
+
   if (btnTopo) {
     function toggleTopo() {
       btnTopo.style.display = window.scrollY > 300 ? "grid" : "none";
@@ -49,23 +57,32 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", toggleTopo);
 
     btnTopo.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   }
 
   const linksInternos = document.querySelectorAll('a[href^="#"]');
+
   linksInternos.forEach((link) => {
     link.addEventListener("click", (event) => {
       const id = link.getAttribute("href");
+
       if (!id || id === "#") return;
 
       const destino = document.querySelector(id);
+
       if (!destino) return;
 
       event.preventDefault();
 
-      const alturaHeader = document.querySelector(".cabecalho")?.offsetHeight || 90;
-      const topo = destino.getBoundingClientRect().top + window.scrollY - alturaHeader - 12;
+      const alturaHeader =
+        document.querySelector(".cabecalho")?.offsetHeight || 90;
+
+      const topo =
+        destino.getBoundingClientRect().top + window.scrollY - alturaHeader - 12;
 
       window.scrollTo({
         top: topo,
@@ -75,25 +92,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const elementosAnimar = document.querySelectorAll(".animar");
+
   function animarAoEntrar() {
     const alturaTela = window.innerHeight;
+
     elementosAnimar.forEach((elemento) => {
       if (elemento.getBoundingClientRect().top < alturaTela - 80) {
         elemento.classList.add("visivel");
       }
     });
   }
+
   animarAoEntrar();
   window.addEventListener("scroll", animarAoEntrar);
 
   const perguntas = document.querySelectorAll(".faq-pergunta");
+
   perguntas.forEach((pergunta) => {
     pergunta.addEventListener("click", () => {
       const item = pergunta.closest(".faq-item");
       if (!item) return;
 
       document.querySelectorAll(".faq-item").forEach((outro) => {
-        if (outro !== item) outro.classList.remove("ativo");
+        if (outro !== item) {
+          outro.classList.remove("ativo");
+        }
       });
 
       item.classList.toggle("ativo");
@@ -101,6 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const secoes = document.querySelectorAll("section[id]");
+
   function destacarMenu() {
     const posicao = window.scrollY + 140;
 
@@ -113,11 +137,15 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!link) return;
 
       if (posicao >= topo && posicao < topo + altura) {
-        document.querySelectorAll(".menu-nav a").forEach((a) => a.classList.remove("ativo"));
+        document.querySelectorAll(".menu-nav a").forEach((a) => {
+          a.classList.remove("ativo");
+        });
+
         link.classList.add("ativo");
       }
     });
   }
+
   destacarMenu();
   window.addEventListener("scroll", destacarMenu);
 });
