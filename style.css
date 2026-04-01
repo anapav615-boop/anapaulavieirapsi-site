@@ -6,8 +6,8 @@
   --title: #7d6578;
   --title-dark: #5f4d5b;
 
-  --header-bg: #d8c3d8;
-  --footer-bg: #b68fb6;
+  --header-bg: #e8d8e7;
+  --footer-bg: #d8b9d3;
 
   --card-bg: rgba(255, 255, 255, 0.96);
   --border: #eadce8;
@@ -39,9 +39,14 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: var(--text);
-  background:
-    linear-gradient(rgba(255, 253, 253, 0.96), rgba(250, 245, 248, 0.97)),
-    url("imagens/fundo-floral.png") center top / cover no-repeat fixed;
+  background-color: #f9f4f7;
+  background-image:
+    linear-gradient(rgba(255, 250, 252, 0.78), rgba(250, 244, 248, 0.82)),
+    url("imagens/fundo-floral.png");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow-x: hidden;
 }
 
@@ -387,7 +392,7 @@ button {
 
 /* FOOTER */
 .rodape {
-  background: linear-gradient(135deg, #c7a8c7, var(--footer-bg));
+  background: linear-gradient(135deg, #e0c7dc, #d8b9d3);
   color: #fff;
   padding: 40px 0;
   margin-top: 30px;
