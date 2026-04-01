@@ -37,10 +37,10 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="cabecalho">
     <div class="container header-wrap">
       <a href="#inicio" class="logo-area" aria-label="Página inicial">
@@ -76,431 +76,343 @@
   </header>
 
   <main>
-    <section class="hero" id="inicio">
+    <!-- HERO -->
+    <section class="hero faixa-topo" id="inicio">
       <div class="container">
-        <div class="hero-imagem-card animar">
-          <img
-            src="imagens/consultorio.jpg"
-            alt="Consultório acolhedor de psicologia em Itapetininga"
-            class="hero-imagem"
-          />
-        </div>
+        <div class="hero-box animar">
+          <div class="hero-media">
+            <img
+              src="imagens/consultorio.jpg"
+              alt="Consultório acolhedor de psicologia em Itapetininga"
+            />
+          </div>
 
-        <div class="hero-frase-card animar">
-          <span class="selo">Psicóloga em Itapetininga • presencial e online</span>
-          <h1>
-            Psicóloga em Itapetininga com atendimento acolhedor para crianças,
-            adolescentes e adultos.
-          </h1>
+          <div class="hero-overlay">
+            <span class="hero-chip">Psicóloga em Itapetininga • presencial e online</span>
+            <h1>
+              Psicóloga em Itapetininga com atendimento acolhedor para
+              crianças, adolescentes e adultos.
+            </h1>
+            <p>
+              Um espaço seguro para cuidar das emoções com escuta, respeito
+              e atenção à sua história.
+            </p>
+            <a
+              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primario"
+            >
+              Agendar atendimento
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="hero-texto-card animar">
+    <!-- SOBRE -->
+    <section class="secao faixa-suave" id="sobre">
+      <div class="container">
+        <div class="sobre-box animar">
+          <div class="sobre-media">
+            <img src="imagens/sua-foto.jpg" alt="Foto da psicóloga Ana Paula Ap. Vieira" />
+          </div>
+
+          <div class="sobre-conteudo">
+            <h2>Sobre Mim</h2>
+            <p>
+              Sou <strong>Ana Paula Ap. Vieira</strong>, psicóloga clínica
+              <strong>CRP 06/217114</strong>. Meu trabalho é oferecer um espaço
+              acolhedor, ético e humano para crianças, adolescentes e adultos
+              que estão enfrentando momentos de sofrimento emocional,
+              dificuldades internas, conflitos relacionais ou fases
+              desafiadoras da vida.
+            </p>
+            <p>
+              Atendo de forma presencial em Itapetininga-SP e também online,
+              respeitando a história, o tempo e as necessidades emocionais de
+              cada pessoa.
+            </p>
+
+            <a
+              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secundario"
+            >
+              Conheça meu trabalho
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATENDIMENTOS -->
+    <section class="secao faixa-curva" id="servicos">
+      <div class="container">
+        <div class="secao-titulo animar">
+          <h2>Atendimento psicológico para diferentes fases da vida</h2>
           <p>
-            Atendimento psicológico presencial em Itapetininga-SP e online para todo o
-            Brasil, com escuta, acolhimento e cuidado emocional em diferentes fases da vida.
+            Um espaço de escuta e acolhimento para crianças, adolescentes e
+            adultos, respeitando a singularidade e o momento de cada pessoa.
+          </p>
+        </div>
+
+        <div class="icones-servicos animar">
+          <article class="icone-servico">
+            <div class="icone-circulo">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <h3>Psicoterapia Infantil</h3>
+            <p>
+              Um espaço acolhedor para a criança expressar emoções, desenvolver
+              recursos emocionais e receber cuidado psicológico com
+              sensibilidade e atenção ao seu momento de vida.
+            </p>
+          </article>
+
+          <article class="icone-servico">
+            <div class="icone-circulo">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h3>Psicoterapia para Adolescentes</h3>
+            <p>
+              Apoio emocional para questões relacionadas à autoestima,
+              ansiedade, conflitos, inseguranças, escola, amizades, família e
+              processo de autoconhecimento.
+            </p>
+          </article>
+
+          <article class="icone-servico">
+            <div class="icone-circulo">
+              <i class="fa-solid fa-laptop-medical"></i>
+            </div>
+            <h3>Psicoterapia para Adultos</h3>
+            <p>
+              Atendimento psicológico para ansiedade, sobrecarga emocional,
+              autocobrança, autoestima, relacionamentos e diferentes desafios
+              da vida adulta.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SENTIMENTOS -->
+    <section class="secao faixa-suave">
+      <div class="container">
+        <div class="secao-titulo animar">
+          <h2>Talvez você esteja se sentindo...</h2>
+          <p>
+            Algumas experiências emocionais podem tornar o dia a dia mais
+            difícil. A psicoterapia pode ajudar a compreender o que você está
+            sentindo e construir caminhos com mais equilíbrio.
+          </p>
+        </div>
+
+        <div class="grid-sentimentos animar">
+          <article class="card-sentimento">
+            <img src="imagens/ansiedade.jpg" alt="Ansiedade" />
+            <div class="card-legenda">Ansiedade</div>
+          </article>
+
+          <article class="card-sentimento">
+            <img src="imagens/tristeza-persistente.jpg" alt="Tristeza e desânimo" />
+            <div class="card-legenda">Tristeza</div>
+          </article>
+
+          <article class="card-sentimento">
+            <img src="imagens/relacionamentos.jpg" alt="Conflitos de relacionamento" />
+            <div class="card-legenda">Em conflito</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="secao faixa-curva">
+      <div class="container">
+        <div class="secao-titulo animar">
+          <h2>Como funciona</h2>
+        </div>
+
+        <div class="grid-passos animar">
+          <article class="passo-box">
+            <div class="passo-numero">1</div>
+            <h3>Agende sua sessão</h3>
+            <p>Você entra em contato para tirar dúvidas e verificar disponibilidade.</p>
+          </article>
+
+          <article class="passo-box">
+            <div class="passo-numero">2</div>
+            <h3>Encontre acolhimento</h3>
+            <p>Os encontros acontecem com escuta, respeito e cuidado emocional.</p>
+          </article>
+
+          <article class="passo-box">
+            <div class="passo-numero">3</div>
+            <h3>Caminhe com mais clareza</h3>
+            <p>A psicoterapia ajuda a compreender emoções e construir novos caminhos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section class="secao faixa-suave" id="recursos">
+      <div class="container">
+        <div class="secao-titulo animar">
+          <h2>Conteúdos e Materiais</h2>
+          <p>
+            Conteúdos pensados para orientar, acolher e apoiar sua jornada de
+            cuidado emocional.
+          </p>
+        </div>
+
+        <div class="recursos-grid animar">
+          <article class="card-recurso">
+            <img src="imagens/psicologa-itapetininga.jpg" alt="Psicóloga em Itapetininga" />
+            <div class="texto"><h3>Psicóloga em Itapetininga</h3></div>
+          </article>
+
+          <article class="card-recurso">
+            <img src="imagens/ansiedade-itapetininga.jpg" alt="Ansiedade em Itapetininga" />
+            <div class="texto"><h3>Ansiedade em Itapetininga</h3></div>
+          </article>
+
+          <article class="card-recurso">
+            <img src="imagens/ansiedade-trabalho.jpg" alt="Ansiedade no trabalho" />
+            <div class="texto"><h3>Ansiedade no trabalho</h3></div>
+          </article>
+
+          <article class="card-recurso">
+            <img src="imagens/burnout-emocional-trabalho.jpg" alt="Burnout emocional" />
+            <div class="texto"><h3>Burnout emocional</h3></div>
+          </article>
+
+          <article class="card-recurso">
+            <img src="imagens/orientacao-parental-itapetininga.jpg" alt="Orientação parental em Itapetininga" />
+            <div class="texto"><h3>Orientação parental em Itapetininga</h3></div>
+          </article>
+
+          <article class="card-recurso">
+            <img src="imagens/psicoterapia-adultos-itapetininga.jpg" alt="Psicoterapia para adultos em Itapetininga" />
+            <div class="texto"><h3>Psicoterapia para adultos em Itapetininga</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="secao faixa-curva" id="depoimentos">
+      <div class="container">
+        <div class="secao-titulo animar">
+          <h2>Depoimentos</h2>
+          <p>
+            Um espaço de escuta e cuidado refletido na experiência de quem já
+            passou pelo atendimento.
+          </p>
+        </div>
+
+        <div class="grid-depoimentos animar">
+          <article class="card-depoimento">
+            <p>“Um atendimento muito acolhedor, com escuta cuidadosa e sensível.”</p>
+          </article>
+
+          <article class="card-depoimento">
+            <p>“Me senti respeitado(a) e ouvido(a) em um momento muito importante da minha vida.”</p>
+          </article>
+
+          <article class="card-depoimento">
+            <p>“Um espaço seguro para falar sobre emoções e encontrar mais clareza.”</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="secao faixa-suave" id="faq">
+      <div class="container">
+        <div class="secao-titulo animar">
+          <h2>Perguntas frequentes</h2>
+          <p>Algumas respostas para dúvidas comuns antes do primeiro atendimento.</p>
+        </div>
+
+        <div class="faq animar">
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button">
+              <span>Você atende crianças, adolescentes e adultos?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-resposta">
+              <p>
+                Sim. O atendimento é pensado para acolher diferentes fases da
+                vida, respeitando as necessidades emocionais de cada pessoa.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button">
+              <span>Você atende online?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-resposta">
+              <p>
+                Sim. O atendimento online é realizado de forma ética, segura e
+                acolhedora para pessoas de todo o Brasil.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button">
+              <span>Como saber se a terapia é para mim?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-resposta">
+              <p>
+                A terapia pode ajudar quando existe sofrimento emocional,
+                ansiedade, sobrecarga, conflitos, tristeza, dificuldades nos
+                relacionamentos ou desejo de se compreender melhor.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-pergunta" type="button">
+              <span>Como faço para agendar?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-resposta">
+              <p>
+                Você pode entrar em contato diretamente pelo WhatsApp para
+                verificar disponibilidade e tirar dúvidas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="secao faixa-final">
+      <div class="container">
+        <div class="cta-final animar">
+          <h2>Se fizer sentido para você, estou aqui para te ouvir.</h2>
+          <p>
+            Para informações sobre valores, disponibilidade e atendimento,
+            fale comigo pelo WhatsApp.
           </p>
 
-          <ul class="lista-destaques">
-            <li><i class="fa-solid fa-check"></i> Atendimento presencial em Itapetininga-SP</li>
-            <li><i class="fa-solid fa-check"></i> Atendimento online para todo o Brasil</li>
-            <li><i class="fa-solid fa-check"></i> Escuta acolhedora, ética e individualizada</li>
-          </ul>
-
-          <div class="hero-botoes">
-            <a
-              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-primario"
-            >
-              Agendar pelo WhatsApp
-            </a>
-            <a href="#sobre" class="btn-secundario">Conheça meu trabalho</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" id="sobre">
-      <div class="container">
-        <div class="bloco-padrao animar">
-          <div class="sobre-grid">
-            <div class="sobre-foto">
-              <img
-                src="imagens/sua-foto.jpg"
-                alt="Foto da psicóloga Ana Paula Ap. Vieira"
-              />
-            </div>
-
-            <div class="sobre-texto">
-              <h2>Olá, eu sou <span class="nome-profissional">Ana Paula Ap. Vieira</span></h2>
-              <span class="sub">Psicóloga Clínica • CRP 06/217114</span>
-
-              <p>
-                Meu trabalho é oferecer um espaço acolhedor, ético e humano para
-                crianças, adolescentes e adultos que estão enfrentando momentos de
-                sofrimento emocional, dificuldades internas, conflitos relacionais ou
-                fases desafiadoras da vida.
-              </p>
-
-              <p>
-                Atendo de forma presencial em Itapetininga-SP e também online,
-                respeitando a história, o tempo e as necessidades emocionais de cada
-                pessoa.
-              </p>
-
-              <p>
-                A psicoterapia pode ser um caminho de escuta, cuidado e fortalecimento
-                emocional, ajudando você a compreender melhor o que sente e a construir
-                novas formas de lidar com a vida.
-              </p>
-            </div>
-
-            <aside class="sobre-info">
-              <ul>
-                <li>
-                  <i class="fa-solid fa-location-dot"></i>
-                  <span><strong>Presencial</strong><br />Atendimento em Itapetininga-SP</span>
-                </li>
-                <li>
-                  <i class="fa-solid fa-laptop"></i>
-                  <span><strong>Online</strong><br />Atendimento para todo o Brasil</span>
-                </li>
-                <li>
-                  <i class="fa-solid fa-id-card"></i>
-                  <span><strong>CRP</strong><br />06/217114</span>
-                </li>
-              </ul>
-
-              <a
-                href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-primario"
-              >
-                Quero agendar
-              </a>
-            </aside>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" id="servicos">
-      <div class="container">
-        <div class="bloco-padrao animar">
-          <div class="secao-titulo">
-            <h2>Atendimento psicológico para diferentes fases da vida</h2>
-            <p>
-              Um espaço de escuta e acolhimento para crianças, adolescentes e adultos,
-              respeitando a singularidade e o momento de cada pessoa.
-            </p>
-          </div>
-
-          <div class="grid-3">
-            <article class="card-servico">
-              <div class="icone-bolha">
-                <i class="fa-solid fa-child-reaching"></i>
-              </div>
-              <h3>Psicoterapia Infantil</h3>
-              <p>
-                Um espaço acolhedor para a criança expressar emoções, desenvolver
-                recursos emocionais e receber cuidado psicológico com sensibilidade
-                e atenção ao seu momento de vida.
-              </p>
-            </article>
-
-            <article class="card-servico">
-              <div class="icone-bolha">
-                <i class="fa-solid fa-seedling"></i>
-              </div>
-              <h3>Psicoterapia para Adolescentes</h3>
-              <p>
-                Apoio emocional para questões relacionadas à autoestima, ansiedade,
-                conflitos, inseguranças, escola, amizades, família e processo de
-                autoconhecimento.
-              </p>
-            </article>
-
-            <article class="card-servico">
-              <div class="icone-bolha">
-                <i class="fa-solid fa-heart"></i>
-              </div>
-              <h3>Psicoterapia para Adultos</h3>
-              <p>
-                Atendimento psicológico para ansiedade, sobrecarga emocional,
-                autocobrança, autoestima, relacionamentos e diferentes desafios
-                da vida adulta.
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" id="vivencias">
-      <div class="container">
-        <div class="bloco-padrao animar">
-          <div class="secao-titulo">
-            <h2>Talvez você esteja vivendo...</h2>
-            <p>
-              Algumas experiências emocionais podem tornar o dia a dia mais difícil.
-              A psicoterapia pode ajudar a compreender o que você está sentindo e
-              construir caminhos com mais equilíbrio.
-            </p>
-          </div>
-
-          <div class="grid-4">
-            <article class="card-questao">
-              <img src="imagens/ansiedade.jpg" alt="Ansiedade em Itapetininga" />
-              <div class="conteudo">
-                <h3>Ansiedade</h3>
-              </div>
-            </article>
-
-            <article class="card-questao">
-              <img src="imagens/tristeza-persistente.jpg" alt="Tristeza persistente" />
-              <div class="conteudo">
-                <h3>Tristeza e desânimo</h3>
-              </div>
-            </article>
-
-            <article class="card-questao">
-              <img src="imagens/relacionamentos.jpg" alt="Conflitos de relacionamento" />
-              <div class="conteudo">
-                <h3>Conflitos de relacionamento</h3>
-              </div>
-            </article>
-
-            <article class="card-questao">
-              <img src="imagens/baixa-autoestima.jpg" alt="Baixa autoestima" />
-              <div class="conteudo">
-                <h3>Baixa autoestima</h3>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" id="como-funciona">
-      <div class="container">
-        <div class="bloco-padrao animar">
-          <div class="secao-titulo">
-            <h2>Como funciona</h2>
-            <p>Um processo acolhedor, claro e respeitoso desde o primeiro contato.</p>
-          </div>
-
-          <div class="grid-3 passos-grid">
-            <article class="passo-card">
-              <div class="passo-numero">1</div>
-              <h3>Primeiro contato</h3>
-              <p>
-                Você entra em contato para tirar dúvidas e verificar disponibilidade.
-              </p>
-            </article>
-
-            <article class="passo-card">
-              <div class="passo-numero">2</div>
-              <h3>Atendimento</h3>
-              <p>
-                Os encontros acontecem com escuta acolhedora, respeitando sua história
-                e seu momento.
-              </p>
-            </article>
-
-            <article class="passo-card">
-              <div class="passo-numero">3</div>
-              <h3>Cuidado contínuo</h3>
-              <p>
-                A psicoterapia pode favorecer compreensão, fortalecimento emocional e
-                novas formas de lidar com a vida.
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" id="recursos">
-      <div class="container">
-        <div class="bloco-padrao animar">
-          <div class="secao-titulo">
-            <h2>Conteúdos e Materiais</h2>
-            <p>
-              Conteúdos pensados para orientar, acolher e apoiar sua jornada de
-              cuidado emocional.
-            </p>
-          </div>
-
-          <div class="recursos-grid">
-            <article class="card-recurso">
-              <img src="imagens/psicologa-itapetininga.jpg" alt="Psicóloga em Itapetininga" />
-              <div class="texto">
-                <h3>Psicóloga em Itapetininga</h3>
-              </div>
-            </article>
-
-            <article class="card-recurso">
-              <img src="imagens/ansiedade-itapetininga.jpg" alt="Ansiedade em Itapetininga" />
-              <div class="texto">
-                <h3>Ansiedade em Itapetininga</h3>
-              </div>
-            </article>
-
-            <article class="card-recurso">
-              <img src="imagens/ansiedade-trabalho.jpg" alt="Ansiedade no trabalho" />
-              <div class="texto">
-                <h3>Ansiedade no trabalho</h3>
-              </div>
-            </article>
-
-            <article class="card-recurso">
-              <img src="imagens/burnout-emocional-trabalho.jpg" alt="Burnout emocional" />
-              <div class="texto">
-                <h3>Burnout emocional</h3>
-              </div>
-            </article>
-
-            <article class="card-recurso">
-              <img src="imagens/orientacao-parental-itapetininga.jpg" alt="Orientação parental em Itapetininga" />
-              <div class="texto">
-                <h3>Orientação parental em Itapetininga</h3>
-              </div>
-            </article>
-
-            <article class="card-recurso">
-              <img src="imagens/psicoterapia-adultos-itapetininga.jpg" alt="Psicoterapia para adultos em Itapetininga" />
-              <div class="texto">
-                <h3>Psicoterapia para adultos em Itapetininga</h3>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" id="depoimentos">
-      <div class="container">
-        <div class="bloco-padrao animar">
-          <div class="secao-titulo">
-            <h2>Depoimentos</h2>
-            <p>
-              Um espaço de escuta e cuidado refletido na experiência de quem já passou pelo atendimento.
-            </p>
-          </div>
-
-          <div class="grid-3">
-            <article class="card-depoimento">
-              <p>“Um atendimento muito acolhedor, com escuta cuidadosa e sensível.”</p>
-            </article>
-
-            <article class="card-depoimento">
-              <p>“Me senti respeitado(a) e ouvido(a) em um momento muito importante da minha vida.”</p>
-            </article>
-
-            <article class="card-depoimento">
-              <p>“Um espaço seguro para falar sobre emoções e encontrar mais clareza.”</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" id="faq">
-      <div class="container">
-        <div class="bloco-padrao animar">
-          <div class="secao-titulo">
-            <h2>Perguntas frequentes</h2>
-            <p>Algumas respostas para dúvidas comuns antes do primeiro atendimento.</p>
-          </div>
-
-          <div class="faq">
-            <div class="faq-item">
-              <button class="faq-pergunta" type="button">
-                <span>Você atende crianças, adolescentes e adultos?</span>
-                <i class="fa-solid fa-chevron-down"></i>
-              </button>
-              <div class="faq-resposta">
-                <p>
-                  Sim. O atendimento é pensado para acolher diferentes fases da vida,
-                  respeitando as necessidades emocionais de cada pessoa.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-pergunta" type="button">
-                <span>Você atende online?</span>
-                <i class="fa-solid fa-chevron-down"></i>
-              </button>
-              <div class="faq-resposta">
-                <p>
-                  Sim. O atendimento online é realizado de forma ética, segura e
-                  acolhedora para pessoas de todo o Brasil.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-pergunta" type="button">
-                <span>Como saber se a terapia é para mim?</span>
-                <i class="fa-solid fa-chevron-down"></i>
-              </button>
-              <div class="faq-resposta">
-                <p>
-                  A terapia pode ajudar quando existe sofrimento emocional, ansiedade,
-                  sobrecarga, conflitos, tristeza, dificuldades nos relacionamentos
-                  ou desejo de se compreender melhor.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-pergunta" type="button">
-                <span>Como faço para agendar?</span>
-                <i class="fa-solid fa-chevron-down"></i>
-              </button>
-              <div class="faq-resposta">
-                <p>
-                  Você pode entrar em contato diretamente pelo WhatsApp para verificar
-                  disponibilidade e tirar dúvidas.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" id="contato-whats">
-      <div class="container">
-        <div class="bloco-padrao animar">
-          <div class="secao-titulo">
-            <h2>Vamos conversar?</h2>
-            <p>
-              Se você deseja agendar uma sessão ou tirar dúvidas, pode entrar em contato
-              diretamente pelo WhatsApp.
-            </p>
-          </div>
-
-          <div class="contato-whats-card">
-            <ul class="contato-lista">
-              <li><strong>WhatsApp:</strong> <a href="https://wa.me/5515996760791" target="_blank" rel="noopener noreferrer">(15) 99676-0791</a></li>
-              <li><strong>E-mail:</strong> <a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a></li>
-              <li><strong>Presencial:</strong> Itapetininga-SP</li>
-              <li><strong>Online:</strong> atendimento para todo o Brasil</li>
-            </ul>
-
-            <a
-              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-primario"
-            >
-              Chamar no WhatsApp
-            </a>
-          </div>
+          <a
+            href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primario"
+          >
+            Falar no WhatsApp
+          </a>
         </div>
       </div>
     </section>
