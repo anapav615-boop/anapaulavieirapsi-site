@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");
   const menuNav = document.getElementById("menu-nav");
-  const menuLinks = document.querySelectorAll(".menu-nav a");
+  const menuLinks = document.querySelectorAll('.menu-nav a[href^="#"]');
 
-  // MENU MOBILE
   if (menuToggle && menuNav) {
     menuToggle.addEventListener("click", () => {
       menuNav.classList.toggle("aberto");
@@ -36,12 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // HEADER AO ROLAR
   const cabecalho = document.querySelector(".cabecalho");
 
   function atualizarCabecalho() {
     if (!cabecalho) return;
-
     if (window.scrollY > 20) {
       cabecalho.classList.add("scrolled");
     } else {
@@ -52,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
   atualizarCabecalho();
   window.addEventListener("scroll", atualizarCabecalho);
 
-  // BOTÃO VOLTAR AO TOPO
   const btnTopo = document.getElementById("btn-topo");
 
   if (btnTopo) {
@@ -71,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ROLAGEM SUAVE DOS LINKS INTERNOS
   const linksInternos = document.querySelectorAll('a[href^="#"]');
 
   linksInternos.forEach((link) => {
@@ -99,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ANIMAÇÃO AO ENTRAR NA TELA
   const elementosAnimar = document.querySelectorAll(".animar");
 
   function animarAoEntrar() {
@@ -115,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
   animarAoEntrar();
   window.addEventListener("scroll", animarAoEntrar);
 
-  // FAQ
   const perguntas = document.querySelectorAll(".faq-pergunta");
 
   perguntas.forEach((pergunta) => {
@@ -133,11 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // MENU ATIVO CONFORME SEÇÃO
   const secoes = document.querySelectorAll("section[id]");
 
   function destacarMenu() {
-    const posicao = window.scrollY + 140;
+    const posicao = window.scrollY + 160;
 
     secoes.forEach((secao) => {
       const topo = secao.offsetTop;
@@ -148,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!link) return;
 
       if (posicao >= topo && posicao < topo + altura) {
-        document.querySelectorAll(".menu-nav a").forEach((a) => {
+        document.querySelectorAll('.menu-nav a[href^="#"]').forEach((a) => {
           a.classList.remove("ativo");
         });
 
