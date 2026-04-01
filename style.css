@@ -394,7 +394,7 @@ button {
 /* FOOTER */
 .rodape {
   background: linear-gradient(135deg, #e0c7dc, #d8b9d3);
-  color: #fff;
+  color: var(--title-dark);
   padding: 40px 0;
   margin-top: 30px;
 }
@@ -410,10 +410,11 @@ button {
   margin: 0 0 8px;
 }
 
+.footer-info p,
 .footer-info a,
 .footer-links a,
 .footer-redes a {
-  color: #fff;
+  color: var(--title-dark);
 }
 
 .footer-links {
