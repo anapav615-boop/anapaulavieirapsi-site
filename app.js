@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const elementosAnimar = document.querySelectorAll(".animar");
   const perguntas = document.querySelectorAll(".faq-pergunta");
 
+  // MENU MOBILE
   if (menuToggle && menuNav) {
     menuToggle.addEventListener("click", () => {
       menuNav.classList.toggle("aberto");
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // CABEÇALHO SOMBRA
   function atualizarCabecalho() {
     if (!cabecalho) return;
 
@@ -47,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   atualizarCabecalho();
   window.addEventListener("scroll", atualizarCabecalho);
 
+  // ROLAGEM SUAVE
   function rolarParaSecao(id) {
     if (!id || id === "#") return;
 
@@ -54,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!destino) return;
 
     const alturaHeader = cabecalho ? cabecalho.offsetHeight : 90;
-    const topo = destino.offsetTop - alturaHeader - 12;
+    const topo = destino.offsetTop - alturaHeader - 10;
 
     window.scrollTo({
       top: topo,
@@ -84,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // MENU ATIVO
   function destacarMenu() {
     const alturaHeader = cabecalho ? cabecalho.offsetHeight : 90;
     const posicao = window.scrollY + alturaHeader + 60;
@@ -106,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
   destacarMenu();
   window.addEventListener("scroll", destacarMenu);
 
+  // BOTÃO TOPO
   if (btnTopo) {
     function toggleTopo() {
       btnTopo.style.display = window.scrollY > 300 ? "grid" : "none";
@@ -122,6 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ANIMAÇÃO
   function animarAoEntrar() {
     const alturaTela = window.innerHeight;
 
@@ -135,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
   animarAoEntrar();
   window.addEventListener("scroll", animarAoEntrar);
 
+  // FAQ (se existir em outras páginas)
   perguntas.forEach((pergunta) => {
     pergunta.addEventListener("click", () => {
       const item = pergunta.closest(".faq-item");

@@ -1,3 +1,8 @@
+/* =========================================================
+   ESTÉTICA FINAL — SEM MEXER NO INDEX
+   Moderna • Elegante • Acolhedora • Responsiva
+   ========================================================= */
+
 :root {
   --bg: #fbf7f8;
   --bg-soft: #f7f1f4;
@@ -13,15 +18,15 @@
   --text-soft: #8f7d88;
 
   --border: #e8dce5;
-  --card-bg: rgba(255, 252, 253, 0.88);
+  --card-bg: rgba(255, 252, 253, 0.92);
   --accent: #b9899d;
   --accent-hover: #a7768b;
 
   --whatsapp: #25d366;
   --whatsapp-hover: #1ebe5d;
 
-  --shadow: 0 12px 28px rgba(145, 115, 136, 0.08);
-  --shadow-hover: 0 16px 36px rgba(145, 115, 136, 0.14);
+  --shadow: 0 14px 32px rgba(145, 115, 136, 0.08);
+  --shadow-hover: 0 18px 38px rgba(145, 115, 136, 0.12);
 
   --radius-xl: 40px;
   --radius-lg: 28px;
@@ -43,8 +48,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: var(--text);
-  background:
-    linear-gradient(180deg, #fffdfd 0%, #faf5f7 45%, #f8f2f5 100%);
+  background: linear-gradient(180deg, #fffdfd 0%, #faf5f7 48%, #f8f2f5 100%);
   overflow-x: hidden;
 }
 
@@ -73,7 +77,9 @@ section[id] {
   scroll-margin-top: 110px;
 }
 
-/* CABEÇALHO */
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
 .cabecalho {
   position: sticky;
   top: 0;
@@ -86,7 +92,7 @@ section[id] {
 }
 
 .cabecalho.scrolled {
-  box-shadow: 0 10px 24px rgba(122, 101, 121, 0.10);
+  box-shadow: 0 10px 24px rgba(122, 101, 121, 0.1);
 }
 
 .header-wrap {
@@ -168,61 +174,60 @@ section[id] {
   transform: translateY(-1px);
 }
 
-/* FUNDO FLORAL */
-.faixa-topo,
+/* =========================================================
+   FUNDO FLORAL REAL (usa imagens decorativas)
+   Coloque estes arquivos na pasta /imagens:
+   floral-esquerda.png
+   floral-direita.png
+   ========================================================= */
 .faixa-suave,
 .faixa-curva,
 .faixa-final,
 .secao {
   position: relative;
+  overflow: hidden;
   isolation: isolate;
 }
 
 .faixa-suave::before,
 .faixa-curva::before,
-.faixa-final::before {
+.faixa-final::before,
+.secao::before {
   content: "";
   position: absolute;
-  inset: 0;
-  z-index: -2;
+  left: -14px;
+  bottom: -14px;
+  width: 240px;
+  height: 240px;
+  background: url("imagens/floral-esquerda.png") no-repeat bottom left;
+  background-size: contain;
+  opacity: 0.14;
   pointer-events: none;
-  opacity: 0.34;
-  background:
-    radial-gradient(circle at 10% 88%, rgba(201, 153, 175, 0.22) 0 14px, transparent 15px),
-    radial-gradient(circle at 12.8% 90.5%, rgba(236, 202, 217, 0.28) 0 26px, transparent 27px),
-    radial-gradient(circle at 15.6% 88.8%, rgba(191, 136, 162, 0.20) 0 14px, transparent 15px),
-
-    radial-gradient(circle at 86% 90%, rgba(201, 153, 175, 0.22) 0 14px, transparent 15px),
-    radial-gradient(circle at 88.8% 92.2%, rgba(236, 202, 217, 0.28) 0 26px, transparent 27px),
-    radial-gradient(circle at 91.5% 90.2%, rgba(191, 136, 162, 0.20) 0 14px, transparent 15px),
-
-    radial-gradient(circle at 8.4% 93.2%, rgba(216, 174, 194, 0.20) 0 8px, transparent 9px),
-    radial-gradient(circle at 12% 95.3%, rgba(216, 174, 194, 0.18) 0 8px, transparent 9px),
-    radial-gradient(circle at 15.4% 93.5%, rgba(216, 174, 194, 0.18) 0 8px, transparent 9px),
-
-    radial-gradient(circle at 84.2% 94.2%, rgba(216, 174, 194, 0.18) 0 8px, transparent 9px),
-    radial-gradient(circle at 88% 96.1%, rgba(216, 174, 194, 0.18) 0 8px, transparent 9px),
-    radial-gradient(circle at 91.7% 94.1%, rgba(216, 174, 194, 0.18) 0 8px, transparent 9px),
-
-    linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(247,239,244,0.16) 100%);
+  z-index: -1;
 }
 
 .faixa-suave::after,
 .faixa-curva::after,
-.faixa-final::after {
+.faixa-final::after,
+.secao::after {
   content: "";
   position: absolute;
-  inset: 0;
-  z-index: -1;
+  right: -14px;
+  bottom: -14px;
+  width: 240px;
+  height: 240px;
+  background: url("imagens/floral-direita.png") no-repeat bottom right;
+  background-size: contain;
+  opacity: 0.14;
   pointer-events: none;
-  background:
-    radial-gradient(110px 40px at 4% 100%, rgba(194, 149, 172, 0.07), transparent 70%),
-    radial-gradient(110px 40px at 96% 100%, rgba(194, 149, 172, 0.07), transparent 70%);
+  z-index: -1;
 }
 
-/* SEÇÕES */
+/* =========================================================
+   SEÇÕES
+   ========================================================= */
 .secao {
-  padding: 36px 0;
+  padding: 38px 0;
 }
 
 .secao-titulo {
@@ -246,53 +251,54 @@ section[id] {
   line-height: 1.85;
 }
 
-/* HERO */
+/* =========================================================
+   HERO — FORÇA TEXTO FORA DA IMAGEM SEM MEXER NO HTML
+   ========================================================= */
 .hero {
   padding: 28px 0 34px;
 }
 
-.hero-box,
-.sobre-box,
-.icone-servico,
-.card-sentimento,
-.card-recurso,
-.faq-item,
-.passo-box,
-.cta-final {
-  background: var(--card-bg);
-  border: 1px solid rgba(232, 221, 230, 0.66);
-  box-shadow: var(--shadow);
-}
-
 .hero-box {
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  position: relative;
+  display: grid !important;
+  grid-template-columns: 1.02fr 0.98fr !important;
+  gap: 28px !important;
+  align-items: center !important;
+  padding: 26px !important;
+  border-radius: var(--radius-xl) !important;
+  background: var(--card-bg) !important;
+  border: 1px solid rgba(232, 221, 230, 0.66) !important;
+  box-shadow: var(--shadow) !important;
+  overflow: hidden !important;
+  position: relative !important;
 }
 
-.hero-media {
-  position: relative;
+.hero-media,
+.hero-imagem {
+  order: 2;
 }
 
-.hero-media img {
-  width: 100%;
-  max-height: 560px;
-  object-fit: cover;
-  display: block;
-  filter: saturate(0.96) brightness(1.01);
+.hero-media img,
+.hero-imagem img {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 420px !important;
+  max-height: 560px !important;
+  object-fit: cover !important;
+  border-radius: 30px !important;
+  box-shadow: 0 16px 32px rgba(142, 115, 136, 0.12) !important;
 }
 
-.hero-overlay {
-  position: absolute;
-  left: clamp(18px, 4vw, 38px);
-  top: clamp(18px, 4vw, 38px);
-  max-width: min(560px, calc(100% - 36px));
-  background: rgba(255, 251, 252, 0.66);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(232, 221, 230, 0.72);
-  border-radius: 28px;
-  padding: 24px;
-  box-shadow: 0 10px 24px rgba(136, 111, 131, 0.08);
+.hero-overlay,
+.hero-texto {
+  position: static !important;
+  order: 1 !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 
 .hero-chip {
@@ -307,7 +313,8 @@ section[id] {
   margin-bottom: 16px;
 }
 
-.hero-overlay h1 {
+.hero-overlay h1,
+.hero-texto h1 {
   margin: 0 0 14px;
   font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 3.2vw, 3.45rem);
@@ -315,7 +322,8 @@ section[id] {
   color: var(--title);
 }
 
-.hero-overlay p {
+.hero-overlay p,
+.hero-texto p {
   margin: 0 0 18px;
   font-size: 1.04rem;
   line-height: 1.82;
@@ -342,7 +350,7 @@ section[id] {
 .btn-primario {
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 10px 18px rgba(185, 137, 157, 0.20);
+  box-shadow: 0 10px 18px rgba(185, 137, 157, 0.2);
 }
 
 .btn-primario:hover {
@@ -352,7 +360,7 @@ section[id] {
 
 .btn-secundario {
   background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(232, 221, 230, 0.80);
+  border: 1px solid rgba(232, 221, 230, 0.8);
   color: var(--title-dark);
 }
 
@@ -361,7 +369,9 @@ section[id] {
   transform: translateY(-2px);
 }
 
-/* SOBRE */
+/* =========================================================
+   SOBRE
+   ========================================================= */
 .sobre-box {
   border-radius: 38px;
   padding: 30px;
@@ -369,6 +379,9 @@ section[id] {
   grid-template-columns: 320px 1fr;
   gap: 28px;
   align-items: center;
+  background: var(--card-bg);
+  border: 1px solid rgba(232, 221, 230, 0.66);
+  box-shadow: var(--shadow);
 }
 
 .sobre-media img {
@@ -391,7 +404,9 @@ section[id] {
   line-height: 1.88;
 }
 
-/* SERVIÇOS */
+/* =========================================================
+   SERVIÇOS
+   ========================================================= */
 .icones-servicos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -402,6 +417,15 @@ section[id] {
   text-align: center;
   padding: 30px 24px;
   border-radius: 26px;
+  background: var(--card-bg);
+  border: 1px solid rgba(232, 221, 230, 0.66);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.icone-servico:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 
 .icone-circulo {
@@ -414,7 +438,8 @@ section[id] {
   place-items: center;
 }
 
-.icone-circulo i {
+.icone-circulo i,
+.icone-servico i {
   font-size: 1.5rem;
   color: #b0859d;
 }
@@ -432,7 +457,9 @@ section[id] {
   line-height: 1.84;
 }
 
-/* SENTIMENTOS */
+/* =========================================================
+   SENTIMENTOS
+   ========================================================= */
 .grid-sentimentos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -442,6 +469,15 @@ section[id] {
 .card-sentimento {
   overflow: hidden;
   border-radius: 24px;
+  background: var(--card-bg);
+  border: 1px solid rgba(232, 221, 230, 0.66);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-sentimento:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 
 .card-sentimento img {
@@ -451,15 +487,20 @@ section[id] {
   filter: saturate(0.96) brightness(1.01);
 }
 
-.card-legenda {
-  padding: 14px 12px 16px;
+.card-legenda,
+.card-sentimento p {
+  padding: 14px 14px 18px;
   text-align: center;
   font-family: "Playfair Display", serif;
   color: var(--title);
-  font-size: 1.24rem;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 0;
 }
 
-/* RECURSOS */
+/* =========================================================
+   RECURSOS
+   ========================================================= */
 .recursos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -469,6 +510,15 @@ section[id] {
 .card-recurso {
   overflow: hidden;
   border-radius: 24px;
+  background: var(--card-bg);
+  border: 1px solid rgba(232, 221, 230, 0.66);
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-recurso:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
 }
 
 .card-recurso img {
@@ -491,7 +541,9 @@ section[id] {
   font-weight: 500;
 }
 
-/* PASSOS */
+/* =========================================================
+   COMO FUNCIONA
+   ========================================================= */
 .grid-passos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -503,6 +555,8 @@ section[id] {
   padding: 34px 20px 22px;
   text-align: center;
   background: rgba(255, 252, 253, 0.76);
+  border: 1px solid rgba(232, 221, 230, 0.66);
+  box-shadow: var(--shadow);
 }
 
 .passo-numero {
@@ -515,7 +569,7 @@ section[id] {
   place-items: center;
   font-weight: 700;
   margin: 0 auto 14px;
-  box-shadow: 0 8px 16px rgba(190, 145, 170, 0.20);
+  box-shadow: 0 8px 16px rgba(190, 145, 170, 0.2);
 }
 
 .passo-box h3 {
@@ -530,73 +584,23 @@ section[id] {
   line-height: 1.78;
 }
 
-/* FAQ */
-.faq {
-  display: grid;
-  gap: 14px;
+/* =========================================================
+   FAQ — MANTÉM NO CABEÇALHO, ESCONDE APENAS A SEÇÃO DA HOME
+   ========================================================= */
+section#faq {
+  display: none !important;
 }
 
-.faq-item {
-  border-radius: 22px;
-  overflow: hidden;
-}
-
-.faq-pergunta {
-  width: 100%;
-  border: 0;
-  background: transparent;
-  color: var(--title-dark);
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: left;
-  padding: 20px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  cursor: pointer;
-}
-
-.faq-pergunta span {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: rgba(243, 235, 241, 0.94);
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-}
-
-.faq-pergunta span i {
-  transition: transform 0.25s ease;
-}
-
-.faq-resposta {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.32s ease;
-}
-
-.faq-resposta p {
-  margin: 0;
-  padding: 0 22px 20px;
-  line-height: 1.85;
-}
-
-.faq-item.ativo .faq-resposta {
-  max-height: 240px;
-}
-
-.faq-item.ativo .faq-pergunta span i {
-  transform: rotate(45deg);
-}
-
-/* CTA */
+/* =========================================================
+   CTA
+   ========================================================= */
 .cta-final {
   border-radius: 34px;
   padding: 38px 28px;
   text-align: center;
-  background: rgba(255, 251, 252, 0.80);
+  background: rgba(255, 251, 252, 0.82);
+  border: 1px solid rgba(232, 221, 230, 0.66);
+  box-shadow: var(--shadow);
 }
 
 .cta-final h2 {
@@ -617,17 +621,49 @@ section[id] {
   margin-top: 10px;
 }
 
-/* RODAPÉ */
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
 .rodape {
   background: var(--footer-bg);
   border-top: 1px solid rgba(214, 201, 216, 0.76);
-  margin-top: 14px;
+  margin-top: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rodape::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  bottom: -12px;
+  width: 200px;
+  height: 200px;
+  background: url("imagens/floral-esquerda.png") no-repeat bottom left;
+  background-size: contain;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.rodape::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  bottom: -12px;
+  width: 200px;
+  height: 200px;
+  background: url("imagens/floral-direita.png") no-repeat bottom right;
+  background-size: contain;
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 .footer-box {
   display: grid;
   gap: 14px;
-  padding: 28px 0 26px;
+  padding: 30px 0 28px;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-box p {
@@ -651,7 +687,7 @@ section[id] {
   align-items: center;
   gap: 8px;
   color: var(--title-dark);
-  background: rgba(255, 255, 255, 0.70);
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 999px;
   padding: 10px 14px;
   transition: transform 0.25s ease, background 0.25s ease;
@@ -662,7 +698,9 @@ section[id] {
   background: rgba(255, 255, 255, 0.92);
 }
 
-/* BOTÃO TOPO */
+/* =========================================================
+   BOTÕES FIXOS
+   ========================================================= */
 .btn-topo {
   position: fixed;
   right: 20px;
@@ -686,7 +724,6 @@ section[id] {
   background: var(--accent-hover);
 }
 
-/* WHATSAPP */
 .whatsapp-btn {
   position: fixed;
   right: 20px;
@@ -709,7 +746,9 @@ section[id] {
   transform: translateY(-2px);
 }
 
-/* ANIMAÇÃO */
+/* =========================================================
+   ANIMAÇÃO
+   ========================================================= */
 .animar {
   opacity: 0;
   transform: translateY(22px);
@@ -721,7 +760,9 @@ section[id] {
   transform: translateY(0);
 }
 
-/* RESPONSIVO */
+/* =========================================================
+   RESPONSIVO — CELULAR BONITO DE VERDADE
+   ========================================================= */
 @media (max-width: 1100px) {
   .grid-sentimentos,
   .recursos-grid,
@@ -731,16 +772,27 @@ section[id] {
 }
 
 @media (max-width: 980px) {
-  .hero-overlay {
-    position: static;
-    max-width: 100%;
-    margin: 18px;
+  .hero-box {
+    grid-template-columns: 1fr !important;
+    padding: 18px !important;
+    gap: 18px !important;
   }
 
-  .hero-media img {
-    height: auto;
-    max-height: none;
-    min-height: 340px;
+  .hero-media,
+  .hero-imagem {
+    order: 2 !important;
+  }
+
+  .hero-overlay,
+  .hero-texto {
+    order: 1 !important;
+  }
+
+  .hero-media img,
+  .hero-imagem img {
+    min-height: 280px !important;
+    max-height: 420px !important;
+    border-radius: 24px !important;
   }
 
   .icones-servicos,
@@ -803,18 +855,18 @@ section[id] {
     grid-template-columns: 1fr;
   }
 
-  .hero-media img {
-    min-height: 260px;
-  }
-
-  .hero-overlay {
-    margin: 14px;
-    padding: 18px;
-    border-radius: 22px;
-  }
-
-  .hero-overlay h1 {
+  .hero-overlay h1,
+  .hero-texto h1 {
     font-size: clamp(1.8rem, 7vw, 2.4rem);
+  }
+
+  .hero-overlay p,
+  .hero-texto p,
+  .sobre-conteudo p,
+  .passo-box p,
+  .icone-servico p,
+  .cta-final p {
+    line-height: 1.8;
   }
 
   .logo-texto h2 {
@@ -835,6 +887,17 @@ section[id] {
     width: 100%;
   }
 
+  .sobre-box {
+    padding: 20px;
+    border-radius: 28px;
+  }
+
+  .icone-servico,
+  .passo-box,
+  .cta-final {
+    border-radius: 22px;
+  }
+
   .whatsapp-btn {
     width: 52px;
     height: 52px;
@@ -845,5 +908,18 @@ section[id] {
   .btn-topo {
     right: 16px;
     bottom: 16px;
+  }
+
+  .faixa-suave::before,
+  .faixa-curva::before,
+  .faixa-final::before,
+  .secao::before,
+  .faixa-suave::after,
+  .faixa-curva::after,
+  .faixa-final::after,
+  .secao::after {
+    width: 140px;
+    height: 140px;
+    opacity: 0.1;
   }
 }
