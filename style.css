@@ -40,7 +40,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--text);
   background:
-    linear-gradient(rgba(255, 253, 253, 0.93), rgba(250, 245, 248, 0.94)),
+    linear-gradient(rgba(255, 253, 253, 0.96), rgba(250, 245, 248, 0.97)),
     url("imagens/fundo-floral.png") center top / cover no-repeat fixed;
   overflow-x: hidden;
 }
