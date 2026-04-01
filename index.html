@@ -1,151 +1,480 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menu-toggle");
-  const menuNav = document.getElementById("menu-nav");
-  const menuLinks = document.querySelectorAll(".menu-nav a");
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  if (menuToggle && menuNav) {
-    menuToggle.addEventListener("click", () => {
-      menuNav.classList.toggle("aberto");
-      const aberto = menuNav.classList.contains("aberto");
+  <title>Psicóloga em Itapetininga | Ana Paula Ap. Vieira</title>
 
-      menuToggle.setAttribute("aria-expanded", aberto ? "true" : "false");
-      menuToggle.innerHTML = aberto
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
-    });
+  <meta
+    name="description"
+    content="Psicóloga em Itapetininga com atendimento acolhedor para crianças, adolescentes e adultos. Atendimento presencial em Itapetininga-SP e online para todo o Brasil."
+  />
+  <meta
+    name="keywords"
+    content="psicóloga em itapetininga, terapia em itapetininga, psicóloga itapetininga, psicoterapia online, ansiedade em itapetininga, autoestima, burnout emocional"
+  />
+  <meta name="author" content="Ana Paula Ap. Vieira" />
+  <meta name="robots" content="index, follow" />
 
-    menuLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        menuNav.classList.remove("aberto");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      });
-    });
+  <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/" />
+  <link rel="icon" type="image/png" href="imagens/favicon.png" />
+  <link rel="manifest" href="manifest.json" />
 
-    document.addEventListener("click", (event) => {
-      if (!menuNav.contains(event.target) && !menuToggle.contains(event.target)) {
-        menuNav.classList.remove("aberto");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica" />
+  <meta property="og:title" content="Psicóloga em Itapetininga | Ana Paula Ap. Vieira" />
+  <meta
+    property="og:description"
+    content="Atendimento psicológico presencial em Itapetininga-SP e online para todo o Brasil, com escuta acolhedora para crianças, adolescentes e adultos."
+  />
+  <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/" />
+  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg" />
+  <meta property="og:image:alt" content="Ana Paula Ap. Vieira — Psicóloga Clínica em Itapetininga" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Psicóloga em Itapetininga | Ana Paula Ap. Vieira" />
+  <meta
+    name="twitter:description"
+    content="Atendimento psicológico presencial em Itapetininga-SP e online para todo o Brasil."
+  />
+  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Psychologist",
+    "name": "Ana Paula Ap. Vieira",
+    "image": "https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg",
+    "url": "https://anapaulaapvieirapsi.com.br/",
+    "telephone": "+55 15 99676-0791",
+    "email": "contato@anapaulaapvieirapsi.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Nazareth, 84",
+      "addressLocality": "Itapetininga",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Itapetininga"
+      },
+      {
+        "@type": "Country",
+        "name": "Brasil"
       }
-    });
+    ],
+    "sameAs": [
+      "https://www.instagram.com/anapaulapsico/",
+      "https://www.facebook.com/anapaulaapvieirapsico/",
+      "https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
+    ]
   }
+  </script>
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container header-wrap">
+      <a href="#inicio" class="logo-area" aria-label="Página inicial">
+        <img src="imagens/logo-simbolo.png" alt="Logo Ana Paula Ap. Vieira" class="logo" />
+        <div class="logo-texto">
+          <h2>Ana Paula Ap. Vieira</h2>
+          <p>Psicóloga Clínica | CRP 06/217114</p>
+        </div>
+      </a>
 
-  const cabecalho = document.querySelector(".cabecalho");
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-nav"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-  function atualizarCabecalho() {
-    if (!cabecalho) return;
+      <nav class="menu-nav" id="menu-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Quem Sou</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="preco.html">Preço</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    if (window.scrollY > 20) {
-      cabecalho.classList.add("scrolled");
-    } else {
-      cabecalho.classList.remove("scrolled");
-    }
-  }
+  <main>
+    <!-- HERO -->
+    <section class="hero faixa-topo" id="inicio">
+      <div class="container">
+        <div class="hero-box animar">
+          <div class="hero-media">
+            <picture>
+              <source media="(max-width: 768px)" srcset="imagens/consultorio-mobile.jpg" />
+              <img
+                src="imagens/consultorio.jpg"
+                alt="Consultório acolhedor de psicologia em Itapetininga"
+              />
+            </picture>
+          </div>
 
-  atualizarCabecalho();
-  window.addEventListener("scroll", atualizarCabecalho);
+          <div class="hero-overlay">
+            <span class="hero-chip">Psicóloga em Itapetininga • presencial e online</span>
 
-  const btnTopo = document.getElementById("btn-topo");
+            <h1>
+              Psicóloga em Itapetininga com atendimento acolhedor para
+              crianças, adolescentes e adultos.
+            </h1>
 
-  if (btnTopo) {
-    function toggleTopo() {
-      btnTopo.style.display = window.scrollY > 300 ? "grid" : "none";
-    }
+            <p>
+              Atendimento psicológico presencial em Itapetininga-SP e online
+              para todo o Brasil, com escuta sensível, respeito à sua história
+              e cuidado com o que você está vivendo hoje.
+            </p>
 
-    toggleTopo();
-    window.addEventListener("scroll", toggleTopo);
+            <a
+              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primario"
+            >
+              Agendar atendimento
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    btnTopo.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-  }
+    <!-- SOBRE -->
+    <section class="secao faixa-suave" id="sobre">
+      <div class="container">
+        <div class="sobre-box animar">
+          <div class="sobre-media">
+            <img src="imagens/sua-foto.jpg" alt="Foto da psicóloga Ana Paula Ap. Vieira" />
+          </div>
 
-  const linksInternos = document.querySelectorAll('a[href^="#"]');
+          <div class="sobre-conteudo">
+            <h2>Olá, eu sou Ana Paula Ap. Vieira</h2>
 
-  linksInternos.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const id = link.getAttribute("href");
+            <p>
+              Sou <strong>Ana Paula Ap. Vieira</strong>, psicóloga clínica
+              <strong>CRP 06/217114</strong>. Meu trabalho é oferecer um espaço
+              acolhedor, ético e humano para crianças, adolescentes e adultos
+              que estejam passando por momentos de sofrimento emocional,
+              conflitos internos, dificuldades nos relacionamentos ou períodos
+              de maior sobrecarga.
+            </p>
 
-      if (!id || id === "#") return;
+            <p>
+              Atendo presencialmente em Itapetininga-SP e também online,
+              sempre considerando a história, o ritmo e as necessidades
+              emocionais de cada pessoa.
+            </p>
 
-      const destino = document.querySelector(id);
+            <p>
+              A psicoterapia pode ser um caminho de compreensão, fortalecimento
+              e cuidado, ajudando você a olhar para si com mais clareza e
+              gentileza.
+            </p>
 
-      if (!destino) return;
+            <a
+              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secundario"
+            >
+              Quero agendar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      event.preventDefault();
+    <!-- SERVIÇOS -->
+    <section class="secao faixa-curva" id="servicos">
+      <div class="container">
+        <div class="secao-titulo animar">
+          <h2>Atendimento psicológico com olhar atento para cada momento</h2>
+          <p>
+            Um espaço de escuta e acolhimento para crianças, adolescentes e
+            adultos, respeitando a singularidade e o momento de cada pessoa.
+          </p>
+        </div>
 
-      const alturaHeader =
-        document.querySelector(".cabecalho")?.offsetHeight || 90;
+        <div class="icones-servicos animar">
+          <article class="icone-servico">
+            <div class="icone-circulo">
+              <i class="fa-solid fa-child-reaching"></i>
+            </div>
+            <h3>Psicoterapia Infantil</h3>
+            <p>
+              Um espaço cuidadoso para que a criança possa expressar
+              sentimentos, elaborar vivências e desenvolver recursos
+              emocionais com segurança e sensibilidade.
+            </p>
+          </article>
 
-      const topo =
-        destino.getBoundingClientRect().top + window.scrollY - alturaHeader - 12;
+          <article class="icone-servico">
+            <div class="icone-circulo">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h3>Psicoterapia para Adolescentes</h3>
+            <p>
+              Apoio psicológico para questões como autoestima, ansiedade,
+              inseguranças, conflitos, amizades, escola, família e
+              autoconhecimento.
+            </p>
+          </article>
 
-      window.scrollTo({
-        top: topo,
-        behavior: "smooth"
-      });
-    });
-  });
+          <article class="icone-servico">
+            <div class="icone-circulo">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3>Psicoterapia para Adultos</h3>
+            <p>
+              Atendimento para ansiedade, sobrecarga, autocobrança,
+              dificuldades nos relacionamentos, autoestima e outros desafios
+              emocionais do cotidiano.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  const elementosAnimar = document.querySelectorAll(".animar");
+    <!-- SENTIMENTOS -->
+    <section class="secao faixa-suave" id="sentimentos">
+      <div class="container">
+        <div class="secao-titulo animar">
+          <h2>Talvez você esteja se sentindo assim...</h2>
+          <p>
+            Às vezes, o sofrimento aparece de forma silenciosa e vai pesando
+            aos poucos. A psicoterapia pode ser um espaço para compreender o
+            que você sente e encontrar novas formas de seguir.
+          </p>
+        </div>
 
-  function animarAoEntrar() {
-    const alturaTela = window.innerHeight;
+        <div class="grid-sentimentos animar">
+          <article class="card-sentimento">
+            <img src="imagens/ansiedade.jpg" alt="Ansiedade e pensamentos acelerados" />
+            <div class="card-legenda">Ansiedade</div>
+          </article>
 
-    elementosAnimar.forEach((elemento) => {
-      if (elemento.getBoundingClientRect().top < alturaTela - 80) {
-        elemento.classList.add("visivel");
-      }
-    });
-  }
+          <article class="card-sentimento">
+            <img src="imagens/tristeza-persistente.jpg" alt="Tristeza e desânimo" />
+            <div class="card-legenda">Tristeza</div>
+          </article>
 
-  animarAoEntrar();
-  window.addEventListener("scroll", animarAoEntrar);
+          <article class="card-sentimento">
+            <img src="imagens/relacionamentos.jpg" alt="Conflitos nos relacionamentos" />
+            <div class="card-legenda">Em conflito</div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  const perguntas = document.querySelectorAll(".faq-pergunta");
+    <!-- RECURSOS -->
+    <section class="secao faixa-curva" id="recursos">
+      <div class="container">
+        <div class="secao-titulo animar">
+          <h2>Recursos e materiais sobre saúde emocional</h2>
+          <p>
+            Conteúdos pensados para informar, orientar e aproximar você de
+            temas importantes do cuidado psicológico.
+          </p>
+        </div>
 
-  perguntas.forEach((pergunta) => {
-    pergunta.addEventListener("click", () => {
-      const item = pergunta.closest(".faq-item");
-      if (!item) return;
+        <div class="recursos-grid animar">
+          <article class="card-recurso">
+            <img src="imagens/psicologa-itapetininga.jpg" alt="Psicóloga em Itapetininga" />
+            <div class="texto"><h3>Psicóloga em Itapetininga</h3></div>
+          </article>
 
-      document.querySelectorAll(".faq-item").forEach((outro) => {
-        if (outro !== item) {
-          outro.classList.remove("ativo");
-        }
-      });
+          <article class="card-recurso">
+            <img src="imagens/ansiedade-itapetininga.jpg" alt="Ansiedade em Itapetininga" />
+            <div class="texto"><h3>Ansiedade em Itapetininga</h3></div>
+          </article>
 
-      item.classList.toggle("ativo");
-    });
-  });
+          <article class="card-recurso">
+            <img src="imagens/ansiedade-trabalho.jpg" alt="Ansiedade no trabalho" />
+            <div class="texto"><h3>Ansiedade no trabalho</h3></div>
+          </article>
 
-  const secoes = document.querySelectorAll("section[id]");
+          <article class="card-recurso">
+            <img src="imagens/burnout-emocional-trabalho.jpg" alt="Burnout emocional" />
+            <div class="texto"><h3>Burnout emocional</h3></div>
+          </article>
 
-  function destacarMenu() {
-    const posicao = window.scrollY + 140;
+          <article class="card-recurso">
+            <img src="imagens/orientacao-parental-itapetininga.jpg" alt="Orientação parental em Itapetininga" />
+            <div class="texto"><h3>Orientação parental em Itapetininga</h3></div>
+          </article>
 
-    secoes.forEach((secao) => {
-      const topo = secao.offsetTop;
-      const altura = secao.offsetHeight;
-      const id = secao.getAttribute("id");
-      const link = document.querySelector(`.menu-nav a[href="#${id}"]`);
+          <article class="card-recurso">
+            <img src="imagens/psicoterapia-adultos-itapetininga.jpg" alt="Psicoterapia para adultos em Itapetininga" />
+            <div class="texto"><h3>Psicoterapia para adultos em Itapetininga</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      if (!link) return;
+    <!-- COMO FUNCIONA -->
+    <section class="secao faixa-suave" id="como-funciona">
+      <div class="container">
+        <div class="secao-titulo animar">
+          <h2>Como funciona o atendimento</h2>
+        </div>
 
-      if (posicao >= topo && posicao < topo + altura) {
-        document.querySelectorAll(".menu-nav a").forEach((a) => {
-          a.classList.remove("ativo");
-        });
+        <div class="grid-passos animar">
+          <article class="passo-box">
+            <div class="passo-numero">1</div>
+            <h3>Agende sua sessão</h3>
+            <p>
+              Você entra em contato de forma simples para tirar dúvidas e
+              verificar horários disponíveis.
+            </p>
+          </article>
 
-        link.classList.add("ativo");
-      }
-    });
-  }
+          <article class="passo-box">
+            <div class="passo-numero">2</div>
+            <h3>Encontre acolhimento</h3>
+            <p>
+              Os encontros acontecem com escuta respeitosa, presença e atenção
+              ao que faz sentido para você.
+            </p>
+          </article>
 
-  destacarMenu();
-  window.addEventListener("scroll", destacarMenu);
-});
+          <article class="passo-box">
+            <div class="passo-numero">3</div>
+            <h3>Siga com mais clareza</h3>
+            <p>
+              A psicoterapia pode ajudar você a compreender emoções, fortalecer
+              recursos internos e construir caminhos mais saudáveis.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="secao faixa-final" id="cta-final">
+      <div class="container">
+        <div class="cta-final animar">
+          <h2>Psicóloga em Itapetininga para quem busca escuta, cuidado e apoio emocional</h2>
+          <p>
+            Se você sente que está difícil lidar sozinho com o que tem vivido,
+            a psicoterapia pode ser um espaço importante de apoio.
+          </p>
+          <p>
+            O atendimento acontece de forma presencial em Itapetininga-SP e
+            online para todo o Brasil, com respeito à sua história, ao seu
+            tempo e ao que você precisa neste momento.
+          </p>
+
+          <a
+            href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primario"
+          >
+            Agendar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="container">
+      <div class="footer-box">
+        <p>
+          <strong>Endereço:</strong>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP
+          </a>
+        </p>
+
+        <p>
+          Este site utiliza práticas básicas de navegação. Saiba mais em nossa
+          <a href="privacidade.html">Política de Privacidade</a>.
+        </p>
+
+        <p>
+          <strong>Telefone:</strong>
+          <a href="https://wa.me/5515996760791" target="_blank" rel="noopener noreferrer">
+            (15) 99676-0791
+          </a>
+        </p>
+
+        <p>
+          <strong>E-mail:</strong>
+          <a href="mailto:contato@anapaulaapvieirapsi.com.br">
+            contato@anapaulaapvieirapsi.com.br
+          </a>
+        </p>
+
+        <p>© 2026 Ana Paula Ap. Vieira | Psicóloga Clínica | CRP 06/217114</p>
+
+        <div class="footer-redes">
+          <a href="https://www.instagram.com/anapaulapsico/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+
+          <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Facebook</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO TOPO -->
+  <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/5515996760791"
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+  >
+    <img src="imagens/whatsapp-icon.png" alt="WhatsApp" />
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
