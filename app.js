@@ -10,9 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const elementosAnimar = document.querySelectorAll(".animar");
   const perguntas = document.querySelectorAll(".faq-pergunta");
 
-  /* =========================
-     MENU MOBILE
-  ========================= */
   if (menuToggle && menuNav) {
     menuToggle.addEventListener("click", () => {
       menuNav.classList.toggle("aberto");
@@ -37,9 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* =========================
-     CABEÇALHO AO ROLAR
-  ========================= */
   function atualizarCabecalho() {
     if (!cabecalho) return;
 
@@ -53,9 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
   atualizarCabecalho();
   window.addEventListener("scroll", atualizarCabecalho);
 
-  /* =========================
-     ROLAGEM SUAVE PARA ÂNCORAS
-  ========================= */
   function rolarParaSecao(id) {
     if (!id || id === "#") return;
 
@@ -93,9 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* =========================
-     DESTAQUE DO MENU ATIVO
-  ========================= */
   function destacarMenu() {
     const alturaHeader = cabecalho ? cabecalho.offsetHeight : 90;
     const posicao = window.scrollY + alturaHeader + 60;
@@ -118,9 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
   destacarMenu();
   window.addEventListener("scroll", destacarMenu);
 
-  /* =========================
-     BOTÃO TOPO
-  ========================= */
   if (btnTopo) {
     function toggleTopo() {
       btnTopo.style.display = window.scrollY > 300 ? "grid" : "none";
@@ -137,9 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* =========================
-     ANIMAÇÃO AO ENTRAR
-  ========================= */
   function animarAoEntrar() {
     const alturaTela = window.innerHeight;
 
@@ -153,9 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
   animarAoEntrar();
   window.addEventListener("scroll", animarAoEntrar);
 
-  /* =========================
-     FAQ
-  ========================= */
   perguntas.forEach((pergunta) => {
     pergunta.addEventListener("click", () => {
       const item = pergunta.closest(".faq-item");
