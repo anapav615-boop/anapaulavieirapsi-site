@@ -33,11 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cabecalho = document.querySelector(".cabecalho");
   function atualizarCabecalho() {
     if (!cabecalho) return;
-    if (window.scrollY > 20) {
-      cabecalho.classList.add("scrolled");
-    } else {
-      cabecalho.classList.remove("scrolled");
-    }
+    if (window.scrollY > 20) cabecalho.classList.add("scrolled");
+    else cabecalho.classList.remove("scrolled");
   }
   atualizarCabecalho();
   window.addEventListener("scroll", atualizarCabecalho);
@@ -123,24 +120,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   destacarMenu();
   window.addEventListener("scroll", destacarMenu);
-
-  const formContato = document.getElementById("form-contato");
-  if (formContato) {
-    formContato.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      const nome = document.getElementById("nome")?.value.trim();
-      const email = document.getElementById("email")?.value.trim();
-      const telefone = document.getElementById("telefone")?.value.trim();
-      const mensagem = document.getElementById("mensagem")?.value.trim();
-
-      if (!nome || !email || !telefone || !mensagem) {
-        alert("Por favor, preencha todos os campos.");
-        return;
-      }
-
-      alert("Mensagem enviada com sucesso!");
-      formContato.reset();
-    });
-  }
 });
