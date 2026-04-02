@@ -584,13 +584,11 @@ button {
   body {
     background-color: #f9f4f7;
     background-image:
-      linear-gradient(rgba(255, 253, 253, 0.94), rgba(250, 245, 248, 0.95)),
+      linear-gradient(rgba(255, 250, 252, 0.72), rgba(250, 244, 248, 0.76)),
       url("imagens/fundo-floral.png");
     background-position: center top;
-    background-size: cover;
+    background-size: 180%;
     background-repeat: no-repeat;
-
-    /* ESSA LINHA É O MAIS IMPORTANTE */
     background-attachment: scroll;
   }
 
@@ -611,10 +609,28 @@ button {
     max-height: 280px;
   }
 
-  body {
-    background:
-      linear-gradient(rgba(255, 253, 253, 0.95), rgba(250, 245, 248, 0.96)),
-      url("imagens/fundo-floral.png") center top / contain repeat-y;
+  .rodape,
+  .rodape p,
+  .rodape span,
+  .rodape strong,
+  .rodape a,
+  .footer-info p,
+  .footer-info a,
+  .footer-links a,
+  .footer-redes a,
+  .footer-redes i {
+    color: var(--title-dark) !important;
+  }
+
+  .bloco-texto-central,
+  .bloco-principal,
+  .bloco-sobre,
+  .cta-final,
+  .card-servico,
+  .card-artigo,
+  .card-como {
+    border: 1.5px solid var(--green-border) !important;
+    border-radius: 22px !important;
   }
 
 /* FORÇAR COR DO TEXTO DO RODAPÉ */
