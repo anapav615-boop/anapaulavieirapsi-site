@@ -306,13 +306,27 @@ button {
 }
 
 .btn-secundario {
-  background: rgba(255,255,255,0.96);
-  border: 1px solid var(--border);
-  color: var(--title-dark);
+  background: linear-gradient(135deg, #c08ea4, #ad748c);
+  border: none;
+  color: #fff;
 }
 
 .btn-secundario:hover {
-  background: #fff;
+  background: linear-gradient(135deg, #b9849a, #9f667d);
+}
+
+.btn-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #c08ea4, #ad748c);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 /* GRIDS */
