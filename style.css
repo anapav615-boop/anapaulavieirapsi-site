@@ -602,3 +602,14 @@ button {
   border: 1.5px solid var(--green-border) !important;
   border-radius: 22px;
 }
+
+/* CONTORNO VERDE NOS BLOCOS DA HOME */
+.bloco-texto-central,
+.bloco-principal,
+.bloco-sobre,
+.card-servico,
+.card-artigo,
+.card-como {
+  border: 1.5px solid var(--green-border) !important;
+  border-radius: 22px;
+}
