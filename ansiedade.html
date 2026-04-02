@@ -11,7 +11,7 @@
   />
   <meta
     name="keywords"
-    content="ansiedade em itapetininga, psicóloga para ansiedade em itapetininga, sintomas de ansiedade, psicoterapia para ansiedade, ansiedade tratamento psicológico, psicóloga em itapetininga"
+    content="ansiedade em itapetininga, psicóloga para ansiedade em itapetininga, sintomas de ansiedade, psicoterapia para ansiedade, psicóloga em itapetininga"
   />
   <meta name="author" content="Ana Paula Ap. Vieira" />
   <meta name="robots" content="index, follow" />
@@ -31,8 +31,6 @@
   <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/ansiedade.html" />
   <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/ansiedade.jpg" />
   <meta property="og:image:alt" content="Ansiedade, sinais e sintomas em ambiente acolhedor" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ansiedade em Itapetininga – Sinais, sintomas e psicoterapia" />
@@ -55,6 +53,105 @@
 
   <link rel="stylesheet" href="style.css" />
   <script defer src="app.js"></script>
+
+  <style>
+    .artigo-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .artigo-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1.5px solid var(--green-border);
+      box-shadow: var(--shadow);
+      border-radius: 24px;
+      padding: 28px;
+      backdrop-filter: blur(4px);
+    }
+
+    .artigo-imagem img {
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .artigo-legenda {
+      margin: 10px 0 0;
+      color: var(--text-soft);
+      line-height: 1.6;
+      text-align: center;
+      font-size: 0.96rem;
+    }
+
+    .artigo-card h1,
+    .artigo-card h2,
+    .artigo-card h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--title);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    .artigo-card h1 {
+      font-size: clamp(2rem, 3vw, 3rem);
+      margin: 0 0 14px;
+      text-align: center;
+    }
+
+    .artigo-card h2 {
+      font-size: clamp(1.55rem, 2.2vw, 2.2rem);
+      margin: 0 0 14px;
+    }
+
+    .artigo-card h3 {
+      font-size: 1.3rem;
+      margin: 26px 0 10px;
+    }
+
+    .artigo-card p,
+    .artigo-card li {
+      line-height: 1.9;
+    }
+
+    .artigo-card ul {
+      padding-left: 22px;
+      margin: 0;
+    }
+
+    .assinatura-artigo {
+      margin-top: 26px;
+      color: var(--text-soft);
+    }
+
+    .artigo-acoes {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    @media (max-width: 720px) {
+      .artigo-card {
+        padding: 22px 18px;
+      }
+
+      .artigo-acoes {
+        flex-direction: column;
+      }
+
+      .artigo-acoes .btn-primario,
+      .artigo-acoes .btn-secundario {
+        width: 100%;
+      }
+
+      .artigo-imagem img {
+        max-height: 300px;
+      }
+    }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -79,31 +176,6 @@
           }
         },
         "mainEntityOfPage": "https://anapaulaapvieirapsi.com.br/ansiedade.html"
-      },
-      {
-        "@type": "Psychologist",
-        "name": "Ana Paula Ap. Vieira",
-        "image": "https://anapaulaapvieirapsi.com.br/imagens/ana-paula-vieira-psicologa-itapetininga.jpg",
-        "url": "https://anapaulaapvieirapsi.com.br/",
-        "telephone": "+55 15 99676-0791",
-        "email": "contato@anapaulaapvieirapsi.com.br",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Nazareth, 84",
-          "addressLocality": "Itapetininga",
-          "addressRegion": "SP",
-          "addressCountry": "BR"
-        },
-        "areaServed": [
-          {
-            "@type": "City",
-            "name": "Itapetininga"
-          },
-          {
-            "@type": "Country",
-            "name": "Brasil"
-          }
-        ]
       }
     ]
   }
@@ -149,153 +221,71 @@
   </header>
 
   <main>
-    <section class="hero-home">
-      <div class="container">
-        <div class="hero-imagem-unica">
+    <section class="secao">
+      <div class="container artigo-wrap">
+        <div class="artigo-imagem">
           <img
             src="imagens/ansiedade.jpg"
             alt="Ansiedade, sinais e sintomas em ambiente acolhedor"
           />
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" aria-labelledby="ansiedade-titulo">
-      <div class="container">
-        <div class="bloco-texto-central">
-          <h1 id="ansiedade-titulo">Ansiedade – sinais, sintomas e acolhimento</h1>
-          <p>
-            Compreender a ansiedade é um passo importante para reconhecer o que está acontecendo
-            emocionalmente e buscar formas mais cuidadosas de lidar com isso.
+          <p class="artigo-legenda">
+            Compreender a ansiedade é um passo importante para reconhecer o que está acontecendo emocionalmente.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="secao" aria-labelledby="ansiedade-itapetininga-titulo">
-      <div class="container">
-        <div class="bloco-principal">
-          <div class="bloco-principal-conteudo">
-            <h2 id="ansiedade-itapetininga-titulo">Ansiedade em Itapetininga – psicoterapia presencial e online</h2>
+    <section class="secao" aria-labelledby="artigo-ansiedade-titulo">
+      <div class="container artigo-wrap">
+        <article class="artigo-card">
+          <h1 id="artigo-ansiedade-titulo">Ansiedade – sinais, sintomas e acolhimento</h1>
 
-            <p>
-              A ansiedade é uma reação normal do organismo diante de situações de risco, incerteza
-              ou desafio. Quando persistente ou desproporcional, pode comprometer o bem-estar físico
-              e emocional. A psicoterapia oferece ferramentas para compreender gatilhos, regular
-              reações e construir estratégias de enfrentamento.
-            </p>
-
-            <ul class="selos-atendimento">
-              <li>Psicóloga em Itapetininga – SP</li>
-              <li>Atendimento presencial e online</li>
-              <li>Acolhimento para adultos, adolescentes e crianças</li>
-            </ul>
-
-            <div class="hero-botoes">
-              <a
-                href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-primario"
-              >
-                Agendar pelo WhatsApp
-              </a>
-
-              <a href="recursos.html" class="btn-secundario">Voltar aos conteúdos</a>
-            </div>
-
-            <div class="lista-local">
-              <p>📍 Atendimento presencial em Itapetininga – SP</p>
-              <p>💻 Atendimento online para todo o Brasil</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao" aria-labelledby="sinais-ansiedade-titulo">
-      <div class="container">
-        <div class="secao-titulo">
-          <h2 id="sinais-ansiedade-titulo">Sinais e sintomas comuns</h2>
           <p>
-            Alguns sinais podem aparecer de forma isolada ou combinada, impactando o corpo,
-            os pensamentos e a rotina.
+            A ansiedade é uma reação normal do organismo diante de situações de risco, incerteza ou desafio.
+            Quando persistente ou desproporcional, pode comprometer o bem-estar físico e emocional.
+            A psicoterapia oferece ferramentas para compreender gatilhos, regular reações e construir estratégias de enfrentamento.
           </p>
-        </div>
 
-        <div class="grid-como-funciona">
-          <div class="card-como">
-            <h3>Preocupação excessiva</h3>
-            <p>Quando os pensamentos ficam acelerados e difíceis de controlar.</p>
-          </div>
+          <h2>Ansiedade em Itapetininga – quando buscar ajuda</h2>
+          <p>
+            Quando a ansiedade começa a impactar a rotina, o sono, os relacionamentos e a sensação de bem-estar,
+            pode ser importante buscar apoio psicológico. O cuidado emocional permite compreender melhor o que você sente
+            e encontrar formas mais seguras de lidar com isso no dia a dia.
+          </p>
 
-          <div class="card-como">
-            <h3>Tensão e inquietação</h3>
-            <p>Tensão muscular, sensação de alerta constante e dificuldade de relaxar.</p>
-          </div>
+          <h3>Sinais e sintomas comuns</h3>
+          <ul>
+            <li>Preocupação excessiva e persistente</li>
+            <li>Tensão muscular</li>
+            <li>Dificuldade de concentração</li>
+            <li>Alterações no sono</li>
+            <li>Sensação de inquietação</li>
+          </ul>
 
-          <div class="card-como">
-            <h3>Impacto no cotidiano</h3>
-            <p>Alterações no sono, dificuldade de concentração e desgaste emocional.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+          <h3>Como a psicoterapia pode ajudar</h3>
+          <p>
+            Na terapia, cria-se um espaço seguro para acolhimento, identificação de padrões e treinamento de técnicas de regulação
+            emocional. O trabalho conjunto permite construir formas mais adaptativas de lidar com a ansiedade no cotidiano.
+          </p>
 
-    <section class="secao" aria-labelledby="terapia-ajuda-titulo">
-      <div class="container">
-        <div class="bloco-sobre">
-          <div class="sobre-media">
-            <img src="imagens/ansiedade.jpg" alt="Psicoterapia para ansiedade em Itapetininga" />
-          </div>
+          <p class="assinatura-artigo">
+            — Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)<br>
+            Psicoterapia presencial em Itapetininga – SP e online para todo o Brasil
+          </p>
 
-          <div class="sobre-conteudo">
-            <h2 id="terapia-ajuda-titulo">Como a psicoterapia pode ajudar</h2>
-
-            <p>
-              Na terapia, cria-se um espaço seguro para acolhimento, identificação de padrões
-              e desenvolvimento de estratégias para lidar com a ansiedade no cotidiano.
-            </p>
-
-            <p>
-              O processo pode incluir compreensão de gatilhos, regulação emocional, técnicas
-              de respiração e fortalecimento de recursos internos para atravessar momentos
-              difíceis com mais clareza e apoio.
-            </p>
-
-            <p><strong>Acolhimento presencial em Itapetininga e online para todo o Brasil.</strong></p>
-
+          <div class="artigo-acoes">
             <a
               href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
               target="_blank"
               rel="noopener noreferrer"
-              class="btn-secundario"
+              class="btn-primario"
             >
-              Agendar atendimento
+              Agendar pelo WhatsApp
             </a>
+
+            <a href="recursos.html" class="btn-secundario">Voltar aos conteúdos</a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="secao">
-      <div class="container">
-        <div class="cta-final">
-          <h2>Você não precisa lidar com a ansiedade sem apoio</h2>
-          <p>
-            Buscar ajuda psicológica pode ser um passo importante para compreender o que você sente
-            e desenvolver formas mais saudáveis de cuidado emocional.
-          </p>
-
-          <a
-            href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-primario"
-          >
-            Agendar pelo WhatsApp
-          </a>
-        </div>
+        </article>
       </div>
     </section>
   </main>
