@@ -41,7 +41,7 @@ body {
   color: var(--text);
   background-color: #f9f4f7;
   background-image:
-    linear-gradient(rgba(255, 250, 252, 0.78), rgba(250, 244, 248, 0.82)),
+    linear-gradient(rgba(255, 250, 252, 0.60), rgba(250, 244, 248, 0.66)),
     url("imagens/fundo-floral.png");
   background-position: center top;
   background-size: cover;
