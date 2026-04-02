@@ -220,7 +220,7 @@ button {
 .bloco-sobre,
 .cta-final {
   background: rgba(255, 255, 255, 0.90);
-  border: 1px solid rgba(234, 220, 232, 0.9);
+  border: 1.5px solid var(--green-border);
   box-shadow: var(--shadow);
   border-radius: 24px;
   backdrop-filter: blur(4px);
@@ -593,23 +593,14 @@ button {
   color: var(--title-dark) !important;
 }
 
-/* FORÇAR CONTORNO VERDE EM TODOS OS CARDS */
-.card,
-.card-servico,
-.card-artigo,
-.card-como,
-.card-item {
-  border: 1.5px solid var(--green-border) !important;
-  border-radius: 22px;
-}
-
-/* CONTORNO VERDE NOS BLOCOS DA HOME */
+/* CONTORNO VERDE FINAL DA HOME */
 .bloco-texto-central,
 .bloco-principal,
 .bloco-sobre,
+.cta-final,
 .card-servico,
 .card-artigo,
 .card-como {
   border: 1.5px solid var(--green-border) !important;
-  border-radius: 22px;
+  border-radius: 22px !important;
 }
