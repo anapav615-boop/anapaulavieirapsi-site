@@ -593,3 +593,12 @@ button {
   color: var(--title-dark) !important;
 }
 
+/* FORÇAR CONTORNO VERDE EM TODOS OS CARDS */
+.card,
+.card-servico,
+.card-artigo,
+.card-como,
+.card-item {
+  border: 1.5px solid var(--green-border) !important;
+  border-radius: 22px;
+}
