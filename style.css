@@ -582,15 +582,15 @@ button {
 /* MOBILE */
 @media (max-width: 720px) {
   body {
-    background-color: #f9f4f7;
-    background-image:
-      linear-gradient(rgba(255, 250, 252, 0.72), rgba(250, 244, 248, 0.76)),
-      url("imagens/fundo-floral.png");
-    background-position: center top;
-    background-size: 180%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-  }
+  background-color: #f6edf3;
+  background-image:
+    linear-gradient(rgba(249, 239, 245, 0.45), rgba(247, 236, 243, 0.50)),
+    url("imagens/fundo-floral.png");
+  background-position: center top;
+  background-size: 230%;
+  background-repeat: repeat-y;
+  background-attachment: scroll;
+}
 
   .hero-botoes {
     flex-direction: column;
