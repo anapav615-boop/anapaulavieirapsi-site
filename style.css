@@ -548,19 +548,27 @@ button {
   }
 
   .grid-servicos,
-  .grid-cards,
-  .grid-como-funciona,
-  .footer-box {
-    grid-template-columns: 1fr;
-  }
+.grid-cards,
+.grid-como-funciona,
+.footer-box {
+  grid-template-columns: 1fr;
+}
 
-  .footer-box {
-    text-align: center;
-  }
+.footer-box {
+  text-align: center;
+  gap: 24px;
+}
 
-  .footer-redes {
-    justify-content: center;
-  }
+.footer-links {
+  align-items: center;
+}
+
+.footer-redes-box {
+  align-items: center;
+}
+
+.footer-redes {
+  justify-content: center;
 }
 
 @media (max-width: 720px) {
