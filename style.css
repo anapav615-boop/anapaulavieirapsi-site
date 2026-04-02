@@ -564,4 +564,18 @@ button {
       linear-gradient(rgba(255, 253, 253, 0.95), rgba(250, 245, 248, 0.96)),
       url("imagens/fundo-floral.png") center top / contain repeat-y;
   }
+
+/* FORÇAR COR DO TEXTO DO RODAPÉ */
+.rodape,
+.rodape p,
+.rodape span,
+.rodape strong,
+.rodape a,
+.footer-info p,
+.footer-info a,
+.footer-links a,
+.footer-redes a,
+.footer-redes i {
+  color: var(--title-dark) !important;
 }
+
