@@ -555,30 +555,45 @@ button {
   }
 
   .grid-servicos,
-.grid-cards,
-.grid-como-funciona,
-.footer-box {
-  grid-template-columns: 1fr;
+  .grid-cards,
+  .grid-como-funciona,
+  .footer-box {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-box {
+    text-align: center;
+    gap: 24px;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .footer-redes-box {
+    align-items: center;
+  }
+
+  .footer-redes {
+    justify-content: center;
+  }
 }
 
-.footer-box {
-  text-align: center;
-  gap: 24px;
-}
-
-.footer-links {
-  align-items: center;
-}
-
-.footer-redes-box {
-  align-items: center;
-}
-
-.footer-redes {
-  justify-content: center;
-}
-
+/* MOBILE */
 @media (max-width: 720px) {
+  body {
+    background-color: #f9f4f7;
+    background-image:
+      linear-gradient(rgba(255, 253, 253, 0.94), rgba(250, 245, 248, 0.95)),
+      url("imagens/fundo-floral.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* ESSA LINHA É O MAIS IMPORTANTE */
+    background-attachment: scroll;
+  }
+
   .hero-botoes {
     flex-direction: column;
   }
