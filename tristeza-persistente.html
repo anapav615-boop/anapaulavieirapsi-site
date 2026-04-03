@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
   <title>Quando a tristeza deixa de ser passageira | Ana Paula Ap. Vieira</title>
-  <meta name="description" content="Entenda quando a tristeza persistente pode indicar sofrimento emocional, sinais de alerta e como a psicoterapia pode ajudar. Conteúdo da psicóloga Ana Paula Ap. Vieira (CRP 06/217114)." />
-  <meta name="keywords" content="tristeza persistente, sofrimento emocional, tristeza que não passa, psicóloga em Itapetininga, psicoterapia, saúde emocional, Ana Paula Ap. Vieira" />
+  <meta
+    name="description"
+    content="Entenda quando a tristeza persistente pode indicar sofrimento emocional, sinais de alerta e como a psicoterapia pode ajudar. Conteúdo da psicóloga Ana Paula Ap. Vieira (CRP 06/217114)."
+  />
+  <meta
+    name="keywords"
+    content="tristeza persistente, sofrimento emocional, tristeza que não passa, psicóloga em Itapetininga, psicoterapia, saúde emocional, Ana Paula Ap. Vieira"
+  />
   <meta name="author" content="Ana Paula Ap. Vieira" />
   <meta name="robots" content="index, follow" />
 
@@ -18,7 +24,10 @@
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica" />
   <meta property="og:title" content="Quando a tristeza deixa de ser passageira | Ana Paula Ap. Vieira" />
-  <meta property="og:description" content="Sinais de tristeza persistente, sofrimento emocional e quando buscar ajuda psicológica." />
+  <meta
+    property="og:description"
+    content="Sinais de tristeza persistente, sofrimento emocional e quando buscar ajuda psicológica."
+  />
   <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/tristeza-persistente.html" />
   <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/tristeza-persistente.jpg" />
   <meta property="og:image:alt" content="Pessoa em momento de tristeza persistente" />
@@ -27,7 +36,10 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Quando a tristeza deixa de ser passageira | Ana Paula Ap. Vieira" />
-  <meta name="twitter:description" content="Sinais de tristeza persistente, sofrimento emocional e quando buscar ajuda psicológica." />
+  <meta
+    name="twitter:description"
+    content="Sinais de tristeza persistente, sofrimento emocional e quando buscar ajuda psicológica."
+  />
   <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/tristeza-persistente.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,32 +66,19 @@
       margin: 0 auto;
     }
 
-    .hero-artigo {
-      margin-bottom: 26px;
-    }
-
-    .hero-artigo-frame {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 14px;
-      border-radius: 30px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(248,243,247,0.96) 100%);
-      box-shadow: 0 14px 34px rgba(90, 72, 103, 0.10);
-      border: 1px solid rgba(201, 184, 196, 0.55);
-      position: relative;
-    }
-
-    .hero-artigo-frame::before {
-      content: "";
-      position: absolute;
-      inset: 9px;
-      border-radius: 22px;
-      border: 1px solid rgba(210, 196, 208, 0.55);
-      pointer-events: none;
+    /* CARD GRANDE */
+    .hero-artigo-card {
+      max-width: 860px;
+      margin: 0 auto 30px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1.6px solid rgba(140, 174, 136, 0.62);
+      border-radius: 28px;
+      box-shadow: 0 10px 28px rgba(70, 90, 70, 0.08);
+      padding: 14px 14px 18px;
+      backdrop-filter: blur(2px);
     }
 
     .hero-artigo-imagem {
-      position: relative;
       overflow: hidden;
       border-radius: 22px;
       background: #f4eff3;
@@ -87,33 +86,34 @@
 
     .hero-artigo-imagem img {
       width: 100%;
-      height: clamp(280px, 38vw, 430px);
+      height: clamp(260px, 32vw, 360px);
       object-fit: cover;
       object-position: center;
       display: block;
     }
 
     .hero-artigo-legenda {
-      margin-top: 14px;
+      margin-top: 12px;
       text-align: center;
-      font-size: 1rem;
-      color: #6c5a6f;
+      font-size: 0.98rem;
       line-height: 1.65;
-      padding: 0 10px 2px;
+      color: #6c5a6f;
+      padding: 0 10px;
     }
 
+    /* BLOCO DO ARTIGO */
     .artigo-conteudo {
-      background: rgba(255,255,255,0.92);
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 28px;
       padding: 40px 36px;
-      box-shadow: 0 10px 28px rgba(90, 72, 103, 0.08);
+      box-shadow: 0 8px 24px rgba(88, 73, 96, 0.07);
     }
 
     .artigo-conteudo h1 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(2.1rem, 4vw, 3rem);
-      color: #7656b3;
+      font-size: clamp(2.2rem, 4vw, 3rem);
       line-height: 1.15;
+      color: #7656b3;
       margin-bottom: 20px;
     }
 
@@ -123,7 +123,6 @@
       margin-top: 28px;
       margin-bottom: 12px;
       line-height: 1.3;
-      font-size: clamp(1.35rem, 2vw, 1.9rem);
     }
 
     .artigo-conteudo p,
@@ -135,7 +134,7 @@
 
     .artigo-conteudo ul {
       padding-left: 24px;
-      margin-top: 6px;
+      margin-top: 8px;
     }
 
     .artigo-assinatura {
@@ -150,8 +149,9 @@
       gap: 14px;
     }
 
+    /* CARDS PEQUENOS */
     .artigos-relacionados {
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     .artigos-relacionados .grid-cards {
@@ -159,11 +159,18 @@
     }
 
     .artigos-relacionados .card-artigo {
-      border: 1px solid rgba(214, 201, 211, 0.7) !important;
-      box-shadow: 0 10px 24px rgba(90, 72, 103, 0.08) !important;
-      background: rgba(255,255,255,0.94);
+      background: rgba(255, 255, 255, 0.92);
+      border: 1.4px solid rgba(140, 174, 136, 0.55) !important;
       border-radius: 24px;
       overflow: hidden;
+      box-shadow: 0 8px 22px rgba(70, 90, 70, 0.07);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .artigos-relacionados .card-artigo:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 26px rgba(70, 90, 70, 0.11);
+      border-color: rgba(140, 174, 136, 0.78) !important;
     }
 
     .artigos-relacionados .card-artigo img {
@@ -179,9 +186,9 @@
     }
 
     .artigos-relacionados .card-artigo h3 {
-      font-size: 1.2rem;
-      line-height: 1.35;
       color: #6f52ab;
+      font-size: 1.22rem;
+      line-height: 1.35;
       margin-bottom: 10px;
     }
 
@@ -196,14 +203,9 @@
     }
 
     @media (max-width: 768px) {
-      .hero-artigo-frame {
-        padding: 10px;
+      .hero-artigo-card {
+        padding: 10px 10px 14px;
         border-radius: 22px;
-      }
-
-      .hero-artigo-frame::before {
-        inset: 7px;
-        border-radius: 16px;
       }
 
       .hero-artigo-imagem {
@@ -211,11 +213,11 @@
       }
 
       .hero-artigo-imagem img {
-        height: 300px;
+        height: 280px;
       }
 
       .hero-artigo-legenda {
-        font-size: 0.96rem;
+        font-size: 0.95rem;
       }
 
       .artigo-conteudo {
@@ -224,7 +226,7 @@
       }
 
       .artigos-relacionados .card-artigo img {
-        height: 200px;
+        height: 190px;
       }
     }
   </style>
@@ -257,6 +259,7 @@
       {
         "@type": "Psychologist",
         "name": "Ana Paula Ap. Vieira",
+        "image": "https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg",
         "url": "https://anapaulaapvieirapsi.com.br/",
         "telephone": "+55 15 99676-0791",
         "email": "contato@anapaulaapvieirapsi.com.br",
@@ -329,15 +332,13 @@
   <main class="artigo-pagina">
     <section class="secao">
       <div class="container artigo-wrap">
-        <div class="hero-artigo">
-          <div class="hero-artigo-frame">
-            <div class="hero-artigo-imagem">
-              <img src="imagens/tristeza-persistente.jpg" alt="Pessoa com tristeza persistente" />
-            </div>
-            <p class="hero-artigo-legenda">
-              Nem toda tristeza é igual — e você não precisa passar por isso sozinho(a).
-            </p>
+        <div class="hero-artigo-card">
+          <div class="hero-artigo-imagem">
+            <img src="imagens/tristeza-persistente.jpg" alt="Pessoa com tristeza persistente" />
           </div>
+          <p class="hero-artigo-legenda">
+            Nem toda tristeza é igual — e você não precisa passar por isso sozinho(a).
+          </p>
         </div>
 
         <article class="artigo-conteudo">
