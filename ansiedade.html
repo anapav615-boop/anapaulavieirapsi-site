@@ -63,19 +63,21 @@
     }
 
     .artigo-imagem {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 
-   .artigo-imagem img {
+.artigo-imagem img {
   width: 100%;
-  max-width: 720px;
-  height: auto;
+  max-width: 820px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 24px;
   box-shadow: var(--shadow);
   display: block;
-  margin: 0 auto;
 }
 
     .artigo-legenda {
@@ -148,33 +150,36 @@
       justify-content: center;
     }
 
-    @media (max-width: 720px) {
-      .artigo-wrap {
-        max-width: 100%;
-      }
+   @media (max-width: 720px) {
+  .artigo-wrap {
+    max-width: 100%;
+  }
 
-      .artigo-card {
-        padding: 24px 18px;
-      }
+  .artigo-card {
+    padding: 24px 18px;
+  }
 
-      .artigo-imagem img {
-       max-height: 250px;
-      }
+  .artigo-imagem img {
+    height: 230px;
+    max-width: 100%;
+    object-position: center top;
+  }
 
-      .artigo-legenda {
-        font-size: 0.96rem;
-        margin-top: 0;
-      }
+  .artigo-legenda {
+    font-size: 0.96rem;
+    margin-top: 0;
+  }
 
-      .artigo-acoes {
-        flex-direction: column;
-      }
+  .artigo-acoes {
+    flex-direction: column;
+  }
 
-      .artigo-acoes .btn-primario,
-      .artigo-acoes .btn-secundario {
-        width: 100%;
-      }
-    }
+  .artigo-acoes .btn-primario,
+  .artigo-acoes .btn-secundario {
+    width: 100%;
+  }
+  }
+    
   </style>
 
   <script type="application/ld+json">
