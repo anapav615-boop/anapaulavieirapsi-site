@@ -658,3 +658,35 @@ button {
   border: 1.5px solid var(--green-border) !important;
   border-radius: 22px !important;
 }
+
+.bloco-espaco-seguro {
+  background: linear-gradient(135deg, #7656b3 0%, #8c6fc7 60%, #b8ccb0 100%);
+  border-radius: 30px;
+  padding: 40px 30px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 20px 50px rgba(88, 73, 96, 0.15);
+}
+
+.bloco-espaco-seguro h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.bloco-espaco-seguro p {
+  max-width: 600px;
+  margin: 0 auto 18px;
+  line-height: 1.8;
+}
+
+.bloco-espaco-seguro .selos-atendimento {
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bloco-espaco-seguro .btn-primario {
+  background: #fff;
+  color: #7656b3;
+  font-weight: 600;
+}
