@@ -87,15 +87,15 @@
     }
 
     .hero-app-foto {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 18px;
-      padding: 8px;
-      background: linear-gradient(180deg, #f6f1fb 0%, #f3f8f1 100%);
-      box-shadow: var(--sombra-media);
-    }
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  padding: 10px;
+  background: linear-gradient(180deg, #f6f1fb 0%, #f3f8f1 100%);
+  box-shadow: 0 18px 40px rgba(88, 73, 96, 0.14);
+}
 
     .hero-app-foto img {
       width: 100%;
@@ -569,9 +569,10 @@
     }
 
     @media (max-width: 768px) {
-      .menu-app {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+  .hero-app-foto {
+    width: 190px;
+    height: 190px;
+  }
 
       .painel-app,
       .cta-app-final {
