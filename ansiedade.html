@@ -63,22 +63,22 @@
     }
 
     .artigo-imagem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
 
-.artigo-imagem img {
-  width: 100%;
-  max-width: 820px;
-  height: 300px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 24px;
-  box-shadow: var(--shadow);
-  display: block;
-}
+    .artigo-imagem img {
+      width: auto;
+      max-width: 100%;
+      max-height: 340px;
+      height: auto;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      display: block;
+      margin: 0 auto;
+    }
 
     .artigo-legenda {
       color: var(--title);
@@ -87,7 +87,7 @@
       font-size: 1rem;
       font-weight: 500;
       padding: 0;
-      margin: 2px 0 0;
+      margin: 0;
       background: transparent;
       border-radius: 0;
       box-shadow: none;
@@ -150,36 +150,34 @@
       justify-content: center;
     }
 
-   @media (max-width: 720px) {
-  .artigo-wrap {
-    max-width: 100%;
-  }
+    @media (max-width: 720px) {
+      .artigo-wrap {
+        max-width: 100%;
+      }
 
-  .artigo-card {
-    padding: 24px 18px;
-  }
+      .artigo-card {
+        padding: 24px 18px;
+      }
 
-  .artigo-imagem img {
-    height: 230px;
-    max-width: 100%;
-    object-position: center top;
-  }
+      .artigo-imagem img {
+        max-width: 100%;
+        max-height: 250px;
+      }
 
-  .artigo-legenda {
-    font-size: 0.96rem;
-    margin-top: 0;
-  }
+      .artigo-legenda {
+        font-size: 0.96rem;
+        margin-top: 0;
+      }
 
-  .artigo-acoes {
-    flex-direction: column;
-  }
+      .artigo-acoes {
+        flex-direction: column;
+      }
 
-  .artigo-acoes .btn-primario,
-  .artigo-acoes .btn-secundario {
-    width: 100%;
-  }
-  }
-    
+      .artigo-acoes .btn-primario,
+      .artigo-acoes .btn-secundario {
+        width: 100%;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
