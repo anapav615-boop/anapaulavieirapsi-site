@@ -2,187 +2,471 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
   <title>Quando a tristeza deixa de ser passageira | Ana Paula Ap. Vieira</title>
-
   <meta name="description" content="Entenda quando a tristeza persistente pode indicar sofrimento emocional, sinais de alerta e como a psicoterapia pode ajudar. Conteúdo da psicóloga Ana Paula Ap. Vieira (CRP 06/217114)." />
+  <meta name="keywords" content="tristeza persistente, sofrimento emocional, tristeza que não passa, psicóloga em Itapetininga, psicoterapia, saúde emocional, Ana Paula Ap. Vieira" />
+  <meta name="author" content="Ana Paula Ap. Vieira" />
+  <meta name="robots" content="index, follow" />
 
-  <link rel="icon" type="image/png" href="imagens/favicon.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+  <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/tristeza-persistente.html" />
+  <link rel="icon" type="image/png" href="imagens/favicon.png" />
+  <link rel="manifest" href="manifest.json" />
 
-  <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/tristeza-persistente.html">
-
-  <!-- Open Graph -->
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica" />
-  <meta property="og:title" content="Quando a tristeza deixa de ser passageira" />
+  <meta property="og:title" content="Quando a tristeza deixa de ser passageira | Ana Paula Ap. Vieira" />
   <meta property="og:description" content="Sinais de tristeza persistente, sofrimento emocional e quando buscar ajuda psicológica." />
   <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/tristeza-persistente.html" />
   <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/tristeza-persistente.jpg" />
+  <meta property="og:image:alt" content="Pessoa em momento de tristeza persistente" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Quando a tristeza deixa de ser passageira | Ana Paula Ap. Vieira" />
   <meta name="twitter:description" content="Sinais de tristeza persistente, sofrimento emocional e quando buscar ajuda psicológica." />
   <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/tristeza-persistente.jpg" />
 
-  <!-- JSON-LD (Article) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+
+  <style>
+    .artigo-pagina {
+      padding-top: 18px;
+    }
+
+    .artigo-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .hero-artigo {
+      margin-bottom: 28px;
+    }
+
+    .hero-artigo-imagem {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+      background: #fff;
+    }
+
+    .hero-artigo-imagem img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .hero-artigo-legenda {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 0.98rem;
+      color: #6c5a6f;
+      line-height: 1.6;
+    }
+
+    .artigo-conteudo {
+      background: #fff;
+      border-radius: 24px;
+      padding: 38px 34px;
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.06);
+    }
+
+    .artigo-conteudo h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      color: #6b48a8;
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+
+    .artigo-conteudo h2,
+    .artigo-conteudo h3 {
+      color: #6b48a8;
+      margin-top: 26px;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .artigo-conteudo p,
+    .artigo-conteudo li {
+      color: #4a3d52;
+      line-height: 1.85;
+      font-size: 1.04rem;
+    }
+
+    .artigo-conteudo ul {
+      padding-left: 22px;
+      margin: 10px 0 0;
+    }
+
+    .artigo-assinatura {
+      margin-top: 26px;
+      color: #5b4a66;
+    }
+
+    .artigo-botoes {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .artigos-relacionados {
+      margin-top: 34px;
+    }
+
+    .artigos-relacionados .grid-cards {
+      margin-top: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-artigo-imagem img {
+        height: 320px;
+      }
+
+      .artigo-conteudo {
+        padding: 26px 20px;
+        border-radius: 18px;
+      }
+
+      .hero-artigo-imagem {
+        border-radius: 18px;
+      }
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Quando a tristeza deixa de ser passageira: sinais de sofrimento emocional",
-    "description": "Entenda quando a tristeza persistente pode indicar sofrimento emocional, sinais de alerta e como a psicoterapia pode ajudar.",
-    "image": "https://anapaulaapvieirapsi.com.br/imagens/tristeza-persistente.jpg",
-    "author": {
-      "@type": "Person",
-      "name": "Ana Paula Ap. Vieira",
-      "jobTitle": "Psicóloga Clínica",
-      "identifier": "CRP 06/217114"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Consultório de Psicologia – Ana Paula Ap. Vieira",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://anapaulaapvieirapsi.com.br/imagens/logo-simbolo.png"
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Quando a tristeza deixa de ser passageira: sinais de sofrimento emocional",
+        "description": "Entenda quando a tristeza persistente pode indicar sofrimento emocional, sinais de alerta e como a psicoterapia pode ajudar.",
+        "image": "https://anapaulaapvieirapsi.com.br/imagens/tristeza-persistente.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Ana Paula Ap. Vieira",
+          "jobTitle": "Psicóloga Clínica",
+          "identifier": "CRP 06/217114"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ana Paula Ap. Vieira | Psicóloga Clínica",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://anapaulaapvieirapsi.com.br/imagens/logo-simbolo.png"
+          }
+        },
+        "mainEntityOfPage": "https://anapaulaapvieirapsi.com.br/tristeza-persistente.html"
+      },
+      {
+        "@type": "Psychologist",
+        "name": "Ana Paula Ap. Vieira",
+        "url": "https://anapaulaapvieirapsi.com.br/",
+        "telephone": "+55 15 99676-0791",
+        "email": "contato@anapaulaapvieirapsi.com.br",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Nazareth, 84",
+          "addressLocality": "Itapetininga",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Itapetininga"
+          },
+          {
+            "@type": "Country",
+            "name": "Brasil"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/anapaulapsico/",
+          "https://www.facebook.com/anapaulaapvieirapsico/",
+          "https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
+        ]
       }
-    },
-    "mainEntityOfPage": "https://anapaulaapvieirapsi.com.br/tristeza-persistente.html"
+    ]
   }
   </script>
-
-  <link rel="preload" as="image" href="imagens/tristeza-persistente.jpg">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
 </head>
 
 <body>
-  <!-- ================== CABEÇALHO PADRONIZADO ================== -->
   <header class="cabecalho">
-    <div class="logo-area" style="display:flex; align-items:center; gap:18px; padding:14px 18px;">
-      <img src="imagens/logo-simbolo.png" alt="Símbolo Psicologia" class="logo" style="width:56px; height:56px;">
-      <h1 style="margin:0; color:#6b48a8; font-size:1.25rem;">Ana Paula Ap. Vieira | Psicóloga Clínica</h1>
+    <div class="container header-wrap">
+      <a href="index.html" class="logo-link" aria-label="Página inicial">
+        <div class="logo-area">
+          <img src="imagens/logo-simbolo.png" alt="Logo Ana Paula Ap. Vieira" class="logo" />
+          <div class="logo-texto">
+            <h2>Ana Paula Ap. Vieira</h2>
+            <p>Psicóloga Clínica | CRP 06/217114</p>
+          </div>
+        </div>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-nav"
+        type="button"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="menu-nav" id="menu-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="quem-sou.html">Quem Sou</a></li>
+          <li><a href="depoimentos.html">Depoimentos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="recursos.html">Conteúdos</a></li>
+          <li><a href="preco.html">Preço</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="menu-nav" style="padding:6px 18px;">
-      <ul style="list-style:none; display:flex; gap:18px; margin:0; padding:0; justify-content:flex-end;">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="quem-sou.html">Quem Sou</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="preco.html">Preços</a></li>
-        <li><a href="recursos.html">Recursos</a></li>
-        <li><a href="depoimentos.html">Depoimentos</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- ================== CONTEÚDO ================== -->
-  <main>
-    <section class="conteudo-artigo" style="max-width:920px;margin:28px auto;padding:0 18px;">
-      <img src="imagens/tristeza-persistente.jpg" alt="Pessoa com tristeza persistente" class="imagem-artigo" style="width:100%;height:auto;border-radius:12px;object-fit:cover;">
-      <p class="legenda" style="margin-top:8px;color:#6c5a6f;">Nem toda tristeza é igual — e você não precisa passar por isso sozinho(a).</p>
+  <main class="artigo-pagina">
+    <section class="secao">
+      <div class="container artigo-wrap">
+        <div class="hero-artigo">
+          <div class="hero-artigo-imagem">
+            <img src="imagens/tristeza-persistente.jpg" alt="Pessoa com tristeza persistente" />
+          </div>
+          <p class="hero-artigo-legenda">
+            Nem toda tristeza é igual — e você não precisa passar por isso sozinho(a).
+          </p>
+        </div>
 
-      <h2 style="color:#6b48a8;margin-top:18px;">Quando a tristeza deixa de ser passageira</h2>
+        <article class="artigo-conteudo">
+          <h1>Quando a tristeza deixa de ser passageira</h1>
 
-      <p style="color:#4a3d52;line-height:1.6;">
-        Sentir tristeza faz parte da vida. Ela pode surgir após uma perda, um período difícil, uma frustração ou mudanças importantes.
-        O ponto de atenção é quando a tristeza deixa de ser um “momento” e vira um estado constante — como se o corpo e a mente
-        estivessem sempre cansados, sem energia e sem esperança.
-      </p>
+          <p>
+            Sentir tristeza faz parte da vida. Ela pode surgir após uma perda, um período difícil, uma frustração ou mudanças importantes.
+            O ponto de atenção é quando a tristeza deixa de ser um “momento” e vira um estado constante — como se o corpo e a mente
+            estivessem sempre cansados, sem energia e sem esperança.
+          </p>
 
-      <p style="color:#4a3d52;line-height:1.6;">
-        Isso não significa fraqueza, falta de fé ou “drama”. Muitas pessoas seguem trabalhando, cuidando da casa e da família,
-        mas por dentro sentem um peso difícil de explicar. Sofrimento emocional pode ser silencioso — e ainda assim, real.
-      </p>
+          <p>
+            Isso não significa fraqueza, falta de fé ou “drama”. Muitas pessoas seguem trabalhando, cuidando da casa e da família,
+            mas por dentro sentem um peso difícil de explicar. Sofrimento emocional pode ser silencioso — e ainda assim, real.
+          </p>
 
-      <h3 style="color:#6b48a8;margin-top:18px;">Sinais de tristeza persistente e sofrimento emocional</h3>
-      <ul style="color:#4a3d52;line-height:1.6;">
-        <li>sensação de vazio, apatia ou falta de sentido</li>
-        <li>perda de interesse por coisas que antes eram prazerosas</li>
-        <li>cansaço emocional frequente, mesmo descansando</li>
-        <li>choro fácil ou vontade de chorar “presa”</li>
-        <li>irritabilidade, impaciência ou desânimo constante</li>
-        <li>dificuldade de concentração e baixa produtividade</li>
-        <li>isolamento e vontade de se afastar das pessoas</li>
-        <li>alterações no sono (insônia, sono leve ou excessivo)</li>
-      </ul>
+          <h2>Sinais de tristeza persistente e sofrimento emocional</h2>
+          <ul>
+            <li>sensação de vazio, apatia ou falta de sentido</li>
+            <li>perda de interesse por coisas que antes eram prazerosas</li>
+            <li>cansaço emocional frequente, mesmo descansando</li>
+            <li>choro fácil ou vontade de chorar “presa”</li>
+            <li>irritabilidade, impaciência ou desânimo constante</li>
+            <li>dificuldade de concentração e baixa produtividade</li>
+            <li>isolamento e vontade de se afastar das pessoas</li>
+            <li>alterações no sono (insônia, sono leve ou excessivo)</li>
+          </ul>
 
-      <h3 style="color:#6b48a8;margin-top:18px;">Por que isso pode acontecer?</h3>
-      <p style="color:#4a3d52;line-height:1.6;">
-        Tristeza persistente pode estar ligada a sobrecarga emocional, estresse prolongado, experiências difíceis não elaboradas,
-        padrões de autocobrança, relações adoecedoras ou sensação de solidão interna. Às vezes, não existe “um motivo único” —
-        e isso confunde ainda mais quem está sofrendo.
-      </p>
+          <h2>Por que isso pode acontecer?</h2>
+          <p>
+            Tristeza persistente pode estar ligada a sobrecarga emocional, estresse prolongado, experiências difíceis não elaboradas,
+            padrões de autocobrança, relações adoecedoras ou sensação de solidão interna. Às vezes, não existe “um motivo único” —
+            e isso confunde ainda mais quem está sofrendo.
+          </p>
 
-      <h3 style="color:#6b48a8;margin-top:18px;">Um ponto importante: você não precisa “aguentar” até piorar</h3>
-      <p style="color:#4a3d52;line-height:1.6;">
-        Muitas pessoas tentam se convencer de que “vai passar”, ou se comparam com quem parece estar bem. Mas emoções não acolhidas
-        tendem a se acumular. Buscar ajuda não é desistir — é cuidar, com maturidade emocional, do que está doendo.
-      </p>
+          <h2>Um ponto importante: você não precisa “aguentar” até piorar</h2>
+          <p>
+            Muitas pessoas tentam se convencer de que “vai passar”, ou se comparam com quem parece estar bem. Mas emoções não acolhidas
+            tendem a se acumular. Buscar ajuda não é desistir — é cuidar, com maturidade emocional, do que está doendo.
+          </p>
 
-      <h3 style="color:#6b48a8;margin-top:18px;">Como a psicoterapia pode ajudar</h3>
-      <p style="color:#4a3d52;line-height:1.6;">
-        A terapia oferece um espaço seguro para compreender o que você sente, identificar gatilhos, organizar pensamentos e
-        construir estratégias para atravessar fases difíceis com mais apoio interno. O objetivo não é “forçar alegria”,
-        mas fortalecer recursos para que você volte a se sentir vivo(a), presente e com mais leveza.
-      </p>
+          <h2>Como a psicoterapia pode ajudar</h2>
+          <p>
+            A terapia oferece um espaço seguro para compreender o que você sente, identificar gatilhos, organizar pensamentos e
+            construir estratégias para atravessar fases difíceis com mais apoio interno. O objetivo não é “forçar alegria”,
+            mas fortalecer recursos para que você volte a se sentir vivo(a), presente e com mais leveza.
+          </p>
 
-      <h3 style="color:#6b48a8;margin-top:18px;">Quando procurar ajuda psicológica</h3>
-      <p style="color:#4a3d52;line-height:1.6;">
-        Considere buscar suporte se a tristeza persiste por semanas, se você sente perda de energia emocional, se percebe que está
-        se isolando, ou se nota mudanças importantes em sono, apetite, motivação e autocuidado. Não é necessário esperar “chegar no limite”.
-      </p>
+          <h2>Quando procurar ajuda psicológica</h2>
+          <p>
+            Considere buscar suporte se a tristeza persiste por semanas, se você sente perda de energia emocional, se percebe que está
+            se isolando, ou se nota mudanças importantes em sono, apetite, motivação e autocuidado. Não é necessário esperar “chegar no limite”.
+          </p>
 
-      <p class="assinatura-artigo" style="margin-top:20px;color:#5b4a66;">
-        — Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)<br>
-        Psicoterapia presencial e online | Itapetininga — SP
-      </p>
+          <p class="artigo-assinatura">
+            — Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)<br />
+            Psicoterapia presencial e online | Itapetininga — SP
+          </p>
 
-      <a href="recursos.html" class="btn-voltar"
-         style="display:inline-block;margin-top:24px;padding:10px 26px;border-radius:30px;background:#7a56b2;color:#ffffff;font-weight:500;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.12);">
-        ← Voltar aos recursos
-      </a>
+          <div class="artigo-botoes">
+            <a href="recursos.html" class="btn-secundario">← Voltar aos conteúdos</a>
+            <a
+              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primario"
+            >
+              Agendar pelo WhatsApp
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao artigos-relacionados" aria-labelledby="artigos-relacionados-titulo">
+      <div class="container">
+        <div class="secao-titulo">
+          <h2 id="artigos-relacionados-titulo">Conteúdos relacionados</h2>
+          <p>
+            Leituras que podem complementar este tema com acolhimento e clareza.
+          </p>
+        </div>
+
+        <div class="grid-cards">
+          <a href="depressao.html" class="card-artigo">
+            <img src="imagens/depressao.jpg" alt="Depressão e acolhimento emocional" />
+            <div class="card-artigo-texto">
+              <h3>Depressão: acolhimento, sinais e cuidado emocional</h3>
+              <p>Compreenda sinais importantes e quando buscar ajuda psicológica.</p>
+              <span class="btn-card">Saiba mais</span>
+            </div>
+          </a>
+
+          <a href="cansaco-emocional.html" class="card-artigo">
+            <img src="imagens/cansaco-emocional.jpg" alt="Cansaço emocional" />
+            <div class="card-artigo-texto">
+              <h3>Cansaço emocional e exaustão</h3>
+              <p>Quando tudo parece pesado e o descanso já não parece suficiente.</p>
+              <span class="btn-card">Saiba mais</span>
+            </div>
+          </a>
+
+          <a href="ansiedade-em-itapetininga.html" class="card-artigo">
+            <img src="imagens/ansiedade-em-itapetininga.jpg" alt="Ansiedade em Itapetininga" />
+            <div class="card-artigo-texto">
+              <h3>Ansiedade em Itapetininga</h3>
+              <p>Entenda sinais emocionais que também podem se misturar ao sofrimento psíquico.</p>
+              <span class="btn-card">Saiba mais</span>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- ================== RODAPÉ PADRONIZADO ================== -->
-  <footer class="rodape" style="background:#f4effa;padding:26px 18px;text-align:center;margin-top:18px;">
-    <div style="max-width:1000px;margin:0 auto;">
-      <p style="margin:6px 0;">
-        <strong>Endereço:</strong>
-        <a href="https://www.google.com/maps?q=R.+Nazareth,+84+-+Vila+São+Pedro,+Itapetininga+-+SP" target="_blank" style="text-decoration:underline;">
-          R. Nazareth, 84 - Vila São Pedro, Itapetininga - SP
+  <a
+    href="https://maps.google.com/?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+    class="endereco-flutuante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Abrir endereço no mapa"
+    style="display:none;"
+  ></a>
+
+  <a
+    href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <footer class="rodape" id="contato">
+    <div class="container footer-box">
+      <div class="footer-info">
+        <p><strong>Ana Paula Ap. Vieira | Psicóloga Clínica</strong></p>
+        <p>CRP 06/217114</p>
+        <p>Itapetininga – SP</p>
+        <p>
+          <a
+            href="https://www.google.com/maps?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Rua Nazareth, 84
+          </a>
+        </p>
+        <p>
+          <a href="mailto:contato@anapaulaapvieirapsi.com.br">
+            contato@anapaulaapvieirapsi.com.br
+          </a>
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="recursos.html">Conteúdos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="servicos.html">Atendimento</a>
+        <a
+          href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
         </a>
-      </p>
-      <p style="margin:6px 0;">
-        <strong>Telefone:</strong>
-        <a href="https://wa.me/5515996760791" target="_blank" style="text-decoration:underline;">
-          (15) 99676-0791
-        </a>
-      </p>
-      <p style="margin:6px 0;">
-        <strong>E-mail:</strong>
-        <a href="mailto:contato@anapaulaapvieirapsi.com.br" style="text-decoration:underline;">
-          contato@anapaulaapvieirapsi.com.br
-        </a>
-      </p>
-      <p style="margin:6px 0;">© 2025 Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)</p>
-      <div style="margin-top:8px;">
-        <a href="https://www.instagram.com/anapaulapsico/" target="_blank" style="text-decoration:underline;">Instagram</a> |
-        <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" style="text-decoration:underline;">Facebook</a> |
-        <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185" target="_blank" style="text-decoration:underline;">LinkedIn</a>
+      </div>
+
+      <div class="footer-redes-box">
+        <div class="footer-redes">
+          <a
+            href="https://www.instagram.com/anapaulapsico/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/anapaulaapvieirapsico/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <p class="footer-copy">© 2026 Ana Paula Ap. Vieira</p>
+        <p class="footer-copy">Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
-
-  <button id="btn-topo" class="btn-topo" title="Voltar ao início">↑</button>
-  <a href="https://wa.me/5515996760791" class="whatsapp-btn" target="_blank" style="position:fixed; right:18px; bottom:18px; z-index:999;">
-    <img src="imagens/whatsapp-icon.png" alt="WhatsApp" style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
-  </a>
-
-  <script src="app.js"></script>
 </body>
 </html>
