@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Relacionamentos, padrões e limites | Ana Paula Ap. Vieira</title>
+  <title>Quem Sou | Ana Paula Ap. Vieira | Psicóloga Clínica em Itapetininga</title>
   <meta
     name="description"
-    content="Entenda dificuldades nos relacionamentos, repetição de padrões, medo de desagradar, comunicação e limites. Saiba como a psicoterapia pode ajudar com Ana Paula Ap. Vieira (CRP 06/217114)."
+    content="Conheça Ana Paula Ap. Vieira (CRP 06/217114), psicóloga clínica com atendimento presencial em Itapetininga-SP e online para todo o Brasil, com acolhimento, escuta e cuidado emocional."
   />
   <meta
     name="keywords"
-    content="relacionamentos, padrões nos relacionamentos, limites emocionais, dificuldade nos relacionamentos, comunicação no casal, psicoterapia para relacionamentos, Ana Paula Ap. Vieira"
+    content="Ana Paula Ap. Vieira, psicóloga em Itapetininga, psicóloga clínica, psicoterapia em Itapetininga, atendimento psicológico online, quem sou psicóloga"
   />
   <meta name="author" content="Ana Paula Ap. Vieira" />
   <meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/relacionamentos.html" />
+  <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/quem-sou.html" />
   <link rel="icon" type="image/png" href="imagens/favicon.png" />
   <link rel="manifest" href="manifest.json" />
+  <link rel="preload" as="image" href="imagens/sua-foto.jpg" />
 
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="profile" />
   <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica" />
-  <meta property="og:title" content="Relacionamentos, padrões e limites | Ana Paula Ap. Vieira" />
+  <meta property="og:title" content="Quem Sou | Ana Paula Ap. Vieira | Psicóloga Clínica" />
   <meta
     property="og:description"
-    content="Você sente que repete os mesmos padrões? Entenda limites, comunicação e vínculos. Veja como a psicoterapia pode ajudar."
+    content="Conheça a trajetória, forma de trabalho e o cuidado oferecido por Ana Paula Ap. Vieira em seus atendimentos psicológicos."
   />
-  <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/relacionamentos.html" />
-  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/relacionamentos-itapetininga.jpg" />
-  <meta property="og:image:alt" content="Relacionamentos e comunicação emocional" />
+  <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/quem-sou.html" />
+  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg" />
+  <meta property="og:image:alt" content="Ana Paula Ap. Vieira — Psicóloga Clínica" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Relacionamentos, padrões e limites | Ana Paula Ap. Vieira" />
+  <meta name="twitter:title" content="Quem Sou | Ana Paula Ap. Vieira | Psicóloga Clínica" />
   <meta
     name="twitter:description"
-    content="Entenda dificuldades nos relacionamentos, repetição de padrões, limites e comunicação emocional."
+    content="Psicóloga clínica com atendimento presencial em Itapetininga-SP e online para todo o Brasil."
   />
-  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/relacionamentos-itapetininga.jpg" />
+  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -60,49 +61,22 @@
     :root {
       --verde-index: #b8ccb0;
       --verde-index-escuro: #a7be9d;
-      --card-branco: rgba(255, 255, 255, 0.9);
+      --card-branco: rgba(255, 255, 255, 0.92);
       --sombra-suave: 0 10px 28px rgba(88, 73, 96, 0.07);
+      --roxo: #7656b3;
+      --texto: #4a3d52;
     }
 
-    .artigo-pagina {
+    .pagina-quem-sou {
       padding-top: 18px;
     }
 
-    .artigo-wrap {
-      max-width: 980px;
+    .quem-sou-wrap {
+      max-width: 1060px;
       margin: 0 auto;
     }
 
-    .hero-artigo {
-      max-width: 760px;
-      margin: 0 auto 30px;
-    }
-
-    .hero-artigo-imagem {
-      overflow: hidden;
-      border-radius: 30px;
-      background: transparent;
-      box-shadow: 0 10px 24px rgba(88, 73, 96, 0.08);
-    }
-
-    .hero-artigo-imagem img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      object-position: center 20%;
-      display: block;
-    }
-
-    .hero-artigo-legenda {
-      margin-top: 12px;
-      text-align: center;
-      font-size: 0.98rem;
-      line-height: 1.65;
-      color: #6c5a6f;
-      padding: 0 12px 2px;
-    }
-
-    .artigo-conteudo {
+    .quem-sou-card-principal {
       background: var(--card-branco);
       border: 1px solid var(--verde-index);
       border-radius: 32px;
@@ -110,119 +84,100 @@
       box-shadow: var(--sombra-suave);
     }
 
-    .artigo-conteudo h1 {
+    .quem-sou-titulo {
       font-family: "Playfair Display", serif;
-      font-size: clamp(2.15rem, 4vw, 3rem);
+      font-size: clamp(2.2rem, 4vw, 3rem);
       line-height: 1.15;
-      color: #7656b3;
-      margin-bottom: 20px;
+      color: var(--roxo);
+      text-align: center;
+      margin-bottom: 18px;
     }
 
-    .artigo-conteudo h2,
-    .artigo-conteudo h3 {
-      color: #7656b3;
-      margin-top: 28px;
-      margin-bottom: 12px;
-      line-height: 1.3;
-    }
-
-    .artigo-conteudo p,
-    .artigo-conteudo li {
-      color: #4a3d52;
+    .quem-sou-intro {
+      max-width: 820px;
+      margin: 0 auto 28px;
+      text-align: center;
+      color: var(--texto);
       line-height: 1.9;
       font-size: 1.04rem;
     }
 
-    .artigo-conteudo ul {
-      padding-left: 24px;
-      margin-top: 8px;
+    .quem-sou-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 28px;
+      align-items: center;
     }
 
-    .artigo-assinatura {
-      margin-top: 24px;
-      color: #5b4a66;
-    }
-
-    .artigo-botoes {
-      margin-top: 30px;
+    .quem-sou-foto {
       display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+      justify-content: center;
     }
 
-    .artigos-relacionados {
-      margin-top: 8px;
-    }
-
-    .artigos-relacionados .grid-cards {
-      margin-top: 18px;
-    }
-
-    .artigos-relacionados .card-artigo {
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid var(--verde-index-escuro) !important;
-      border-radius: 28px;
-      box-shadow: var(--sombra-suave);
-      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-      padding: 28px 24px;
-      min-height: auto;
+    .quem-sou-foto img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 10px 24px rgba(88, 73, 96, 0.10);
       display: block;
     }
 
-    .artigos-relacionados .card-artigo:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 28px rgba(88, 73, 96, 0.10);
-      border-color: #94ae89 !important;
+    .quem-sou-box {
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid var(--verde-index-escuro);
+      border-radius: 28px;
+      padding: 26px 24px;
+      box-shadow: var(--sombra-suave);
     }
 
-    .artigos-relacionados .card-artigo-texto {
-      padding: 0;
-    }
-
-    .artigos-relacionados .card-artigo h3 {
-      color: #6f52ab;
+    .quem-sou-box h2 {
+      color: var(--roxo);
       font-size: 1.22rem;
       line-height: 1.35;
       margin-bottom: 12px;
     }
 
-    .artigos-relacionados .card-artigo p {
-      color: #5e5164;
-      line-height: 1.7;
-      margin-bottom: 16px;
+    .quem-sou-box p {
+      color: var(--texto);
+      line-height: 1.85;
+      font-size: 1rem;
+      margin-bottom: 12px;
     }
 
-    .artigos-relacionados .btn-card {
-      display: inline-block;
-      margin-top: 0;
+    .quem-sou-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .quem-sou-box a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .quem-sou-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quem-sou-foto {
+        margin-bottom: 4px;
+      }
     }
 
     @media (max-width: 768px) {
-      .hero-artigo {
-        max-width: 100%;
-      }
-
-      .hero-artigo-imagem {
-        border-radius: 20px;
-      }
-
-      .hero-artigo-imagem img {
-        height: 320px;
-        object-position: center 18%;
-      }
-
-      .hero-artigo-legenda {
-        font-size: 0.95rem;
-      }
-
-      .artigo-conteudo {
+      .quem-sou-card-principal {
         padding: 28px 20px;
         border-radius: 22px;
       }
 
-      .artigos-relacionados .card-artigo {
+      .quem-sou-box {
         border-radius: 22px;
         padding: 22px 18px;
+      }
+
+      .quem-sou-foto img {
+        width: 230px;
+        height: 230px;
       }
     }
   </style>
@@ -232,50 +187,26 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Article",
-        "@id": "https://anapaulaapvieirapsi.com.br/relacionamentos.html#article",
-        "headline": "Relacionamentos – Padrões, limites e vínculos",
-        "description": "Entenda dificuldades nos relacionamentos, repetição de padrões, medo de desagradar, comunicação e limites. Saiba como a psicoterapia pode ajudar.",
-        "image": "https://anapaulaapvieirapsi.com.br/imagens/relacionamentos-itapetininga.jpg",
-        "author": {
-          "@type": "Person",
-          "name": "Ana Paula Ap. Vieira",
-          "jobTitle": "Psicóloga Clínica",
-          "identifier": "CRP 06/217114"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Ana Paula Ap. Vieira | Psicóloga Clínica",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://anapaulaapvieirapsi.com.br/imagens/logo-simbolo.png"
-          }
-        },
-        "mainEntityOfPage": "https://anapaulaapvieirapsi.com.br/relacionamentos.html"
+        "@type": "ProfilePage",
+        "@id": "https://anapaulaapvieirapsi.com.br/quem-sou.html#page",
+        "url": "https://anapaulaapvieirapsi.com.br/quem-sou.html",
+        "name": "Quem Sou | Ana Paula Ap. Vieira",
+        "description": "Conheça Ana Paula Ap. Vieira, psicóloga clínica com atendimento presencial em Itapetininga-SP e online.",
+        "mainEntity": {
+          "@id": "https://anapaulaapvieirapsi.com.br/quem-sou.html#person"
+        }
       },
       {
-        "@type": "Psychologist",
+        "@type": "Person",
+        "@id": "https://anapaulaapvieirapsi.com.br/quem-sou.html#person",
         "name": "Ana Paula Ap. Vieira",
+        "jobTitle": "Psicóloga Clínica",
         "image": "https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg",
-        "url": "https://anapaulaapvieirapsi.com.br/",
-        "telephone": "+55 15 99676-0791",
-        "email": "contato@anapaulaapvieirapsi.com.br",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Nazareth, 84",
-          "addressLocality": "Itapetininga",
-          "addressRegion": "SP",
-          "addressCountry": "BR"
-        },
-        "areaServed": [
-          { "@type": "City", "name": "Itapetininga" },
-          { "@type": "Country", "name": "Brasil" }
-        ],
-        "sameAs": [
-          "https://www.instagram.com/anapaulapsico/",
-          "https://www.facebook.com/anapaulaapvieirapsico/",
-          "https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
-        ]
+        "url": "https://anapaulaapvieirapsi.com.br/quem-sou.html",
+        "worksFor": {
+          "@type": "LocalBusiness",
+          "name": "Ana Paula Ap. Vieira | Psicóloga Clínica"
+        }
       }
     ]
   }
@@ -320,156 +251,43 @@
     </div>
   </header>
 
-  <main class="artigo-pagina">
-    <section class="secao">
-      <div class="container artigo-wrap">
-        <div class="hero-artigo">
-          <div class="hero-artigo-imagem">
-            <img
-              src="imagens/relacionamentos-itapetininga.jpg"
-              alt="Relacionamentos e comunicação emocional no casal"
-            />
+  <main class="pagina-quem-sou">
+    <section class="secao" aria-label="Quem Sou">
+      <div class="container quem-sou-wrap">
+        <div class="quem-sou-card-principal">
+          <h1 class="quem-sou-titulo">Quem Sou</h1>
+          <p class="quem-sou-intro">
+            Um pouco sobre minha trajetória, forma de trabalho e o cuidado que procuro oferecer em cada atendimento.
+          </p>
+
+          <div class="quem-sou-grid">
+            <div class="quem-sou-foto">
+              <img src="imagens/sua-foto.jpg" alt="Ana Paula Ap. Vieira — Psicóloga Clínica" />
+            </div>
+
+            <div class="quem-sou-box">
+              <h2>Ana Paula Ap. Vieira — Psicóloga Clínica (CRP 06/217114)</h2>
+
+              <p>
+                Sou <strong>Ana Paula Ap. Vieira</strong> (CRP 06/217114), psicóloga clínica com atuação voltada ao atendimento individual de
+                adultos, adolescentes e crianças.
+              </p>
+
+              <p>
+                Meu trabalho é guiado pela ética, pelo acolhimento e pelo compromisso com o bem-estar de quem busca acompanhamento.
+                Ofereço um espaço seguro para o cuidado emocional, elaboração de sofrimentos e desenvolvimento pessoal.
+              </p>
+
+              <p>
+                <strong>Atendimento presencial em Itapetininga-SP e online para todo o Brasil.</strong>
+              </p>
+
+              <p>
+                Acredito que cuidar da saúde emocional é um processo possível quando existe escuta, vínculo e respeito pela história de cada pessoa. A terapia não é sobre respostas prontas, mas sobre construir sentidos — no seu tempo, do seu jeito.
+                Atuo como <a href="psicologa-em-itapetininga.html">psicóloga em Itapetininga</a>, oferecendo <a href="psicologa-em-itapetininga.html">psicoterapia em Itapetininga</a> presencial e online para quem busca um espaço de acolhimento e cuidado emocional.
+              </p>
+            </div>
           </div>
-          <p class="hero-artigo-legenda">
-            Quando algo se repete nas relações, pode ser um convite para compreender padrões, limites e necessidades emocionais.
-          </p>
-        </div>
-
-        <article class="artigo-conteudo">
-          <h1>Relacionamentos – Padrões, limites e vínculos</h1>
-
-          <h2>Dificuldades nos relacionamentos: por que isso acontece?</h2>
-
-          <p>
-            Relacionamentos mexem com a nossa história emocional: vínculo, pertencimento, medo de perder, desejo de ser aceito(a),
-            necessidade de carinho, validação e segurança. Por isso, quando a relação entra em crise, é comum surgir ansiedade,
-            confusão, culpa, irritação ou sensação de vazio.
-          </p>
-
-          <p>
-            Às vezes, não é que a pessoa “não sabe amar”. É que ela aprendeu a se proteger de um jeito que hoje atrapalha:
-            evita conversas difíceis, engole sentimentos, tenta agradar para não ser rejeitada ou explode quando já passou do limite.
-            A psicoterapia pode ajudar a compreender o que está por trás desse padrão e construir caminhos mais saudáveis.
-          </p>
-
-          <h3>Sinais comuns de dificuldade nos relacionamentos</h3>
-          <ul>
-            <li>Sensação de repetir as mesmas histórias (com pessoas diferentes)</li>
-            <li>Medo de desagradar e dificuldade de dizer “não”</li>
-            <li>Discussões que viram distanciamento, silêncio ou “gelo”</li>
-            <li>Ciúme, insegurança e necessidade constante de confirmação</li>
-            <li>Vínculo com pessoas indisponíveis, frias ou que não assumem</li>
-            <li>Dificuldade de confiar e de se abrir emocionalmente</li>
-            <li>Desequilíbrio: você faz demais e o outro faz de menos</li>
-          </ul>
-
-          <h3>Padrões que se repetem: não é “azar”, é história</h3>
-          <p>
-            Quando um padrão se repete, geralmente existe algo que precisa ser visto com mais clareza:
-            crenças sobre amor e valor pessoal, formas de se proteger, expectativas, feridas antigas e necessidades não atendidas.
-            Muitas pessoas só percebem isso quando começam a observar: “eu sempre me anulo”, “eu sempre escolho quem não escolhe”,
-            “eu sempre me sinto insuficiente”.
-          </p>
-
-          <p>
-            A terapia ajuda a dar nome ao que acontece, compreender a própria dinâmica emocional e desenvolver novas respostas —
-            com mais consciência, autocuidado e firmeza.
-          </p>
-
-          <h3>Limites: o que protege a relação (e você)</h3>
-          <p>
-            Limites não são agressividade e nem frieza. Limites são uma forma de dizer: “eu me respeito” e “eu preciso disso para
-            permanecer bem”. Em muitas relações, o problema não é falta de amor — é falta de clareza: o que é aceitável, o que machuca,
-            o que precisa mudar.
-          </p>
-
-          <ul>
-            <li>Limite é comunicar o que você sente sem atacar.</li>
-            <li>Limite é não se abandonar para manter alguém por perto.</li>
-            <li>Limite é sustentar um “não” sem culpa destrutiva.</li>
-          </ul>
-
-          <h3>Comunicação: não é falar mais, é falar melhor</h3>
-          <p>
-            Muitas brigas não são “sobre o assunto” — são sobre o que ficou acumulado: frustração, medo, sensação de não ser visto(a),
-            insegurança, cansaço. Comunicar bem envolve reconhecer a própria emoção, escolher o momento e expressar com clareza o que
-            você precisa, sem transformar a conversa em ataque.
-          </p>
-
-          <p>
-            Quando a comunicação melhora, o vínculo tende a ficar mais seguro: menos adivinhação, menos suposições,
-            mais presença e mais verdade.
-          </p>
-
-          <h3>Como a psicoterapia pode ajudar</h3>
-          <p>
-            Na psicoterapia, você encontra um espaço seguro para compreender padrões, fortalecer autoestima, construir limites e
-            desenvolver recursos emocionais para lidar com as relações. O objetivo não é “te encaixar” em um modelo perfeito,
-            mas te ajudar a viver vínculos com mais consciência, autonomia e bem-estar.
-          </p>
-
-          <ul>
-            <li>Identificar padrões e gatilhos emocionais</li>
-            <li>Trabalhar medo de abandono, rejeição e insegurança</li>
-            <li>Fortalecer limites e autocuidado</li>
-            <li>Desenvolver comunicação e posicionamento</li>
-            <li>Reduzir culpa, autocobrança e ansiedade relacional</li>
-          </ul>
-
-          <p class="artigo-assinatura">
-            — Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)<br />
-            Psicoterapia presencial e online | Itapetininga — SP
-          </p>
-
-          <div class="artigo-botoes">
-            <a
-              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula%2C%20gostaria%20de%20saber%20mais%20sobre%20psicoterapia%20para%20relacionamentos."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-primario"
-            >
-              Falar no WhatsApp
-            </a>
-
-            <a href="recursos.html" class="btn-secundario">← Voltar aos conteúdos</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="secao artigos-relacionados" aria-labelledby="artigos-relacionados-titulo">
-      <div class="container">
-        <div class="secao-titulo">
-          <h2 id="artigos-relacionados-titulo">Conteúdos relacionados</h2>
-          <p>
-            Páginas que podem complementar este tema com acolhimento e clareza.
-          </p>
-        </div>
-
-        <div class="grid-cards">
-          <a href="ansiedade.html" class="card-artigo">
-            <div class="card-artigo-texto">
-              <h3>Ansiedade</h3>
-              <p>Entenda como a ansiedade afeta emoções, corpo, rotina e relações.</p>
-              <span class="btn-card">Saiba mais</span>
-            </div>
-          </a>
-
-          <a href="sobre-o-atendimento.html" class="card-artigo">
-            <div class="card-artigo-texto">
-              <h3>Sobre o atendimento</h3>
-              <p>Saiba como funciona a psicoterapia com acolhimento e escuta.</p>
-              <span class="btn-card">Saiba mais</span>
-            </div>
-          </a>
-
-          <a href="servicos.html" class="card-artigo">
-            <div class="card-artigo-texto">
-              <h3>Serviços</h3>
-              <p>Conheça os atendimentos para adultos, adolescentes e crianças.</p>
-              <span class="btn-card">Saiba mais</span>
-            </div>
-          </a>
         </div>
       </div>
     </section>
@@ -485,7 +303,7 @@
   ></a>
 
   <a
-    href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+    href="https://wa.me/5515996760791"
     class="whatsapp-btn"
     target="_blank"
     rel="noopener noreferrer"
