@@ -60,8 +60,6 @@
     :root {
       --verde-index: #b8ccb0;
       --verde-index-escuro: #a7be9d;
-      --verde-linha-interna: rgba(167, 190, 157, 0.55);
-      --verde-linha-externa: rgba(184, 204, 176, 0.9);
       --card-branco: rgba(255, 255, 255, 0.9);
       --sombra-suave: 0 10px 28px rgba(88, 73, 96, 0.07);
     }
@@ -75,45 +73,25 @@
       margin: 0 auto;
     }
 
-    /* FOTO */
+    /* FOTO AJUSTADA */
     .hero-artigo {
-      margin-bottom: 30px;
-    }
-
-    .hero-artigo-frame {
       max-width: 760px;
-      margin: 0 auto;
-      padding: 10px;
-      border-radius: 34px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid var(--verde-linha-externa);
-      box-shadow: 0 8px 22px rgba(88, 73, 96, 0.05);
-      position: relative;
-    }
-
-    .hero-artigo-frame::before {
-      content: "";
-      position: absolute;
-      inset: 8px;
-      border-radius: 28px;
-      border: 1px solid var(--verde-linha-interna);
-      pointer-events: none;
+      margin: 0 auto 30px;
     }
 
     .hero-artigo-imagem {
       overflow: hidden;
-      border-radius: 26px;
-      background: #f4effa;
-      position: relative;
+      border-radius: 30px;
+      background: transparent;
+      box-shadow: 0 10px 24px rgba(88, 73, 96, 0.08);
     }
 
     .hero-artigo-imagem img {
       width: 100%;
-      height: 295px;
+      height: 420px;
       object-fit: cover;
-      object-position: center;
+      object-position: center 18%;
       display: block;
-      border-radius: 26px;
     }
 
     .hero-artigo-legenda {
@@ -228,24 +206,17 @@
     }
 
     @media (max-width: 768px) {
-      .hero-artigo-frame {
+      .hero-artigo {
         max-width: 100%;
-        padding: 8px;
-        border-radius: 24px;
       }
 
-      .hero-artigo-frame::before {
-        inset: 6px;
+      .hero-artigo-imagem {
         border-radius: 20px;
       }
 
-      .hero-artigo-imagem,
       .hero-artigo-imagem img {
-        border-radius: 18px;
-      }
-
-      .hero-artigo-imagem img {
-        height: 240px;
+        height: 320px;
+        object-position: center 16%;
       }
 
       .hero-artigo-legenda {
@@ -369,14 +340,12 @@
     <section class="secao">
       <div class="container artigo-wrap">
         <div class="hero-artigo">
-          <div class="hero-artigo-frame">
-            <div class="hero-artigo-imagem">
-              <img src="imagens/tristeza-persistente.jpg" alt="Pessoa com tristeza persistente" />
-            </div>
-            <p class="hero-artigo-legenda">
-              Nem toda tristeza é igual — e você não precisa passar por isso sozinho(a).
-            </p>
+          <div class="hero-artigo-imagem">
+            <img src="imagens/tristeza-persistente.jpg" alt="Pessoa com tristeza persistente" />
           </div>
+          <p class="hero-artigo-legenda">
+            Nem toda tristeza é igual — e você não precisa passar por isso sozinho(a).
+          </p>
         </div>
 
         <article class="artigo-conteudo">
