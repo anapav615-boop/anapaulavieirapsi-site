@@ -227,19 +227,23 @@ button {
 }
 
 .espaco-seguro-mini-foto {
-  width: 110px;
-  height: 110px;
-  margin: 0 auto 18px;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid #ffffff;
   box-shadow: 0 10px 24px rgba(88, 73, 96, 0.12);
+  flex-shrink: 0;
 }
 
 .espaco-seguro-mini-foto img {
-  width: 100%;
-  height: 100%;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 50%;
 }
 
 .bloco-texto-central,
@@ -674,4 +678,5 @@ button {
   border: 1.5px solid var(--green-border) !important;
   border-radius: 22px !important;
 }
+
 
