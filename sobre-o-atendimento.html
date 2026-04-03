@@ -162,9 +162,11 @@
       background: rgba(255, 255, 255, 0.92);
       border: 1px solid var(--verde-index-escuro) !important;
       border-radius: 28px;
-      overflow: hidden;
       box-shadow: var(--sombra-suave);
       transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      padding: 28px 24px;
+      min-height: auto;
+      display: block;
     }
 
     .artigos-relacionados .card-artigo:hover {
@@ -173,33 +175,26 @@
       border-color: #94ae89 !important;
     }
 
-    .artigos-relacionados .card-artigo img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
-
     .artigos-relacionados .card-artigo-texto {
-      padding: 22px;
+      padding: 0;
     }
 
     .artigos-relacionados .card-artigo h3 {
       color: #6f52ab;
       font-size: 1.22rem;
       line-height: 1.35;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .artigos-relacionados .card-artigo p {
       color: #5e5164;
       line-height: 1.7;
+      margin-bottom: 16px;
     }
 
     .artigos-relacionados .btn-card {
-      margin-top: 14px;
       display: inline-block;
+      margin-top: 0;
     }
 
     @media (max-width: 768px) {
@@ -227,10 +222,7 @@
 
       .artigos-relacionados .card-artigo {
         border-radius: 22px;
-      }
-
-      .artigos-relacionados .card-artigo img {
-        height: 190px;
+        padding: 22px 18px;
       }
     }
   </style>
@@ -432,7 +424,6 @@
 
         <div class="grid-cards">
           <a href="servicos.html" class="card-artigo">
-            <img src="imagens/atendimento-psicologico.jpg" alt="Serviços psicológicos" />
             <div class="card-artigo-texto">
               <h3>Serviços psicológicos</h3>
               <p>Conheça as modalidades de atendimento presencial e online.</p>
@@ -441,7 +432,6 @@
           </a>
 
           <a href="preco.html" class="card-artigo">
-            <img src="imagens/valor-da-terapia.jpg" alt="Valor da terapia" />
             <div class="card-artigo-texto">
               <h3>Valor da terapia</h3>
               <p>Entenda como funciona o investimento no processo terapêutico.</p>
@@ -450,7 +440,6 @@
           </a>
 
           <a href="faq.html" class="card-artigo">
-            <img src="imagens/duvidas-sobre-terapia.jpg" alt="Dúvidas sobre terapia" />
             <div class="card-artigo-texto">
               <h3>Dúvidas frequentes</h3>
               <p>Respostas para perguntas comuns sobre psicoterapia e atendimento.</p>
