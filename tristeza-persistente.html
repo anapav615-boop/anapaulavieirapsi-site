@@ -55,69 +55,91 @@
     }
 
     .hero-artigo {
-      margin-bottom: 28px;
+      margin-bottom: 26px;
+    }
+
+    .hero-artigo-frame {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 14px;
+      border-radius: 30px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(248,243,247,0.96) 100%);
+      box-shadow: 0 14px 34px rgba(90, 72, 103, 0.10);
+      border: 1px solid rgba(201, 184, 196, 0.55);
+      position: relative;
+    }
+
+    .hero-artigo-frame::before {
+      content: "";
+      position: absolute;
+      inset: 9px;
+      border-radius: 22px;
+      border: 1px solid rgba(210, 196, 208, 0.55);
+      pointer-events: none;
     }
 
     .hero-artigo-imagem {
-      border-radius: 24px;
+      position: relative;
       overflow: hidden;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-      background: #fff;
+      border-radius: 22px;
+      background: #f4eff3;
     }
 
     .hero-artigo-imagem img {
       width: 100%;
-      height: 460px;
+      height: clamp(280px, 38vw, 430px);
       object-fit: cover;
       object-position: center;
       display: block;
     }
 
     .hero-artigo-legenda {
-      margin-top: 10px;
+      margin-top: 14px;
       text-align: center;
-      font-size: 0.98rem;
+      font-size: 1rem;
       color: #6c5a6f;
-      line-height: 1.6;
+      line-height: 1.65;
+      padding: 0 10px 2px;
     }
 
     .artigo-conteudo {
-      background: #fff;
-      border-radius: 24px;
-      padding: 38px 34px;
-      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.06);
+      background: rgba(255,255,255,0.92);
+      border-radius: 28px;
+      padding: 40px 36px;
+      box-shadow: 0 10px 28px rgba(90, 72, 103, 0.08);
     }
 
     .artigo-conteudo h1 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(2rem, 3vw, 2.8rem);
-      color: #6b48a8;
-      margin-bottom: 18px;
-      line-height: 1.2;
+      font-size: clamp(2.1rem, 4vw, 3rem);
+      color: #7656b3;
+      line-height: 1.15;
+      margin-bottom: 20px;
     }
 
     .artigo-conteudo h2,
     .artigo-conteudo h3 {
-      color: #6b48a8;
-      margin-top: 26px;
+      color: #7656b3;
+      margin-top: 28px;
       margin-bottom: 12px;
       line-height: 1.3;
+      font-size: clamp(1.35rem, 2vw, 1.9rem);
     }
 
     .artigo-conteudo p,
     .artigo-conteudo li {
       color: #4a3d52;
-      line-height: 1.85;
+      line-height: 1.9;
       font-size: 1.04rem;
     }
 
     .artigo-conteudo ul {
-      padding-left: 22px;
-      margin: 10px 0 0;
+      padding-left: 24px;
+      margin-top: 6px;
     }
 
     .artigo-assinatura {
-      margin-top: 26px;
+      margin-top: 24px;
       color: #5b4a66;
     }
 
@@ -129,25 +151,80 @@
     }
 
     .artigos-relacionados {
-      margin-top: 34px;
+      margin-top: 10px;
     }
 
     .artigos-relacionados .grid-cards {
       margin-top: 18px;
     }
 
+    .artigos-relacionados .card-artigo {
+      border: 1px solid rgba(214, 201, 211, 0.7) !important;
+      box-shadow: 0 10px 24px rgba(90, 72, 103, 0.08) !important;
+      background: rgba(255,255,255,0.94);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .artigos-relacionados .card-artigo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .artigos-relacionados .card-artigo-texto {
+      padding: 22px;
+    }
+
+    .artigos-relacionados .card-artigo h3 {
+      font-size: 1.2rem;
+      line-height: 1.35;
+      color: #6f52ab;
+      margin-bottom: 10px;
+    }
+
+    .artigos-relacionados .card-artigo p {
+      color: #5e5164;
+      line-height: 1.7;
+    }
+
+    .artigos-relacionados .btn-card {
+      margin-top: 14px;
+      display: inline-block;
+    }
+
     @media (max-width: 768px) {
-      .hero-artigo-imagem img {
-        height: 320px;
+      .hero-artigo-frame {
+        padding: 10px;
+        border-radius: 22px;
       }
 
-      .artigo-conteudo {
-        padding: 26px 20px;
-        border-radius: 18px;
+      .hero-artigo-frame::before {
+        inset: 7px;
+        border-radius: 16px;
       }
 
       .hero-artigo-imagem {
-        border-radius: 18px;
+        border-radius: 16px;
+      }
+
+      .hero-artigo-imagem img {
+        height: 300px;
+      }
+
+      .hero-artigo-legenda {
+        font-size: 0.96rem;
+      }
+
+      .artigo-conteudo {
+        padding: 28px 20px;
+        border-radius: 20px;
+      }
+
+      .artigos-relacionados .card-artigo img {
+        height: 200px;
       }
     }
   </style>
@@ -253,12 +330,14 @@
     <section class="secao">
       <div class="container artigo-wrap">
         <div class="hero-artigo">
-          <div class="hero-artigo-imagem">
-            <img src="imagens/tristeza-persistente.jpg" alt="Pessoa com tristeza persistente" />
+          <div class="hero-artigo-frame">
+            <div class="hero-artigo-imagem">
+              <img src="imagens/tristeza-persistente.jpg" alt="Pessoa com tristeza persistente" />
+            </div>
+            <p class="hero-artigo-legenda">
+              Nem toda tristeza é igual — e você não precisa passar por isso sozinho(a).
+            </p>
           </div>
-          <p class="hero-artigo-legenda">
-            Nem toda tristeza é igual — e você não precisa passar por isso sozinho(a).
-          </p>
         </div>
 
         <article class="artigo-conteudo">
