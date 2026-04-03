@@ -7,7 +7,7 @@
   <title>Política de Privacidade | Ana Paula Ap. Vieira</title>
   <meta
     name="description"
-    content="Política de Privacidade do site Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114). Saiba como os dados são coletados, utilizados e protegidos."
+    content="Política de Privacidade do site Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114). Saiba como seus dados são coletados, utilizados e protegidos."
   />
   <meta name="author" content="Ana Paula Ap. Vieira" />
   <meta name="robots" content="index, follow" />
@@ -57,10 +57,6 @@
       --verde-index: #b8ccb0;
       --card-branco: rgba(255, 255, 255, 0.92);
       --sombra-suave: 0 10px 28px rgba(88, 73, 96, 0.07);
-    }
-
-    html, body {
-      min-height: 100%;
     }
 
     body {
@@ -121,42 +117,10 @@
       color: #5b4a66;
     }
 
-    .rodape-privacidade {
-      font-size: 0.85rem;
-      color: #4a3d52;
-      margin-top: 10px;
-    }
-
-    .rodape-privacidade a {
-      color: #7a56b2;
-      text-decoration: underline;
-    }
-
-    .btn-topo {
-      display: none;
-      position: fixed;
-      right: 28px;
-      bottom: 120px;
-      background: #6b48a8;
-      color: #fff;
-      border: 0;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      cursor: pointer;
-      z-index: 999;
-    }
-
     @media (max-width: 768px) {
       .privacidade-card {
         padding: 28px 20px;
         border-radius: 22px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .btn-topo {
-        bottom: 90px;
       }
     }
   </style>
@@ -343,8 +307,32 @@
     </section>
   </main>
 
+  <a
+    href="https://maps.google.com/?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+    class="endereco-flutuante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Abrir endereço no mapa"
+    style="display:none;"
+  ></a>
+
+  <a
+    href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
   <footer class="rodape" id="contato">
     <div class="container footer-box">
+
       <div class="footer-info">
         <p><strong>Ana Paula Ap. Vieira | Psicóloga Clínica</strong></p>
         <p>CRP 06/217114</p>
@@ -412,45 +400,8 @@
         <p class="footer-copy">© 2026 Ana Paula Ap. Vieira</p>
         <p class="footer-copy">Todos os direitos reservados.</p>
       </div>
+
     </div>
   </footer>
-
-  <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">↑</button>
-
-  <a
-    href="https://wa.me/5515996760791"
-    class="whatsapp-btn"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Falar no WhatsApp"
-    style="position:fixed; right:18px; bottom:18px; z-index:999;"
-  >
-    <img
-      src="imagens/whatsapp-icon.png"
-      alt="WhatsApp"
-      style="width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.12);"
-    >
-  </a>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const btnTopo = document.getElementById('btn-topo');
-      if (!btnTopo) return;
-
-      window.addEventListener('scroll', function () {
-        if (window.scrollY > 360) {
-          btnTopo.style.display = 'block';
-        } else {
-          btnTopo.style.display = 'none';
-        }
-      });
-
-      btnTopo.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
-  </script>
-
-  <script src="app.js"></script>
 </body>
 </html>
