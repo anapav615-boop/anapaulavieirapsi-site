@@ -257,69 +257,71 @@
     }
 
     .menu-app {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 34px;
-      padding: 22px;
-      border-radius: 34px;
-      background: rgba(255,255,255,0.38);
-      border: 1px solid rgba(255,255,255,0.48);
-      box-shadow: 0 18px 40px rgba(145, 120, 152, 0.08);
-      backdrop-filter: blur(14px);
-    }
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+  padding: 22px;
+  border-radius: 34px;
+  background: rgba(255,255,255,0.42);
+  border: 1px solid rgba(255,255,255,0.52);
+  box-shadow: 0 18px 40px rgba(145, 120, 152, 0.08);
+  backdrop-filter: blur(12px);
+}
 
-    .menu-app-btn {
-      background: rgba(255,255,255,0.68);
-      border: 1px solid rgba(222, 210, 226, 0.78);
-      border-radius: 28px;
-      padding: 18px 14px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      min-height: 150px;
-      transition: all 0.25s ease;
-      box-shadow: 0 12px 26px rgba(140, 112, 148, 0.05);
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
+   .menu-app-btn {
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(230, 220, 234, 0.96);
+  border-radius: 999px;
+  padding: 18px 18px;
+  min-height: 88px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  box-shadow: 0 10px 24px rgba(140, 112, 148, 0.06);
+  transition: all 0.22s ease;
+}
 
     .menu-app-btn:hover,
-    .menu-app-btn.ativo {
-      transform: translateY(-4px);
-      border-color: rgba(168, 132, 185, 0.88);
-      box-shadow: var(--sombra-hover);
-      background: rgba(255,255,255,0.82);
-    }
+.menu-app-btn.ativo {
+  transform: translateY(-3px);
+  border-color: rgba(168, 132, 185, 0.88);
+  box-shadow: 0 16px 32px rgba(140, 112, 148, 0.12);
+  background: rgba(255,255,255,0.92);
+}
 
-    .menu-app-icone {
-      width: 64px;
-      height: 64px;
-      border-radius: 22px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(180deg, #f9f2fb 0%, #f4f8ef 100%);
-      border: 1px solid rgba(212, 193, 217, 0.62);
-      color: #9d76b2;
-      font-size: 1.38rem;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
-    }
+   .menu-app-icone {
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #fbf4fa 0%, #f7f1f8 100%);
+  border: 1px solid rgba(229, 216, 234, 0.95);
+  color: #a37ab8;
+  font-size: 1.35rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+}
 
     .menu-app-btn strong {
-      color: #8f6ca5;
-      font-size: 1rem;
-      line-height: 1.35;
-    }
+  display: block;
+  color: #8f6ca5;
+  font-size: 1.02rem;
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
 
-    .menu-app-btn span {
-      color: var(--texto-suave);
-      font-size: 0.88rem;
-      line-height: 1.55;
-    }
+.menu-app-btn span {
+  display: block;
+  color: #8a7890;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
 
     .conteudo-app {
       position: relative;
@@ -694,11 +696,15 @@
       }
     }
 
-    @media (max-width: 768px) {
-      .espaco-app-shell {
-        border-radius: 28px;
-        padding: 22px 14px 18px;
-      }
+.menu-app {
+  grid-template-columns: 1fr;
+  padding: 16px;
+  border-radius: 26px;
+}
+
+.menu-app-btn {
+  min-height: 84px;
+}
 
       .hero-app-topo {
         gap: 12px;
