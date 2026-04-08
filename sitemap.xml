@@ -29,12 +29,6 @@
   </url>
 
   <url>
-    <loc>https://anapaulaapvieirapsi.com.br/contato.html</loc>
-    <lastmod>2026-01-21</lastmod>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
     <loc>https://anapaulaapvieirapsi.com.br/recursos.html</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -158,6 +152,12 @@
   </url>
 
   <url>
+    <loc>https://anapaulaapvieirapsi.com.br/dependencia-emocional.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <priority>0.92</priority>
+  </url>
+
+  <url>
     <loc>https://anapaulaapvieirapsi.com.br/depressao.html</loc>
     <lastmod>2026-01-17</lastmod>
     <priority>0.85</priority>
@@ -179,12 +179,6 @@
     <loc>https://anapaulaapvieirapsi.com.br/esgotamento-trabalho.html</loc>
     <lastmod>2026-01-17</lastmod>
     <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/estresse.html</loc>
-    <lastmod>2026-01-21</lastmod>
-    <priority>0.80</priority>
   </url>
 
   <url>
@@ -230,18 +224,6 @@
   </url>
 
   <url>
-    <loc>https://anapaulaapvieirapsi.com.br/como-funciona.html</loc>
-    <lastmod>2026-01-21</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/como-funciona-terapia.html</loc>
-    <lastmod>2026-01-21</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
     <loc>https://anapaulaapvieirapsi.com.br/orientacao-parental.html</loc>
     <lastmod>2026-01-17</lastmod>
     <priority>0.80</priority>
@@ -273,12 +255,6 @@
 
   <url>
     <loc>https://anapaulaapvieirapsi.com.br/psicoterapia-infantil-como-ajuda.html</loc>
-    <lastmod>2026-01-17</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://anapaulaapvieirapsi.com.br/artigo-psicoterapia-infantil.html</loc>
     <lastmod>2026-01-17</lastmod>
     <priority>0.80</priority>
   </url>
