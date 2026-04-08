@@ -7,7 +7,6 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-
   "theme_color": "#7a56b2",
   "background_color": "#fbf6fb",
 
@@ -29,15 +28,27 @@
       "name": "Agendar Sessão",
       "short_name": "Agendar",
       "description": "Agende sua sessão de psicoterapia",
-      "url": "/contato.html",
-      "icons": [{ "src": "imagens/favicon.png", "sizes": "192x192" }]
+      "url": "/servicos.html#contato",
+      "icons": [
+        {
+          "src": "imagens/favicon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     },
     {
       "name": "Artigos e Recursos",
       "short_name": "Recursos",
       "description": "Leia artigos sobre saúde emocional",
       "url": "/recursos.html",
-      "icons": [{ "src": "imagens/favicon.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "imagens/favicon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }
