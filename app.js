@@ -4,13 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnTopo = document.getElementById("btn-topo");
 
   if (menuToggle && menuNav) {
-    function fecharMenu() {
-      menuNav.classList.remove("aberto");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      document.body.classList.remove("menu-aberto");
-    }
-
     function abrirMenu() {
       menuNav.classList.add("aberto");
       menuToggle.setAttribute("aria-expanded", "true");
@@ -18,11 +11,26 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("menu-aberto");
     }
 
-    menuToggle.addEventListener("click", (event) => {
+    function fecharMenu() {
+      menuNav.classList.remove("aberto");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      document.body.classList.remove("menu-aberto");
+    }
+
+    function alternarMenu(event) {
+      event.preventDefault();
       event.stopPropagation();
-      const aberto = menuNav.classList.contains("aberto");
-      aberto ? fecharMenu() : abrirMenu();
-    });
+
+      if (menuNav.classList.contains("aberto")) {
+        fecharMenu();
+      } else {
+        abrirMenu();
+      }
+    }
+
+    menuToggle.addEventListener("click", alternarMenu);
+    menuToggle.addEventListener("touchstart", alternarMenu, { passive: false });
 
     document.addEventListener("click", (event) => {
       if (
@@ -32,6 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
       ) {
         fecharMenu();
       }
+    });
+
+    const linksDoMenu = menuNav.querySelectorAll("a");
+    linksDoMenu.forEach((link) => {
+      link.addEventListener("click", () => {
+        fecharMenu();
+      });
     });
 
     window.addEventListener("resize", () => {
