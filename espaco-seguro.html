@@ -58,6 +58,7 @@
   <script defer src="app.js"></script>
 
   <style>
+
     :root {
       --roxo: #7656b3;
       --roxo-escuro: #65459f;
@@ -68,162 +69,254 @@
       --branco: rgba(255,255,255,0.95);
       --lavanda: #f5f0fb;
       --verde-claro: #f3f8f1;
-      --sombra-suave: 0 10px 26px rgba(88, 73, 96, 0.08);
-      --sombra-media: 0 18px 40px rgba(88, 73, 96, 0.12);
+      --sombra-suave: 0 12px 30px rgba(88, 73, 96, 0.08);
+      --sombra-media: 0 22px 50px rgba(88, 73, 96, 0.13);
+      --sombra-forte: 0 28px 60px rgba(88, 73, 96, 0.16);
     }
 
     .pagina-espaco-seguro {
-      padding-top: 18px;
+      padding: 24px 0 8px;
     }
 
     .espaco-app-wrap {
-      max-width: 1080px;
+      max-width: 1120px;
       margin: 0 auto;
     }
 
     .hero-app {
-      text-align: center;
-      padding: 24px 12px 10px;
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(250px, 300px) minmax(0, 1fr);
+      align-items: center;
+      gap: 34px;
+      padding: 34px;
+      border-radius: 38px;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.72), transparent 34%),
+        linear-gradient(135deg, rgba(245, 240, 251, 0.86) 0%, rgba(255,255,255,0.90) 46%, rgba(243, 248, 241, 0.88) 100%);
+      border: 1px solid rgba(184, 204, 176, 0.96);
+      box-shadow: var(--sombra-media);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-app::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.48);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-app::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -70px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(118,86,179,0.10), rgba(118,86,179,0.00) 72%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-app > * {
+      position: relative;
+      z-index: 1;
     }
 
     .hero-app-foto {
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 20px;
-  padding: 10px;
-  background: linear-gradient(180deg, #f6f1fb 0%, #f3f8f1 100%);
-  box-shadow: 0 18px 40px rgba(88, 73, 96, 0.14);
-}
+      width: 100%;
+      max-width: 290px;
+      aspect-ratio: 1 / 1.08;
+      border-radius: 34px;
+      overflow: hidden;
+      margin: 0;
+      padding: 10px;
+      background: linear-gradient(180deg, rgba(246,241,251,0.96) 0%, rgba(243,248,241,0.96) 100%);
+      border: 1px solid rgba(255,255,255,0.78);
+      box-shadow: var(--sombra-forte);
+    }
 
     .hero-app-foto img {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
-      border-radius: 50%;
+      object-position: center top;
+      border-radius: 26px;
       border: 4px solid rgba(255,255,255,0.96);
+      box-shadow: inset 0 0 0 1px rgba(184, 204, 176, 0.28);
     }
 
     .hero-app-selo {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 9px 14px;
+      padding: 10px 16px;
       border-radius: 999px;
-      border: 1px solid var(--verde);
-      background: linear-gradient(180deg, #f6f1fb 0%, #f3f8f1 100%);
+      border: 1px solid rgba(184, 204, 176, 0.96);
+      background: rgba(255,255,255,0.68);
+      backdrop-filter: blur(8px);
       color: var(--roxo);
       font-size: 0.92rem;
       font-weight: 600;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 22px rgba(88, 73, 96, 0.06);
     }
 
     .hero-app h1 {
       font-family: "Playfair Display", serif;
       color: var(--roxo);
-      font-size: clamp(2.1rem, 4vw, 3rem);
-      line-height: 1.1;
-      margin-bottom: 12px;
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      margin: 0 0 14px;
+      max-width: 540px;
     }
 
     .hero-app p {
-      max-width: 720px;
-      margin: 0 auto;
+      max-width: 690px;
+      margin: 0;
       color: var(--texto);
-      line-height: 1.8;
-      font-size: 1rem;
+      line-height: 1.9;
+      font-size: 1.02rem;
     }
 
     .hero-app-aviso {
-      max-width: 780px;
-      margin: 18px auto 0;
-      padding: 14px 16px;
-      border-radius: 18px;
-      border: 1px solid var(--verde);
-      background: linear-gradient(180deg, #f6f1fb 0%, #f3f8f1 100%);
+      max-width: 720px;
+      margin: 20px 0 0;
+      padding: 16px 18px;
+      border-radius: 20px;
+      border: 1px solid rgba(184, 204, 176, 0.96);
+      background: rgba(255,255,255,0.60);
+      backdrop-filter: blur(8px);
       color: var(--texto);
-      line-height: 1.7;
+      line-height: 1.75;
       font-size: 0.95rem;
+      box-shadow: 0 12px 30px rgba(88, 73, 96, 0.06);
     }
 
     .menu-app {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 16px;
-      margin-top: 28px;
+      margin-top: 22px;
     }
 
     .menu-app-btn {
-      background: var(--branco);
-      border: 1px solid var(--verde);
-      border-radius: 24px;
-      padding: 22px 14px;
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.84) 100%);
+      border: 1px solid rgba(184, 204, 176, 0.96);
+      border-radius: 28px;
+      padding: 20px 16px 18px;
       cursor: pointer;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
-      min-height: 148px;
-      transition: 0.18s ease;
+      min-height: 158px;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
       box-shadow: var(--sombra-suave);
-      text-align: center;
+      text-align: left;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .menu-app-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(245,240,251,0.28), rgba(243,248,241,0.12));
+      opacity: 0;
+      transition: opacity 0.22s ease;
+      z-index: 0;
+    }
+
+    .menu-app-btn > * {
+      position: relative;
+      z-index: 1;
     }
 
     .menu-app-btn:hover,
     .menu-app-btn.ativo {
       transform: translateY(-4px);
-      border-color: var(--roxo);
+      border-color: rgba(118, 86, 179, 0.34);
       box-shadow: var(--sombra-media);
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(250,248,253,0.90) 100%);
+    }
+
+    .menu-app-btn:hover::before,
+    .menu-app-btn.ativo::before {
+      opacity: 1;
     }
 
     .menu-app-icone {
-      width: 62px;
-      height: 62px;
-      border-radius: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
       display: grid;
       place-items: center;
       background: linear-gradient(180deg, #f7f2fc 0%, #f3f8f1 100%);
-      border: 1px solid var(--verde);
+      border: 1px solid rgba(184, 204, 176, 0.96);
       color: var(--roxo);
-      font-size: 1.3rem;
+      font-size: 1.24rem;
+      box-shadow: 0 10px 22px rgba(88, 73, 96, 0.08);
     }
 
     .menu-app-btn strong {
       color: var(--roxo);
-      font-size: 0.98rem;
+      font-size: 1rem;
       line-height: 1.35;
     }
 
     .menu-app-btn span {
       color: var(--texto-suave);
-      font-size: 0.88rem;
-      line-height: 1.5;
+      font-size: 0.89rem;
+      line-height: 1.58;
+      margin-top: auto;
     }
 
     .conteudo-app {
-      margin-top: 28px;
+      margin-top: 22px;
     }
 
     .painel-app {
       display: none;
-      background: var(--branco);
-      border: 1px solid var(--verde);
-      border-radius: 30px;
-      padding: 30px 26px;
-      box-shadow: var(--sombra-suave);
+      background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 100%);
+      border: 1px solid rgba(184, 204, 176, 0.96);
+      border-radius: 34px;
+      padding: 34px 30px;
+      box-shadow: var(--sombra-media);
       position: relative;
       overflow: hidden;
+      isolation: isolate;
     }
 
     .painel-app::before {
       content: "";
       position: absolute;
-      inset: 12px;
-      border-radius: 22px;
-      border: 1px solid rgba(184, 204, 176, 0.22);
+      inset: 14px;
+      border-radius: 26px;
+      border: 1px solid rgba(184, 204, 176, 0.24);
       pointer-events: none;
+      z-index: 0;
+    }
+
+    .painel-app::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -70px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(118,86,179,0.09), transparent 70%);
+      pointer-events: none;
+      z-index: 0;
     }
 
     .painel-app.ativo {
@@ -242,57 +335,65 @@
       }
     }
 
+    .painel-app > * {
+      position: relative;
+      z-index: 1;
+    }
+
     .painel-app h2 {
       font-family: "Playfair Display", serif;
       color: var(--roxo);
-      font-size: clamp(1.8rem, 3vw, 2.3rem);
-      line-height: 1.15;
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      line-height: 1.12;
       text-align: center;
       margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
     }
 
     .painel-app > p.lead-app {
       color: var(--texto-suave);
       text-align: center;
-      line-height: 1.8;
+      line-height: 1.84;
       max-width: 820px;
-      margin: 0 auto 22px;
-      position: relative;
-      z-index: 1;
+      margin: 0 auto 24px;
     }
 
     .grid-2-app {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      position: relative;
-      z-index: 1;
+      gap: 20px;
     }
 
     .grid-3-app {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      position: relative;
-      z-index: 1;
+      gap: 20px;
     }
 
     .box-app {
-      background: #fff;
-      border: 1px solid var(--verde);
-      border-radius: 24px;
-      padding: 22px 20px;
-      box-shadow: 0 10px 24px rgba(88, 73, 96, 0.05);
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(252,250,253,0.94) 100%);
+      border: 1px solid rgba(184, 204, 176, 0.96);
+      border-radius: 26px;
+      padding: 24px 22px;
+      box-shadow: 0 14px 28px rgba(88, 73, 96, 0.06);
       position: relative;
       overflow: hidden;
     }
 
+    .box-app::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 22px;
+      right: 22px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(118,86,179,0), rgba(118,86,179,0.22), rgba(118,86,179,0));
+    }
+
     .box-app h3 {
       color: var(--roxo);
-      font-size: 1.06rem;
+      font-size: 1.08rem;
       margin-bottom: 10px;
+      line-height: 1.35;
     }
 
     .box-app p,
@@ -300,7 +401,7 @@
     .box-app label,
     .box-app small {
       color: var(--texto-suave);
-      line-height: 1.75;
+      line-height: 1.78;
     }
 
     .box-app ul {
@@ -318,14 +419,15 @@
     .box-app textarea,
     .box-app select {
       width: 100%;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(184, 204, 176, 0.9);
+      padding: 13px 14px;
+      border-radius: 15px;
+      border: 1px solid rgba(184, 204, 176, 0.96);
       background: rgba(255,255,255,0.98);
       color: var(--texto);
       font-size: 1rem;
       font-family: inherit;
       outline: none;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
     }
 
     .box-app input:focus,
@@ -333,6 +435,7 @@
     .box-app select:focus {
       border-color: rgba(118, 86, 179, 0.56);
       box-shadow: 0 0 0 4px rgba(118, 86, 179, 0.10);
+      transform: translateY(-1px);
     }
 
     .btn-app,
@@ -341,30 +444,32 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 11px 18px;
+      padding: 12px 18px;
       border-radius: 999px;
       text-decoration: none;
       border: none;
       cursor: pointer;
       font-weight: 600;
       font-size: 0.95rem;
-      transition: 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
     }
 
     .btn-app {
       background: var(--roxo);
       color: #fff;
-      box-shadow: 0 10px 24px rgba(118, 86, 179, 0.16);
+      box-shadow: 0 12px 24px rgba(118, 86, 179, 0.18);
     }
 
     .btn-app-secundario {
       background: linear-gradient(180deg, #f6f1fb 0%, #f3f8f1 100%);
       color: var(--roxo);
-      border: 1px solid var(--verde);
+      border: 1px solid rgba(184, 204, 176, 0.96);
     }
 
     .btn-app:hover,
-    .btn-app-secundario:hover {
+    .btn-app-secundario:hover,
+    .btn-whats-app:hover,
+    .btn-claro-app:hover {
       transform: translateY(-2px);
     }
 
@@ -372,9 +477,9 @@
       display: none;
       margin-top: 14px;
       padding: 14px 15px;
-      border-radius: 16px;
+      border-radius: 18px;
       background: #f8fcf6;
-      border: 1px solid var(--verde);
+      border: 1px solid rgba(184, 204, 176, 0.96);
       color: #4d6752;
       line-height: 1.7;
     }
@@ -387,7 +492,7 @@
       display: none;
       margin-top: 16px;
       padding: 22px 20px;
-      border-radius: 24px;
+      border-radius: 26px;
       background: linear-gradient(135deg, #7656b3 0%, #8b6bc5 60%, #b8ccb0 100%);
       color: #fff;
       box-shadow: var(--sombra-media);
@@ -461,6 +566,7 @@
       border-radius: 999px;
       text-decoration: none;
       font-weight: 600;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
 
     .btn-whats-app {
@@ -483,7 +589,7 @@
 
     .registro-app {
       padding: 14px;
-      border-radius: 16px;
+      border-radius: 18px;
       background: #fcfffb;
       border: 1px solid rgba(184, 204, 176, 0.82);
     }
@@ -496,7 +602,7 @@
 
     .vazio-app {
       padding: 14px;
-      border-radius: 16px;
+      border-radius: 18px;
       background: #fff;
       border: 1px dashed rgba(184, 204, 176, 0.95);
       color: var(--texto-suave);
@@ -507,16 +613,17 @@
     }
 
     .audio-icone-app {
-      width: 68px;
-      height: 68px;
-      border-radius: 22px;
+      width: 72px;
+      height: 72px;
+      border-radius: 24px;
       background: linear-gradient(180deg, #f7f2fc 0%, #f3f8f1 100%);
-      border: 1px solid var(--verde);
+      border: 1px solid rgba(184, 204, 176, 0.96);
       display: grid;
       place-items: center;
       color: var(--roxo);
-      font-size: 1.45rem;
+      font-size: 1.48rem;
       margin: 0 auto 14px;
+      box-shadow: 0 12px 24px rgba(88, 73, 96, 0.06);
     }
 
     .audio-card-app audio {
@@ -528,8 +635,8 @@
       margin-top: 24px;
       background: linear-gradient(135deg, #7656b3 0%, #8c6fc7 58%, #b8ccb0 100%);
       color: #fff;
-      border-radius: 30px;
-      padding: 30px 24px;
+      border-radius: 34px;
+      padding: 32px 24px;
       text-align: center;
       box-shadow: var(--sombra-media);
       position: relative;
@@ -539,7 +646,7 @@
     .cta-app-final h2 {
       font-family: "Playfair Display", serif;
       color: #fff;
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
       margin-bottom: 10px;
     }
 
@@ -557,7 +664,13 @@
       gap: 12px;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1060px) {
+      .hero-app {
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 26px;
+        padding: 28px;
+      }
+
       .menu-app {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
@@ -568,31 +681,156 @@
       }
     }
 
-    @media (max-width: 768px) {
-  .hero-app-foto {
-    width: 190px;
-    height: 190px;
-  }
+    @media (max-width: 860px) {
+      .hero-app {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 24px 20px;
+      }
+
+      .hero-app-foto {
+        max-width: 230px;
+        margin: 0 auto;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+      }
+
+      .hero-app-foto img {
+        border-radius: 50%;
+      }
+
+      .hero-app h1,
+      .hero-app p,
+      .hero-app-aviso {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .menu-app {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(220px, 1fr);
+        grid-template-columns: none;
+        overflow-x: auto;
+        gap: 14px;
+        padding-bottom: 6px;
+        scroll-snap-type: x proximity;
+      }
+
+      .menu-app::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .menu-app::-webkit-scrollbar-thumb {
+        background: rgba(176, 123, 146, 0.28);
+        border-radius: 999px;
+      }
+
+      .menu-app-btn {
+        min-height: 150px;
+        scroll-snap-align: start;
+      }
 
       .painel-app,
       .cta-app-final {
+        border-radius: 26px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pagina-espaco-seguro {
+        padding-top: 18px;
+      }
+
+      .espaco-app-wrap {
+        width: 100%;
+      }
+
+      .hero-app {
+        border-radius: 28px;
+      }
+
+      .hero-app::before {
+        inset: 10px;
         border-radius: 22px;
+      }
+
+      .hero-app h1 {
+        font-size: clamp(2rem, 8vw, 2.7rem);
+      }
+
+      .hero-app p {
+        font-size: 0.98rem;
       }
 
       .painel-app {
         padding: 24px 18px;
+        border-radius: 24px;
       }
 
-      .menu-app-btn {
-        min-height: 128px;
+      .painel-app::before {
+        inset: 10px;
+        border-radius: 18px;
+      }
+
+      .box-app {
+        border-radius: 22px;
+        padding: 22px 18px;
+      }
+
+      .cta-app-final {
+        border-radius: 24px;
+        padding: 28px 18px;
       }
     }
 
     @media (max-width: 520px) {
+      .hero-app {
+        padding: 20px 16px;
+      }
+
+      .hero-app-foto {
+        max-width: 190px;
+      }
+
+      .hero-app-selo {
+        font-size: 0.84rem;
+        padding: 9px 12px;
+      }
+
       .menu-app {
-        grid-template-columns: 1fr;
+        grid-auto-columns: 84%;
+        margin-right: -4px;
+      }
+
+      .menu-app-btn {
+        border-radius: 24px;
+        min-height: 144px;
+      }
+
+      .menu-app-icone {
+        width: 54px;
+        height: 54px;
+        border-radius: 16px;
+      }
+
+      .painel-app h2 {
+        font-size: clamp(1.75rem, 8vw, 2.1rem);
+      }
+
+      .retorno-acoes-app,
+      .cta-app-acoes {
+        flex-direction: column;
+      }
+
+      .btn-whats-app,
+      .btn-claro-app,
+      .btn-app,
+      .btn-app-secundario {
+        width: 100%;
       }
     }
+
   </style>
 
   <script type="application/ld+json">
@@ -678,38 +916,30 @@
     <section class="secao" aria-labelledby="espaco-seguro-titulo">
       <div class="container espaco-app-wrap">
         <section class="hero-app">
-          <div class="hero-app-shell">
-            <div class="hero-app-media">
-              <div class="hero-app-foto-wrap">
-                <div class="hero-app-foto">
-                  <img
-                    src="imagens/ana-paula-vieira-psicologa-itapetininga.jpg"
-                    alt="Ana Paula Ap. Vieira, psicóloga clínica em Itapetininga"
-                  />
-                </div>
-              </div>
-            </div>
+          <div class="hero-app-foto">
+            <img
+              src="imagens/ana-paula-vieira-psicologa-itapetininga.jpg"
+              alt="Ana Paula Ap. Vieira, psicóloga clínica em Itapetininga"
+            />
+          </div>
 
-            <div class="hero-app-copy">
-              <span class="hero-app-selo">
-                <i class="fa-solid fa-heart"></i>
-                Recurso interativo de acolhimento emocional
-              </span>
+          <span class="hero-app-selo">
+            <i class="fa-solid fa-heart"></i>
+            Recurso interativo de acolhimento emocional
+          </span>
 
-              <h1 id="espaco-seguro-titulo">Espaço Seguro</h1>
+          <h1 id="espaco-seguro-titulo">Espaço Seguro</h1>
 
-              <p>
-                Este é um espaço pensado para momentos em que você sente necessidade de pausar,
-                respirar, se perceber melhor e encontrar algum acolhimento. Aqui você pode fazer
-                um check-in emocional, escrever no diário, ouvir áudios de apoio e acessar exercícios
-                simples para cuidar do que está sentindo.
-              </p>
+          <p>
+            Este é um espaço pensado para momentos em que você sente necessidade de pausar,
+            respirar, se perceber melhor e encontrar algum acolhimento. Aqui você pode fazer
+            um check-in emocional, escrever no diário, ouvir áudios de apoio e acessar exercícios
+            simples para cuidar do que está sentindo.
+          </p>
 
-              <div class="hero-app-aviso">
-                <strong>Importante:</strong> este espaço tem finalidade psicoeducativa e de acolhimento inicial.
-                Ele não substitui psicoterapia, avaliação psicológica, acompanhamento profissional nem atendimento em situações de urgência.
-              </div>
-            </div>
+          <div class="hero-app-aviso">
+            <strong>Importante:</strong> este espaço tem finalidade psicoeducativa e de acolhimento inicial.
+            Ele não substitui psicoterapia, avaliação psicológica, acompanhamento profissional nem atendimento em situações de urgência.
           </div>
         </section>
 
@@ -1025,3 +1255,300 @@
             <a
               href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
               target="_blank"
+              rel="noopener noreferrer"
+              class="btn-whats-app"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              Agendar pelo WhatsApp
+            </a>
+
+            <a href="recursos.html" class="btn-claro-app">
+              <i class="fa-regular fa-folder-open"></i>
+              Ver outros conteúdos
+            </a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <a
+    href="https://maps.google.com/?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+    class="endereco-flutuante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Abrir endereço no mapa"
+    style="display:none;"
+  ></a>
+
+  <a
+    href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <footer class="rodape" id="contato">
+    <div class="container footer-box">
+      <div class="footer-info">
+        <p><strong>Ana Paula Ap. Vieira | Psicóloga Clínica</strong></p>
+        <p>CRP 06/217114</p>
+        <p>Itapetininga – SP</p>
+        <p>
+          <a
+            href="https://www.google.com/maps?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Rua Nazareth, 84
+          </a>
+        </p>
+        <p>
+          <a href="mailto:contato@anapaulaapvieirapsi.com.br">
+            contato@anapaulaapvieirapsi.com.br
+          </a>
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="recursos.html">Conteúdos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="servicos.html">Atendimento</a>
+        <a
+          href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <div class="footer-redes-box">
+        <div class="footer-redes">
+          <a
+            href="https://www.instagram.com/anapaulapsico/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/anapaulaapvieirapsico/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <p class="footer-copy">© 2026 Ana Paula Ap. Vieira</p>
+        <p class="footer-copy">Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const CHECKIN_KEY = "espaco_seguro_checkin";
+    const DIARIO_KEY = "espaco_seguro_diario";
+
+    const botoesMenu = document.querySelectorAll(".menu-app-btn");
+    const paineis = document.querySelectorAll(".painel-app");
+
+    function abrirPainel(id) {
+      paineis.forEach((painel) => painel.classList.remove("ativo"));
+      botoesMenu.forEach((botao) => botao.classList.remove("ativo"));
+
+      const painelAtivo = document.getElementById(id);
+      const botaoAtivo = document.querySelector(`.menu-app-btn[data-target="${id}"]`);
+
+      if (painelAtivo) painelAtivo.classList.add("ativo");
+      if (botaoAtivo) botaoAtivo.classList.add("ativo");
+
+      if (painelAtivo) {
+        painelAtivo.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    botoesMenu.forEach((botao) => {
+      botao.addEventListener("click", function () {
+        abrirPainel(this.dataset.target);
+      });
+    });
+
+    const irParaApoio = document.getElementById("irParaApoio");
+    if (irParaApoio) {
+      irParaApoio.addEventListener("click", function () {
+        abrirPainel("painel-apoio");
+      });
+    }
+
+    function gerarMensagemAcolhimento(emocao, intensidade, necessidade, nome) {
+      const baseNome = nome ? `${nome}, ` : "";
+      const intensidadeNum = Number(intensidade);
+
+      let mensagem = `${baseNome}obrigada por parar um momento para perceber o que você sente. `;
+      mensagem += `Reconhecer ${emocao ? `a ${emocao.toLowerCase()}` : "o que está acontecendo dentro de você"} já é um gesto importante de cuidado. `;
+
+      if (!isNaN(intensidadeNum) && intensidade !== "") {
+        if (intensidadeNum >= 8) {
+          mensagem += "Pelo que você descreve, isso parece estar muito intenso hoje. Talvez este seja um dia para diminuir exigências, respeitar seus limites e buscar apoio. ";
+        } else if (intensidadeNum >= 5) {
+          mensagem += "Parece que isso está ocupando um espaço importante no seu dia. Talvez seja valioso se perguntar o que pode ser suavizado agora, mesmo que só um pouco. ";
+        } else {
+          mensagem += "Mesmo que isso apareça de forma mais leve, ainda merece escuta e cuidado. ";
+        }
+      }
+
+      if (necessidade) {
+        mensagem += `O que você nomeou como necessidade — "${necessidade}" — pode ser um caminho delicado para começar a se acolher hoje. `;
+      }
+
+      if (emocao === "Ansiedade") {
+        mensagem += "Tente ir por partes. Nem tudo precisa ser resolvido ao mesmo tempo.";
+      } else if (emocao === "Tristeza") {
+        mensagem += "Talvez hoje seu coração precise mais de acolhimento do que de cobrança.";
+      } else if (emocao === "Cansaço") {
+        mensagem += "Descansar também é uma forma legítima de cuidado.";
+      } else if (emocao === "Sobrecarga") {
+        mensagem += "Talvez seja importante se perguntar o que pode ser deixado para depois.";
+      } else if (emocao === "Solidão") {
+        mensagem += "Buscar vínculo e apoio pode ser um passo importante e cuidadoso.";
+      } else {
+        mensagem += "Você não precisa ter todas as respostas agora. Às vezes, respirar, desacelerar e pedir ajuda já é um começo.";
+      }
+
+      return mensagem;
+    }
+
+    const checkinForm = document.getElementById("checkinForm");
+    if (checkinForm) {
+      checkinForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome_checkin").value.trim();
+        const emocao = document.getElementById("emocao").value.trim();
+        const intensidade = document.getElementById("intensidade").value.trim();
+        const necessidade = document.getElementById("necessidade").value.trim();
+
+        const mensagem = document.getElementById("checkinMensagem");
+        const retorno = document.getElementById("checkinRetorno");
+        const textoRetorno = document.getElementById("textoRetornoCheckin");
+
+        if (!emocao) {
+          mensagem.textContent = "Escolha ao menos uma emoção para continuar.";
+          mensagem.classList.add("show");
+          retorno.style.display = "none";
+          return;
+        }
+
+        const registro = {
+          nome,
+          emocao,
+          intensidade,
+          necessidade,
+          data: new Date().toLocaleString("pt-BR")
+        };
+
+        localStorage.setItem(CHECKIN_KEY, JSON.stringify(registro));
+
+        mensagem.textContent = "Seu check-in foi registrado neste navegador.";
+        mensagem.classList.add("show");
+
+        textoRetorno.textContent = gerarMensagemAcolhimento(emocao, intensidade, necessidade, nome);
+        retorno.style.display = "block";
+      });
+    }
+
+    function renderizarDiario() {
+      const container = document.getElementById("listaDiario");
+      if (!container) return;
+
+      const dados = JSON.parse(localStorage.getItem(DIARIO_KEY) || "[]");
+
+      if (!dados.length) {
+        container.innerHTML = '<div class="vazio-app">Você ainda não tem registros salvos aqui.</div>';
+        return;
+      }
+
+      container.innerHTML = dados
+        .slice()
+        .reverse()
+        .map(item => `
+          <div class="registro-app">
+            <strong>${item.titulo || "Registro emocional"}</strong>
+            <p>${item.texto}</p>
+            <small>${item.data}</small>
+          </div>
+        `)
+        .join("");
+    }
+
+    const diarioForm = document.getElementById("diarioForm");
+    if (diarioForm) {
+      diarioForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const titulo = document.getElementById("titulo_diario").value.trim();
+        const texto = document.getElementById("texto_diario").value.trim();
+        const mensagem = document.getElementById("diarioMensagem");
+
+        if (!texto) {
+          mensagem.textContent = "Escreva algo no diário para salvar seu registro.";
+          mensagem.classList.add("show");
+          return;
+        }
+
+        const dados = JSON.parse(localStorage.getItem(DIARIO_KEY) || "[]");
+
+        dados.push({
+          titulo,
+          texto,
+          data: new Date().toLocaleString("pt-BR")
+        });
+
+        localStorage.setItem(DIARIO_KEY, JSON.stringify(dados));
+
+        diarioForm.reset();
+        mensagem.textContent = "Seu registro foi salvo neste navegador.";
+        mensagem.classList.add("show");
+
+        renderizarDiario();
+      });
+    }
+
+    const limparDiario = document.getElementById("limparDiario");
+    if (limparDiario) {
+      limparDiario.addEventListener("click", function () {
+        localStorage.removeItem(DIARIO_KEY);
+        renderizarDiario();
+
+        const mensagem = document.getElementById("diarioMensagem");
+        mensagem.textContent = "Os registros do diário foram removidos deste navegador.";
+        mensagem.classList.add("show");
+      });
+    }
+
+    renderizarDiario();
+  </script>
+</body>
+</html>
