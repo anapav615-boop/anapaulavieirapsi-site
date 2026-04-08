@@ -795,6 +795,69 @@
   box-shadow: none !important;
 }
 
+.menu-app {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.menu-app-btn {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 14px !important;
+  text-align: left !important;
+  min-height: 160px !important;
+  padding: 22px 18px !important;
+  border-radius: 28px !important;
+}
+
+.menu-app-icone {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #f9f1f7 !important;
+  border: 1px solid #eedff0 !important;
+  color: #b486c4 !important;
+  font-size: 1.22rem !important;
+  flex-shrink: 0 !important;
+  box-shadow: none !important;
+  margin-top: 2px !important;
+}
+
+.menu-app-btn strong,
+.menu-app-btn span {
+  display: block !important;
+  width: 100% !important;
+}
+
+.menu-app-btn strong {
+  margin-bottom: 8px !important;
+  font-size: 1rem !important;
+  line-height: 1.3 !important;
+}
+
+.menu-app-btn span {
+  font-size: 0.96rem !important;
+  line-height: 1.55 !important;
+  max-width: 220px !important;
+}
+
+@media (max-width: 768px) {
+  .menu-app {
+    grid-template-columns: 1fr !important;
+  }
+
+  .menu-app-btn {
+    min-height: auto !important;
+  }
+
+  .menu-app-btn span {
+    max-width: 100% !important;
+  }
+}
   </style>
 
   <script type="application/ld+json">
