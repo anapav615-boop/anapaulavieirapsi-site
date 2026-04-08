@@ -1,153 +1,633 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-<title>Por que é tão difícil dizer não e colocar limites | Ana Paula Ap. Vieira</title>
+  <title>Por que é tão difícil dizer não e colocar limites | Ana Paula Ap. Vieira</title>
+  <meta
+    name="description"
+    content="Entenda por que é tão difícil dizer não, como a falta de limites pode gerar sobrecarga emocional e como a psicoterapia pode ajudar nesse processo com acolhimento e cuidado psicológico."
+  />
+  <meta
+    name="keywords"
+    content="dificuldade em dizer não, dificuldade de colocar limites, limites emocionais, sobrecarga emocional, necessidade de aprovação, psicóloga em Itapetininga, psicoterapia em Itapetininga, Ana Paula Ap. Vieira"
+  />
+  <meta name="author" content="Ana Paula Ap. Vieira" />
+  <meta name="robots" content="index, follow" />
 
-<meta name="description" content="Entenda por que é tão difícil dizer não, como a falta de limites pode gerar sobrecarga emocional e como a psicoterapia pode ajudar." />
-<meta name="author" content="Ana Paula Ap. Vieira" />
-<meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/dificuldade-em-dizer-nao.html" />
+  <link rel="icon" type="image/png" href="imagens/favicon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preload" as="image" href="imagens/dizer-nao-limites-saudaveis.jpg" />
 
-<link rel="canonical" href="https://anapaulaapvieirapsi.com.br/dificuldade-em-dizer-nao.html" />
-<link rel="icon" href="imagens/favicon.png" />
-<link rel="stylesheet" href="style.css" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ana Paula Ap. Vieira | Psicóloga Clínica" />
+  <meta property="og:title" content="Por que é tão difícil dizer não e colocar limites | Ana Paula Ap. Vieira" />
+  <meta
+    property="og:description"
+    content="A dificuldade em dizer não pode estar ligada à culpa, medo de rejeição, necessidade de aprovação e sobrecarga emocional."
+  />
+  <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/dificuldade-em-dizer-nao.html" />
+  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/dizer-nao-limites-saudaveis.jpg" />
+  <meta property="og:image:alt" content="Aprender a dizer não e desenvolver limites saudáveis" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-<meta property="og:type" content="article">
-<meta property="og:title" content="Por que é tão difícil dizer não e colocar limites">
-<meta property="og:description" content="A dificuldade em dizer não pode estar ligada à culpa, medo de rejeição e necessidade de aprovação.">
-<meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/dizer-nao.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Por que é tão difícil dizer não e colocar limites | Ana Paula Ap. Vieira" />
+  <meta
+    name="twitter:description"
+    content="Entenda por que é tão difícil dizer não e como a psicoterapia pode ajudar a construir limites mais saudáveis."
+  />
+  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/dizer-nao-limites-saudaveis.jpg" />
 
-<style>
-.artigo-wrap {max-width:980px;margin:0 auto;}
-.hero img {width:100%;height:420px;object-fit:cover;border-radius:28px;}
-.artigo-card {
-  background:#fff;
-  border:1px solid #b8ccb0;
-  border-radius:32px;
-  padding:36px;
-  margin-top:24px;
-}
-.artigo-card h1{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(2.1rem,4vw,3rem);
-  line-height:1.15;
-  color:#7656b3;
-  margin-bottom:18px;
-}
-.artigo-card p, .artigo-card li{
-  color:#4a3d52;
-  line-height:1.9;
-}
-.artigos-relacionados{margin-top:40px;}
-@media(max-width:768px){
-.hero img{height:300px;}
-.artigo-card{padding:24px;}
-.artigo-card h1{font-size:2rem;}
-}
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+
+  <style>
+    :root {
+      --verde-index: #b8ccb0;
+      --verde-index-escuro: #a7be9d;
+      --card-branco: rgba(255, 255, 255, 0.9);
+      --sombra-suave: 0 10px 28px rgba(88, 73, 96, 0.07);
+    }
+
+    .artigo-pagina {
+      padding-top: 18px;
+    }
+
+    .artigo-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .hero-artigo {
+      max-width: 760px;
+      margin: 0 auto 30px;
+    }
+
+    .hero-artigo-imagem {
+      overflow: hidden;
+      border-radius: 30px;
+      background: transparent;
+      box-shadow: 0 10px 24px rgba(88, 73, 96, 0.08);
+    }
+
+    .hero-artigo-imagem img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+    }
+
+    .hero-artigo-legenda {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: #6c5a6f;
+      padding: 0 12px 2px;
+    }
+
+    .artigo-conteudo {
+      background: var(--card-branco);
+      border: 1px solid var(--verde-index);
+      border-radius: 32px;
+      padding: 40px 36px;
+      box-shadow: var(--sombra-suave);
+    }
+
+    .artigo-conteudo h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.15rem, 4vw, 3rem);
+      line-height: 1.15;
+      color: #7656b3;
+      margin-bottom: 20px;
+      text-wrap: balance;
+    }
+
+    .artigo-conteudo h2,
+    .artigo-conteudo h3 {
+      color: #7656b3;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .artigo-conteudo p,
+    .artigo-conteudo li {
+      color: #4a3d52;
+      line-height: 1.9;
+      font-size: 1.04rem;
+    }
+
+    .artigo-conteudo ul {
+      padding-left: 24px;
+      margin-top: 8px;
+    }
+
+    .artigo-assinatura {
+      margin-top: 24px;
+      color: #5b4a66;
+    }
+
+    .artigo-botoes {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .artigos-relacionados {
+      margin-top: 8px;
+    }
+
+    .artigos-relacionados .grid-cards {
+      margin-top: 18px;
+    }
+
+    .artigos-relacionados .card-artigo {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--verde-index-escuro) !important;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--sombra-suave);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      display: block;
+      text-decoration: none;
+    }
+
+    .artigos-relacionados .card-artigo:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(88, 73, 96, 0.10);
+      border-color: #94ae89 !important;
+    }
+
+    .artigos-relacionados .card-artigo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      background: #f3f0f7;
+    }
+
+    .artigos-relacionados .card-artigo-texto {
+      padding: 22px;
+    }
+
+    .artigos-relacionados .card-artigo h3 {
+      color: #6f52ab;
+      font-size: 1.22rem;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .artigos-relacionados .card-artigo p {
+      color: #5e5164;
+      line-height: 1.7;
+    }
+
+    .artigos-relacionados .btn-card {
+      margin-top: 14px;
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      .hero-artigo {
+        max-width: 100%;
+      }
+
+      .hero-artigo-imagem {
+        border-radius: 20px;
+      }
+
+      .hero-artigo-imagem img {
+        height: 320px;
+        object-position: center 16%;
+      }
+
+      .hero-artigo-legenda {
+        font-size: 0.95rem;
+      }
+
+      .artigo-conteudo {
+        padding: 28px 20px;
+        border-radius: 22px;
+      }
+
+      .artigo-conteudo h1 {
+        font-size: 2rem;
+        line-height: 1.14;
+        margin-bottom: 18px;
+      }
+
+      .artigos-relacionados .card-artigo {
+        border-radius: 22px;
+      }
+
+      .artigos-relacionados .card-artigo img {
+        height: 190px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .artigo-conteudo h1 {
+        font-size: 1.82rem;
+        line-height: 1.12;
+      }
+
+      .artigo-conteudo p,
+      .artigo-conteudo li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Por que é tão difícil dizer não e colocar limites",
+        "description": "Entenda por que é tão difícil dizer não, como a falta de limites pode gerar sobrecarga emocional e como a psicoterapia pode ajudar nesse processo.",
+        "image": "https://anapaulaapvieirapsi.com.br/imagens/dizer-nao-limites-saudaveis.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Ana Paula Ap. Vieira",
+          "jobTitle": "Psicóloga Clínica",
+          "identifier": "CRP 06/217114"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ana Paula Ap. Vieira | Psicóloga Clínica",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://anapaulaapvieirapsi.com.br/imagens/logo-simbolo.png"
+          }
+        },
+        "mainEntityOfPage": "https://anapaulaapvieirapsi.com.br/dificuldade-em-dizer-nao.html"
+      },
+      {
+        "@type": "Psychologist",
+        "name": "Ana Paula Ap. Vieira",
+        "image": "https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg",
+        "url": "https://anapaulaapvieirapsi.com.br/",
+        "telephone": "+55 15 99676-0791",
+        "email": "contato@anapaulaapvieirapsi.com.br",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Nazareth, 84",
+          "addressLocality": "Itapetininga",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Itapetininga"
+          },
+          {
+            "@type": "Country",
+            "name": "Brasil"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/anapaulapsico/",
+          "https://www.facebook.com/anapaulaapvieirapsico/",
+          "https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <header class="cabecalho">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo-link" aria-label="Página inicial">
+        <div class="logo-area">
+          <img src="imagens/logo-simbolo.png" alt="Logo Ana Paula Ap. Vieira" class="logo" />
+          <div class="logo-texto">
+            <h2>Ana Paula Ap. Vieira</h2>
+            <p>Psicóloga Clínica | CRP 06/217114</p>
+          </div>
+        </div>
+      </a>
 
-<header class="cabecalho">
-  <div class="container header-wrap">
-    <a href="index.html" class="logo-link">
-      <div class="logo-area">
-        <img src="imagens/logo-simbolo.png" class="logo">
-        <div>
-          <h2>Ana Paula Ap. Vieira</h2>
-          <p>Psicóloga Clínica | CRP 06/217114</p>
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-nav"
+        type="button"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="menu-nav" id="menu-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="quem-sou.html">Quem Sou</a></li>
+          <li><a href="depoimentos.html">Depoimentos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="recursos.html">Conteúdos</a></li>
+          <li><a href="preco.html">Preço</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="artigo-pagina">
+    <section class="secao">
+      <div class="container artigo-wrap">
+        <div class="hero-artigo">
+          <div class="hero-artigo-imagem">
+            <img src="imagens/dizer-nao-limites-saudaveis.jpg" alt="Aprender a dizer não e desenvolver limites saudáveis" />
+          </div>
+          <p class="hero-artigo-legenda">
+            Aprender a dizer não pode ser um passo importante de cuidado consigo.
+          </p>
+        </div>
+
+        <article class="artigo-conteudo">
+          <h1>Por que é tão difícil dizer não e colocar limites?</h1>
+
+          <p>
+            Você já se pegou dizendo “sim” quando, na verdade, queria dizer “não”?
+          </p>
+
+          <p>
+            Mesmo estando cansada, sobrecarregada ou sem vontade, você acaba aceitando e depois sente um peso, um incômodo difícil de explicar.
+          </p>
+
+          <p>
+            Se isso acontece com você, saiba que não é falta de força ou de posicionamento. Na maioria das vezes, existe uma história emocional por trás dessa dificuldade.
+          </p>
+
+          <h2>Quando o sim vem antes de você</h2>
+
+          <p>
+            Muitas pessoas aprenderam, ao longo da vida, que precisam agradar, corresponder e evitar conflitos.
+          </p>
+
+          <p>
+            Dizer não pode trazer sensações desconfortáveis, como medo de magoar alguém, receio de ser rejeitada ou culpa por priorizar a si mesma.
+          </p>
+
+          <p>
+            E, sem perceber, o sim passa a ser automático, mesmo quando isso custa caro emocionalmente.
+          </p>
+
+          <p>
+            Com o tempo, isso pode gerar uma sensação silenciosa de cansaço, como se você estivesse sempre disponível para os outros, mas distante de si mesma.
+          </p>
+
+          <h2>O que pode estar por trás da dificuldade em dizer não</h2>
+
+          <p>
+            A dificuldade em colocar limites não surge do nada. Ela costuma estar ligada a experiências emocionais importantes e a padrões construídos ao longo da vida.
+          </p>
+
+          <ul>
+            <li>Necessidade de aprovação</li>
+            <li>Medo de rejeição ou abandono</li>
+            <li>Dificuldade em reconhecer as próprias necessidades</li>
+            <li>Sentimento de responsabilidade excessiva pelos outros</li>
+            <li>Baixa autoestima</li>
+          </ul>
+
+          <p>
+            Muitas vezes, dizer não parece arriscado demais, como se isso pudesse afetar vínculos, decepcionar alguém ou causar conflitos difíceis de sustentar.
+          </p>
+
+          <h2>Quando você se coloca sempre em segundo lugar</h2>
+
+          <p>
+            Dizer sim o tempo todo pode até evitar desconfortos momentâneos, mas, aos poucos, gera sobrecarga emocional.
+          </p>
+
+          <p>
+            Você pode começar a perceber sinais como:
+          </p>
+
+          <ul>
+            <li>Cansaço constante</li>
+            <li>Irritação ou frustração</li>
+            <li>Sensação de injustiça</li>
+            <li>Dificuldade em relaxar</li>
+            <li>Distanciamento de si mesma</li>
+          </ul>
+
+          <p>
+            Em alguns momentos, pode surgir até um questionamento silencioso: por que eu sempre faço mais do que consigo?
+          </p>
+
+          <h2>Dizer não também é cuidado consigo</h2>
+
+          <p>
+            Aprender a dizer não não significa se afastar das pessoas. É se aproximar de si mesma.
+          </p>
+
+          <p>
+            Colocar limites não significa ser fria, egoísta ou indiferente. Significa reconhecer que você também tem necessidades, limites e emoções que merecem ser respeitados.
+          </p>
+
+          <p>
+            Dizer não é uma forma de preservar sua energia, seu tempo e seu bem-estar. E isso não diminui o cuidado com o outro, apenas torna esse cuidado mais saudável.
+          </p>
+
+          <h2>O desafio de começar a se posicionar</h2>
+
+          <p>
+            Se você sempre disse sim, é natural que o não pareça difícil no início.
+          </p>
+
+          <p>
+            Pode surgir culpa. Pode surgir insegurança. Pode surgir medo de como o outro vai reagir.
+          </p>
+
+          <p>
+            Mas esse processo não precisa ser brusco. Aprender a se posicionar é algo que acontece aos poucos, com mais consciência, mais escuta interna e mais respeito por si mesma.
+          </p>
+
+          <h2>Como a psicoterapia pode ajudar</h2>
+
+          <p>
+            Na psicoterapia, você encontra um espaço seguro para compreender de onde vem a dificuldade em dizer não, quais são seus padrões emocionais e como você se relaciona consigo e com os outros.
+          </p>
+
+          <p>
+            Esse processo pode ajudar no fortalecimento da autoestima, no reconhecimento dos próprios limites e na construção de formas mais equilibradas de se posicionar.
+          </p>
+
+          <p>
+            Sem culpa. Sem rigidez. Sem precisar deixar de ser quem você é.
+          </p>
+
+          <h2>Um passo de cada vez</h2>
+
+          <p>
+            Talvez você não consiga mudar tudo de uma vez. Mas começar a se escutar já é um movimento importante.
+          </p>
+
+          <p>
+            Perceber quando algo incomoda. Reconhecer seus limites. E, aos poucos, se permitir respeitá-los.
+          </p>
+
+          <p>
+            Porque, no fundo, aprender a dizer não é também aprender a se escolher.
+          </p>
+
+          <p class="artigo-assinatura">
+            — Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)<br>
+            Psicoterapia presencial e online | Itapetininga — SP
+          </p>
+
+          <div class="artigo-botoes">
+            <a href="recursos.html" class="btn-secundario">← Voltar aos conteúdos</a>
+            <a
+              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primario"
+            >
+              Agendar pelo WhatsApp
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao artigos-relacionados" aria-labelledby="artigos-relacionados-titulo">
+      <div class="container">
+        <div class="secao-titulo">
+          <h2 id="artigos-relacionados-titulo">Conteúdos relacionados</h2>
+          <p>
+            Leituras que podem complementar este tema com acolhimento e clareza.
+          </p>
+        </div>
+
+        <div class="grid-cards">
+          <a href="baixa-autoestima.html" class="card-artigo">
+            <img src="imagens/baixa-autoestima-itapetininga.jpg" alt="Baixa autoestima e autocrítica" />
+            <div class="card-artigo-texto">
+              <h3>Baixa autoestima</h3>
+              <p>Quando a autocrítica, a insegurança e a necessidade de aprovação começam a pesar demais.</p>
+              <span class="btn-card">Ler artigo</span>
+            </div>
+          </a>
+
+          <a href="sobrecarga-emocional.html" class="card-artigo">
+            <img src="imagens/autocuidado-emocional-natureza-2.jpg" alt="Sobrecarga emocional" />
+            <div class="card-artigo-texto">
+              <h3>Sobrecarga emocional</h3>
+              <p>Quando o excesso de demandas e o hábito de se anular começam a cobrar um preço emocional alto.</p>
+              <span class="btn-card">Ler artigo</span>
+            </div>
+          </a>
+
+          <a href="relacionamentos.html" class="card-artigo">
+            <img src="imagens/relacionamentos-itapetininga.jpg" alt="Relacionamentos e limites" />
+            <div class="card-artigo-texto">
+              <h3>Relacionamentos</h3>
+              <p>Reflexões sobre vínculos, comunicação, medo de desagradar e construção de limites emocionais.</p>
+              <span class="btn-card">Ler artigo</span>
+            </div>
+          </a>
         </div>
       </div>
-    </a>
-  </div>
-</header>
+    </section>
+  </main>
 
-<main class="artigo-wrap">
+  <a
+    href="https://maps.google.com/?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+    class="endereco-flutuante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Abrir endereço no mapa"
+    style="display:none;"
+  ></a>
 
-<div class="hero">
-  <img src="imagens/dizer-nao-limites-saudaveis.jpg" alt="Aprender a dizer não e criar limites saudáveis">
-</div>
+  <a
+    href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-<p class="legenda">Aprender a dizer não pode ser um passo importante de cuidado consigo.</p>
+  <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
 
-<div class="artigo-card">
+  <footer class="rodape" id="contato">
+    <div class="container footer-box">
+      <div class="footer-info">
+        <p><strong>Ana Paula Ap. Vieira | Psicóloga Clínica</strong></p>
+        <p>CRP 06/217114</p>
+        <p>Itapetininga – SP</p>
+        <p>
+          <a href="https://www.google.com/maps?q=Rua+Nazareth,+84,+Itapetininga,+SP" target="_blank" rel="noopener noreferrer">
+            Rua Nazareth, 84
+          </a>
+        </p>
+        <p>
+          <a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a>
+        </p>
+      </div>
 
-<h1>Por que é tão difícil dizer não e colocar limites?</h1>
+      <div class="footer-links">
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="recursos.html">Conteúdos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="servicos.html">Atendimento</a>
+        <a
+          href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
+        </a>
+      </div>
 
-<!-- TEXTO ORIGINAL MANTIDO -->
-<p>Você já se pegou dizendo “sim” quando, na verdade, queria dizer “não”?</p>
+      <div class="footer-redes-box">
+        <div class="footer-redes">
+          <a href="https://www.instagram.com/anapaulapsico/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
 
-<p>Mesmo estando cansada, sobrecarregada ou sem vontade, você acaba aceitando e depois sente um peso, um incômodo difícil de explicar.</p>
-
-<p>Se isso acontece com você, saiba que não é falta de força ou de posicionamento. Na maioria das vezes, existe uma história emocional por trás dessa dificuldade.</p>
-
-<h2>Quando o sim vem antes de você</h2>
-
-<p>Muitas pessoas aprenderam, ao longo da vida, que precisam agradar, corresponder e evitar conflitos.</p>
-
-<p>Dizer não pode trazer sensações desconfortáveis, como medo de magoar alguém, receio de ser rejeitada ou culpa por priorizar a si mesma.</p>
-
-<p>E, sem perceber, o sim passa a ser automático, mesmo quando isso custa caro emocionalmente.</p>
-
-<p>Com o tempo, isso pode gerar uma sensação silenciosa de cansaço, como se você estivesse sempre disponível para os outros, mas distante de si mesma.</p>
-
-<h2>O que pode estar por trás da dificuldade em dizer não</h2>
-
-<ul>
-<li>Necessidade de aprovação</li>
-<li>Medo de rejeição ou abandono</li>
-<li>Dificuldade em reconhecer as próprias necessidades</li>
-<li>Sentimento de responsabilidade excessiva pelos outros</li>
-<li>Baixa autoestima</li>
-</ul>
-
-<h2>Dizer não também é cuidado consigo</h2>
-
-<p>Aprender a dizer não não significa se afastar das pessoas. É se aproximar de si mesma.</p>
-
-<p>Colocar limites não significa ser fria, egoísta ou indiferente. Significa reconhecer que você também tem necessidades.</p>
-
-<p>Dizer não é uma forma de preservar sua energia, seu tempo e seu bem-estar.</p>
-
-<p class="assinatura-artigo">
-— Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)
-</p>
-
-<a href="https://wa.me/5515996760791" class="btn-primario">Agendar atendimento</a>
-
-</div>
-
-<section class="artigos-relacionados">
-<h2>Conteúdos relacionados</h2>
-
-<div class="grid-cards">
-
-<a href="ansiedade.html" class="card-artigo">
-<img src="imagens/ansiedade.jpg">
-<h3>Ansiedade</h3>
-</a>
-
-<a href="autoestima.html" class="card-artigo">
-<img src="imagens/autoestima.jpg">
-<h3>Autoestima</h3>
-</a>
-
-<a href="exaustao-emocional.html" class="card-artigo">
-<img src="imagens/exaustao.jpg">
-<h3>Exaustão emocional</h3>
-</a>
-
-</div>
-</section>
-
-</main>
-
-<footer class="rodape">
-<p>© 2026 Ana Paula Ap. Vieira</p>
-</footer>
-
+        <p class="footer-copy">© 2026 Ana Paula Ap. Vieira</p>
+        <p class="footer-copy">Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
