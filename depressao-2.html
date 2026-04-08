@@ -114,10 +114,13 @@
 
     .artigo-conteudo h1 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(2.15rem, 4vw, 3rem);
-      line-height: 1.15;
+      font-size: clamp(2.05rem, 3.7vw, 2.9rem);
+      line-height: 1.17;
+      letter-spacing: -0.01em;
       color: #7656b3;
       margin-bottom: 20px;
+      max-width: 12ch;
+      text-wrap: balance;
     }
 
     .artigo-conteudo h2,
@@ -230,12 +233,32 @@
         border-radius: 22px;
       }
 
+      .artigo-conteudo h1 {
+        font-size: 2rem;
+        line-height: 1.14;
+        max-width: 11ch;
+        margin-bottom: 18px;
+      }
+
       .artigos-relacionados .card-artigo {
         border-radius: 22px;
       }
 
       .artigos-relacionados .card-artigo img {
         height: 190px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .artigo-conteudo h1 {
+        font-size: 1.82rem;
+        line-height: 1.12;
+        max-width: 10ch;
+      }
+
+      .artigo-conteudo p,
+      .artigo-conteudo li {
+        font-size: 1rem;
       }
     }
   </style>
@@ -264,6 +287,36 @@
           }
         },
         "mainEntityOfPage": "https://anapaulaapvieirapsi.com.br/depressao-2.html"
+      },
+      {
+        "@type": "Psychologist",
+        "name": "Ana Paula Ap. Vieira",
+        "image": "https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg",
+        "url": "https://anapaulaapvieirapsi.com.br/",
+        "telephone": "+55 15 99676-0791",
+        "email": "contato@anapaulaapvieirapsi.com.br",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Nazareth, 84",
+          "addressLocality": "Itapetininga",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Itapetininga"
+          },
+          {
+            "@type": "Country",
+            "name": "Brasil"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/anapaulapsico/",
+          "https://www.facebook.com/anapaulaapvieirapsico/",
+          "https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
+        ]
       }
     ]
   }
@@ -363,7 +416,7 @@
           </p>
 
           <p class="artigo-assinatura">
-            — Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)<br>
+            — Ana Paula Ap. Vieira | Psicóloga Clínica (CRP 06/217114)<br />
             Psicoterapia presencial e online | Itapetininga – SP
           </p>
 
