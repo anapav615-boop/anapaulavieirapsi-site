@@ -1243,9 +1243,9 @@
     });
 
     if (menuButtons.length > 0) {
-      menuButtons[0].classList.add("ativo");
-      document.getElementById("painel-checkin").classList.add("ativo");
-    }
+  paineis.forEach((painel) => painel.classList.remove("ativo"));
+  menuButtons.forEach((btn) => btn.classList.remove("ativo"));
+}
 
     const mensagensCheckin = {
       "Ansiedade": "Talvez hoje seu corpo e sua mente estejam tentando dar conta de muitas coisas ao mesmo tempo. Respire com gentileza. Você não precisa resolver tudo agora.",
