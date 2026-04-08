@@ -679,4 +679,22 @@ button {
   border-radius: 22px !important;
 }
 
+.espaco-seguro-home-card {
+  position: relative;
+  overflow: hidden;
+}
 
+.espaco-seguro-home-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.38), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(184, 204, 176, 0.12), transparent 30%);
+  pointer-events: none;
+}
+
+.espaco-seguro-home-card .bloco-principal-conteudo {
+  position: relative;
+  z-index: 1;
+}
