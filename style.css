@@ -161,6 +161,17 @@ button {
   background: rgba(255,255,255,0.34);
 }
 
+.menu-nav a.ativo {
+  background: linear-gradient(135deg, #c08ea4, #ad748c);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(176, 123, 146, 0.22);
+}
+
+.menu-nav a.ativo:hover {
+  background: linear-gradient(135deg, #b9849a, #9f667d);
+  color: #fff;
+}
+
 /* HERO */
 .hero-home {
   padding: 26px 0 12px;

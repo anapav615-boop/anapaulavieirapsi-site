@@ -40,6 +40,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const linksMenu = document.querySelectorAll("#menu-nav a");
+  const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
+
+  linksMenu.forEach((link) => {
+    const href = link.getAttribute("href");
+
+    if (!href) return;
+
+    if (href === paginaAtual) {
+      link.classList.add("ativo");
+      link.setAttribute("aria-current", "page");
+    }
+  });
+
   if (btnTopo) {
     function toggleTopo() {
       btnTopo.classList.toggle("visivel", window.scrollY > 300);
