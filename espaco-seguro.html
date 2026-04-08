@@ -1099,204 +1099,223 @@
   </main>
 
   <footer class="rodape">
-    <div class="container">
-      <div class="rodape-grid">
-        <div>
-          <h3>Ana Paula Ap. Vieira</h3>
-          <p>Psicóloga Clínica | CRP 06/217114</p>
-          <p>Atendimento psicológico online e presencial em Itapetininga.</p>
-        </div>
+   <a
+  href="https://maps.google.com/?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+  class="endereco-flutuante"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Abrir endereço no mapa"
+  style="display:none;"
+></a>
 
-        <div>
-          <h4>Contato</h4>
-          <p>
-            <a href="https://wa.me/5515996760791" target="_blank" rel="noopener noreferrer">
-              WhatsApp: (15) 99676-0791
-            </a>
-          </p>
-          <p>
-            <a href="mailto:contato@anapaulaapvieirapsi.com.br">
-              contato@anapaulaapvieirapsi.com.br
-            </a>
-          </p>
-        </div>
+<a
+  href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+  class="whatsapp-btn"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Falar no WhatsApp"
+>
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
-        <div>
-          <h4>Links rápidos</h4>
-          <p><a href="index.html">Início</a></p>
-          <p><a href="servicos.html">Serviços</a></p>
-          <p><a href="quem-sou.html">Quem Sou</a></p>
-          <p><a href="faq.html">FAQ</a></p>
-        </div>
-      </div>
+<button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
 
-      <div class="rodape-bottom">
-        <p>© 2026 Ana Paula Ap. Vieira | Psicóloga Clínica. Todos os direitos reservados.</p>
-      </div>
+<footer class="rodape" id="contato">
+  <div class="container footer-box">
+
+    <div class="footer-info">
+      <p><strong>Ana Paula Ap. Vieira | Psicóloga Clínica</strong></p>
+      <p>CRP 06/217114</p>
+      <p>Itapetininga – SP</p>
+      <p>
+        <a
+          href="https://www.google.com/maps?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Rua Nazareth, 84
+        </a>
+      </p>
+      <p>
+        <a href="mailto:contato@anapaulaapvieirapsi.com.br">
+          contato@anapaulaapvieirapsi.com.br
+        </a>
+      </p>
     </div>
-  </footer>
 
-  <script>
-    const menuButtons = document.querySelectorAll(".menu-app-btn");
-    const paineis = document.querySelectorAll(".painel-app");
+    <div class="footer-links">
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="recursos.html">Conteúdos</a>
+      <a href="faq.html">FAQ</a>
+      <a href="servicos.html">Atendimento</a>
+      <a
+        href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp
+      </a>
+    </div>
 
-    function abrirPainel(id) {
-      paineis.forEach((painel) => painel.classList.remove("ativo"));
-      menuButtons.forEach((btn) => btn.classList.remove("ativo"));
+    <div class="footer-redes-box">
+      <div class="footer-redes">
+        <a
+          href="https://www.instagram.com/anapaulapsico/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
 
-      const painel = document.getElementById(id);
-      const botao = document.querySelector(`.menu-app-btn[data-target="${id}"]`);
+        <a
+          href="https://www.facebook.com/anapaulaapvieirapsico/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
 
-      if (painel) painel.classList.add("ativo");
-      if (botao) botao.classList.add("ativo");
-    }
+        <a
+          href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
 
-    menuButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        abrirPainel(btn.dataset.target);
-        document.querySelector(".conteudo-app")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
+      <p class="footer-copy">© 2026 Ana Paula Ap. Vieira</p>
+      <p class="footer-copy">Todos os direitos reservados.</p>
+    </div>
+
+  </div>
+</footer>
+
+ <script>
+  const menuButtons = document.querySelectorAll(".menu-app-btn");
+  const paineis = document.querySelectorAll(".painel-app");
+
+  function abrirPainel(id) {
+    paineis.forEach((painel) => painel.classList.remove("ativo"));
+    menuButtons.forEach((btn) => btn.classList.remove("ativo"));
+
+    const painel = document.getElementById(id);
+    const botao = document.querySelector(`.menu-app-btn[data-target="${id}"]`);
+
+    if (painel) painel.classList.add("ativo");
+    if (botao) botao.classList.add("ativo");
+  }
+
+  // 👇 CLIQUE NORMAL (SEM ABRIR AUTOMÁTICO)
+  menuButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      abrirPainel(btn.dataset.target);
+      document.querySelector(".conteudo-app")?.scrollIntoView({ behavior: "smooth" });
     });
+  });
 
-    abrirPainel("painel-checkin");
+  // ❌ REMOVIDO:
+  // abrirPainel("painel-checkin");
 
-    // CHECK-IN
-    const checkinForm = document.getElementById("checkinForm");
-    const checkinMensagem = document.getElementById("checkinMensagem");
-    const checkinRetorno = document.getElementById("checkinRetorno");
-    const textoRetornoCheckin = document.getElementById("textoRetornoCheckin");
-    const irParaApoio = document.getElementById("irParaApoio");
+  // CHECK-IN
+  const checkinForm = document.getElementById("checkinForm");
+  const checkinMensagem = document.getElementById("checkinMensagem");
+  const checkinRetorno = document.getElementById("checkinRetorno");
+  const textoRetornoCheckin = document.getElementById("textoRetornoCheckin");
+  const irParaApoio = document.getElementById("irParaApoio");
 
-    const devolutivas = {
-      "Ansiedade": "Se hoje a ansiedade está mais presente, tente reduzir a exigência interna. Nem tudo precisa ser resolvido agora. Às vezes, o próximo passo é apenas respirar e se acolher com mais gentileza.",
-      "Cansaço": "Seu cansaço merece ser levado a sério. Nem sempre o corpo e a mente estão pedindo produtividade — às vezes, estão pedindo pausa, limite e cuidado.",
-      "Tristeza": "A tristeza também precisa de espaço. Você não precisa apressar o que sente. Talvez hoje o mais importante seja não se abandonar emocionalmente.",
-      "Sobrecarga": "Quando tudo pesa ao mesmo tempo, a mente pode se sentir no limite. Talvez hoje você não precise fazer tudo — apenas priorizar o que é essencial e se tratar com mais delicadeza.",
-      "Solidão": "Sentir-se só pode doer de formas muito silenciosas. Que hoje você possa lembrar que seu sofrimento merece escuta, presença e cuidado.",
-      "Insegurança": "A insegurança costuma aparecer quando você está tentando sustentar mais do que deveria sozinha. Volte para o que é possível hoje, sem se medir apenas pelo medo.",
-      "Irritação": "Às vezes, a irritação é o jeito que o corpo encontra de mostrar que algo já passou do limite. Tente olhar com curiosidade para o que tem te desgastado.",
-      "Medo": "O medo pode te deixar em alerta constante. Se isso estiver muito intenso, talvez este seja um sinal de que você precisa de mais apoio e acolhimento.",
-      "Esperança": "Mesmo que hoje ainda existam dificuldades, perceber alguma esperança dentro de você já é um movimento importante de reconexão com a vida."
-    };
+  const devolutivas = {
+    "Ansiedade": "Se hoje a ansiedade está mais presente, tente reduzir a exigência interna...",
+    "Cansaço": "Seu cansaço merece ser levado a sério...",
+    "Tristeza": "A tristeza também precisa de espaço...",
+    "Sobrecarga": "Quando tudo pesa ao mesmo tempo...",
+    "Solidão": "Sentir-se só pode doer...",
+    "Insegurança": "A insegurança costuma aparecer...",
+    "Irritação": "Às vezes, a irritação é um sinal...",
+    "Medo": "O medo pode te deixar em alerta constante...",
+    "Esperança": "Perceber esperança já é um movimento importante..."
+  };
 
-    checkinForm?.addEventListener("submit", function (e) {
-      e.preventDefault();
+  checkinForm?.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      const nome = document.getElementById("nome_checkin").value.trim();
-      const emocao = document.getElementById("emocao").value;
-      const intensidade = document.getElementById("intensidade").value;
-      const necessidade = document.getElementById("necessidade").value.trim();
+    const nome = document.getElementById("nome_checkin").value.trim();
+    const emocao = document.getElementById("emocao").value;
+    const intensidade = document.getElementById("intensidade").value;
+    const necessidade = document.getElementById("necessidade").value.trim();
 
-      if (!emocao || !intensidade || !necessidade) {
-        checkinMensagem.textContent = "Preencha os campos para receber sua devolutiva.";
-        checkinMensagem.classList.add("show");
-        checkinRetorno.style.display = "none";
-        return;
-      }
-
-      checkinMensagem.textContent = "Seu check-in foi registrado com carinho.";
+    if (!emocao || !intensidade || !necessidade) {
+      checkinMensagem.textContent = "Preencha os campos.";
       checkinMensagem.classList.add("show");
-
-      const saudacao = nome ? `${nome}, ` : "";
-      const mensagemBase = devolutivas[emocao] || "Obrigada por se escutar hoje. O que você sente merece cuidado.";
-
-      textoRetornoCheckin.textContent =
-        `${saudacao}${mensagemBase} ` +
-        `Hoje você identificou intensidade ${intensidade}/10 e percebeu necessidade de ${necessidade.toLowerCase()}. ` +
-        `Leve isso com mais gentileza ao longo do seu dia.`;
-
-      checkinRetorno.style.display = "block";
-    });
-
-    irParaApoio?.addEventListener("click", function () {
-      abrirPainel("painel-apoio");
-      document.getElementById("painel-apoio")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-
-    // DIÁRIO
-    const diarioForm = document.getElementById("diarioForm");
-    const diarioMensagem = document.getElementById("diarioMensagem");
-    const listaDiario = document.getElementById("listaDiario");
-    const limparDiario = document.getElementById("limparDiario");
-
-    function carregarDiario() {
-      const registros = JSON.parse(localStorage.getItem("espacoSeguroDiario") || "[]");
-      listaDiario.innerHTML = "";
-
-      if (!registros.length) {
-        listaDiario.innerHTML = `<div class="vazio-app">Ainda não há registros salvos aqui.</div>`;
-        return;
-      }
-
-      registros.reverse().forEach((item) => {
-        const bloco = document.createElement("div");
-        bloco.className = "registro-app";
-        bloco.innerHTML = `
-          <strong>${item.titulo || "Sem título"}</strong>
-          <small>${item.data}</small>
-          <p>${item.texto}</p>
-        `;
-        listaDiario.appendChild(bloco);
-      });
+      return;
     }
 
-    diarioForm?.addEventListener("submit", function (e) {
-      e.preventDefault();
+    const saudacao = nome ? `${nome}, ` : "";
+    const mensagemBase = devolutivas[emocao] || "Obrigada por se escutar hoje.";
 
-      const titulo = document.getElementById("titulo_diario").value.trim();
-      const texto = document.getElementById("texto_diario").value.trim();
+    textoRetornoCheckin.textContent =
+      `${saudacao}${mensagemBase}`;
 
-      if (!texto) {
-        diarioMensagem.textContent = "Escreva algo antes de salvar.";
-        diarioMensagem.classList.add("show");
-        return;
-      }
+    checkinRetorno.style.display = "block";
+  });
 
-      const registros = JSON.parse(localStorage.getItem("espacoSeguroDiario") || "[]");
+  irParaApoio?.addEventListener("click", function () {
+    abrirPainel("painel-apoio");
+  });
 
-      registros.push({
-        titulo: titulo || "Registro emocional",
-        texto,
-        data: new Date().toLocaleString("pt-BR")
-      });
+  // DIÁRIO
+  const diarioForm = document.getElementById("diarioForm");
+  const listaDiario = document.getElementById("listaDiario");
 
-      localStorage.setItem("espacoSeguroDiario", JSON.stringify(registros));
+  function carregarDiario() {
+    const registros = JSON.parse(localStorage.getItem("espacoSeguroDiario") || "[]");
+    listaDiario.innerHTML = "";
 
-      diarioMensagem.textContent = "Seu registro foi salvo neste dispositivo.";
-      diarioMensagem.classList.add("show");
+    if (!registros.length) {
+      listaDiario.innerHTML = `<div class="vazio-app">Sem registros ainda.</div>`;
+      return;
+    }
 
-      diarioForm.reset();
-      carregarDiario();
+    registros.reverse().forEach((item) => {
+      const bloco = document.createElement("div");
+      bloco.className = "registro-app";
+      bloco.innerHTML = `<strong>${item.titulo}</strong><p>${item.texto}</p>`;
+      listaDiario.appendChild(bloco);
+    });
+  }
+
+  diarioForm?.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const titulo = document.getElementById("titulo_diario").value.trim();
+    const texto = document.getElementById("texto_diario").value.trim();
+
+    if (!texto) return;
+
+    const registros = JSON.parse(localStorage.getItem("espacoSeguroDiario") || "[]");
+
+    registros.push({
+      titulo: titulo || "Registro",
+      texto
     });
 
-    limparDiario?.addEventListener("click", function () {
-      localStorage.removeItem("espacoSeguroDiario");
-      carregarDiario();
-      diarioMensagem.textContent = "Seus registros foram removidos deste dispositivo.";
-      diarioMensagem.classList.add("show");
-    });
-
+    localStorage.setItem("espacoSeguroDiario", JSON.stringify(registros));
+    diarioForm.reset();
     carregarDiario();
+  });
 
-    // EXERCÍCIOS
-    document.querySelectorAll(".exercicio-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const id = btn.dataset.exercicio;
-        const alvo = document.getElementById(`feedback-${id}`);
-        if (alvo) {
-          alvo.classList.toggle("show");
-        }
-      });
-    });
+  carregarDiario();
 
-    // MENU MOBILE
-    const menuToggle = document.getElementById("menu-toggle");
-    const menuNav = document.getElementById("menu-nav");
+  // MENU MOBILE
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuNav = document.getElementById("menu-nav");
 
-    menuToggle?.addEventListener("click", () => {
-      const aberto = menuNav.classList.toggle("aberto");
-      menuToggle.setAttribute("aria-expanded", aberto ? "true" : "false");
-    });
-  </script>
-</body>
-</html>
+  menuToggle?.addEventListener("click", () => {
+    menuNav.classList.toggle("aberto");
+  });
+</script>
