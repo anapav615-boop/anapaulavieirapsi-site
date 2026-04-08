@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("menu-aberto");
     }
 
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
       const aberto = menuNav.classList.contains("aberto");
       aberto ? fecharMenu() : abrirMenu();
     });

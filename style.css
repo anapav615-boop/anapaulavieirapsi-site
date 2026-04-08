@@ -133,6 +133,14 @@ button {
   background: rgba(255,255,255,0.35);
   color: var(--title-dark);
   font-size: 1.08rem;
+
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.menu-toggle i {
+  pointer-events: none;
 }
 
 /* garante ícone centralizado no botão do menu */
