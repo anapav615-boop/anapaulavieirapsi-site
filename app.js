@@ -56,19 +56,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const linksMenu = document.querySelectorAll("#menu-nav a");
-  const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
+ const linksMenu = document.querySelectorAll("#menu-nav a");
+const paginaAtual = window.location.pathname.split("/").pop() || "";
 
-  linksMenu.forEach((link) => {
-    const href = link.getAttribute("href");
+linksMenu.forEach((link) => {
+  const href = link.getAttribute("href");
 
-    if (!href) return;
+  if (!href) return;
 
-    if (href === paginaAtual) {
-      link.classList.add("ativo");
-      link.setAttribute("aria-current", "page");
-    }
-  });
+  const ehHome = (paginaAtual === "" && href === "/");
+  const ehPaginaAtual = href === paginaAtual;
+
+  if (ehHome || ehPaginaAtual) {
+    link.classList.add("ativo");
+    link.setAttribute("aria-current", "page");
+  }
+});
 
   if (btnTopo) {
     function toggleTopo() {
