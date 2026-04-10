@@ -1087,4 +1087,48 @@ button {
     width: 100%;
     text-align: center;
   }
+/* TESTE BOTÕES ACOLHIMENTO */
+
+.botoes-acolhimento {
+  display: flex !important;
+  gap: 14px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  margin-top: 18px !important;
+}
+
+.botoes-acolhimento .btn-principal {
+  background: linear-gradient(135deg, #c08ea4, #ad748c) !important;
+  color: #fff !important;
+  padding: 12px 22px !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  box-shadow: 0 8px 18px rgba(176, 123, 146, 0.25) !important;
+  border: none !important;
+}
+
+.botoes-acolhimento .btn-secundario {
+  background: transparent !important;
+  color: var(--title-dark) !important;
+  padding: 10px 16px !important;
+  border-radius: 999px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .botoes-acolhimento {
+    flex-direction: column !important;
+  }
+
+  .botoes-acolhimento .btn-principal,
+  .botoes-acolhimento .btn-secundario {
+    width: 100% !important;
+    text-align: center !important;
+  }
 }
