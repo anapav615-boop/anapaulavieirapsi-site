@@ -1030,4 +1030,61 @@ button {
   .espaco-seguro-home-card-premium-lista li {
     font-size: 0.86rem;
   }
+
+/* BOTÕES ACOLHIMENTO */
+
+.botoes-acolhimento {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+/* BOTÃO PRINCIPAL (WhatsApp) */
+.btn-principal {
+  background: linear-gradient(135deg, #c08ea4, #ad748c);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 18px rgba(176, 123, 146, 0.25);
+  transition: all 0.25s ease;
+}
+
+.btn-principal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(176, 123, 146, 0.35);
+}
+
+/* BOTÃO SECUNDÁRIO */
+.btn-secundario {
+  background: transparent;
+  color: var(--title-dark);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+}
+
+.btn-secundario:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .botoes-acolhimento {
+    flex-direction: column;
+  }
+
+  .btn-principal,
+  .btn-secundario {
+    width: 100%;
+    text-align: center;
+  }
 }
