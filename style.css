@@ -90,16 +90,22 @@ button {
   justify-content: space-between;
   gap: 22px;
   position: relative;
+  padding: 10px 0;
 }
 
 .logo-link {
   display: block;
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+  min-width: 0;
 }
 
 .logo-area {
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
 }
 
 .logo {
@@ -109,6 +115,11 @@ button {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.92);
   padding: 4px;
+  flex-shrink: 0;
+}
+
+.logo-texto {
+  min-width: 0;
 }
 
 .logo-texto h2 {
@@ -119,8 +130,9 @@ button {
 }
 
 .logo-texto p {
-  margin: 3px 0 0;
-  font-size: 0.9rem;
+  margin: 4px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.35;
   color: #6f5b6b;
 }
 
@@ -133,18 +145,14 @@ button {
   background: rgba(255,255,255,0.35);
   color: var(--title-dark);
   font-size: 1.08rem;
-
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   user-select: none;
+  flex-shrink: 0;
 }
 
 .menu-toggle i {
   pointer-events: none;
-}
-
-/* garante ícone centralizado no botão do menu */
-.menu-toggle i {
   line-height: 1;
 }
 
@@ -178,6 +186,36 @@ button {
 .menu-nav a.ativo:hover {
   background: linear-gradient(135deg, #b9849a, #9f667d);
   color: #fff;
+}
+
+/* AJUSTE HEADER MOBILE */
+@media (max-width: 768px) {
+  .header-wrap {
+    min-height: 82px;
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .logo-area {
+    gap: 10px;
+    align-items: center;
+  }
+
+  .logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .logo-texto h2 {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .logo-texto p {
+    font-size: 0.8rem;
+    line-height: 1.25;
+    margin-top: 4px;
+  }
 }
 
 /* HERO */
