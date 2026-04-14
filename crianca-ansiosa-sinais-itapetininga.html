@@ -7,11 +7,11 @@
   <title>Criança ansiosa: sinais que os pais precisam observar em Itapetininga | Ana Paula Vieira</title>
   <meta
     name="description"
-    content="Criança ansiosa em Itapetininga: conheça os sinais que os pais precisam observar, como a ansiedade aparece na infância e quando buscar ajuda psicológica."
+    content="Criança ansiosa em Itapetininga: entenda os sinais que os pais precisam observar, como a ansiedade pode aparecer na infância e como a psicoterapia pode ajudar."
   />
   <meta
     name="keywords"
-    content="criança ansiosa itapetininga, ansiedade infantil sintomas, psicóloga infantil itapetininga, sinais de ansiedade em crianças, terapia infantil"
+    content="criança ansiosa itapetininga, sinais de ansiedade infantil, psicóloga infantil em itapetininga, ansiedade infantil, terapia infantil itapetininga, Ana Paula Vieira"
   />
   <meta name="author" content="Ana Paula Vieira" />
   <meta name="robots" content="index, follow" />
@@ -26,7 +26,7 @@
   <meta property="og:title" content="Criança ansiosa: sinais que os pais precisam observar em Itapetininga | Ana Paula Vieira" />
   <meta
     property="og:description"
-    content="Entenda como a ansiedade aparece na infância e quais sinais os pais devem observar para acolher melhor seus filhos."
+    content="Entenda como a ansiedade pode aparecer na infância, quais sinais merecem atenção e como a psicoterapia pode ajudar com acolhimento e escuta."
   />
   <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/crianca-ansiosa-sinais-itapetininga.html" />
   <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/crianca-ansiosa-itapetininga-desenhando.jpg" />
@@ -38,7 +38,7 @@
   <meta name="twitter:title" content="Criança ansiosa: sinais que os pais precisam observar em Itapetininga | Ana Paula Vieira" />
   <meta
     name="twitter:description"
-    content="Saiba identificar sinais de ansiedade infantil e quando buscar ajuda psicológica em Itapetininga."
+    content="Saiba como identificar sinais de ansiedade infantil e quando buscar ajuda psicológica em Itapetininga."
   />
   <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/crianca-ansiosa-itapetininga-desenhando.jpg" />
 
@@ -81,6 +81,7 @@
     .hero-artigo-imagem {
       overflow: hidden;
       border-radius: 30px;
+      background: transparent;
       box-shadow: 0 10px 24px rgba(88, 73, 96, 0.08);
     }
 
@@ -98,6 +99,7 @@
       font-size: 0.98rem;
       line-height: 1.65;
       color: #6c5a6f;
+      padding: 0 12px 2px;
     }
 
     .artigo-conteudo {
@@ -111,14 +113,17 @@
     .artigo-conteudo h1 {
       font-family: "Playfair Display", serif;
       font-size: clamp(2.15rem, 4vw, 3rem);
+      line-height: 1.15;
       color: #7656b3;
       margin-bottom: 20px;
     }
 
-    .artigo-conteudo h2 {
+    .artigo-conteudo h2,
+    .artigo-conteudo h3 {
       color: #7656b3;
       margin-top: 28px;
       margin-bottom: 12px;
+      line-height: 1.3;
     }
 
     .artigo-conteudo p,
@@ -130,6 +135,7 @@
 
     .artigo-conteudo ul {
       padding-left: 24px;
+      margin-top: 8px;
     }
 
     .artigo-assinatura {
@@ -140,110 +146,438 @@
     .artigo-botoes {
       margin-top: 30px;
       display: flex;
+      flex-wrap: wrap;
       gap: 14px;
     }
 
+    .artigos-relacionados {
+      margin-top: 8px;
+    }
+
+    .artigos-relacionados .grid-cards {
+      margin-top: 18px;
+    }
+
+    .artigos-relacionados .card-artigo {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--verde-index-escuro) !important;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--sombra-suave);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .artigos-relacionados .card-artigo:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(88, 73, 96, 0.10);
+      border-color: #94ae89 !important;
+    }
+
+    .artigos-relacionados .card-artigo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .artigos-relacionados .card-artigo-texto {
+      padding: 22px;
+    }
+
+    .artigos-relacionados .card-artigo h3 {
+      color: #6f52ab;
+      font-size: 1.22rem;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+
+    .artigos-relacionados .card-artigo p {
+      color: #5e5164;
+      line-height: 1.7;
+    }
+
+    .artigos-relacionados .btn-card {
+      margin-top: 14px;
+      display: inline-block;
+    }
+
     @media (max-width: 768px) {
+      .hero-artigo {
+        max-width: 100%;
+      }
+
+      .hero-artigo-imagem {
+        border-radius: 20px;
+      }
+
       .hero-artigo-imagem img {
         height: 320px;
+        object-position: center;
+      }
+
+      .hero-artigo-legenda {
+        font-size: 0.95rem;
       }
 
       .artigo-conteudo {
         padding: 28px 20px;
+        border-radius: 22px;
+      }
+
+      .artigos-relacionados .card-artigo {
+        border-radius: 22px;
+      }
+
+      .artigos-relacionados .card-artigo img {
+        height: 190px;
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Criança ansiosa: sinais que os pais precisam observar em Itapetininga",
+        "description": "Criança ansiosa em Itapetininga: conheça sinais que merecem atenção e entenda como a psicoterapia pode ajudar com acolhimento e escuta.",
+        "image": "https://anapaulaapvieirapsi.com.br/imagens/crianca-ansiosa-itapetininga-desenhando.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "Ana Paula Vieira",
+          "jobTitle": "Psicóloga Clínica",
+          "identifier": "CRP 06/217114"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ana Paula Vieira | Psicóloga Clínica",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://anapaulaapvieirapsi.com.br/imagens/logo-simbolo.png"
+          }
+        },
+        "mainEntityOfPage": "https://anapaulaapvieirapsi.com.br/crianca-ansiosa-sinais-itapetininga.html"
+      },
+      {
+        "@type": "Psychologist",
+        "name": "Ana Paula Vieira",
+        "image": "https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg",
+        "url": "https://anapaulaapvieirapsi.com.br/",
+        "telephone": "+55 15 99676-0791",
+        "email": "contato@anapaulaapvieirapsi.com.br",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Nazareth, 84",
+          "addressLocality": "Itapetininga",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Itapetininga"
+          },
+          {
+            "@type": "Country",
+            "name": "Brasil"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/anapaulapsico/",
+          "https://www.facebook.com/anapaulaapvieirapsico/",
+          "https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-
-<header class="cabecalho">
+ <header class="cabecalho">
   <div class="container header-wrap">
-    <a href="/" class="logo-link">
+    <a href="/" class="logo-link" aria-label="Página inicial">
       <div class="logo-area">
-        <img src="imagens/logo-simbolo.png" class="logo" />
+        <img src="imagens/logo-simbolo.png" alt="Logo Ana Paula Vieira" class="logo" />
         <div class="logo-texto">
           <h2>Ana Paula Vieira</h2>
           <p>Psicóloga Clínica em Itapetininga | CRP 06/217114</p>
         </div>
       </div>
     </a>
-  </div>
-</header>
 
-<main class="artigo-pagina">
-  <section class="secao">
-    <div class="container artigo-wrap">
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-nav"
+        type="button"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-      <div class="hero-artigo">
-        <div class="hero-artigo-imagem">
-          <img src="imagens/crianca-ansiosa-itapetininga-desenhando.jpg"
-               alt="Criança desenhando em momento de introspecção relacionado à ansiedade infantil em Itapetininga" />
+      <nav class="menu-nav" id="menu-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="quem-sou.html">Quem Sou</a></li>
+          <li><a href="depoimentos.html">Depoimentos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="recursos.html">Conteúdos</a></li>
+          <li><a href="preco.html">Preço</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="artigo-pagina">
+    <section class="secao">
+      <div class="container artigo-wrap">
+        <div class="hero-artigo">
+          <div class="hero-artigo-imagem">
+            <img src="imagens/crianca-ansiosa-itapetininga-desenhando.jpg" alt="Criança desenhando em momento de introspecção relacionado à ansiedade infantil em Itapetininga" />
+          </div>
+          <p class="hero-artigo-legenda">
+            Nem sempre a ansiedade infantil aparece em palavras — muitas vezes, ela se revela em pequenos sinais do comportamento.
+          </p>
         </div>
-        <p class="hero-artigo-legenda">
-          Nem sempre a ansiedade aparece em palavras — muitas vezes, ela se revela nos pequenos sinais do comportamento.
+
+        <article class="artigo-conteudo">
+          <h1>Criança ansiosa: sinais que os pais precisam observar em Itapetininga</h1>
+
+          <p>
+            Nem sempre a ansiedade na infância é percebida com facilidade. Crianças nem sempre conseguem explicar
+            o que sentem com clareza, e por isso o sofrimento emocional pode aparecer de outras formas: no corpo,
+            no comportamento, no sono, no choro ou em preocupações que parecem grandes demais para a idade.
+          </p>
+
+          <p>
+            Para muitos pais, o primeiro sinal não vem em palavras, mas em mudanças sutis na rotina. Uma criança
+            que antes parecia tranquila pode começar a demonstrar mais medo, irritação, insegurança ou dificuldade
+            para lidar com situações do dia a dia.
+          </p>
+
+          <h2>Sinais de ansiedade em crianças</h2>
+
+          <p>
+            Cada criança expressa a ansiedade de um jeito. Ainda assim, alguns sinais costumam merecer atenção,
+            especialmente quando aparecem com frequência ou começam a gerar sofrimento.
+          </p>
+
+          <ul>
+            <li>Medos intensos ou frequentes</li>
+            <li>Dificuldade para se separar dos pais</li>
+            <li>Choro fácil ou irritabilidade constante</li>
+            <li>Dificuldade para dormir ou pesadelos</li>
+            <li>Dor de barriga ou dor de cabeça sem causa médica aparente</li>
+            <li>Preocupação excessiva com erros, rotina ou acontecimentos futuros</li>
+            <li>Necessidade de controle ou perfeição</li>
+            <li>Agitação, tensão ou dificuldade para relaxar</li>
+          </ul>
+
+          <h2>O que pode gerar ansiedade na infância</h2>
+
+          <p>
+            A ansiedade infantil pode estar relacionada a diferentes fatores. Mudanças na rotina, separações,
+            conflitos familiares, cobranças excessivas, inseguranças, dificuldades escolares ou experiências
+            emocionais difíceis podem influenciar a forma como a criança se sente.
+          </p>
+
+          <p>
+            Nem sempre existe uma causa única. Muitas vezes, a ansiedade aparece como resultado de um conjunto
+            de vivências que a criança ainda não consegue compreender ou elaborar sozinha.
+          </p>
+
+          <h2>Quando os pais devem observar com mais atenção</h2>
+
+          <p>
+            Nem toda preocupação ou medo é um problema. Algumas reações fazem parte do desenvolvimento infantil.
+            O que merece mais atenção é quando os sinais se tornam frequentes, intensos ou começam a afetar
+            a rotina da criança.
+          </p>
+
+          <p>
+            Isso pode aparecer quando ela evita situações simples, sofre demais para se separar dos pais,
+            apresenta sintomas físicos recorrentes, tem dificuldade para dormir, demonstra muito medo de errar
+            ou parece estar sempre em estado de alerta.
+          </p>
+
+          <h2>Como os pais podem ajudar</h2>
+
+          <p>
+            A criança precisa sentir que pode contar com o adulto sem ser julgada. Mais do que corrigir
+            rapidamente o comportamento, é importante tentar compreender o que aquele sinal pode estar comunicando.
+          </p>
+
+          <ul>
+            <li>Escute com calma e sem minimizar o que a criança sente</li>
+            <li>Evite frases que façam a criança se sentir exagerada ou fraca</li>
+            <li>Ofereça segurança emocional e previsibilidade na rotina</li>
+            <li>Observe mudanças de comportamento com atenção e gentileza</li>
+            <li>Procure ajuda quando o sofrimento se torna frequente</li>
+          </ul>
+
+          <h2>Como a psicoterapia infantil pode ajudar</h2>
+
+          <p>
+            A psicoterapia oferece um espaço seguro para que a criança possa expressar emoções de forma adequada
+            à sua idade. Muitas vezes, isso acontece através da fala, do brincar, do desenho e da relação
+            terapêutica construída com acolhimento.
+          </p>
+
+          <p>
+            O acompanhamento psicológico também pode ajudar os pais a compreender melhor esse momento e a oferecer
+            um suporte emocional mais ajustado às necessidades da criança.
+          </p>
+
+          <h2>Atendimento psicológico infantil em Itapetininga</h2>
+
+          <p>
+            Se você percebe sinais de ansiedade no seu filho, buscar orientação pode ser um passo importante.
+            O atendimento com <strong>psicóloga em Itapetininga</strong> pode ajudar a compreender melhor o que
+            a criança está vivendo e oferecer um cuidado mais acolhedor nesse processo.
+          </p>
+
+          <p>
+            📍 Atendimento presencial em Itapetininga – SP<br>
+            💻 Atendimento online para todo o Brasil
+          </p>
+
+          <p>
+            Crianças nem sempre dizem em palavras o que estão sentindo. Muitas vezes, elas mostram. E quando
+            um adulto consegue observar com sensibilidade, o cuidado pode começar mais cedo.
+          </p>
+
+          <p class="artigo-assinatura">
+            — Ana Paula Vieira | Psicóloga Clínica (CRP 06/217114)<br>
+            Psicoterapia presencial e online | Itapetininga – SP
+          </p>
+
+          <div class="artigo-botoes">
+            <a href="recursos.html" class="btn-secundario">← Voltar aos conteúdos</a>
+            <a
+              href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primario"
+            >
+              Agendar pelo WhatsApp
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao artigos-relacionados" aria-labelledby="artigos-relacionados-titulo">
+      <div class="container">
+        <div class="secao-titulo">
+          <h2 id="artigos-relacionados-titulo">Conteúdos relacionados</h2>
+          <p>
+            Leituras que podem complementar este tema com acolhimento e clareza.
+          </p>
+        </div>
+
+        <div class="grid-cards">
+          <a href="orientacao-parental.html" class="card-artigo">
+            <img src="imagens/orientacao-parental.jpg" alt="Orientação parental" />
+            <div class="card-artigo-texto">
+              <h3>Orientação parental</h3>
+              <p>Um espaço de escuta e apoio para pais que desejam compreender melhor as necessidades emocionais dos filhos.</p>
+              <span class="btn-card">Saiba mais</span>
+            </div>
+          </a>
+
+          <a href="psicoterapia-infantil.html" class="card-artigo">
+            <img src="imagens/psicoterapia-infantil.jpg" alt="Psicoterapia infantil" />
+            <div class="card-artigo-texto">
+              <h3>Psicoterapia infantil</h3>
+              <p>Entenda como o acompanhamento psicológico pode ajudar crianças a expressarem emoções com mais segurança.</p>
+              <span class="btn-card">Saiba mais</span>
+            </div>
+          </a>
+
+          <a href="infancia-traumas.html" class="card-artigo">
+            <img src="imagens/infancia-traumas.jpg" alt="Infância e traumas emocionais" />
+            <div class="card-artigo-texto">
+              <h3>Infância e traumas emocionais</h3>
+              <p>Como experiências da infância podem deixar marcas emocionais e afetar a forma de sentir e se relacionar.</p>
+              <span class="btn-card">Saiba mais</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a
+    href="https://maps.google.com/?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+    class="endereco-flutuante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Abrir endereço no mapa"
+    style="display:none;"
+  ></a>
+
+  <a
+    href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <footer class="rodape" id="contato">
+    <div class="container footer-box">
+      <div class="footer-info">
+        <p><strong>Ana Paula Vieira | Psicóloga Clínica</strong></p>
+        <p>CRP 06/217114</p>
+        <p>Itapetininga – SP</p>
+        <p>
+          <a href="https://www.google.com/maps?q=Rua+Nazareth,+84,+Itapetininga,+SP" target="_blank" rel="noopener noreferrer">
+            Rua Nazareth, 84
+          </a>
+        </p>
+        <p>
+          <a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a>
         </p>
       </div>
 
-      <article class="artigo-conteudo">
+      <div class="footer-links">
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="recursos.html">Conteúdos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="servicos.html">Atendimento</a>
+        <a href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">
+          WhatsApp
+        </a>
+      </div>
 
-        <h1>Criança ansiosa: sinais que os pais precisam observar em Itapetininga</h1>
+      <div class="footer-redes-box">
+        <div class="footer-redes">
+          <a href="https://www.instagram.com/anapaulapsico/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/anapaulaapvieirapsico/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
 
-        <p>
-          Nem sempre a ansiedade na infância é fácil de perceber. Diferente dos adultos, as crianças nem sempre conseguem
-          expressar o que estão sentindo com clareza. Por isso, a ansiedade pode aparecer através de comportamentos,
-          mudanças emocionais ou até sinais físicos.
-        </p>
-
-        <h2>Sinais de ansiedade em crianças</h2>
-
-        <ul>
-          <li>Medos intensos ou frequentes</li>
-          <li>Dificuldade para se separar dos pais</li>
-          <li>Irritabilidade ou choro frequente</li>
-          <li>Dificuldade para dormir</li>
-          <li>Queixas físicas sem causa médica</li>
-          <li>Excesso de preocupação</li>
-          <li>Necessidade de controle ou perfeição</li>
-        </ul>
-
-        <h2>O que pode causar ansiedade na infância</h2>
-
-        <p>
-          A ansiedade pode estar relacionada a mudanças, inseguranças, ambiente familiar, rotina ou até mesmo
-          dificuldades em lidar com emoções. Nem sempre há uma causa única — muitas vezes é um conjunto de fatores.
-        </p>
-
-        <h2>Como os pais podem ajudar</h2>
-
-        <p>
-          O mais importante é criar um espaço seguro onde a criança possa se expressar. Escutar, acolher e evitar
-          julgamentos faz toda a diferença no desenvolvimento emocional.
-        </p>
-
-        <h2>Quando procurar ajuda</h2>
-
-        <p>
-          Quando os sinais começam a se repetir com frequência ou impactam a rotina da criança, o acompanhamento
-          psicológico pode ajudar a compreender melhor o que está acontecendo.
-        </p>
-
-        <h2>Atendimento psicológico infantil em Itapetininga</h2>
-
-        <p>
-          O atendimento com <strong>psicóloga em Itapetininga</strong> pode oferecer um espaço seguro para a criança
-          se expressar e para os pais compreenderem melhor esse momento.
-        </p>
-
-        <p class="artigo-assinatura">
-          — Ana Paula Vieira | Psicóloga Clínica
-        </p>
-
-      </article>
-
+        <p class="footer-copy">© 2026 Ana Paula Vieira</p>
+        <p class="footer-copy">Todos os direitos reservados.</p>
+      </div>
     </div>
-  </section>
-</main>
-
+  </footer>
 </body>
 </html>
