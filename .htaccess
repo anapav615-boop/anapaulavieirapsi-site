@@ -7,7 +7,7 @@ RewriteRule ^(.*)$ https://anapaulaapvieirapsi.com.br/$1 [R=301,L]
 # Remover index.html
 # Remover index.html
 RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
-RewriteRule ^index\.html$ https://anapaulaapvieirapsi.com.br/ [R=301,L]
+RewriteRule ^index\.html$ / [R=301,L]
 
 Redirect 301 /sobre-ana-paula.html https://anapaulaapvieirapsi.com.br/quem-sou.html
 Redirect 301 /como-funciona.html https://anapaulaapvieirapsi.com.br/sobre-o-atendimento.html
