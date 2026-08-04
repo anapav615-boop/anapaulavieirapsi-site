@@ -1,22 +1,4 @@
-# ---------------------------------------------
-# ROBOTS.TXT OTIMIZADO PARA SEO
-# anapaulaapvieirapsi.com.br
-# ---------------------------------------------
-
 User-agent: *
 Allow: /
-Disallow: /*?*
 
-# ---------------------------------------------
-# CONTROLE DE RASTREAMENTO (opcional)
-# ---------------------------------------------
-User-agent: Bingbot
-Crawl-delay: 2
-
-User-agent: Yandex
-Crawl-delay: 2
-
-# ---------------------------------------------
-# SITEMAP
-# ---------------------------------------------
 Sitemap: https://anapaulaapvieirapsi.com.br/sitemap.xml

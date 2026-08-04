@@ -1,48 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Política de Privacidade | Ana Paula Vieira</title>
+  <title>Política de Privacidade | Ana Paula Aparecida Vieira</title>
+
   <meta
     name="description"
-    content="Política de Privacidade do site Ana Paula Vieira | Psicóloga Clínica (CRP 06/217114). Saiba como seus dados são coletados, utilizados e protegidos."
+    content="Política de Privacidade do site Ana Paula Aparecida Vieira | Psicóloga Clínica (CRP 06/217114). Saiba como os dados pessoais são coletados, utilizados e protegidos."
   />
-  <meta name="author" content="Ana Paula Vieira" />
+  <meta name="author" content="Ana Paula Aparecida Vieira" />
   <meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://anapaulaapvieirapsi.com.br/privacidade.html" />
-  <link rel="icon" type="image/png" href="imagens/favicon.png" />
+  <link
+    rel="canonical"
+    href="https://anapaulaapvieirapsi.com.br/privacidade.html"
+  />
+
+  <link rel="icon" href="imagens/favicon.png" type="image/png" />
   <link rel="manifest" href="manifest.json" />
 
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ana Paula Vieira | Psicóloga Clínica" />
-  <meta property="og:title" content="Política de Privacidade | Ana Paula Vieira" />
+  <meta
+    property="og:site_name"
+    content="Ana Paula Aparecida Vieira | Psicóloga Clínica"
+  />
+  <meta
+    property="og:title"
+    content="Política de Privacidade | Ana Paula Aparecida Vieira"
+  />
   <meta
     property="og:description"
-    content="Saiba como os dados do site Ana Paula Vieira | Psicóloga Clínica são coletados, utilizados e protegidos."
+    content="Saiba como os dados pessoais tratados pelo site Ana Paula Aparecida Vieira | Psicóloga Clínica são coletados, utilizados e protegidos."
   />
-  <meta property="og:url" content="https://anapaulaapvieirapsi.com.br/privacidade.html" />
-  <meta property="og:image" content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg" />
-  <meta property="og:image:alt" content="Ana Paula Vieira — Psicóloga Clínica" />
+  <meta
+    property="og:url"
+    content="https://anapaulaapvieirapsi.com.br/privacidade.html"
+  />
+  <meta
+    property="og:image"
+    content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg"
+  />
+  <meta
+    property="og:image:alt"
+    content="Ana Paula Aparecida Vieira — Psicóloga Clínica"
+  />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Política de Privacidade | Ana Paula Vieira" />
+  <meta
+    name="twitter:title"
+    content="Política de Privacidade | Ana Paula Aparecida Vieira"
+  />
   <meta
     name="twitter:description"
-    content="Política de Privacidade do site Ana Paula Vieira | Psicóloga Clínica."
+    content="Política de Privacidade do site Ana Paula Aparecida Vieira | Psicóloga Clínica."
   />
-  <meta name="twitter:image" content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg" />
+  <meta
+    name="twitter:image"
+    content="https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg"
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap"
   />
   <link
     rel="stylesheet"
@@ -50,17 +76,13 @@
   />
 
   <link rel="stylesheet" href="style.css" />
-  <script defer src="app.js"></script>
+  <script src="app.js" defer></script>
 
   <style>
     :root {
       --verde-index: #b8ccb0;
-      --card-branco: rgba(255, 255, 255, 0.92);
+      --card-branco: rgba(255, 255, 255, 0.94);
       --sombra-suave: 0 10px 28px rgba(88, 73, 96, 0.07);
-    }
-
-    body {
-      background: #fbf6fb;
     }
 
     .pagina-privacidade {
@@ -74,47 +96,62 @@
 
     .privacidade-card {
       background: var(--card-branco);
-      border: 1px solid var(--verde-index);
+      border: 1.5px solid var(--verde-index);
       border-radius: 32px;
       padding: 40px 36px;
       box-shadow: var(--sombra-suave);
+      backdrop-filter: blur(4px);
     }
 
     .privacidade-card h1 {
+      margin: 0 0 14px;
       font-family: "Playfair Display", serif;
       font-size: clamp(2.1rem, 4vw, 2.9rem);
       line-height: 1.15;
       color: #7656b3;
-      margin-bottom: 14px;
     }
 
     .privacidade-card h2 {
+      margin: 28px 0 10px;
       color: #7656b3;
-      margin: 26px 0 10px;
       line-height: 1.3;
     }
 
     .privacidade-card h3 {
-      color: #7656b3;
       margin: 18px 0 6px;
+      color: #7656b3;
       line-height: 1.3;
     }
 
     .privacidade-card p,
     .privacidade-card li {
       color: #4a3d52;
-      line-height: 1.9;
       font-size: 1.02rem;
+      line-height: 1.9;
     }
 
     .privacidade-card ul {
-      margin: 0 0 10px 18px;
+      margin: 0 0 10px 20px;
       padding: 0;
     }
 
+    .privacidade-card a {
+      color: #7656b3;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
     .privacidade-data {
-      margin: 0 0 8px;
+      margin: 0 0 12px;
       color: #5b4a66;
+    }
+
+    .privacidade-aviso {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border: 1px solid rgba(143, 191, 159, 0.78);
+      border-radius: 18px;
+      background: rgba(244, 249, 244, 0.82);
     }
 
     @media (max-width: 768px) {
@@ -133,20 +170,21 @@
         "@type": "WebPage",
         "name": "Política de Privacidade",
         "url": "https://anapaulaapvieirapsi.com.br/privacidade.html",
-        "description": "Política de Privacidade do site Ana Paula Vieira | Psicóloga Clínica."
+        "description": "Política de Privacidade do site Ana Paula Aparecida Vieira | Psicóloga Clínica."
       },
       {
         "@type": "Psychologist",
-        "name": "Ana Paula Vieira",
+        "name": "Ana Paula Aparecida Vieira",
         "url": "https://anapaulaapvieirapsi.com.br/",
         "image": "https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg",
         "telephone": "+55 15 99676-0791",
         "email": "contato@anapaulaapvieirapsi.com.br",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Rua Nazareth, 84",
+          "streetAddress": "Rua João Evangelista, 831 - Centro",
           "addressLocality": "Itapetininga",
           "addressRegion": "SP",
+          "postalCode": "18200-055",
           "addressCountry": "BR"
         }
       }
@@ -157,26 +195,30 @@
 
 <body>
   <header class="cabecalho">
-  <div class="container header-wrap">
-    <a href="/" class="logo-link" aria-label="Página inicial">
-      <div class="logo-area">
-        <img src="imagens/logo-simbolo.png" alt="Logo Ana Paula Vieira" class="logo" />
-        <div class="logo-texto">
-          <h2>Ana Paula Vieira</h2>
-          <p>Psicóloga Clínica em Itapetininga | CRP 06/217114</p>
+    <div class="container header-wrap">
+      <a class="logo-link" href="/" aria-label="Página inicial">
+        <div class="logo-area">
+          <img
+            class="logo"
+            src="imagens/logo-simbolo.png"
+            alt="Logo Ana Paula Aparecida Vieira"
+          />
+          <div class="logo-texto">
+            <h2>Ana Paula Aparecida Vieira</h2>
+            <p>Psicóloga Clínica em Itapetininga | CRP 06/217114</p>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
 
       <button
         class="menu-toggle"
         id="menu-toggle"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="menu-nav"
         type="button"
+        aria-controls="menu-nav"
+        aria-expanded="false"
+        aria-label="Abrir menu"
       >
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
       </button>
 
       <nav class="menu-nav" id="menu-nav" aria-label="Navegação principal">
@@ -184,7 +226,7 @@
           <li><a href="/">Início</a></li>
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="quem-sou.html">Quem Sou</a></li>
-          <li><a href="depoimentos.html">Depoimentos</a></li>
+          <li><a href="sobre-o-atendimento.html">Como funciona</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="recursos.html">Conteúdos</a></li>
           <li><a href="preco.html">Preço</a></li>
@@ -196,156 +238,324 @@
   <main class="pagina-privacidade">
     <section class="secao" aria-labelledby="privacidade-title">
       <div class="container privacidade-wrap">
-        <div class="privacidade-card">
+        <article class="privacidade-card">
           <h1 id="privacidade-title">Política de Privacidade</h1>
-          <p class="privacidade-data"><em>Última atualização: Novembro/2025</em></p>
 
-          <p>
-            Esta Política de Privacidade explica como são coletados, utilizados e protegidos os dados pessoais
-            das pessoas que acessam o site <strong>anapaulaapvieirapsi.com.br</strong>, de titularidade de
-            <strong>Ana Paula Vieira – Psicóloga Clínica (CRP 06/217114)</strong>.
+          <p class="privacidade-data">
+            <em>Última atualização: agosto de 2026</em>
           </p>
 
-          <h2>1. Dados coletados</h2>
-          <p>Os dados podem ser coletados de três formas:</p>
+          <p>
+            Esta Política de Privacidade explica como são tratados os dados
+            pessoais das pessoas que acessam o site
+            <strong>anapaulaapvieirapsi.com.br</strong>, de titularidade de
+            <strong>
+              Ana Paula Aparecida Vieira — Psicóloga Clínica, CRP 06/217114
+            </strong>.
+          </p>
 
-          <h3>1.1. Dados fornecidos por você</h3>
+          <p>
+            O tratamento de dados é realizado com respeito à privacidade, à
+            confidencialidade, à legislação brasileira de proteção de dados e
+            às normas éticas aplicáveis à atuação profissional em Psicologia.
+          </p>
+
+          <h2>1. Responsável pelo tratamento dos dados</h2>
+
+          <p>
+            A responsável pelo tratamento dos dados pessoais relacionados a
+            este site é:
+          </p>
+
           <ul>
-            <li>Nome;</li>
-            <li>E-mail;</li>
-            <li>Telefone (quando informado);</li>
-            <li>Mensagem enviada pelo formulário de contato.</li>
+            <li>
+              <strong>Ana Paula Aparecida Vieira — Psicóloga Clínica</strong>
+            </li>
+            <li><strong>CRP:</strong> 06/217114</li>
+            <li>
+              <strong>E-mail:</strong>
+              <a href="mailto:contato@anapaulaapvieirapsi.com.br">
+                contato@anapaulaapvieirapsi.com.br
+              </a>
+            </li>
+            <li>
+              <strong>Telefone:</strong>
+              <a href="tel:+5515996760791">(15) 99676-0791</a>
+            </li>
+            <li><strong>Local:</strong> Itapetininga — SP, Brasil</li>
           </ul>
 
-          <h3>1.2. Dados coletados automaticamente</h3>
+          <h2>2. Dados que podem ser tratados</h2>
+
+          <h3>2.1. Dados fornecidos pela pessoa usuária</h3>
+
+          <p>
+            Quando você utiliza os canais de contato disponibilizados no site,
+            poderão ser informados dados como:
+          </p>
+
           <ul>
-            <li>Endereço IP;</li>
-            <li>Navegador e sistema operacional;</li>
-            <li>Páginas visitadas e tempo de navegação;</li>
-            <li>Informações técnicas necessárias para o funcionamento do site.</li>
+            <li>nome;</li>
+            <li>e-mail;</li>
+            <li>telefone;</li>
+            <li>mensagem enviada voluntariamente;</li>
+            <li>informações necessárias para responder ao contato ou organizar um agendamento.</li>
           </ul>
 
-          <h3>1.3. Cookies</h3>
+          <h3>2.2. Dados técnicos de navegação</h3>
+
           <p>
-            Este site utiliza cookies essenciais e algumas tecnologias semelhantes para lembrar preferências
-            básicas, melhorar a navegação e cumprir exigências legais. Você pode configurar o seu navegador
-            para bloquear cookies, mas isso pode limitar algumas funcionalidades.
+            Durante a navegação, alguns dados técnicos podem ser processados
+            automaticamente pela hospedagem e pelos serviços utilizados no
+            site, como:
           </p>
 
-          <h2>2. Finalidade do uso dos dados</h2>
-          <p>Os dados coletados são utilizados para:</p>
           <ul>
-            <li>Responder mensagens enviadas pelo formulário de contato;</li>
-            <li>Auxiliar no agendamento de atendimentos psicológicos;</li>
-            <li>Melhorar o conteúdo e a navegação do site;</li>
-            <li>Cumprir obrigações legais e regulatórias;</li>
-            <li>Garantir segurança e prevenção de usos indevidos.</li>
+            <li>endereço IP;</li>
+            <li>tipo de navegador e sistema operacional;</li>
+            <li>tipo de dispositivo;</li>
+            <li>data e horário de acesso;</li>
+            <li>páginas visitadas;</li>
+            <li>registros técnicos necessários para segurança e funcionamento.</li>
           </ul>
+
           <p>
-            <strong>Seus dados não são vendidos nem utilizados para publicidade invasiva.</strong>
+            O site é hospedado pelo <strong>GitHub Pages</strong>. A plataforma
+            pode registrar o endereço IP de visitantes para fins operacionais e
+            de segurança, conforme suas próprias políticas.
           </p>
 
-          <h2>3. Compartilhamento de dados</h2>
+          <h3>2.3. Cookies e tecnologias semelhantes</h3>
+
           <p>
-            Os dados pessoais poderão ser compartilhados apenas quando necessário:
+            O site pode utilizar cookies essenciais para funcionamento,
+            segurança e memorização de preferências básicas. Caso ferramentas
+            de medição de audiência sejam ativadas, cookies adicionais somente
+            serão utilizados de acordo com as configurações aplicáveis e com as
+            informações apresentadas à pessoa usuária.
           </p>
+
+          <p>
+            Você pode bloquear ou apagar cookies nas configurações do
+            navegador. Algumas funcionalidades poderão ser limitadas quando os
+            cookies essenciais forem bloqueados.
+          </p>
+
+          <h2>3. Dados sensíveis e informações clínicas</h2>
+
+          <p>
+            Este site não é utilizado para armazenar prontuários psicológicos,
+            registros de sessões ou documentos clínicos. Evite enviar, por
+            formulários, e-mail ou mensagens iniciais, descrições clínicas
+            detalhadas ou outros dados pessoais sensíveis que não sejam
+            necessários para o primeiro contato.
+          </p>
+
+          <p class="privacidade-aviso">
+            <strong>Importante:</strong> os canais do site não substituem
+            atendimento de urgência ou emergência. Informações relacionadas ao
+            acompanhamento psicológico são tratadas pelos canais adequados,
+            observando o sigilo profissional e as normas éticas da Psicologia.
+          </p>
+
+          <h2>4. Finalidades do tratamento</h2>
+
+          <p>Os dados poderão ser utilizados para:</p>
+
           <ul>
-            <li>Para cumprimento de obrigações legais ou decisões judiciais;</li>
-            <li>Com serviços de hospedagem e infraestrutura do site (como Netlify e provedores de e-mail);</li>
-            <li>Com ferramentas de análise de tráfego, como Google Analytics, quando utilizadas.</li>
+            <li>responder a mensagens e solicitações;</li>
+            <li>fornecer informações sobre os atendimentos psicológicos;</li>
+            <li>auxiliar na organização de agendamentos;</li>
+            <li>manter o funcionamento e a segurança do site;</li>
+            <li>compreender, de forma geral, o uso e o desempenho das páginas;</li>
+            <li>cumprir obrigações legais, regulatórias e profissionais;</li>
+            <li>prevenir fraudes, abusos e acessos indevidos.</li>
           </ul>
+
           <p>
-            O tratamento de dados respeita as normas éticas da Psicologia e a legislação brasileira de proteção
-            de dados pessoais.
+            <strong>
+              Os dados pessoais não são vendidos nem utilizados para
+              publicidade invasiva.
+            </strong>
           </p>
 
-          <h2>4. Armazenamento e segurança</h2>
+          <h2>5. Bases legais</h2>
+
           <p>
-            Os dados são armazenados em ambiente com medidas razoáveis de segurança para impedir acessos
-            não autorizados, alterações ou perda indevida.
-            <strong>Informações de prontuário psicológico não são registradas neste site.</strong>
+            O tratamento poderá ocorrer, conforme a situação, com base no
+            consentimento, na execução de procedimentos solicitados pela pessoa
+            interessada, no cumprimento de obrigações legais ou regulatórias e
+            no legítimo interesse relacionado à segurança e ao funcionamento
+            do site, sempre respeitando os direitos da pessoa titular.
           </p>
 
-          <h2>5. Direitos da pessoa usuária</h2>
+          <h2>6. Compartilhamento e serviços de terceiros</h2>
+
           <p>
-            Você pode, a qualquer momento, solicitar:
+            Os dados poderão ser processados ou compartilhados apenas quando
+            necessário para o funcionamento do site, para responder ao contato
+            ou para cumprir obrigações legais. Entre os serviços que podem
+            participar desse processo estão:
           </p>
+
           <ul>
-            <li>Acesso aos dados pessoais que foram informados;</li>
-            <li>Correção ou atualização de informações;</li>
-            <li>Exclusão de dados que não sejam mais necessários;</li>
-            <li>Esclarecimentos sobre o tratamento dos seus dados.</li>
+            <li>GitHub Pages, utilizado para hospedagem;</li>
+            <li>provedores de e-mail e comunicação;</li>
+            <li>Google Fonts e Font Awesome, utilizados para fontes e ícones;</li>
+            <li>Google Maps, WhatsApp e redes sociais acessadas por links externos;</li>
+            <li>ferramentas de medição de audiência, caso sejam ativadas;</li>
+            <li>autoridades públicas, quando houver obrigação legal ou ordem válida.</li>
           </ul>
+
           <p>
-            Os pedidos podem ser enviados para o e-mail
-            <strong>contato@anapaulaapvieirapsi.com.br</strong>.
+            Ao acessar um serviço externo, poderão ser aplicadas as políticas
+            de privacidade e as condições definidas pelo próprio fornecedor.
+            Alguns fornecedores podem realizar processamento de dados fora do
+            Brasil, de acordo com suas estruturas técnicas e políticas.
           </p>
 
-          <h2>6. Links externos</h2>
+          <h2>7. Armazenamento, retenção e segurança</h2>
+
           <p>
-            Este site contém links para outros serviços, como WhatsApp, Google Maps, Instagram, Facebook e
-            LinkedIn. Cada serviço possui sua própria política de privacidade, pela qual não temos
-            responsabilidade.
+            Os dados serão mantidos somente pelo período necessário para
+            atender às finalidades informadas, responder às solicitações,
+            exercer direitos, cumprir obrigações legais ou resguardar o
+            exercício regular de direitos.
           </p>
 
-          <h2>7. Atualizações desta política</h2>
           <p>
-            Esta Política de Privacidade pode ser atualizada conforme ajustes técnicos ou legais do site.
-            A versão vigente estará sempre disponível nesta página, com a data de atualização indicada no início
-            do texto.
+            São adotadas medidas razoáveis de segurança para reduzir riscos de
+            acesso não autorizado, alteração, divulgação ou perda indevida.
+            Nenhum sistema conectado à internet, entretanto, oferece garantia
+            absoluta contra incidentes.
           </p>
 
-          <h2>8. Contato</h2>
+          <h2>8. Direitos da pessoa titular</h2>
+
           <p>
-            Em caso de dúvidas sobre esta política ou sobre o tratamento de dados pessoais, você pode entrar em contato:
+            Nos termos da Lei Geral de Proteção de Dados Pessoais, a pessoa
+            titular pode solicitar, quando aplicável:
           </p>
-          <p><strong>Telefone:</strong> (15) 99676-0791</p>
-          <p><strong>E-mail:</strong> contato@anapaulaapvieirapsi.com.br</p>
-          <p><strong>Local:</strong> Itapetininga – SP, Brasil</p>
-        </div>
+
+          <ul>
+            <li>confirmação da existência de tratamento;</li>
+            <li>acesso aos dados pessoais;</li>
+            <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+            <li>informações sobre o uso e o compartilhamento dos dados;</li>
+            <li>anonimização, bloqueio ou eliminação de dados desnecessários ou tratados de forma inadequada;</li>
+            <li>portabilidade, quando aplicável e conforme regulamentação;</li>
+            <li>eliminação de dados tratados com consentimento, quando cabível;</li>
+            <li>revogação do consentimento;</li>
+            <li>oposição ao tratamento realizado em desconformidade com a legislação.</li>
+          </ul>
+
+          <p>
+            Para exercer esses direitos, envie uma solicitação para
+            <a href="mailto:contato@anapaulaapvieirapsi.com.br">
+              contato@anapaulaapvieirapsi.com.br
+            </a>.
+            Poderão ser solicitadas informações necessárias para confirmar a
+            identidade da pessoa requerente e proteger os dados contra acessos
+            indevidos.
+          </p>
+
+          <h2>9. Crianças e adolescentes</h2>
+
+          <p>
+            O site apresenta conteúdos e informações sobre atendimento
+            psicológico de crianças e adolescentes, mas não foi criado para
+            coletar diretamente dados pessoais de crianças sem a participação
+            de seus responsáveis.
+          </p>
+
+          <p>
+            O primeiro contato relacionado ao atendimento de crianças deve ser
+            realizado, preferencialmente, por mãe, pai ou responsável legal.
+            Adolescentes e responsáveis devem evitar o envio de informações
+            sensíveis além do necessário para solicitar orientações iniciais ou
+            agendamento.
+          </p>
+
+          <h2>10. Links externos</h2>
+
+          <p>
+            O site contém links para serviços externos, como WhatsApp, Google
+            Maps, Instagram, Facebook e LinkedIn. Cada plataforma possui sua
+            própria política de privacidade e é responsável pelo tratamento
+            realizado em seu ambiente.
+          </p>
+
+          <h2>11. Atualizações desta política</h2>
+
+          <p>
+            Esta Política de Privacidade poderá ser atualizada para refletir
+            mudanças legais, técnicas ou operacionais. A versão vigente estará
+            disponível nesta página e apresentará a data da última atualização.
+          </p>
+
+          <h2>12. Contato</h2>
+
+          <p>
+            Dúvidas e solicitações relacionadas à privacidade e ao tratamento
+            de dados pessoais podem ser encaminhadas pelos seguintes canais:
+          </p>
+
+          <p>
+            <strong>Telefone:</strong>
+            <a href="tel:+5515996760791">(15) 99676-0791</a>
+          </p>
+
+          <p>
+            <strong>E-mail:</strong>
+            <a href="mailto:contato@anapaulaapvieirapsi.com.br">
+              contato@anapaulaapvieirapsi.com.br
+            </a>
+          </p>
+
+          <p><strong>Local:</strong> Itapetininga — SP, Brasil</p>
+        </article>
       </div>
     </section>
   </main>
 
   <a
-    href="https://maps.google.com/?q=Rua+Nazareth,+84,+Itapetininga,+SP"
-    class="endereco-flutuante"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Abrir endereço no mapa"
-    style="display:none;"
-  ></a>
-
-  <a
-    href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
     class="whatsapp-btn"
+    href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento."
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Falar no WhatsApp"
   >
-    <i class="fa-brands fa-whatsapp"></i>
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
 
-  <button id="btn-topo" class="btn-topo" aria-label="Voltar ao topo">
-    <i class="fa-solid fa-chevron-up"></i>
+  <button
+    class="btn-topo"
+    id="btn-topo"
+    type="button"
+    aria-label="Voltar ao topo"
+  >
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
   </button>
 
   <footer class="rodape" id="contato">
     <div class="container footer-box">
-
       <div class="footer-info">
-        <p><strong>Ana Paula Vieira | Psicóloga Clínica</strong></p>
+        <p>
+          <strong>Ana Paula Aparecida Vieira | Psicóloga Clínica</strong>
+        </p>
         <p>CRP 06/217114</p>
-        <p>Itapetininga – SP</p>
+        <p>Itapetininga — SP</p>
+
         <p>
           <a
-            href="https://www.google.com/maps?q=Rua+Nazareth,+84,+Itapetininga,+SP"
+            href="https://www.google.com/maps?q=Rua+Jo%C3%A3o+Evangelista,+831,+Centro,+Itapetininga,+SP,+18200-055"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Rua Nazareth, 84
+            Rua João Evangelista, 831 — Centro, CEP 18200-055
           </a>
         </p>
+
         <p>
           <a href="mailto:contato@anapaulaapvieirapsi.com.br">
             contato@anapaulaapvieirapsi.com.br
@@ -375,7 +585,7 @@
             rel="noopener noreferrer"
             aria-label="Instagram"
           >
-            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
           </a>
 
           <a
@@ -384,23 +594,22 @@
             rel="noopener noreferrer"
             aria-label="Facebook"
           >
-            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
           </a>
 
           <a
-            href="https://www.linkedin.com/in/ana-paula-ap-vieira-a96632185/"
+            href="https://www.linkedin.com/in/ana-paula-aparecida-vieira-a96632185"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
           </a>
         </div>
 
-        <p class="footer-copy">© 2026 Ana Paula Vieira</p>
+        <p class="footer-copy">© 2026 Ana Paula Aparecida Vieira</p>
         <p class="footer-copy">Todos os direitos reservados.</p>
       </div>
-
     </div>
   </footer>
 </body>

@@ -3,24 +3,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuNav = document.getElementById("menu-nav");
   const btnTopo = document.getElementById("btn-topo");
 
+  /*
+   * Menu para celular
+   */
   if (menuToggle && menuNav) {
+    function atualizarIconeMenu(aberto) {
+      menuToggle.setAttribute("aria-expanded", String(aberto));
+      menuToggle.setAttribute(
+        "aria-label",
+        aberto ? "Fechar menu" : "Abrir menu"
+      );
+
+      menuToggle.innerHTML = aberto
+        ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+        : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+    }
+
     function abrirMenu() {
       menuNav.classList.add("aberto");
-      menuToggle.setAttribute("aria-expanded", "true");
-      menuToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
       document.body.classList.add("menu-aberto");
+      atualizarIconeMenu(true);
     }
 
     function fecharMenu() {
       menuNav.classList.remove("aberto");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
       document.body.classList.remove("menu-aberto");
+      atualizarIconeMenu(false);
     }
 
     function alternarMenu(event) {
       event.preventDefault();
-      event.stopPropagation();
 
       if (menuNav.classList.contains("aberto")) {
         fecharMenu();
@@ -29,57 +41,142 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
+    /*
+     * O evento click funciona com mouse, toque e teclado.
+     * Não é necessário adicionar touchstart.
+     */
     menuToggle.addEventListener("click", alternarMenu);
-    menuToggle.addEventListener("touchstart", alternarMenu, { passive: false });
 
+    /*
+     * Fecha o menu ao clicar fora dele.
+     */
     document.addEventListener("click", (event) => {
+      const menuEstaAberto = menuNav.classList.contains("aberto");
+      const clicouDentroDoMenu = menuNav.contains(event.target);
+      const clicouNoBotao = menuToggle.contains(event.target);
+
       if (
-        menuNav.classList.contains("aberto") &&
-        !menuNav.contains(event.target) &&
-        !menuToggle.contains(event.target)
+        menuEstaAberto &&
+        !clicouDentroDoMenu &&
+        !clicouNoBotao
       ) {
         fecharMenu();
       }
     });
 
-    const linksDoMenu = menuNav.querySelectorAll("a");
-    linksDoMenu.forEach((link) => {
-      link.addEventListener("click", () => {
+    /*
+     * Fecha o menu com a tecla Esc.
+     */
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        menuNav.classList.contains("aberto")
+      ) {
         fecharMenu();
-      });
+        menuToggle.focus();
+      }
     });
 
+    /*
+     * Fecha o menu depois que um link é selecionado.
+     */
+    menuNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", fecharMenu);
+    });
+
+    /*
+     * Fecha o menu caso a tela volte ao tamanho de computador.
+     */
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 980) {
+      if (
+        window.innerWidth > 980 &&
+        menuNav.classList.contains("aberto")
+      ) {
         fecharMenu();
       }
     });
+
+    atualizarIconeMenu(false);
   }
 
- const linksMenu = document.querySelectorAll("#menu-nav a");
-const paginaAtual = window.location.pathname.split("/").pop() || "";
+  /*
+   * Destaque automático da página atual no menu.
+   */
+  const linksMenu = Array.from(
+    document.querySelectorAll("#menu-nav a")
+  );
 
-linksMenu.forEach((link) => {
-  const href = link.getAttribute("href");
-
-  if (!href) return;
-
-  const ehHome = (paginaAtual === "" && href === "/");
-  const ehPaginaAtual = href === paginaAtual;
-
-  if (ehHome || ehPaginaAtual) {
-    link.classList.add("ativo");
-    link.setAttribute("aria-current", "page");
-  }
-});
-
-  if (btnTopo) {
-    function toggleTopo() {
-      btnTopo.classList.toggle("visivel", window.scrollY > 300);
+  function obterArquivoDaUrl(valor) {
+    if (!valor) {
+      return "";
     }
 
-    toggleTopo();
-    window.addEventListener("scroll", toggleTopo);
+    const urlSemAncora = valor
+      .split("#")[0]
+      .split("?")[0];
+
+    const partes = urlSemAncora
+      .split("/")
+      .filter(Boolean);
+
+    return partes.pop() || "index.html";
+  }
+
+  const paginaAtual =
+    obterArquivoDaUrl(window.location.pathname) ||
+    "index.html";
+
+  const linkDaPaginaAtual = linksMenu.find((link) => {
+    const href = link.getAttribute("href");
+
+    if (!href) {
+      return false;
+    }
+
+    const paginaDoLink =
+      href === "/"
+        ? "index.html"
+        : obterArquivoDaUrl(href);
+
+    return paginaDoLink === paginaAtual;
+  });
+
+  /*
+   * Só substitui o destaque quando encontra uma página exata
+   * no menu. Nos artigos, mantém "Conteúdos" destacado quando
+   * isso já estiver definido no próprio HTML.
+   */
+  if (linkDaPaginaAtual) {
+    linksMenu.forEach((link) => {
+      link.classList.remove("ativo");
+      link.removeAttribute("aria-current");
+    });
+
+    linkDaPaginaAtual.classList.add("ativo");
+    linkDaPaginaAtual.setAttribute(
+      "aria-current",
+      "page"
+    );
+  }
+
+  /*
+   * Botão para voltar ao topo.
+   */
+  if (btnTopo) {
+    function alternarBotaoTopo() {
+      btnTopo.classList.toggle(
+        "visivel",
+        window.scrollY > 300
+      );
+    }
+
+    alternarBotaoTopo();
+
+    window.addEventListener(
+      "scroll",
+      alternarBotaoTopo,
+      { passive: true }
+    );
 
     btnTopo.addEventListener("click", () => {
       window.scrollTo({
