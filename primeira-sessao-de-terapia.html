@@ -330,45 +330,39 @@
     ]
   }
   </script>
+
+<style>
+.menu-nav a[aria-current="page"] {
+  background: linear-gradient(135deg, #c08ea4, #ad748c);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(176, 123, 146, 0.22);
+}
+@media (max-width: 980px) {
+  .menu-nav a[aria-current="page"] { display:block; width:100%; text-align:left; }
+}
+</style>
 </head>
 
 <body>
   <header class="cabecalho">
-    <div class="container header-wrap">
-      <a href="/" class="logo-link" aria-label="Página inicial">
-        <div class="logo-area">
-          <img src="imagens/logo-simbolo.png" alt="Logo Ana Paula Aparecida Vieira" class="logo" />
-          <div class="logo-texto">
-            <h2>Ana Paula Aparecida Vieira</h2>
-            <p>Psicóloga Clínica em Itapetininga | CRP 06/217114</p>
-          </div>
-        </div>
-      </a>
-
-      <button
-        class="menu-toggle"
-        id="menu-toggle"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="menu-nav"
-        type="button"
-      >
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav class="menu-nav" id="menu-nav" aria-label="Navegação principal">
-        <ul>
-          <li><a href="/">Início</a></li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="quem-sou.html">Quem Sou</a></li>
-          <li><a href="depoimentos.html">Depoimentos</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="recursos.html">Conteúdos</a></li>
-          <li><a href="preco.html">Preço</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<div class="container header-wrap">
+<a aria-label="Página inicial" class="logo-link" href="/">
+<div class="logo-area">
+<img alt="Logo Ana Paula Aparecida Vieira" class="logo" height="383" src="imagens/logo-simbolo.png" width="389"/>
+<div class="logo-texto">
+<h2>Ana Paula Aparecida Vieira</h2>
+<p>Psicóloga Clínica em Itapetininga | CRP 06/217114</p>
+</div>
+</div>
+</a>
+<button aria-controls="menu-nav" aria-expanded="false" aria-label="Abrir menu" class="menu-toggle" id="menu-toggle" type="button">
+<i class="fa-solid fa-bars"></i>
+</button>
+<nav aria-label="Navegação principal" class="menu-nav" id="menu-nav">
+<ul><li><a href="/">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="quem-sou.html">Quem Sou</a></li><li><a href="sobre-o-atendimento.html">Como funciona</a></li><li><a href="faq.html">FAQ</a></li><li><a aria-current="page" class="ativo" href="recursos.html">Conteúdos</a></li><li><a href="preco.html">Preço</a></li></ul>
+</nav>
+</div>
+</header>
 
   <main class="artigo-pagina">
     <section class="secao">
