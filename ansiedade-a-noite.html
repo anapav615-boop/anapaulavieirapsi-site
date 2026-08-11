@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-  <title>Ansiedade à noite: por que a mente não consegue desligar? | Ana Paula Vieira</title>
+  <title>Ansiedade à noite: por que a mente não consegue desligar? | Ana Paula Aparecida Vieira</title>
   <meta name="description" content="Entenda por que a ansiedade pode aumentar à noite, como os pensamentos afetam o descanso e quando procurar ajuda psicológica." />
   <meta name="keywords" content="ansiedade à noite, ansiedade noturna, mente acelerada à noite, pensamentos antes de dormir, ansiedade e sono, psicóloga em Itapetininga, terapia online" />
   <meta name="author" content="Ana Paula Aparecida Vieira" />
@@ -235,6 +235,29 @@
         padding: 22px 18px;
       }
     }
+  
+    .artigos-relacionados .card-artigo {
+      overflow: hidden;
+    }
+
+    .artigos-relacionados .card-artigo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .artigos-relacionados .card-artigo-texto {
+      padding: 22px;
+    }
+
+    @media (max-width: 768px) {
+      .artigos-relacionados .card-artigo img {
+        height: 190px;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -467,34 +490,56 @@
     <section class="secao artigos-relacionados" aria-labelledby="artigos-relacionados-titulo">
       <div class="container">
         <div class="secao-titulo">
-          <h2 id="artigos-relacionados-titulo">Leia também</h2>
-          <p>
-            Outros conteúdos para compreender melhor como a ansiedade pode aparecer na vida emocional.
-          </p>
+          <h2 id="artigos-relacionados-titulo">Conteúdos relacionados</h2>
+          <p>Leituras que podem complementar este tema com acolhimento e clareza.</p>
         </div>
 
         <div class="grid-cards">
-          <a href="ansiedade-afetando-a-vida-emocional.html" class="card-artigo">
+          <a class="card-artigo" href="ansiedade-afetando-vida-emocional.html">
+            <img
+              alt="Ansiedade: sinais, acolhimento e cuidado emocional"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="imagens/ansiedade-afetando-vida-emocional.jpg"
+              width="900"
+            />
             <div class="card-artigo-texto">
-              <h3>Ansiedade afetando a vida emocional</h3>
-              <p>Entenda como a ansiedade pode interferir nas emoções, nos relacionamentos e na rotina.</p>
-              <span class="btn-card">Saiba mais</span>
+              <h3>Ansiedade: sinais e cuidado emocional</h3>
+              <p>Entenda como a ansiedade pode se manifestar no corpo e nas emoções e como a psicoterapia pode ajudar.</p>
+              <span class="btn-card">Ler artigo</span>
             </div>
           </a>
 
-          <a href="crises-de-ansiedade.html" class="card-artigo">
+          <a class="card-artigo" href="ansiedade-em-mulheres.html">
+            <img
+              alt="Ansiedade em mulheres"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="imagens/ansiedade-mulheres-itapetininga.jpg"
+              width="900"
+            />
             <div class="card-artigo-texto">
-              <h3>Crises de ansiedade</h3>
-              <p>Conheça sinais que podem acompanhar momentos de ansiedade mais intensa e quando buscar ajuda.</p>
-              <span class="btn-card">Saiba mais</span>
+              <h3>Ansiedade em mulheres</h3>
+              <p>Excesso de responsabilidade, autocobrança e sensação de não conseguir parar.</p>
+              <span class="btn-card">Ler artigo</span>
             </div>
           </a>
 
-          <a href="sobre-o-atendimento.html" class="card-artigo">
+          <a class="card-artigo" href="ansiedade-trabalho.html">
+            <img
+              alt="Ansiedade no ambiente de trabalho"
+              decoding="async"
+              height="600"
+              loading="lazy"
+              src="imagens/ansiedade-trabalho.jpg"
+              width="900"
+            />
             <div class="card-artigo-texto">
-              <h3>Sobre o atendimento psicológico</h3>
-              <p>Veja como funciona a psicoterapia presencial em Itapetininga e o atendimento online.</p>
-              <span class="btn-card">Como funciona</span>
+              <h3>Ansiedade no ambiente de trabalho</h3>
+              <p>Quando a pressão e a cobrança transformam o trabalho em fonte de sofrimento emocional.</p>
+              <span class="btn-card">Ler artigo</span>
             </div>
           </a>
         </div>
