@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 
-
-
-﻿<!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<!-- Medição de visitas e cliques, ativada somente com consentimento -->
-<script defer="" src="analytics-contato.js"></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
 <title>Primeira sessão de terapia: como funciona? | Psicóloga em Itapetininga</title>
 <meta content="Entenda como funciona a primeira sessão de terapia, o que falar, o que esperar e como esse primeiro encontro acontece. Psicóloga em Itapetininga e online." name="description"/>
-<meta content="primeira sessão de terapia, como funciona a primeira sessão de terapia, o que falar na primeira sessão de terapia, o que esperar da terapia, primeira consulta com psicóloga, psicóloga em Itapetininga, psicoterapia para adultos" name="keywords"/>
 <meta content="Ana Paula Aparecida Vieira" name="author"/>
 <meta content="index, follow" name="robots"/>
 <link href="https://anapaulaapvieirapsi.com.br/primeira-sessao-de-terapia.html" rel="canonical"/>
 <link href="imagens/favicon.png" rel="icon" type="image/png"/>
 <link href="manifest.json" rel="manifest"/>
+<link as="image" href="imagens/primeira-sessao-terapia-consultorio-itapetininga.jpg" rel="preload"/>
 <meta content="pt_BR" property="og:locale"/>
 <meta content="article" property="og:type"/>
 <meta content="Ana Paula Aparecida Vieira | Psicóloga Clínica" property="og:site_name"/>
@@ -32,7 +26,7 @@
 <meta content="Primeira sessão de terapia: como funciona, o que falar e o que esperar" name="twitter:title"/>
 <meta content="Entenda o que acontece na primeira sessão de terapia e por que você não precisa chegar sabendo exatamente o que dizer." name="twitter:description"/>
 <meta content="https://anapaulaapvieirapsi.com.br/imagens/primeira-sessao-terapia-consultorio-itapetininga.jpg" name="twitter:image"/>
-<link as="image" href="imagens/primeira-sessao-terapia-consultorio-itapetininga.jpg" rel="preload"/><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
@@ -120,16 +114,13 @@
       margin-top: 8px;
     }
 
-    .artigo-destaque {
-      margin: 26px 0;
-      padding: 22px 24px;
-      border-left: 4px solid #a7be9d;
-      border-radius: 18px;
-      background: rgba(232, 240, 228, 0.62);
-    }
-
-    .artigo-destaque p {
-      margin: 0;
+    .bloco-leitura-complementar {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, #f4effa 0%, #f2fbf6 100%);
+      border: 1px solid rgba(127, 191, 154, 0.45);
+      color: #4a3d52;
     }
 
     .artigo-assinatura {
@@ -156,11 +147,9 @@
       background: rgba(255, 255, 255, 0.92);
       border: 1px solid var(--verde-index-escuro) !important;
       border-radius: 28px;
+      overflow: hidden;
       box-shadow: var(--sombra-suave);
       transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-      padding: 28px 24px;
-      min-height: auto;
-      display: block;
     }
 
     .artigos-relacionados .card-artigo:hover {
@@ -169,26 +158,34 @@
       border-color: #94ae89 !important;
     }
 
+    .artigos-relacionados .card-artigo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      background: #f3f0f7;
+    }
+
     .artigos-relacionados .card-artigo-texto {
-      padding: 0;
+      padding: 22px;
     }
 
     .artigos-relacionados .card-artigo h3 {
       color: #6f52ab;
       font-size: 1.22rem;
       line-height: 1.35;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .artigos-relacionados .card-artigo p {
       color: #5e5164;
       line-height: 1.7;
-      margin-bottom: 16px;
     }
 
     .artigos-relacionados .btn-card {
+      margin-top: 14px;
       display: inline-block;
-      margin-top: 0;
     }
 
     @media (max-width: 768px) {
@@ -214,44 +211,20 @@
         border-radius: 22px;
       }
 
-      .artigo-destaque {
-        padding: 20px 18px;
+      .bloco-leitura-complementar {
+        padding: 16px 16px;
+        border-radius: 18px;
       }
 
       .artigos-relacionados .card-artigo {
         border-radius: 22px;
-        padding: 22px 18px;
       }
-    }
-  
-    .artigos-relacionados .card-artigo {
-      padding: 0;
-      overflow: hidden;
-    }
 
-    .artigos-relacionados .card-artigo img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      background: #f3f0f7;
-    }
-
-    .artigos-relacionados .card-artigo-texto {
-      padding: 22px;
-    }
-
-    @media (max-width: 768px) {
       .artigos-relacionados .card-artigo img {
         height: 190px;
       }
-
-      .artigos-relacionados .card-artigo-texto {
-        padding: 20px 18px;
-      }
     }
-</style>
+  </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -261,10 +234,10 @@
       "@id": "https://anapaulaapvieirapsi.com.br/primeira-sessao-de-terapia.html#article",
       "headline": "Primeira sessão de terapia: como funciona, o que falar e o que esperar",
       "description": "Entenda como funciona a primeira sessão de terapia, o que falar, o que esperar e como esse primeiro encontro acontece.",
+      "image": "https://anapaulaapvieirapsi.com.br/imagens/primeira-sessao-terapia-consultorio-itapetininga.jpg",
       "datePublished": "2026-08-06",
       "dateModified": "2026-10-06",
       "inLanguage": "pt-BR",
-      "image": "https://anapaulaapvieirapsi.com.br/imagens/primeira-sessao-terapia-consultorio-itapetininga.jpg",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://anapaulaapvieirapsi.com.br/primeira-sessao-de-terapia.html"
@@ -290,6 +263,29 @@
       ]
     },
     {
+      "@type": "Psychologist",
+      "@id": "https://anapaulaapvieirapsi.com.br/#psychologist",
+      "name": "Ana Paula Aparecida Vieira",
+      "jobTitle": "Psicóloga Clínica",
+      "identifier": "CRP 06/217114",
+      "url": "https://anapaulaapvieirapsi.com.br/",
+      "telephone": "+55 15 99676-0791",
+      "email": "contato@anapaulaapvieirapsi.com.br",
+      "sameAs": [
+        "https://www.instagram.com/anapaulapsico/",
+        "https://www.facebook.com/anapaulapsico/",
+        "https://www.linkedin.com/in/ana-paula-aparecida-vieira-a96632185"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua João Evangelista, 831 - Centro",
+        "addressLocality": "Itapetininga",
+        "addressRegion": "SP",
+        "postalCode": "18200-055",
+        "addressCountry": "BR"
+      }
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://anapaulaapvieirapsi.com.br/primeira-sessao-de-terapia.html#faq",
       "mainEntity": [
@@ -298,7 +294,7 @@
           "name": "O que acontece na primeira sessão de terapia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A primeira sessão é um momento de acolhimento, conhecimento inicial e compreensão do que motivou a procura pela terapia. A psicóloga pode fazer perguntas para entender melhor sua história e o momento atual."
+            "text": "A primeira sessão é um momento de acolhimento, conhecimento inicial e compreensão do que motivou a procura pela terapia."
           }
         },
         {
@@ -306,7 +302,7 @@
           "name": "O que falar na primeira sessão de terapia?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Você pode começar contando o que motivou a busca, algo que tem incomodado ou até dizer que não sabe por onde começar. Não é necessário preparar um discurso."
+            "text": "Você pode começar contando o que motivou a busca, algo que tem incomodado ou até dizer que não sabe por onde começar."
           }
         },
         {
@@ -314,15 +310,15 @@
           "name": "Preciso contar toda a minha história na primeira consulta?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Não. Você pode compartilhar apenas aquilo que consegue falar naquele momento. A confiança é construída gradualmente e outros aspectos da sua história podem aparecer ao longo do processo."
+            "text": "Não. Você pode compartilhar apenas aquilo que consegue falar naquele momento. A confiança é construída gradualmente."
           }
         },
         {
           "@type": "Question",
-          "name": "É normal ficar nervoso antes da primeira sessão de terapia?",
+          "name": "É normal ficar nervoso antes da primeira sessão?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim. O primeiro atendimento pode despertar ansiedade, vergonha ou insegurança, especialmente para quem não está acostumado a falar sobre sentimentos e experiências pessoais."
+            "text": "Sim. O primeiro atendimento pode despertar ansiedade, vergonha ou insegurança, especialmente para quem não está acostumado a falar sobre sentimentos."
           }
         },
         {
@@ -332,54 +328,13 @@
             "@type": "Answer",
             "text": "As sessões costumam ter cerca de 50 minutos, e a frequência é combinada de acordo com as necessidades do processo terapêutico."
           }
-        },
-        {
-          "@type": "Question",
-          "name": "A primeira sessão de terapia já resolve o problema?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A psicoterapia é um processo. A primeira sessão pode trazer alívio e compreensão inicial, mas questões emocionais costumam ser trabalhadas e aprofundadas ao longo dos encontros."
-          }
         }
-      ]
-    },
-    {
-      "@type": "Psychologist",
-      "@id": "https://anapaulaapvieirapsi.com.br/#psychologist",
-      "name": "Ana Paula Aparecida Vieira",
-      "jobTitle": "Psicóloga Clínica",
-      "identifier": "CRP 06/217114",
-      "url": "https://anapaulaapvieirapsi.com.br/",
-      "telephone": "+55 15 99676-0791",
-      "email": "contato@anapaulaapvieirapsi.com.br",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua João Evangelista, 831 - Centro",
-        "addressLocality": "Itapetininga",
-        "addressRegion": "SP",
-        "postalCode": "18200-055",
-        "addressCountry": "BR"
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Itapetininga"
-        },
-        {
-          "@type": "Country",
-          "name": "Brasil"
-        }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/anapaulapsico/",
-        "https://www.facebook.com/anapaulapsico/",
-        "https://www.linkedin.com/in/ana-paula-aparecida-vieira-a96632185"
       ]
     }
   ]
 }
-</script>
-<style>
+</script><style>
+
 .menu-nav a[aria-current="page"] {
   background: linear-gradient(135deg, #c08ea4, #ad748c);
   color: #fff;
@@ -388,31 +343,10 @@
 @media (max-width: 980px) {
   .menu-nav a[aria-current="page"] { display:block; width:100%; text-align:left; }
 }
+
 </style>
 <link data-central-estilo="true" href="estilo-global.css" rel="stylesheet"/>
-<style data-ajuste-cabecalho="pagina-primeira-sessao-topo">
-/* Ajuste exclusivo desta página:
-   cabeçalho começa no topo e não acompanha a rolagem. */
-html,
-body {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-body > .cabecalho {
-  position: relative !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  margin-top: 0 !important;
-  transform: none !important;
-  width: 100% !important;
-}
-
-body > .cabecalho:first-child {
-  margin-block-start: 0 !important;
-}
-</style></head>
+</head>
 <body>
 <header class="cabecalho">
 <div class="container header-wrap">
@@ -434,14 +368,8 @@ body > .cabecalho:first-child {
 </div>
 </header>
 <main class="artigo-pagina">
-<section class="secao">
-<div class="container artigo-wrap">
-<div class="hero-artigo">
-<div class="hero-artigo-imagem">
-<img alt="Consultório acolhedor para primeira sessão de terapia em Itapetininga" decoding="async" fetchpriority="high" height="720" src="imagens/primeira-sessao-terapia-consultorio-itapetininga.jpg" width="1600"/>
-</div>
-<p class="hero-artigo-legenda">Você não precisa chegar à primeira sessão sabendo explicar tudo. Esse encontro existe justamente para começar a compreender o que você está vivendo.</p>
-</div>
+<section class="secao"><div class="container artigo-wrap">
+<div class="hero-artigo"><div class="hero-artigo-imagem"><img alt="Consultório acolhedor para primeira sessão de terapia em Itapetininga" decoding="async" fetchpriority="high" height="900" src="imagens/primeira-sessao-terapia-consultorio-itapetininga.jpg" width="1600"/></div><p class="hero-artigo-legenda">Você não precisa chegar à primeira sessão sabendo explicar tudo. Esse encontro existe justamente para começar a compreender o que você está vivendo.</p></div>
 <article class="artigo-conteudo">
 <h1>Primeira sessão de terapia: como funciona, o que falar e o que esperar</h1>
 <p>Marcar a <strong>primeira sessão de terapia</strong> pode trazer alívio, mas também muitas dúvidas. É comum pensar: <strong>“O que eu vou falar?”</strong>, <strong>“Será que preciso contar tudo?”</strong>, <strong>“E se eu ficar nervoso?”</strong> ou <strong>“Como a psicóloga vai conduzir esse encontro?”</strong>.</p>
@@ -449,9 +377,7 @@ body > .cabecalho:first-child {
 <h2>Como funciona a primeira sessão de terapia?</h2>
 <p>No primeiro encontro, você pode contar o que motivou a busca pela terapia. Algumas pessoas chegam por causa da ansiedade, do cansaço emocional, de dificuldades nos relacionamentos, de uma fase de mudanças ou de um sofrimento que ficou difícil carregar sozinho.</p>
 <p>A conversa acontece de maneira gradual. A psicóloga pode fazer perguntas para compreender melhor sua rotina, seus sentimentos, acontecimentos importantes da sua história e o que você espera do acompanhamento.</p>
-<div class="artigo-destaque">
-<p><strong>Importante:</strong> você não precisa contar tudo na primeira sessão. O vínculo e a confiança são construídos com o tempo, sempre respeitando seus limites e seu ritmo.</p>
-</div>
+<div class="bloco-leitura-complementar"><p style="margin-bottom:10px;"><strong>Tem vergonha de começar ou medo de não saber o que dizer?</strong><br/>Esse sentimento também pode aparecer antes do primeiro atendimento e não significa que você não esteja preparado para começar.</p><a class="btn-secundario" href="vergonha-de-comecar-terapia.html" style="display:inline-block; margin-top:8px;">Ler sobre a vergonha de começar</a></div>
 <h2>O que falar na primeira sessão de terapia?</h2>
 <p>Não existe um roteiro obrigatório. Você pode começar exatamente da forma como conseguir.</p>
 <p>Algumas pessoas começam dizendo:</p>
@@ -468,7 +394,6 @@ body > .cabecalho:first-child {
 <h2>E se eu não souber por onde começar?</h2>
 <p>Dizer <strong>“eu não sei por onde começar”</strong> já pode ser um começo.</p>
 <p>A psicóloga pode ajudar a organizar a conversa com perguntas e escuta, sem exigir que você tenha respostas prontas. Aos poucos, pensamentos, emoções, medos, lembranças e conflitos podem ser compreendidos com mais clareza.</p>
-<p>Se a insegurança antes do primeiro atendimento estiver muito presente, você também pode ler o conteúdo <a href="vergonha-de-comecar-terapia.html"><strong>Tenho vergonha de começar terapia</strong></a>, que aborda justamente esse receio de não saber o que dizer.</p>
 <h2>O que a psicóloga pode perguntar?</h2>
 <p>Cada primeira sessão é diferente, porque cada pessoa tem uma história única. Algumas perguntas podem ajudar a compreender:</p>
 <ul>
@@ -487,9 +412,6 @@ body > .cabecalho:first-child {
 <h2>É normal ficar nervoso antes da primeira sessão?</h2>
 <p>Sim. A primeira sessão pode despertar ansiedade, vergonha ou insegurança, especialmente para quem não está acostumado a falar sobre sentimentos ou experiências pessoais.</p>
 <p>Você não precisa chegar tranquilo para começar terapia. Pode chegar nervoso, confuso, triste, cansado ou sem saber exatamente como explicar o que está acontecendo.</p>
-<div class="artigo-destaque">
-<p>🌿 <strong>A primeira sessão não exige respostas prontas.</strong> Ela começa exatamente de onde você está hoje.</p>
-</div>
 <h2>Posso chorar durante a sessão?</h2>
 <p>Sim. Chorar pode acontecer, assim como também pode não acontecer. Cada pessoa expressa suas emoções de uma forma diferente.</p>
 <p>Não existe uma reação que você precise apresentar para que aquilo que está vivendo seja considerado importante. Você também não precisa pedir desculpas por se emocionar.</p>
@@ -498,7 +420,7 @@ body > .cabecalho:first-child {
 <p>Você não precisa preencher cada minuto da conversa. A psicóloga pode ajudar a conduzir o encontro respeitando o seu ritmo.</p>
 <h2>Quanto tempo dura a primeira sessão de terapia?</h2>
 <p>As sessões costumam ter cerca de <strong>50 minutos</strong>. A frequência é combinada de acordo com as necessidades do processo terapêutico, e os próximos passos podem ser conversados ao final do encontro.</p>
-<p>Se você quiser entender melhor a organização do acompanhamento, veja também a página <a href="sobre-o-atendimento.html"><strong>Sobre o atendimento psicológico</strong></a>.</p>
+<div class="bloco-leitura-complementar"><p style="margin-bottom:10px;"><strong>Quer entender melhor o acompanhamento?</strong><br/>Veja informações sobre funcionamento das sessões, modalidades e continuidade da psicoterapia.</p><a class="btn-secundario" href="sobre-o-atendimento.html" style="display:inline-block; margin-top:8px;">Como funciona o atendimento</a></div>
 <h2>Existe sigilo na terapia?</h2>
 <p>Sim. O sigilo profissional é uma parte fundamental do atendimento psicológico e contribui para que a terapia seja um espaço de confiança, respeito e cuidado.</p>
 <p>Dúvidas sobre funcionamento, limites do sigilo e outras questões relacionadas ao acompanhamento podem ser esclarecidas durante o atendimento.</p>
@@ -508,9 +430,6 @@ body > .cabecalho:first-child {
 <h2>O que esperar depois da primeira sessão?</h2>
 <p>Ao final do atendimento, você pode ter uma percepção inicial de como se sentiu durante aquela conversa e de como funciona o acompanhamento.</p>
 <p>A terapia não precisa resolver tudo imediatamente. O processo é construído ao longo do tempo, conforme você vai conseguindo compreender melhor o que sente, reconhecer padrões e encontrar novas possibilidades de cuidado.</p>
-<h2>A primeira sessão já resolve o problema?</h2>
-<p>Algumas pessoas sentem alívio depois de conseguir falar sobre aquilo que estavam vivendo. Ainda assim, a psicoterapia é um processo.</p>
-<p>Compreender conflitos emocionais, padrões de relacionamento, experiências anteriores e formas de lidar com determinadas situações geralmente exige continuidade. O objetivo não é oferecer respostas prontas, mas favorecer compreensão e elaboração ao longo do acompanhamento.</p>
 <h2>Como saber se é o momento de começar terapia?</h2>
 <p>Você não precisa esperar o sofrimento chegar ao limite para procurar ajuda psicológica.</p>
 <p>A terapia pode ser considerada quando você percebe, por exemplo:</p>
@@ -525,11 +444,10 @@ body > .cabecalho:first-child {
 <li>sensação de repetir situações que causam sofrimento;</li>
 <li>desejo de compreender melhor a si mesmo.</li>
 </ul>
-<p>Se ainda estiver em dúvida, veja também <a href="quando-procurar-terapia-sinais-emocionais.html"><strong>Quando procurar terapia? Sinais emocionais que merecem atenção</strong></a>.</p>
+<div class="bloco-leitura-complementar"><p style="margin-bottom:10px;"><strong>Está em dúvida se é o momento de procurar ajuda?</strong><br/>Alguns sinais emocionais podem indicar que vale conversar com uma psicóloga.</p><a class="btn-secundario" href="quando-procurar-terapia-sinais-emocionais.html" style="display:inline-block; margin-top:8px;">Quando procurar terapia?</a></div>
 <h2>Primeira sessão de terapia em Itapetininga</h2>
 <p>Se você está procurando uma <strong>psicóloga em Itapetininga</strong> e ainda tem dúvidas sobre como funciona a primeira sessão, saiba que esse primeiro encontro pode ser justamente o espaço para conversar sobre essas inseguranças.</p>
 <p>Realizo psicoterapia para adultos de forma presencial em <strong>Itapetininga – SP</strong> e também atendimento psicológico online.</p>
-<p>O acompanhamento oferece um espaço profissional, sigiloso e acolhedor para falar sobre ansiedade, autoestima, relacionamentos, conflitos, mudanças de vida, sobrecarga emocional e outras experiências que estejam causando sofrimento.</p>
 <h2>Perguntas frequentes sobre a primeira sessão de terapia</h2>
 <h3>O que acontece na primeira sessão?</h3>
 <p>É um momento de conhecimento inicial, acolhimento e compreensão do que motivou a procura pela psicoterapia.</p>
@@ -539,30 +457,20 @@ body > .cabecalho:first-child {
 <p>Não. Você compartilha sua história gradualmente, dentro do seu próprio ritmo.</p>
 <h3>É normal ficar nervoso antes da sessão?</h3>
 <p>Sim. Ansiedade e insegurança antes do primeiro atendimento são comuns e podem ser conversadas durante a própria sessão.</p>
-<h3>Quanto tempo dura uma sessão de terapia?</h3>
-<p>As sessões costumam ter cerca de 50 minutos. A frequência do acompanhamento é conversada de acordo com cada processo.</p>
 <h3>É possível fazer terapia online?</h3>
 <p>Sim. Além do atendimento presencial em Itapetininga, também realizo psicoterapia online.</p>
 <h2>Talvez o primeiro passo seja apenas começar</h2>
 <p>Você não precisa organizar tudo sozinho antes de procurar ajuda. Também não precisa saber exatamente o que dizer ou ter certeza de todas as respostas.</p>
 <p><strong>A primeira sessão pode ser o espaço para começar a compreender aquilo que hoje ainda parece difícil de explicar.</strong></p>
-<p class="artigo-assinatura">— Ana Paula Aparecida Vieira | Psicóloga Clínica (CRP 06/217114)<br/>Psicoterapia presencial e online | Itapetininga — SP</p>
+<p class="artigo-assinatura">— Ana Paula Aparecida Vieira | Psicóloga Clínica (CRP 06/217114)<br/>Psicoterapia presencial em Itapetininga – SP e online para todo o Brasil.</p>
 <div class="artigo-botoes">
-<a class="btn-primario" href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20minha%20primeira%20sessão%20de%20terapia." rel="noopener noreferrer" target="_blank">Agendar a primeira sessão</a>
 <a class="btn-secundario" href="vergonha-de-comecar-terapia.html">Vergonha de começar?</a>
-<a class="btn-secundario" href="sobre-o-atendimento.html">Como funciona o atendimento</a>
-<a class="btn-secundario" href="faq.html">Ver dúvidas frequentes</a>
+<a class="btn-secundario" href="sobre-o-atendimento.html">Como funciona</a>
+<a class="btn-secundario" href="recursos.html">← Voltar aos conteúdos</a>
+<a class="btn-primario" href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20minha%20primeira%20sessão%20de%20terapia." rel="noopener noreferrer" target="_blank">Agendar primeira sessão</a>
 </div>
-</article>
-</div>
-</section>
-<section aria-labelledby="artigos-relacionados-titulo" class="secao artigos-relacionados">
-<div class="container">
-<div class="secao-titulo">
-<h2 id="artigos-relacionados-titulo">Leia também</h2>
-<p>Leituras para ajudar você a compreender o início da psicoterapia e reconhecer quando buscar apoio psicológico.</p>
-</div>
-<div class="grid-cards">
+</article></div></section>
+<section aria-labelledby="artigos-relacionados-titulo" class="secao artigos-relacionados"><div class="container"><div class="secao-titulo"><h2 id="artigos-relacionados-titulo">Conteúdos relacionados</h2><p>Leituras para ajudar você a compreender o início da psicoterapia e reconhecer quando buscar apoio psicológico.</p></div><div class="grid-cards">
 <a class="card-artigo" href="vergonha-de-comecar-terapia.html">
 <img alt="Pessoa refletindo antes de começar terapia" decoding="async" height="600" loading="lazy" src="imagens/vergonha-de-comecar-terapia-itapetininga.jpg" width="900"/>
 <div class="card-artigo-texto">
@@ -572,7 +480,7 @@ body > .cabecalho:first-child {
 </div>
 </a>
 <a class="card-artigo" href="sobre-o-atendimento.html">
-<img alt="Atendimento psicológico em ambiente acolhedor em Itapetininga" decoding="async" height="600" loading="lazy" src="imagens/sobre-o-atendimento-psicologico-itapetininga.jpg" width="900"/>
+<img alt="Consultório de psicologia em Itapetininga" decoding="async" height="600" loading="lazy" src="imagens/sobre-o-atendimento-psicologico-itapetininga.jpg" width="900"/>
 <div class="card-artigo-texto">
 <h3>Sobre o atendimento psicológico</h3>
 <p>Entenda como funciona a psicoterapia, as modalidades de atendimento e a continuidade do processo.</p>
@@ -587,12 +495,9 @@ body > .cabecalho:first-child {
 <span class="btn-card">Ler artigo</span>
 </div>
 </a>
-</div>
-</div>
-</section>
-</main>
+</div></div></section></main>
 <a aria-label="Abrir endereço no mapa" class="endereco-flutuante" href="https://maps.google.com/?q=Rua+Jo%C3%A3o+Evangelista,+831,+Centro,+Itapetininga,+SP,+18200-055" rel="noopener noreferrer" style="display:none;" target="_blank"></a>
-<a aria-label="Agendar primeira sessão pelo WhatsApp" class="whatsapp-btn" href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20minha%20primeira%20sessão%20de%20terapia." rel="noopener noreferrer" target="_blank">
+<a aria-label="Falar no WhatsApp" class="whatsapp-btn" href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento." rel="noopener noreferrer" target="_blank">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 <button aria-label="Voltar ao topo" class="btn-topo" id="btn-topo">
@@ -610,9 +515,7 @@ body > .cabecalho:first-child {
           </a>
 </p>
 <p>
-<a href="mailto:contato@anapaulaapvieirapsi.com.br">
-            contato@anapaulaapvieirapsi.com.br
-          </a>
+<a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a>
 </p>
 </div>
 <div class="footer-links">
@@ -620,7 +523,7 @@ body > .cabecalho:first-child {
 <a href="recursos.html">Conteúdos</a>
 <a href="faq.html">FAQ</a>
 <a href="servicos.html">Atendimento</a>
-<a href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20minha%20primeira%20sessão%20de%20terapia." rel="noopener noreferrer" target="_blank">
+<a href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento." rel="noopener noreferrer" target="_blank">
           WhatsApp
         </a>
 </div>
