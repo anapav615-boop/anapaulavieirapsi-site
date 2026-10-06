@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+
 ﻿<!DOCTYPE html>
 
 <html lang="pt-BR">
@@ -388,7 +389,13 @@
 }
 </style>
 <link data-central-estilo="true" href="estilo-global.css" rel="stylesheet"/>
-</head>
+<style data-ajuste-cabecalho="pagina-primeira-sessao">
+/* Nesta página o cabeçalho permanece no fluxo normal e não acompanha a rolagem. */
+.cabecalho {
+  position: static !important;
+  top: auto !important;
+}
+</style></head>
 <body>
 <header class="cabecalho">
 <div class="container header-wrap">
