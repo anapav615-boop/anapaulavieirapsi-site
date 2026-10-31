@@ -1,30 +1,32 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<!-- Medição de visitas e cliques, ativada somente com consentimento -->
-<script defer src="analytics-contato.js"></script>
+<head><script defer="True" src="analytics-contato.js"></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
-<title>Psicóloga em Itapetininga – SP | Ana Paula Aparecida Vieira</title>
-<meta content="Atendimento psicológico em Itapetininga – SP com acolhimento e cuidado emocional. Psicoterapia presencial e online com Ana Paula Aparecida Vieira, psicóloga clínica." name="description"/>
+<title>Psicóloga em Itapetininga – Atendimento Presencial e Online | Ana Paula Aparecida Vieira</title>
+<meta content="Psicóloga em Itapetininga, no Centro. Conheça o atendimento psicológico para adultos, crianças e adolescentes, tire dúvidas sobre a primeira sessão e saiba como entrar em contato." name="description"/>
 <meta content="Ana Paula Aparecida Vieira" name="author"/>
 <meta content="index, follow" name="robots"/>
+<meta content="BR-SP" name="geo.region"/>
+<meta content="Itapetininga" name="geo.placename"/>
+<meta content="-23.5917;-48.0531" name="geo.position"/>
+<meta content="-23.5917, -48.0531" name="ICBM"/>
 <link href="https://anapaulaapvieirapsi.com.br/psicologa-em-itapetininga.html" rel="canonical"/>
 <link href="imagens/favicon.png" rel="icon" type="image/png"/>
 <link href="manifest.json" rel="manifest"/>
 <meta content="pt_BR" property="og:locale"/>
 <meta content="article" property="og:type"/>
 <meta content="Ana Paula Aparecida Vieira | Psicóloga Clínica" property="og:site_name"/>
-<meta content="Psicóloga em Itapetininga – SP | Ana Paula Aparecida Vieira" property="og:title"/>
-<meta content="Atendimento psicológico em Itapetininga – SP com acolhimento e cuidado emocional. Psicoterapia presencial e online com Ana Paula Aparecida Vieira, psicóloga clínica." property="og:description"/>
+<meta content="Psicóloga em Itapetininga – Atendimento Presencial e Online | Ana Paula Aparecida Vieira" property="og:title"/>
+<meta content="Psicóloga em Itapetininga, no Centro. Conheça o atendimento psicológico para adultos, crianças e adolescentes, tire dúvidas sobre a primeira sessão e saiba como entrar em contato." property="og:description"/>
 <meta content="https://anapaulaapvieirapsi.com.br/psicologa-em-itapetininga.html" property="og:url"/>
 <meta content="https://anapaulaapvieirapsi.com.br/imagens/psicologa-em-itapetininga.jpg" property="og:image"/>
-<meta content="Psicóloga em Itapetininga em consultório acolhedor" property="og:image:alt"/>
+<meta content="Ambiente de acolhimento e escuta psicológica representando a escolha de uma psicóloga em Itapetininga" property="og:image:alt"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Psicóloga em Itapetininga – SP | Ana Paula Aparecida Vieira" name="twitter:title"/>
-<meta content="Atendimento psicológico em Itapetininga – SP com acolhimento e cuidado emocional. Psicoterapia presencial e online com Ana Paula Aparecida Vieira, psicóloga clínica." name="twitter:description"/>
+<meta content="Psicóloga em Itapetininga – Atendimento Presencial e Online | Ana Paula Aparecida Vieira" name="twitter:title"/>
+<meta content="Psicóloga em Itapetininga, no Centro. Conheça o atendimento psicológico para adultos, crianças e adolescentes, tire dúvidas sobre a primeira sessão e saiba como entrar em contato." name="twitter:description"/>
 <meta content="https://anapaulaapvieirapsi.com.br/imagens/psicologa-em-itapetininga.jpg" name="twitter:image"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -40,9 +42,7 @@
       --sombra-suave: 0 10px 28px rgba(88, 73, 96, 0.07);
     }
 
-    .artigo-pagina {
-      padding-top: 18px;
-    }
+    .artigo-pagina { padding-top: 18px; }
 
     .artigo-wrap {
       max-width: 980px;
@@ -114,6 +114,25 @@
       margin-top: 8px;
     }
 
+    .faq-artigo {
+      margin-top: 30px;
+      padding-top: 10px;
+    }
+
+    .faq-item {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      border: 1px solid rgba(184, 204, 176, 0.9);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .faq-item h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.12rem;
+    }
+
     .artigo-assinatura {
       margin-top: 24px;
       color: #5b4a66;
@@ -126,13 +145,9 @@
       gap: 14px;
     }
 
-    .artigos-relacionados {
-      margin-top: 8px;
-    }
+    .artigos-relacionados { margin-top: 8px; }
 
-    .artigos-relacionados .grid-cards {
-      margin-top: 18px;
-    }
+    .artigos-relacionados .grid-cards { margin-top: 18px; }
 
     .artigos-relacionados .card-artigo {
       background: rgba(255, 255, 255, 0.92);
@@ -157,9 +172,7 @@
       display: block;
     }
 
-    .artigos-relacionados .card-artigo-texto {
-      padding: 22px;
-    }
+    .artigos-relacionados .card-artigo-texto { padding: 22px; }
 
     .artigos-relacionados .card-artigo h3 {
       color: #6f52ab;
@@ -179,92 +192,28 @@
     }
 
     @media (max-width: 768px) {
-      .hero-artigo {
-        max-width: 100%;
-      }
+      .hero-artigo { max-width: 100%; }
 
-      .hero-artigo-imagem {
-        border-radius: 20px;
-      }
+      .hero-artigo-imagem { border-radius: 20px; }
 
       .hero-artigo-imagem img {
         height: 320px;
         object-position: center 16%;
       }
 
-      .hero-artigo-legenda {
-        font-size: 0.95rem;
-      }
+      .hero-artigo-legenda { font-size: 0.95rem; }
 
       .artigo-conteudo {
         padding: 28px 20px;
         border-radius: 22px;
       }
 
-      .artigos-relacionados .card-artigo {
-        border-radius: 22px;
-      }
+      .artigos-relacionados .card-artigo { border-radius: 22px; }
 
-      .artigos-relacionados .card-artigo img {
-        height: 190px;
-      }
+      .artigos-relacionados .card-artigo img { height: 190px; }
     }
   </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "@id": "https://anapaulaapvieirapsi.com.br/psicologa-em-itapetininga.html#article",
-      "headline": "Psicóloga em Itapetininga – SP: psicoterapia presencial e online",
-      "description": "Atendimento psicológico em Itapetininga – SP com acolhimento e cuidado emocional. Psicoterapia presencial e online com Ana Paula Aparecida Vieira, psicóloga clínica.",
-      "image": "https://anapaulaapvieirapsi.com.br/imagens/psicologa-em-itapetininga.jpg",
-      "dateModified": "2026-07-30",
-      "inLanguage": "pt-BR",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://anapaulaapvieirapsi.com.br/psicologa-em-itapetininga.html"
-      },
-      "author": {
-        "@id": "https://anapaulaapvieirapsi.com.br/#psychologist"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Ana Paula Aparecida Vieira | Psicóloga Clínica",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://anapaulaapvieirapsi.com.br/imagens/logo-simbolo.png"
-        }
-      }
-    },
-    {
-      "@type": "Psychologist",
-      "@id": "https://anapaulaapvieirapsi.com.br/#psychologist",
-      "name": "Ana Paula Aparecida Vieira",
-      "jobTitle": "Psicóloga Clínica",
-      "identifier": "CRP 06/217114",
-      "url": "https://anapaulaapvieirapsi.com.br/",
-      "telephone": "+55 15 99676-0791",
-      "email": "contato@anapaulaapvieirapsi.com.br",
-      "image": "https://anapaulaapvieirapsi.com.br/imagens/sua-foto.jpg",
-      "sameAs": [
-        "https://www.instagram.com/anapaulapsico/",
-        "https://www.facebook.com/anapaulaapvieirapsico/",
-        "https://www.linkedin.com/in/ana-paula-aparecida-vieira-a96632185"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua João Evangelista, 831 - Centro",
-        "addressLocality": "Itapetininga",
-        "addressRegion": "SP",
-        "postalCode": "18200-055",
-        "addressCountry": "BR"
-      }
-    }
-  ]
-}
-</script><style>
+<style>
 
 .menu-nav a[aria-current="page"] {
   background: linear-gradient(135deg, #c08ea4, #ad748c);
@@ -276,8 +225,101 @@
 }
 
 </style>
-<link href="estilo-global.css" rel="stylesheet" data-central-estilo="true"/>
-</head>
+<link data-central-estilo="true" href="estilo-global.css" rel="stylesheet"/>
+<style>
+/* Complementos sutis à página; cores e tipografia seguem o site */
+.artigo-conteudo .abertura-resposta { font-size: 1.04em; line-height: 1.85; }
+.artigo-conteudo .caixa-orientacao {
+  background: #f6f7f1;
+  border-left: 4px solid #a7be9d;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin: 26px 0 32px;
+}
+.artigo-conteudo .caixa-orientacao p { margin: 0 0 12px; }
+.artigo-conteudo .caixa-orientacao p:last-child { margin-bottom: 0; }
+.artigo-conteudo .caixa-convite { background:#f8f5f7; border-left-color: #c08ea4; }
+.artigo-conteudo .caixa-convite .btn-primario {display:inline-block; margin-top:8px;}
+.artigo-conteudo a:not(.btn-primario):not(.btn-secundario) { text-decoration: underline; text-underline-offset:3px; }
+@media (max-width:600px) { .artigo-conteudo .caixa-orientacao { padding:18px 17px; } }
+</style><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://anapaulaapvieirapsi.com.br/psicologa-em-itapetininga.html",
+      "url": "https://anapaulaapvieirapsi.com.br/psicologa-em-itapetininga.html",
+      "name": "Psicóloga em Itapetininga – SP: psicoterapia presencial e online",
+      "description": "Psicóloga em Itapetininga, no Centro. Conheça o atendimento psicológico para adultos, crianças e adolescentes, tire dúvidas sobre a primeira sessão e saiba como entrar em contato.",
+      "inLanguage": "pt-BR",
+      "dateModified": "2026-10-31",
+      "about": {
+        "@id": "https://anapaulaapvieirapsi.com.br/#psychologist"
+      }
+    },
+    {
+      "@type": "Psychologist",
+      "@id": "https://anapaulaapvieirapsi.com.br/#psychologist",
+      "name": "Ana Paula Aparecida Vieira",
+      "jobTitle": "Psicóloga Clínica",
+      "identifier": "CRP 06/217114",
+      "url": "https://anapaulaapvieirapsi.com.br/",
+      "telephone": "+55 15 99676-0791",
+      "email": "contato@anapaulaapvieirapsi.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua João Evangelista, 831 - Centro",
+        "addressLocality": "Itapetininga",
+        "addressRegion": "SP",
+        "postalCode": "18200-055",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Onde fica o consultório?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O consultório fica na Rua João Evangelista, 831, Centro, em Itapetininga – SP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Atende crianças e adolescentes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Realizo atendimento psicológico para adultos, adolescentes e crianças, considerando as necessidades de cada fase da vida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso saber o que falar na primeira sessão?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. É possível começar contando apenas o que motivou a procura; o diálogo acontece respeitando seu tempo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso perguntar valores e horários antes de agendar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Você pode entrar em contato para esclarecer valores, horários, modalidade e condições do atendimento."
+          }
+        }
+      ]
+    }
+  ]
+}</script><style>/* SEO local e caminho de contato — sem alterar o cabeçalho compartilhado */
+.seo-local-box{margin:28px 0;padding:23px;border-radius:20px;border:1px solid rgba(167,190,157,.7);background:linear-gradient(135deg,#f7f3f9,#f1f6ee)}
+.seo-local-box strong{font-size:1.07rem;color:#634d8a}.seo-local-box p{margin:10px 0 15px;line-height:1.75}
+.seo-local-box .btn-primario{display:inline-flex;max-width:100%;text-align:center}
+.artigo-conteudo a:not(.btn-primario):not(.btn-secundario){text-underline-offset:3px}
+@media(max-width:650px){.seo-local-box{padding:18px}.seo-local-box .btn-primario{width:100%;justify-content:center}}
+</style></head>
 <body>
 <header class="cabecalho">
 <div class="container header-wrap">
@@ -302,104 +344,54 @@
 <section class="secao">
 <div class="container artigo-wrap">
 <div class="hero-artigo">
-<div class="hero-artigo-imagem">
-<img alt="Psicóloga em Itapetininga em consultório acolhedor" decoding="async" fetchpriority="high" height="1024" src="imagens/psicologa-em-itapetininga.jpg" width="1536"/>
+<div class="hero-artigo-imagem" style="background:linear-gradient(130deg,#e9ece3,#eee8f3);min-height:220px">
+<img alt="Ambiente acolhedor de consultório de psicologia em Itapetininga" decoding="async" fetchpriority="high" height="1024" onerror="this.style.display='none'" src="imagens/psicologa-em-itapetininga.jpg" width="1536"/>
 </div>
-<p class="hero-artigo-legenda">
-            Psicoterapia é um espaço de escuta, acolhimento e reconstrução emocional — no seu tempo, com cuidado.
-          </p>
+<p class="hero-artigo-legenda">Atendimento psicológico no Centro de Itapetininga, com escuta cuidadosa, ética e respeito à sua história.</p>
 </div>
 <article class="artigo-conteudo">
 <h1>Psicóloga em Itapetininga – SP: psicoterapia presencial e online</h1>
-<p>
-            Se você está buscando <strong>psicóloga em Itapetininga</strong>, saiba que você não precisa enfrentar tudo sozinho(a).
-            A psicoterapia pode ajudar a compreender emoções, aliviar sintomas, fortalecer autoestima e desenvolver recursos
-            para lidar com fases difíceis.
-          </p>
-<h2>Quando procurar terapia?</h2>
-<p>A terapia pode ser indicada quando você percebe, por exemplo:</p>
-<ul>
-<li>Ansiedade, pensamentos acelerados e dificuldade de desligar</li>
-<li>Tristeza persistente, desânimo e perda de prazer</li>
-<li>Exaustão emocional e sinais de burnout no trabalho</li>
-<li>Autocrítica intensa, culpa e baixa autoestima</li>
-<li>Dificuldades nos relacionamentos e conflitos familiares</li>
-</ul>
-<h2>Como funciona o atendimento</h2>
-<p>
-            O processo terapêutico acontece em sessões regulares, com escuta profissional e acolhimento.
-            Ao longo do caminho, a pessoa aprende a reconhecer padrões, organizar emoções e construir novas formas
-            de se cuidar, com mais clareza e equilíbrio.
-          </p>
-<h2>Atendimento em Itapetininga e online</h2>
-<p>
-            Você pode escolher o formato que fizer mais sentido para sua rotina:
-            <strong>presencial em Itapetininga – SP</strong> ou <strong>online</strong>.
-          </p>
-<p>
-            📍 Endereço: Rua João Evangelista, 831 - Centro, Itapetininga - SP, CEP 18200-055<br/>
-            💻 Psicoterapia online para todo o Brasil
-          </p>
-<h2>Conteúdos que podem te ajudar</h2>
-<p>
-            Você também pode acessar materiais e artigos no site:
-            <a href="recursos.html">ver recursos</a>.
-          </p>
-<section id="atendimento-publicos-itapetininga">
-<h2>Atendimento para adultos, adolescentes e crianças</h2>
-<p>O atendimento é organizado de acordo com a fase da vida e a necessidade de cada pessoa. Adultos podem trabalhar questões como ansiedade, autocobrança, relacionamentos, luto, mudanças e sobrecarga emocional. Adolescentes encontram um espaço de escuta para conflitos, identidade, ansiedade, tristeza e relações familiares ou escolares. No atendimento infantil, recursos lúdicos ajudam a criança a expressar o que ainda não consegue explicar em palavras, com participação dos responsáveis quando necessário.</p>
-<h2>Atendimento presencial no Centro de Itapetininga</h2>
-<p>O consultório está localizado na Rua João Evangelista, 831, Centro, Itapetininga–SP, CEP 18200-055. A modalidade presencial pode ser importante para quem deseja um espaço reservado fora da rotina de casa e valoriza o encontro no consultório.</p>
-<h2>Terapia online: quando essa modalidade pode fazer sentido</h2>
-<p>A terapia online pode facilitar a continuidade do cuidado para adolescentes e adultos que possuem rotina corrida, moram em outras cidades ou preferem ser atendidos em um ambiente conhecido. Antes de iniciar, são conversadas as condições de privacidade, conexão e disponibilidade para a sessão.</p>
-<h2>Como acontece o primeiro contato</h2>
-<p>No WhatsApp, você pode informar para quem é o atendimento, se procura a modalidade presencial ou online e quais horários costuma ter disponíveis. Não é necessário relatar toda a história por mensagem. As questões mais importantes serão acolhidas com calma na primeira sessão.</p>
-</section><p class="artigo-assinatura">
-            — Ana Paula Aparecida Vieira | Psicóloga Clínica (CRP 06/217114)<br/>
-            Psicoterapia presencial em Itapetininga – SP e online para todo o Brasil.
-          </p>
-<div class="artigo-botoes"><a class="btn-secundario" href="servicos.html">Conhecer os atendimentos</a>
-<a class="btn-primario" href="https://wa.me/5515996760791?text=Olá%20Ana%20Paula,%20gostaria%20de%20agendar%20um%20atendimento." rel="noopener noreferrer" target="_blank">
-              Agendar pelo WhatsApp
-            </a>
-</div>
+<p class="abertura-resposta">Se você procura <strong>psicóloga em Itapetininga</strong>, pode começar conhecendo como funciona o atendimento e verificando se a proposta de cuidado combina com o que você precisa. Sou <strong>Ana Paula Aparecida Vieira, psicóloga clínica (CRP 06/217114)</strong>, e realizo atendimento psicológico para adultos, adolescentes e crianças, com consultório no Centro de Itapetininga.</p>
+<p>Procurar psicoterapia pode surgir em um momento de ansiedade, esgotamento, dificuldade nos relacionamentos, mudanças importantes ou simplesmente pelo desejo de compreender melhor o que sente. Não é necessário chegar com um diagnóstico ou saber exatamente o que dizer na primeira sessão.</p>
+<div class="seo-local-box"><strong>Atendimento em Itapetininga</strong><p>📍 Rua João Evangelista, 831 – Centro, Itapetininga – SP, CEP 18200-055<br/>💻 Atendimento online, conforme as necessidades e condições de cada caso.</p><a class="btn-primario" href="https://wa.me/5515996760791?text=Ol%C3%A1%2C%20Ana%20Paula.%20Procuro%20psicoterapia%20em%20Itapetininga%20e%20gostaria%20de%20saber%20como%20funciona%20e%20quais%20hor%C3%A1rios%20est%C3%A3o%20dispon%C3%ADveis." rel="noopener noreferrer" target="_blank">Conversar sobre a primeira sessão</a></div>
+<h2>Quando procurar atendimento psicológico?</h2>
+<p>A psicoterapia pode ser uma possibilidade de cuidado quando emoções ou situações difíceis começam a afetar o bem-estar. Alguns motivos frequentes para buscar uma psicóloga são:</p>
+<ul><li>Ansiedade, preocupações constantes ou pensamentos que parecem não parar.</li><li>Sobrecarga emocional, estresse e cansaço persistente.</li><li>Baixa autoestima, autocrítica intensa ou sentimentos de culpa.</li><li>Conflitos familiares, relacionamentos desgastantes ou dificuldade em estabelecer limites.</li><li>Tristeza, luto ou períodos de mudança e adaptação.</li><li>Dificuldades emocionais ou comportamentais de crianças e adolescentes que merecem atenção.</li></ul>
+<p>Cada pessoa tem sua história. A procura por ajuda não depende de uma lista de sintomas; o primeiro encontro também serve para conversar sobre o que motivou essa busca. Leia também <a href="quando-procurar-terapia-sinais-emocionais.html">quando procurar terapia</a>.</p>
+<h2>Atendimento psicológico para adultos, adolescentes e crianças</h2>
+<p><strong>Adultos:</strong> um espaço de escuta sobre ansiedade, autoestima, relações, cansaço emocional, perdas e momentos de mudança. Veja <a href="psicoterapia-adultos.html">psicoterapia para adultos</a>.</p>
+<p><strong>Adolescentes:</strong> acolhimento de questões emocionais, escolares, familiares, de identidade e autoestima, com atenção ao sigilo e à participação dos responsáveis nos limites adequados. Conheça <a href="psicoterapia-adolescentes-itapetininga-como-funciona.html">como funciona o atendimento de adolescentes</a>.</p>
+<p><strong>Crianças:</strong> acompanhamento que considera a fase de desenvolvimento, a expressão de emoções e a participação dos pais ou responsáveis quando necessário. Entenda <a href="psicoterapia-infantil-itapetininga-quando-procurar.html">como funciona a psicoterapia infantil em Itapetininga</a>.</p>
+<h2>Como funciona a primeira sessão de terapia?</h2>
+<p>O primeiro atendimento é um momento para compreender o motivo da procura, conhecer aspectos da sua história e conversar sobre as condições do processo terapêutico. Você pode fazer perguntas sobre frequência, duração, sigilo, modalidade e valores antes de decidir iniciar.</p>
+<p>Não precisa contar tudo de uma só vez. Saiba mais em <a href="primeira-sessao-de-terapia.html">primeira sessão de terapia: como funciona, o que falar e o que esperar</a>.</p>
+<h2>Psicoterapia presencial em Itapetininga ou atendimento online?</h2>
+<p>O <strong>atendimento presencial em Itapetininga</strong> acontece no consultório localizado na Rua João Evangelista, 831, Centro. Para quem prefere comparecer a um espaço reservado, pode ser uma opção prática.</p>
+<p>A <strong>psicoterapia online</strong> pode facilitar o acesso ao cuidado para pessoas de outras cidades ou com rotinas que dificultam o deslocamento. A escolha considera a faixa etária, a privacidade, as condições do atendimento e a avaliação profissional. Veja as diferenças em <a href="terapia-online-ou-presencial.html">terapia online ou presencial</a>.</p>
+<h2>O que observar ao escolher uma psicóloga em Itapetininga?</h2>
+<p>Verifique o registro no Conselho Regional de Psicologia (CRP), conheça as faixas etárias atendidas e esclareça dúvidas sobre sigilo, modalidade e condições do acompanhamento. Sentir-se à vontade para fazer perguntas também é importante. Preparei um conteúdo com orientações práticas: <a href="como-escolher-psicologa-itapetininga.html">como escolher uma psicóloga em Itapetininga</a>.</p>
+<h2>Como dar o primeiro passo para marcar um atendimento?</h2>
+<p>Você pode entrar em contato pelo WhatsApp para informar se o atendimento é para um adulto, criança ou adolescente, qual modalidade procura e os horários que costuma ter disponíveis. <strong>Não é necessário contar detalhes íntimos por mensagem.</strong> As questões pessoais podem ser conversadas no contexto apropriado da sessão.</p>
+<section aria-labelledby="faq-local" class="faq-artigo"><h2 id="faq-local">Perguntas frequentes</h2>
+<div class="faq-item"><h3>Onde fica o consultório?</h3><p>O consultório fica na Rua João Evangelista, 831, Centro, em Itapetininga – SP.</p></div>
+<div class="faq-item"><h3>Atende crianças e adolescentes?</h3><p>Sim. Realizo atendimento psicológico para adultos, adolescentes e crianças, considerando as necessidades de cada fase da vida.</p></div>
+<div class="faq-item"><h3>Preciso saber o que falar na primeira sessão?</h3><p>Não. É possível começar contando apenas o que motivou a procura; o diálogo acontece respeitando seu tempo.</p></div>
+<div class="faq-item"><h3>Posso perguntar valores e horários antes de agendar?</h3><p>Sim. Você pode entrar em contato para esclarecer valores, horários, modalidade e condições do atendimento.</p></div>
+</section>
+<h2>O primeiro contato pode ser simples</h2>
+<p>Se está considerando começar a psicoterapia, você pode enviar uma mensagem para conhecer o atendimento e verificar a disponibilidade de horários. Esse primeiro contato é uma oportunidade para esclarecer dúvidas, sem compromisso de iniciar o acompanhamento.</p>
+<p class="artigo-assinatura"><strong>Ana Paula Aparecida Vieira</strong> | Psicóloga Clínica<br/>CRP 06/217114<br/>Atendimento presencial no Centro de Itapetininga – SP e online.</p>
+<div class="artigo-botoes"><a class="btn-secundario" href="/">Página inicial</a><a class="btn-secundario" href="sobre-o-atendimento.html">Como funciona o atendimento</a><a class="btn-primario" href="https://wa.me/5515996760791?text=Ol%C3%A1%2C%20Ana%20Paula.%20Procuro%20psicoterapia%20em%20Itapetininga%20e%20gostaria%20de%20saber%20como%20funciona%20e%20quais%20hor%C3%A1rios%20est%C3%A3o%20dispon%C3%ADveis." rel="noopener noreferrer" target="_blank">Consultar horários pelo WhatsApp</a></div>
 </article>
 </div>
 </section>
 <section aria-labelledby="artigos-relacionados-titulo" class="secao artigos-relacionados">
 <div class="container">
-<div class="secao-titulo">
-<h2 id="artigos-relacionados-titulo">Conteúdos relacionados</h2>
-<p>
-            Leituras que podem complementar este tema com acolhimento e clareza.
-          </p>
-</div>
+<div class="secao-titulo"><h2 id="artigos-relacionados-titulo">Conteúdos relacionados</h2><p>Outras leituras para entender como a psicoterapia pode começar em cada fase da vida.</p></div>
 <div class="grid-cards">
-<a class="card-artigo" href="sobre-o-atendimento.html">
-<img alt="Sobre o atendimento psicológico" decoding="async" height="1536" loading="lazy" src="imagens/sobre-o-atendimento-psicologico-itapetininga.jpg" width="1024"/>
-<div class="card-artigo-texto">
-<h3>Sobre o atendimento psicológico</h3>
-<p>Entenda como funciona o processo terapêutico, o acolhimento e o cuidado emocional.</p>
-<span class="btn-card">Saiba mais</span>
-</div>
-</a>
-<a class="card-artigo" href="ansiedade-afetando-vida-emocional.html">
-<img alt="Ansiedade em Itapetininga" decoding="async" height="1024" loading="lazy" src="imagens/ansiedade-afetando-vida-emocional.jpg" width="1536"/>
-<div class="card-artigo-texto">
-<h3>Ansiedade em Itapetininga</h3>
-<p>Entenda sintomas, impactos no dia a dia e como a psicoterapia pode ajudar.</p>
-<span class="btn-card">Saiba mais</span>
-</div>
-</a>
-<a class="card-artigo" href="psicoterapia-adultos.html">
-<img alt="Psicoterapia para adultos" decoding="async" height="1024" loading="lazy" src="imagens/consultorio.jpg" width="1536"/>
-<div class="card-artigo-texto">
-<h3>Psicoterapia para adultos</h3>
-<p>Um espaço de acolhimento, autoconhecimento e cuidado emocional para a vida adulta.</p>
-<span class="btn-card">Saiba mais</span>
-</div>
-</a>
-</div>
+<a class="card-artigo" href="como-escolher-psicologa-itapetininga.html"><img alt="Ambiente de atendimento psicológico representando a escolha de uma psicóloga em Itapetininga" decoding="async" loading="lazy" src="imagens/como-escolher-psicologa-itapetininga.jpg"/><div class="card-artigo-texto"><h3>Como escolher uma psicóloga em Itapetininga?</h3><p>Critérios práticos para escolher a profissional e tirar dúvidas antes da primeira sessão.</p><span class="btn-card">Saiba mais</span></div></a>
+<a class="card-artigo" href="primeira-sessao-de-terapia.html"><img alt="Consultório preparado para primeira sessão de terapia" decoding="async" loading="lazy" src="imagens/primeira-sessao-terapia-consultorio-itapetininga.jpg"/><div class="card-artigo-texto"><h3>Primeira sessão de terapia</h3><p>O que acontece no primeiro encontro e como se preparar com tranquilidade.</p><span class="btn-card">Saiba mais</span></div></a>
+<a class="card-artigo" href="terapia-online-ou-presencial.html"><img alt="Sala de psicoterapia acolhedora" decoding="async" loading="lazy" src="imagens/sobre-o-atendimento-psicologico-itapetininga.jpg"/><div class="card-artigo-texto"><h3>Terapia online ou presencial?</h3><p>Entenda as modalidades para decidir o que faz sentido para sua rotina.</p><span class="btn-card">Saiba mais</span></div></a></div>
 </div>
 </section>
 </main>
@@ -422,9 +414,7 @@
           </a>
 </p>
 <p>
-<a href="mailto:contato@anapaulaapvieirapsi.com.br">
-            contato@anapaulaapvieirapsi.com.br
-          </a>
+<a href="mailto:contato@anapaulaapvieirapsi.com.br">contato@anapaulaapvieirapsi.com.br</a>
 </p>
 </div>
 <div class="footer-links">
